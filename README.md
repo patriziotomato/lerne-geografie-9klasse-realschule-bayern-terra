@@ -9,6 +9,12 @@ Kapitelstruktur des Terra-Buchs (Klett). Pures TypeScript — kein Framework.
 - **Lernkonzepte statt Auswendiglernen**: Jeder Inhalt hat 2–3 unterschiedlich
   formulierte Frage-Varianten. Gemeistert wird das *Konzept* (Leitner-System, 5 Boxen) —
   gezählt wird gelernter Inhalt, nicht beantwortete Fragen.
+- **Auf Tempo getrimmt**: kurze Antwortoptionen und knappe Erklärungen (~290 statt
+  ~470 Zeichen Lesestoff pro Frage), und bei einer richtigen Antwort blättert die App
+  nach 1,2 s von selbst weiter.
+- **Faire Fragen**: Die vier Optionen sind ungefähr gleich lang, damit man die richtige
+  nicht an ihrer Länge erkennt; die Lösungsposition wird über jede Runde gleichmäßig
+  auf A–D verteilt.
 - **Deadline & Tagespensum**: Beim Start Lernziel-Datum festlegen; die App rechnet
   aus, wie viel pro Tag nötig ist, und zeigt, ob man auf Kurs ist.
 - **Gamification**: XP, Level, Tages-Streaks, Combos, ~16 Abzeichen, Konfetti —
@@ -56,6 +62,30 @@ Die Fragen liegen als editierbare JSON-Dateien in `src/data/questions/*.json`:
 
 Die App mischt die Antwortreihenfolge beim Anzeigen. Kapitel-Metadaten (Titel,
 Emoji, Farben, Kisten-Badges) stehen in `src/data/chapters.ts`.
+
+### Regeln für neue Fragen
+
+`npm run check:questions` prüft die JSON-Dateien (und läuft auch im `build`, ein
+Verstoß blockt also den Deploy):
+
+| Regel | |
+|---|---|
+| Antwortoption | max. 60 Zeichen |
+| **Längen-Spreizung** | längste minus kürzeste Option max. **15 Zeichen** |
+| Erklärung | max. 110 Zeichen |
+| längste = richtig | über den Gesamtbestand max. 30 % |
+| Konzept-IDs & Fragetexte | müssen zu `scripts/questions-baseline.json` passen |
+
+Die Spreizungsregel ist die wichtigste: Waren die vier Optionen unterschiedlich
+lang, war die richtige Antwort in 74 % der Fälle einfach die längste — man kam
+ohne jedes Wissen auf ~74 % richtig. **Distraktoren also genauso konkret und
+genauso lang formulieren wie die richtige Antwort**, nicht die richtige Antwort
+verwässern.
+
+Konzept-IDs sind der Schlüssel des Leitner-Fortschritts im localStorage: Ändert
+sich eine ID, verliert die Nutzerin ihren Lernstand. Werden bewusst Konzepte
+ergänzt oder Fragetexte geändert, die Baseline neu erzeugen mit
+`node scripts/check-questions.mjs --update-baseline`.
 
 ## Deployment (GitHub Pages)
 
