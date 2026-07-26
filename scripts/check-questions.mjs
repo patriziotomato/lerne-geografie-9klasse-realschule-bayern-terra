@@ -119,6 +119,27 @@ if (baseline) {
   }
 }
 
+// ------------------------------------------------------- Unterthemen (S4) ---
+
+// topic ist der Anzeigename eines Unterthemas im Themenkatalog. Die App setzt
+// „ein Unterthema = ein Konzept" voraus (ausnehmen und vormerken greifen genau
+// ein Konzept), ein doppelter topic-Text wäre in der Liste also nicht
+// unterscheidbar. Der gespeicherte Schlüssel ist die Konzept-ID (siehe S1) —
+// der Text selbst darf jederzeit umformuliert werden.
+const topics = new Map();
+for (const { file, data } of chapters) {
+  for (const concept of data.concepts ?? []) {
+    const topic = (concept.topic ?? '').trim();
+    if (!topic) {
+      fail(file, concept.id, 'S4', 'topic fehlt oder ist leer.');
+      continue;
+    }
+    const other = topics.get(topic);
+    if (other) fail(file, concept.id, 'S4', `topic "${topic}" gibt es schon bei ${other}.`);
+    else topics.set(topic, concept.id);
+  }
+}
+
 // ---------------------------------------------------- Struktur & Längen -----
 
 for (const { file, variant, label } of all) {

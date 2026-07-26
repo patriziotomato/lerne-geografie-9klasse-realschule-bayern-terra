@@ -15,6 +15,15 @@ Kapitelstruktur des Terra-Buchs (Klett). Pures TypeScript — kein Framework.
 - **Faire Fragen**: Die vier Optionen sind ungefähr gleich lang, damit man die richtige
   nicht an ihrer Länge erkennt; die Lösungsposition wird über jede Runde gleichmäßig
   auf A–D verteilt.
+- **Themenkatalog**: Zwei Ebenen — Hauptthemen (Kapitel) lassen sich ganz abwählen,
+  einzelne Unterthemen einzeln ausnehmen. Direkt an jeder Frage steht dafür
+  „🙋 Thema noch nicht dran?" mit zwei Optionen:
+  „🚫 hatten wir noch nicht" nimmt das Unterthema aus dem Lernplan (es zählt dann
+  auch nicht mehr für Fortschritt, Schatzkiste und Tagespensum), und
+  „📌 muss ich noch lernen" setzt es auf die **Merkliste**.
+- **Merkliste**: Vorgemerkte Themen ruhen in normalen Runden, bleiben aber im
+  Lernplan — sie müssen ja gelernt werden. Unter „📌 Merkliste" kann man sie gezielt
+  üben und abhaken; bei Box 4 hakt sich ein Thema selbst ab.
 - **Deadline & Tagespensum**: Beim Start Lernziel-Datum festlegen; die App rechnet
   aus, wie viel pro Tag nötig ist, und zeigt, ob man auf Kurs ist.
 - **Gamification**: XP, Level, Tages-Streaks, Combos, ~16 Abzeichen, Konfetti —
@@ -75,6 +84,7 @@ Verstoß blockt also den Deploy):
 | Erklärung | max. 110 Zeichen |
 | längste = richtig | über den Gesamtbestand max. 30 % |
 | Konzept-IDs & Fragetexte | müssen zu `scripts/questions-baseline.json` passen |
+| `topic` | nicht leer und projektweit eindeutig |
 
 Die Spreizungsregel ist die wichtigste: Waren die vier Optionen unterschiedlich
 lang, war die richtige Antwort in 74 % der Fälle einfach die längste — man kam
@@ -86,6 +96,11 @@ Konzept-IDs sind der Schlüssel des Leitner-Fortschritts im localStorage: Änder
 sich eine ID, verliert die Nutzerin ihren Lernstand. Werden bewusst Konzepte
 ergänzt oder Fragetexte geändert, die Baseline neu erzeugen mit
 `node scripts/check-questions.mjs --update-baseline`.
+
+`topic` ist das Unterthema im Themenkatalog und damit nutzersichtbar. Ein Konzept
+ist genau ein Unterthema, deshalb muss `topic` eindeutig sein. Der gespeicherte
+Schlüssel für Ausnahmen und Merkliste ist die Konzept-ID — der `topic`-Text lässt
+sich also jederzeit umformulieren, ohne dass jemand seine Auswahl verliert.
 
 ## Deployment (GitHub Pages)
 

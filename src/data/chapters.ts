@@ -63,3 +63,25 @@ export const CHAPTERS: Chapter[] = [
 export function chapterById(id: string): Chapter | undefined {
   return CHAPTERS.find((c) => c.id === id);
 }
+
+/** Runden-Label: Emoji, Kurzname, Titel. */
+export interface RoundLabel {
+  emoji: string;
+  short: string;
+  title: string;
+}
+
+/** Runden-IDs, die kein echtes Kapitel sind — chapterById() liefert für sie
+ *  undefined, die Quiz-Kopfzeile bliebe also leer. */
+export const PSEUDO_CHAPTERS: Record<string, RoundLabel> = {
+  mix: { emoji: '🎲', short: 'Mix', title: 'Mix aus meinem Lernplan' },
+  merkliste: { emoji: '📌', short: 'Merkliste', title: 'Merkliste üben' },
+};
+
+/** Anzeige-Label einer Runde — echtes Kapitel oder Pseudo-Kapitel. */
+export function roundLabel(chapterId: string): RoundLabel {
+  const pseudo = PSEUDO_CHAPTERS[chapterId];
+  if (pseudo) return pseudo;
+  const ch = chapterById(chapterId);
+  return ch ? { emoji: ch.emoji, short: ch.short, title: ch.title } : { emoji: '📚', short: '', title: '' };
+}

@@ -1,5 +1,5 @@
 import { state } from '../store.ts';
-import { MAX_BOX, activeConcepts } from './leitner.ts';
+import { MAX_BOX, plannedConcepts } from './leitner.ts';
 
 /** Übersetzt den Leitner-Lernstand in eine geschätzte Schulnote und
  *  vergleicht sie mit der Zielnote. Reine Lesefunktionen — keine Seiteneffekte.
@@ -54,7 +54,7 @@ function scoreOf(conceptId: string): number {
 /** Geschätzte Prüfungsleistung (0..1) über den ganzen Lernplan — noch nicht
  *  gelernte Inhalte drücken die Schätzung bewusst. */
 export function estimatedPercent(): number {
-  const concepts = activeConcepts();
+  const concepts = plannedConcepts();
   if (concepts.length === 0) return 0;
   const sum = concepts.reduce((s, e) => s + scoreOf(e.concept.id), 0);
   return sum / concepts.length;
@@ -62,7 +62,7 @@ export function estimatedPercent(): number {
 
 /** Anzahl der Inhalte im Lernplan, die schon mindestens einmal drankamen */
 export function seenConcepts(): number {
-  return activeConcepts().filter((e) => state.progress[e.concept.id]?.lastSeen != null).length;
+  return plannedConcepts().filter((e) => state.progress[e.concept.id]?.lastSeen != null).length;
 }
 
 /** Geschätzte Note — null, solange zu wenig beantwortet wurde. */
@@ -77,7 +77,7 @@ export function estimatedGrade(): number | null {
  *  ist zugleich die Reihenfolge, in der pickRound() den Stoff tatsächlich abfragt
  *  (niedrigste Box zuerst). */
 export function conceptsNeededFor(grade: number): number {
-  const concepts = activeConcepts();
+  const concepts = plannedConcepts();
   if (concepts.length === 0) return 0;
   const scores = concepts.map((e) => scoreOf(e.concept.id));
   const target = percentForGrade(grade) * concepts.length;
@@ -117,7 +117,7 @@ export function gradeVerdict(): GradeVerdict {
   if (current < target) return { kind: 'ahead', target, current };
   if (current === target) return { kind: 'on-target', target, current };
 
-  const planSize = activeConcepts().length;
+  const planSize = plannedConcepts().length;
   return {
     kind: 'behind',
     target,
