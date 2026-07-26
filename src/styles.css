@@ -1348,6 +1348,49 @@ strong {
   font-weight: 600;
 }
 
+/* ==== Themen-Aktionen an der Frage ======================================
+   Kam mit dem Themenkatalog dazu und lief noch auf --card-2 aus dem alten
+   Design. Das Token existiert nicht mehr, wodurch die Trennlinien auf
+   currentColor zurückfielen und statt einer Hairline in Textfarbe standen. */
+.qa-flag {
+  margin: var(--s-3) 0 var(--s-1);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+.qa-flag .btn.small {
+  margin: 0 auto;
+}
+.qa-flag-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  margin-top: var(--s-3);
+  text-align: left;
+}
+
+/* ==== Themenkatalog & Merkliste ========================================= */
+.topic-row {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+.topic-row:last-of-type {
+  border-bottom: none;
+}
+.topic-row-main {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.35;
+}
+.topic-row-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
 /* ==== Konfetti ========================================================== */
 .confetti-host {
   position: fixed;

@@ -1,16 +1,15 @@
 import { bottomNav } from '../router.ts';
 import { esc, ring } from '../ui.ts';
 import { CHAPTERS } from '../data/chapters.ts';
-import { conceptsOf } from '../data/content.ts';
-import { chapterMastery, learnedCount, isChapterActive } from '../logic/leitner.ts';
-import { state, save } from '../store.ts';
+import { chapterMastery, learnedCount, isChapterActive, plannedConceptsOf, toggleChapter } from '../logic/leitner.ts';
+import { state } from '../store.ts';
 
 export function renderChapters(root: HTMLElement): void {
   root.innerHTML = `
     <header class="page-head"><h1>📚 Kapitel</h1><p class="muted">Terra Geografie 9 · Realschule Bayern — tippe ⭐, um Themen für deinen Lernplan zu wählen</p></header>
     <div class="chapter-list">
       ${CHAPTERS.map((ch) => {
-        const total = conceptsOf(ch.id).length;
+        const total = plannedConceptsOf(ch.id).length;
         const learned = learnedCount(ch.id);
         const mastery = chapterMastery(ch.id);
         const chestOpen = state.stats.openedChests.includes(ch.id);
@@ -25,6 +24,7 @@ export function renderChapters(root: HTMLElement): void {
               <span class="pill">${learned}/${total} gelernt</span>
               <span class="pill chest ${chestOpen ? 'open' : ''}">${chestOpen ? `${ch.chestBadge.emoji} Kiste offen` : '🎁 Kiste zu'}</span>
               ${active ? '' : '<span class="pill off">Nicht im Lernplan</span>'}
+              ${total === 0 ? '<span class="pill off">Kein Thema im Lernplan</span>' : ''}
             </div>
           </div>
           <div class="ch-side">
@@ -39,23 +39,16 @@ export function renderChapters(root: HTMLElement): void {
         </a>`;
       }).join('')}
       <a class="btn ghost big" href="#/quiz/mix">🎲 Mix aus meinem Lernplan</a>
+      <a class="btn ghost" href="#/topics">🗂️ Themenkatalog: einzelne Unterthemen wählen</a>
     </div>
     ${bottomNav('chapters')}`;
 
   root.querySelectorAll<HTMLButtonElement>('.ch-toggle').forEach((btn) => {
     btn.addEventListener('click', (e) => {
+      // Der Button steckt in einem <a>, das ins Quiz führt.
       e.preventDefault();
       e.stopPropagation();
-      const id = btn.dataset.id!;
-      const p = state.profile!;
-      if (p.chapters.includes(id)) {
-        if (p.chapters.length === 1) return; // mindestens ein Thema bleibt aktiv
-        p.chapters = p.chapters.filter((c) => c !== id);
-      } else {
-        p.chapters = [...p.chapters, id];
-      }
-      save();
-      renderChapters(root);
+      if (toggleChapter(btn.dataset.id!)) renderChapters(root);
     });
   });
 }
