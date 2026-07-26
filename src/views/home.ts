@@ -5,10 +5,8 @@ import { gradePicker, bindGradePicker } from './gradePicker.ts';
 import { gradeVerdict, type GradeVerdict } from '../logic/grade.ts';
 import { levelProgress } from '../logic/gamification.ts';
 import { pace, daysLeftLabel } from '../logic/pace.ts';
-import { totalLearned } from '../logic/leitner.ts';
-import { TOTAL_CONCEPTS } from '../data/content.ts';
+import { totalLearned, activeConceptCount, activeChapterIds, chapterMastery } from '../logic/leitner.ts';
 import { CHAPTERS } from '../data/chapters.ts';
-import { chapterMastery } from '../logic/leitner.ts';
 import { nudge } from '../logic/reminders.ts';
 
 export function renderHome(root: HTMLElement): void {
@@ -17,14 +15,17 @@ export function renderHome(root: HTMLElement): void {
   const lp = levelProgress(s.xp);
   const pc = pace();
   const learned = totalLearned();
-  const overall = TOTAL_CONCEPTS > 0 ? learned / TOTAL_CONCEPTS : 0;
+  const totalConcepts = activeConceptCount();
+  const overall = totalConcepts > 0 ? learned / totalConcepts : 0;
   const hint = nudge();
   const streakActiveToday = s.lastStudyDay === todayKey();
   const verdict = gradeVerdict();
 
-  // Schwächstes, noch nicht gemeistertes Kapitel als Empfehlung
+  // Schwächstes gewähltes Kapitel als Empfehlung
+  const activeIds = activeChapterIds();
+  const activeChapters = CHAPTERS.filter((c) => activeIds.includes(c.id));
   const nextChapter =
-    [...CHAPTERS].sort((a, b) => chapterMastery(a.id) - chapterMastery(b.id))[0] ?? CHAPTERS[0];
+    [...activeChapters].sort((a, b) => chapterMastery(a.id) - chapterMastery(b.id))[0] ?? CHAPTERS[0];
 
   const last7 = lastDays(7);
   const maxPts = Math.max(1, ...last7.map((d) => d.points));
@@ -33,7 +34,7 @@ export function renderHome(root: HTMLElement): void {
     <header class="home-head">
       <div>
         <div class="greet">Hi ${esc(p.firstName)} 👋</div>
-        <div class="muted small">${daysLeftLabel(pc)} bis zu deinem Ziel</div>
+        <div class="muted small">${pc.hasDeadline ? `${daysLeftLabel(pc)} bis zu deinem Ziel` : 'Geografie 9 · Realschule Bayern'}</div>
       </div>
       <div class="streak ${streakActiveToday ? 'hot' : ''}" title="Tage in Folge gelernt">
         <span class="flame">🔥</span><span class="streak-n">${s.streak}</span>
@@ -56,26 +57,26 @@ export function renderHome(root: HTMLElement): void {
         <div class="xp-line"><strong>${s.xp.toLocaleString('de-DE')} XP</strong></div>
         <div class="muted small">Noch ${(lp.needed - lp.into).toLocaleString('de-DE')} XP bis Level ${lp.level + 1}</div>
         <div class="bar"><span style="width:${(overall * 100).toFixed(0)}%"></span></div>
-        <div class="muted small">${learned} von ${TOTAL_CONCEPTS} Inhalten gelernt (${Math.round(overall * 100)} %)</div>
+        <div class="muted small">${learned} von ${totalConcepts} Inhalten gelernt (${Math.round(overall * 100)} %)</div>
       </div>
     </section>
 
-    <section class="card pace-card ${pc.done ? 'done' : pc.onTrack ? 'ok' : 'behind'}">
-      ${
-        pc.done
-          ? `<div class="pace-emoji">🎓</div><div><strong>Alles gemeistert!</strong><br><span class="muted small">Du bist bereit. Halte dein Wissen mit Mix-Runden frisch!</span></div>`
+    ${
+      pc.done
+        ? `<section class="card pace-card done"><div class="pace-emoji">🎓</div><div><strong>Alles gemeistert!</strong><br><span class="muted small">Du bist bereit. Halte dein Wissen mit Mix-Runden frisch!</span></div></section>`
+        : !pc.hasDeadline
+          ? `<a class="card pace-card neutral" href="#/settings"><div class="pace-emoji">🗓️</div><div><strong>Tagesziel: ${pc.todayPoints}/${pc.dailyTarget} Lernpunkte</strong><br><span class="muted small">Tipp: Setz dir in den Einstellungen ein Ziel-Datum — dann rechne ich dein Pensum aus.</span></div></a>`
           : pc.onTrack
-            ? `<div class="pace-emoji">🎯</div><div><strong>Du bist auf Kurs!</strong><br><span class="muted small">Tagesziel geschafft: ${pc.todayPoints}/${pc.dailyTarget} Lernpunkte. Stark!</span></div>`
-            : `<div class="pace-emoji">💪</div><div><strong>Heute noch ${pc.dailyTarget - pc.todayPoints} Lernpunkte</strong><br><span class="muted small">${pc.todayPoints}/${pc.dailyTarget} geschafft — jede richtige Antwort zählt!</span></div>`
-      }
-    </section>
+            ? `<section class="card pace-card ok"><div class="pace-emoji">🎯</div><div><strong>Du bist auf Kurs!</strong><br><span class="muted small">Tagesziel geschafft: ${pc.todayPoints}/${pc.dailyTarget} Lernpunkte. Stark!</span></div></section>`
+            : `<section class="card pace-card behind"><div class="pace-emoji">💪</div><div><strong>Heute noch ${pc.dailyTarget - pc.todayPoints} Lernpunkte</strong><br><span class="muted small">${pc.todayPoints}/${pc.dailyTarget} geschafft — jede richtige Antwort zählt!</span></div></section>`
+    }
 
     ${gradeCard(verdict)}
 
     <a class="btn primary big cta" href="#/quiz/${nextChapter.id}">
       Weiterlernen: ${nextChapter.emoji} ${esc(nextChapter.short)} 🚀
     </a>
-    <a class="btn ghost big" href="#/quiz/mix">🎲 Mix aus allen Kapiteln</a>
+    <a class="btn ghost big" href="#/quiz/mix">🎲 Mix aus meinem Lernplan</a>
 
     <section class="card week-card">
       <div class="card-title">Deine Woche</div>

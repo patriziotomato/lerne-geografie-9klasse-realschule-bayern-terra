@@ -3,8 +3,7 @@ import { esc, fmtDate, fmtTime, sha256Hex } from '../ui.ts';
 import { state, todayKey } from '../store.ts';
 import { CHAPTERS } from '../data/chapters.ts';
 import { conceptsOf } from '../data/content.ts';
-import { chapterMastery, learnedCount, totalLearned } from '../logic/leitner.ts';
-import { TOTAL_CONCEPTS } from '../data/content.ts';
+import { chapterMastery, learnedCount, totalLearned, activeConceptCount, isChapterActive } from '../logic/leitner.ts';
 import { pace, daysLeftLabel } from '../logic/pace.ts';
 import { gradeVerdict, gradeLabel, type GradeVerdict } from '../logic/grade.ts';
 
@@ -61,20 +60,24 @@ function renderDashboard(root: HTMLElement): void {
 
   root.innerHTML = `
     <header class="page-head"><h1>👨‍👩‍👧 Eltern-Bereich</h1>
-      <p class="muted">Lernfortschritt von ${esc(p.firstName)} · Ziel: ${new Date(p.deadline).toLocaleDateString('de-DE')}</p>
+      <p class="muted">Lernfortschritt von ${esc(p.firstName)}${p.deadline ? ` · Ziel: ${new Date(p.deadline).toLocaleDateString('de-DE')}` : ' · kein Ziel-Datum gesetzt'}</p>
     </header>
 
     <section class="stat-tiles">
       <div class="tile"><div class="tile-num">${totalMinutes}</div><div class="tile-label">Minuten gesamt</div></div>
       <div class="tile"><div class="tile-num">${s.sessions.length}</div><div class="tile-label">Lerneinheiten</div></div>
       <div class="tile"><div class="tile-num">${quote}%</div><div class="tile-label">Richtig-Quote</div></div>
-      <div class="tile"><div class="tile-num">${learned}/${TOTAL_CONCEPTS}</div><div class="tile-label">Inhalte gelernt</div></div>
+      <div class="tile"><div class="tile-num">${learned}/${activeConceptCount()}</div><div class="tile-label">Inhalte gelernt</div></div>
     </section>
 
-    <section class="card ${pc.done ? 'pace-card done' : pc.onTrack ? 'pace-card ok' : 'pace-card behind'}">
-      <div class="pace-emoji">${pc.done ? '🎓' : pc.onTrack ? '🎯' : '⚠️'}</div>
-      <div><strong>${pc.done ? 'Lernziel erreicht' : pc.onTrack ? 'Auf Kurs' : 'Hinter dem Plan'}</strong><br>
-      <span class="muted small">${daysLeftLabel(pc)} · Tagespensum: ${pc.dailyTarget} Lernpunkte · heute: ${pc.todayPoints}</span></div>
+    <section class="card ${pc.done ? 'pace-card done' : !pc.hasDeadline ? 'pace-card neutral' : pc.onTrack ? 'pace-card ok' : 'pace-card behind'}">
+      <div class="pace-emoji">${pc.done ? '🎓' : !pc.hasDeadline ? '🗓️' : pc.onTrack ? '🎯' : '⚠️'}</div>
+      <div><strong>${pc.done ? 'Lernziel erreicht' : !pc.hasDeadline ? 'Kein Ziel-Datum gesetzt' : pc.onTrack ? 'Auf Kurs' : 'Hinter dem Plan'}</strong><br>
+      <span class="muted small">${
+        pc.hasDeadline
+          ? `${daysLeftLabel(pc)} · Tagespensum: ${pc.dailyTarget} Lernpunkte · heute: ${pc.todayPoints}`
+          : `Freies Lernen · heute: ${pc.todayPoints} Lernpunkte`
+      }</span></div>
     </section>
 
     ${parentGradeCard(gradeVerdict())}
@@ -83,9 +86,10 @@ function renderDashboard(root: HTMLElement): void {
       <div class="card-title">Fortschritt pro Kapitel</div>
       ${CHAPTERS.map((ch) => {
         const m = chapterMastery(ch.id);
+        const active = isChapterActive(ch.id);
         return `
-        <div class="parent-ch">
-          <div class="parent-ch-head"><span>${ch.emoji} ${esc(ch.short)}</span><span class="muted small">${learnedCount(ch.id)}/${conceptsOf(ch.id).length} · ${Math.round(m * 100)} %</span></div>
+        <div class="parent-ch ${active ? '' : 'inactive'}">
+          <div class="parent-ch-head"><span>${ch.emoji} ${esc(ch.short)}${active ? '' : ' <span class="pill off">nicht im Lernplan</span>'}</span><span class="muted small">${learnedCount(ch.id)}/${conceptsOf(ch.id).length} · ${Math.round(m * 100)} %</span></div>
           <div class="bar"><span style="width:${(m * 100).toFixed(0)}%; background:${ch.color}"></span></div>
         </div>`;
       }).join('')}
@@ -187,14 +191,14 @@ function buildReport(): string {
   const v = gradeVerdict();
   const lines = [
     `📊 Geo-Quest Lernbericht — ${p.firstName}`,
-    `Ziel: ${new Date(p.deadline).toLocaleDateString('de-DE')} (${daysLeftLabel(pc)})`,
-    `Status: ${pc.done ? 'Alles gelernt 🎓' : pc.onTrack ? 'Auf Kurs 🎯' : 'Hinter dem Plan ⚠️'}`,
+    p.deadline ? `Ziel: ${new Date(p.deadline).toLocaleDateString('de-DE')} (${daysLeftLabel(pc)})` : 'Kein Ziel-Datum gesetzt',
+    `Status: ${pc.done ? 'Alles gelernt 🎓' : !pc.hasDeadline ? 'Freies Lernen 🗓️' : pc.onTrack ? 'Auf Kurs 🎯' : 'Hinter dem Plan ⚠️'}`,
     ...(v.kind === 'no-target'
       ? []
       : v.kind === 'no-data'
         ? [`Noten-Einschätzung: noch zu wenig Daten · Zielnote ${v.target}`]
         : [`Noten-Einschätzung: Stand ${v.current} · Zielnote ${v.target}`]),
-    `Inhalte gelernt: ${totalLearned()}/${TOTAL_CONCEPTS}`,
+    `Inhalte gelernt: ${totalLearned()}/${activeConceptCount()}`,
     `Lernzeit gesamt: ${totalMinutes} min in ${s.sessions.length} Einheiten`,
     `Streak: ${s.streak} Tage (Rekord: ${s.bestStreak})`,
     '',

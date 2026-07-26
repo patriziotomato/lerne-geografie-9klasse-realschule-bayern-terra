@@ -1,4 +1,5 @@
 import type { AppState, DayLog, Profile } from './types.ts';
+import { CHAPTERS } from './data/chapters.ts';
 
 const KEY = 'geoquest.geo9.terra.v1';
 const SCHEMA_VERSION = 3;
@@ -34,11 +35,28 @@ function load(): AppState {
     const parsed = JSON.parse(raw) as Partial<AppState>;
     // Sanfte Migration: fehlende Felder mit Defaults auffüllen.
     const def = defaultState();
+    const rawProfile = parsed.profile as Partial<Profile> | null | undefined;
+    const profile: Profile | null = rawProfile
+      ? {
+          firstName: rawProfile.firstName ?? '',
+          phone: rawProfile.phone ?? '',
+          deadline: rawProfile.deadline ?? null,
+          studyTimes: rawProfile.studyTimes ?? [],
+          // Profile von vor der Themenauswahl lernen weiterhin alles.
+          chapters:
+            rawProfile.chapters && rawProfile.chapters.length > 0
+              ? rawProfile.chapters
+              : CHAPTERS.map((c) => c.id),
+          // Profile von vor der Zielnoten-Abfrage werden auf der Startseite gefragt.
+          targetGrade: validGrade(rawProfile.targetGrade),
+          createdAt: rawProfile.createdAt ?? new Date().toISOString(),
+        }
+      : null;
     return {
       ...def,
       ...parsed,
+      profile,
       version: SCHEMA_VERSION,
-      profile: migrateProfile(parsed.profile),
       stats: { ...def.stats, ...(parsed.stats ?? {}) },
       settings: { ...def.settings, ...(parsed.settings ?? {}) },
       progress: parsed.progress ?? {},
@@ -48,14 +66,12 @@ function load(): AppState {
   }
 }
 
-/** Profile aus älteren Schema-Versionen auffüllen (v2 kannte noch keine Zielnote).
- *  Die Schwellen bleiben absichtlich hier inline — ein Import aus logic/grade.ts
+/** Zielnote aus dem Speicher übernehmen, sofern sie eine echte Schulnote ist.
+ *  Die Grenzen stehen absichtlich hier inline — ein Import aus logic/grade.ts
  *  würde einen Zyklus store → grade → store erzeugen. */
-function migrateProfile(profile: Profile | null | undefined): Profile | null {
-  if (!profile) return null;
-  const g = profile.targetGrade;
-  const valid = typeof g === 'number' && Number.isInteger(g) && g >= 1 && g <= 6;
-  return { ...profile, targetGrade: valid ? g : null };
+function validGrade(grade: unknown): number | null {
+  const ok = typeof grade === 'number' && Number.isInteger(grade) && grade >= 1 && grade <= 6;
+  return ok ? (grade as number) : null;
 }
 
 /** Globaler App-Zustand. Nach Mutationen save() aufrufen. */

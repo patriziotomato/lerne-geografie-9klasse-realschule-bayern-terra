@@ -1,9 +1,10 @@
-import { ALL_CONCEPTS, TOTAL_CONCEPTS } from '../data/content.ts';
 import { state } from '../store.ts';
-import { MAX_BOX } from './leitner.ts';
+import { MAX_BOX, activeConcepts } from './leitner.ts';
 
 /** Übersetzt den Leitner-Lernstand in eine geschätzte Schulnote und
- *  vergleicht sie mit der Zielnote. Reine Lesefunktionen — keine Seiteneffekte. */
+ *  vergleicht sie mit der Zielnote. Reine Lesefunktionen — keine Seiteneffekte.
+ *  Gerechnet wird über den Lernplan (die gewählten Themenblöcke), nicht über
+ *  alle Kapitel — abgewählte Themen kommen in der Prüfung ja nicht dran. */
 
 /** Notenschlüssel Realschule Bayern: Mindest-Prozentsatz für Note 1…5 (darunter 6) */
 const GRADE_THRESHOLDS = [0.92, 0.81, 0.67, 0.5, 0.3];
@@ -50,16 +51,18 @@ function scoreOf(conceptId: string): number {
   return BOX_SCORE[Math.min(MAX_BOX, Math.max(0, p.box))];
 }
 
-/** Geschätzte Prüfungsleistung (0..1) über ALLE Inhalte — ungelernte drücken bewusst. */
+/** Geschätzte Prüfungsleistung (0..1) über den ganzen Lernplan — noch nicht
+ *  gelernte Inhalte drücken die Schätzung bewusst. */
 export function estimatedPercent(): number {
-  if (TOTAL_CONCEPTS === 0) return 0;
-  const sum = ALL_CONCEPTS.reduce((s, e) => s + scoreOf(e.concept.id), 0);
-  return sum / TOTAL_CONCEPTS;
+  const concepts = activeConcepts();
+  if (concepts.length === 0) return 0;
+  const sum = concepts.reduce((s, e) => s + scoreOf(e.concept.id), 0);
+  return sum / concepts.length;
 }
 
-/** Anzahl der Inhalte, die schon mindestens einmal drankamen */
+/** Anzahl der Inhalte im Lernplan, die schon mindestens einmal drankamen */
 export function seenConcepts(): number {
-  return ALL_CONCEPTS.filter((e) => state.progress[e.concept.id]?.lastSeen != null).length;
+  return activeConcepts().filter((e) => state.progress[e.concept.id]?.lastSeen != null).length;
 }
 
 /** Geschätzte Note — null, solange zu wenig beantwortet wurde. */
@@ -74,14 +77,14 @@ export function estimatedGrade(): number | null {
  *  ist zugleich die Reihenfolge, in der pickRound() den Stoff tatsächlich abfragt
  *  (niedrigste Box zuerst). */
 export function conceptsNeededFor(grade: number): number {
-  if (TOTAL_CONCEPTS === 0) return 0;
-  const target = percentForGrade(grade) * TOTAL_CONCEPTS;
-  let sum = ALL_CONCEPTS.reduce((s, e) => s + scoreOf(e.concept.id), 0);
+  const concepts = activeConcepts();
+  if (concepts.length === 0) return 0;
+  const scores = concepts.map((e) => scoreOf(e.concept.id));
+  const target = percentForGrade(grade) * concepts.length;
+  let sum = scores.reduce((s, v) => s + v, 0);
   if (sum >= target) return 0;
 
-  const open = ALL_CONCEPTS.map((e) => scoreOf(e.concept.id))
-    .filter((score) => score < BOX_SCORE[MAX_BOX])
-    .sort((a, b) => a - b);
+  const open = scores.filter((score) => score < BOX_SCORE[MAX_BOX]).sort((a, b) => a - b);
 
   let needed = 0;
   for (const score of open) {
@@ -114,11 +117,12 @@ export function gradeVerdict(): GradeVerdict {
   if (current < target) return { kind: 'ahead', target, current };
   if (current === target) return { kind: 'on-target', target, current };
 
+  const planSize = activeConcepts().length;
   return {
     kind: 'behind',
     target,
     current,
     needed: conceptsNeededFor(target),
-    early: TOTAL_CONCEPTS === 0 || seenConcepts() / TOTAL_CONCEPTS < EARLY_COVERAGE,
+    early: planSize === 0 || seenConcepts() / planSize < EARLY_COVERAGE,
   };
 }

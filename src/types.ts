@@ -39,10 +39,12 @@ export interface Chapter {
 export interface Profile {
   firstName: string;
   phone: string;
-  /** ISO-Datum (yyyy-mm-dd), bis wann gelernt sein muss */
-  deadline: string;
-  /** Uhrzeiten "HH:MM", zu denen gelernt werden soll */
+  /** ISO-Datum (yyyy-mm-dd), bis wann gelernt sein muss — optional */
+  deadline: string | null;
+  /** Uhrzeiten "HH:MM", zu denen gelernt werden soll — optional, leer = keine */
   studyTimes: string[];
+  /** Ausgewählte Themenblöcke (Kapitel-IDs); alle IDs = "Alle Inhalte" */
+  chapters: string[];
   /** Angepeilte Schulnote (1–4); null = noch nicht gefragt */
   targetGrade: number | null;
   createdAt: string;

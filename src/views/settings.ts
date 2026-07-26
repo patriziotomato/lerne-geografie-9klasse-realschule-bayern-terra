@@ -4,6 +4,8 @@ import { gradePicker, bindGradePicker } from './gradePicker.ts';
 import { state, save, resetAll, exportJson } from '../store.ts';
 import { downloadIcs } from '../logic/ics.ts';
 import { requestPermission, scheduleWhileOpen, notificationsSupported } from '../logic/reminders.ts';
+import { CHAPTERS } from '../data/chapters.ts';
+import { conceptsOf } from '../data/content.ts';
 
 export function renderSettings(root: HTMLElement): void {
   const p = state.profile!;
@@ -20,22 +22,43 @@ export function renderSettings(root: HTMLElement): void {
       <label class="field"><span>Handynummer</span>
         <input id="set-phone" type="tel" value="${esc(p.phone)}" maxlength="20" />
         <small class="muted">Für spätere SMS-Erinnerungen — bleibt bis dahin nur auf diesem Gerät.</small></label>
-      <label class="field"><span>Lernziel-Datum</span>
-        <input id="set-deadline" type="date" value="${p.deadline}" /></label>
+      <label class="field"><span>Lernziel-Datum (optional)</span>
+        <input id="set-deadline" type="date" value="${p.deadline ?? ''}" />
+        <small class="muted">${p.deadline ? 'Daraus berechne ich dein Tagespensum.' : 'Kein Ziel gesetzt — z. B. der Tag der Schulaufgabe.'}</small></label>
+      ${p.deadline ? '<button class="btn ghost small" id="set-deadline-clear">Ziel entfernen</button>' : ''}
       <div class="field"><span>Meine Zielnote</span>
         ${gradePicker(p.targetGrade)}
         <small class="muted">Danach richtet sich die Einschätzung auf der Startseite: für welche Note dein Lernstand gerade reicht.</small></div>
     </section>
 
     <section class="card">
+      <div class="card-title">🎯 Meine Themen</div>
+      <p class="muted small">Diese Themenblöcke zählen für Fortschritt, Mix-Runden und Tagespensum.</p>
+      <div class="topic-grid">
+        ${CHAPTERS.map((ch) => {
+          const on = p.chapters.includes(ch.id);
+          return `
+          <button class="topic-card ${on ? 'on' : ''}" data-id="${ch.id}" style="--ch-color:${ch.color}">
+            <span class="topic-emoji">${ch.emoji}</span>
+            <span class="topic-name">${esc(ch.short)}</span>
+            <span class="topic-check">${on ? '✓' : ''}</span>
+          </button>`;
+        }).join('')}
+      </div>
+      <button class="btn ghost small" id="set-all-topics">🌍 Alle Inhalte auswählen</button>
+      <p class="muted small">${p.chapters.length} Themenblöcke · ${p.chapters.reduce((n, id) => n + conceptsOf(id).length, 0)} Inhalte im Lernplan</p>
+    </section>
+
+    <section class="card">
       <div class="card-title">Lernzeiten & Erinnerungen</div>
+      ${p.studyTimes.length === 0 ? '<p class="muted small">Noch keine Lernzeiten — leg fest, wann du lernen willst (z. B. 14:30 und 20:30), dann können App und Kalender dich erinnern.</p>' : ''}
       <div id="set-times">
         ${p.studyTimes
           .map(
             (t, i) => `
           <div class="time-row">
             <input type="time" value="${t}" data-idx="${i}" class="set-time" />
-            ${p.studyTimes.length > 1 ? `<button class="btn icon set-del-time" data-idx="${i}" aria-label="Zeit entfernen">✕</button>` : ''}
+            <button class="btn icon set-del-time" data-idx="${i}" aria-label="Zeit entfernen">✕</button>
           </div>`,
           )
           .join('')}
@@ -53,8 +76,12 @@ export function renderSettings(root: HTMLElement): void {
             ? '<button class="btn ghost small" id="set-perm">🔔 Benachrichtigungen erlauben</button>'
             : ''
       }
-      <button class="btn primary" id="set-ics">📅 Lernzeiten in Kalender eintragen (.ics)</button>
-      <p class="muted small">Tipp: Der Kalender-Eintrag erinnert dich zuverlässig — auch wenn die App zu ist. Echte SMS-Erinnerungen kommen in einer späteren Version.</p>
+      ${
+        p.studyTimes.length > 0
+          ? `<button class="btn primary" id="set-ics">📅 Lernzeiten in Kalender eintragen (.ics)</button>
+             <p class="muted small">Tipp: Der Kalender-Eintrag erinnert dich zuverlässig — auch wenn die App zu ist. Echte SMS-Erinnerungen kommen in einer späteren Version.</p>`
+          : ''
+      }
     </section>
 
     <section class="card">
@@ -97,10 +124,33 @@ function bind(root: HTMLElement): void {
   });
   root.querySelector('#set-deadline')!.addEventListener('change', (e) => {
     const v = (e.target as HTMLInputElement).value;
-    if (v) {
-      p.deadline = v;
+    p.deadline = v || null;
+    save();
+    renderSettings(root);
+  });
+  root.querySelector('#set-deadline-clear')?.addEventListener('click', () => {
+    p.deadline = null;
+    save();
+    renderSettings(root);
+  });
+
+  root.querySelectorAll<HTMLButtonElement>('.topic-card').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.id!;
+      if (p.chapters.includes(id)) {
+        if (p.chapters.length === 1) return; // mindestens ein Thema bleibt aktiv
+        p.chapters = p.chapters.filter((c) => c !== id);
+      } else {
+        p.chapters = [...p.chapters, id];
+      }
       save();
-    }
+      renderSettings(root);
+    });
+  });
+  root.querySelector('#set-all-topics')!.addEventListener('click', () => {
+    p.chapters = CHAPTERS.map((c) => c.id);
+    save();
+    renderSettings(root);
   });
 
   bindGradePicker(root, (grade) => {
@@ -146,7 +196,7 @@ function bind(root: HTMLElement): void {
     scheduleWhileOpen();
     renderSettings(root);
   });
-  root.querySelector('#set-ics')!.addEventListener('click', downloadIcs);
+  root.querySelector('#set-ics')?.addEventListener('click', downloadIcs);
 
   root.querySelector('#set-sound')!.addEventListener('change', (e) => {
     state.settings.soundEnabled = (e.target as HTMLInputElement).checked;
