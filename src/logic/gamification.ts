@@ -2,7 +2,7 @@ import type { RoundResult } from '../types.ts';
 import { state, save, todayKey, todayLog } from '../store.ts';
 import { CHAPTERS } from '../data/chapters.ts';
 import { chapterMastery, learnedCount, plannedConceptsOf } from './leitner.ts';
-import { estimatedGrade } from './grade.ts';
+import { estimatedGrade, WORST_NAMED_GRADE } from './grade.ts';
 
 /** XP für eine richtige Antwort bei gegebener Combo (Anzahl richtiger davor in Serie) */
 export function xpForAnswer(combo: number): number {
@@ -101,8 +101,6 @@ export function finishRound(input: {
   perfect: boolean;
   xpGained: number;
   bestCombo: number;
-  /** Geschätzte Note beim Rundenstart — die Boxen sind jetzt schon verändert. */
-  gradeBefore: number | null;
 }): RoundResult {
   const s = state.stats;
   const levelBefore = levelForXp(s.xp);
@@ -152,6 +150,16 @@ export function finishRound(input: {
   if (totalConcepts > 0 && learnedTotal >= totalConcepts / 2) award('half-way', newBadges);
   if (learnedAll) award('all-master', newBadges);
 
+  // Notensprung: gefeiert wird nur eine neue Bestnote. Ein Vergleich mit dem Stand
+  // beim Rundenstart würde bei jedem Auf und Ab erneut auslösen, und eine 6 ist kein
+  // Anlass zum Feiern — sie kommt allein daher, dass der Rest noch offen ist.
+  const gradeAfter = estimatedGrade();
+  const isRecord =
+    gradeAfter !== null &&
+    gradeAfter <= WORST_NAMED_GRADE &&
+    (s.bestGrade === null || gradeAfter < s.bestGrade);
+  if (isRecord) s.bestGrade = gradeAfter;
+
   save();
 
   return {
@@ -164,7 +172,6 @@ export function finishRound(input: {
     leveledUpTo: level > levelBefore ? level : null,
     newBadges,
     unlockedChests,
-    gradeBefore: input.gradeBefore,
-    gradeAfter: estimatedGrade(),
+    newBestGrade: isRecord ? gradeAfter : null,
   };
 }

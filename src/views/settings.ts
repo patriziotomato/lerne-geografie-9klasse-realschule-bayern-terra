@@ -3,7 +3,8 @@ import { esc, sha256Hex } from '../ui.ts';
 import { gradePicker, bindGradePicker } from './gradePicker.ts';
 import { state, save, resetAll, exportJson } from '../store.ts';
 import { downloadIcs } from '../logic/ics.ts';
-import { requestPermission, scheduleWhileOpen, notificationsSupported } from '../logic/reminders.ts';
+import { scheduleWhileOpen } from '../logic/reminders.ts';
+import { requestPermission, notificationsSupported } from '../logic/notify.ts';
 import { CHAPTERS } from '../data/chapters.ts';
 import { plannedConceptCount, toggleChapter, todoConcepts } from '../logic/leitner.ts';
 

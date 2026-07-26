@@ -5,6 +5,10 @@ import { state, save, todayLog } from '../store.ts';
 
 export const MAX_BOX = 4;
 
+/** Fragen pro Runde. Auch grade.ts rechnet damit die Restdistanz in Runden aus,
+ *  deshalb liegt der Wert hier und nicht in der Quiz-View. */
+export const ROUND_SIZE = 10;
+
 /** Runden-ID der Merkliste-Übungsrunde (kein echtes Kapitel) */
 export const MERK_ROUND = 'merkliste';
 
@@ -217,7 +221,7 @@ function toRoundItem(chapterId: string, concept: Concept, correctDisplayIndex: n
 /** Stellt eine Runde zusammen: niedrige Boxen und lange nicht Gesehenes zuerst.
  *  chapterId 'mix' zieht aus dem ganzen Lernplan, 'merkliste' nur aus den
  *  vorgemerkten Themen. */
-export function pickRound(chapterId: string, count = 10): RoundItem[] {
+export function pickRound(chapterId: string, count = ROUND_SIZE): RoundItem[] {
   const pool = drawablePool(chapterId);
 
   const scored = pool.map((entry) => {
