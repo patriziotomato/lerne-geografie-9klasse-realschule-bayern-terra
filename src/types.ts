@@ -106,12 +106,25 @@ export interface Settings {
   parentPinHash: string | null;
 }
 
+/** Markierungen einzelner Unterthemen. Werte sind Konzept-IDs: Unterthema
+ *  (Concept.topic) und Konzept sind 1:1, und die IDs sind über
+ *  scripts/check-questions.mjs (Regel S1) gegen Umbenennung geschützt — Themen-Texte
+ *  dürfen sich dagegen jederzeit ändern.
+ *  Invariante: excluded ∩ todo = ∅ (halten die Mutatoren in logic/leitner.ts). */
+export interface TopicFlags {
+  /** „Hatten wir noch nicht" — zählt NICHT zum Lernplan, fällt aus allen Nennern. */
+  excluded: string[];
+  /** „Muss ich noch lernen" — bleibt im Lernplan, ruht nur in normalen Runden. */
+  todo: string[];
+}
+
 export interface AppState {
   version: number;
   profile: Profile | null;
   progress: Record<string, ConceptProgress>;
   stats: Stats;
   settings: Settings;
+  topics: TopicFlags;
 }
 
 /** Ergebnis einer beendeten Quiz-Runde (für den Results-Screen) */
@@ -119,6 +132,10 @@ export interface RoundResult {
   chapterId: string;
   total: number;
   correct: number;
+  /** Fehlerfreie Runde. Nicht aus correct/total ableiten: Fragen, die über
+   *  „hatten wir noch nicht" aus der Runde geflogen sind, zählen nicht als
+   *  gemeistert, machen aber correct === total wahr. */
+  perfect: boolean;
   xpGained: number;
   bestCombo: number;
   leveledUpTo: number | null;

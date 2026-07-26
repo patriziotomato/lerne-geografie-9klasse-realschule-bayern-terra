@@ -26,7 +26,7 @@ export function ring(ratio: number, size: number, stroke: number, color: string,
 
 /** Konfetti-Regen (rein CSS/DOM, entfernt sich selbst) */
 export function confetti(durationMs = 2600): void {
-  const colors = ['#f59e0b', '#ec4899', '#3b82f6', '#10b981', '#8b5cf6', '#06b6d4'];
+  const colors = ['#ffb020', '#ec5f92', '#3f7fe8', '#2ed77f', '#9b82ff', '#2ee6d0'];
   const host = document.createElement('div');
   host.className = 'confetti-host';
   host.setAttribute('aria-hidden', 'true');

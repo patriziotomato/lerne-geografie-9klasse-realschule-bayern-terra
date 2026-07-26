@@ -1,9 +1,8 @@
 import type { RoundResult } from '../types.ts';
 import { state, save, todayKey, todayLog } from '../store.ts';
 import { CHAPTERS } from '../data/chapters.ts';
-import { chapterMastery, learnedCount } from './leitner.ts';
+import { chapterMastery, learnedCount, plannedConceptsOf } from './leitner.ts';
 import { estimatedGrade, WORST_NAMED_GRADE } from './grade.ts';
-import { conceptsOf } from '../data/content.ts';
 
 /** XP für eine richtige Antwort bei gegebener Combo (Anzahl richtiger davor in Serie) */
 export function xpForAnswer(combo: number): number {
@@ -97,6 +96,9 @@ export function finishRound(input: {
   chapterId: string;
   total: number;
   correct: number;
+  /** Fehlerfreie Runde — kommt aus der View, weil nur sie weiß, ob Fragen
+   *  ungewertet aus der Runde geflogen sind. */
+  perfect: boolean;
   xpGained: number;
   bestCombo: number;
 }): RoundResult {
@@ -110,7 +112,7 @@ export function finishRound(input: {
 
   const newBadges: string[] = [];
   award('first-round', newBadges);
-  if (input.correct === input.total && input.total > 0) award('perfect-round', newBadges);
+  if (input.perfect && input.total > 0) award('perfect-round', newBadges);
   if (input.bestCombo >= 10) award('combo-10', newBadges);
   for (const n of [3, 7, 14, 30]) if (s.streak >= n) award(`streak-${n}`, newBadges);
   const hour = new Date().getHours();
@@ -126,7 +128,9 @@ export function finishRound(input: {
   // Kapitel-Kisten: 100 % Mastery schaltet die Schatzkiste frei.
   const unlockedChests: string[] = [];
   for (const ch of CHAPTERS) {
-    if (conceptsOf(ch.id).length === 0) continue;
+    // Kapitel, deren Unterthemen alle ausgeschlossen sind, bekommen keine Kiste —
+    // sonst wäre sie durch Wegklicken statt Lernen zu holen.
+    if (plannedConceptsOf(ch.id).length === 0) continue;
     if (s.openedChests.includes(ch.id)) continue;
     if (chapterMastery(ch.id) >= 1) {
       s.openedChests.push(ch.id);
@@ -134,13 +138,15 @@ export function finishRound(input: {
     }
   }
 
-  // Gesamt-Badges nach Kisten-Check
-  const learnedAll = CHAPTERS.every((ch) => {
-    const n = conceptsOf(ch.id).length;
-    return n > 0 && learnedCount(ch.id) === n;
-  });
-  const totalConcepts = CHAPTERS.reduce((n, ch) => n + conceptsOf(ch.id).length, 0);
-  const learnedTotal = CHAPTERS.reduce((n, ch) => n + learnedCount(ch.id), 0);
+  // Gesamt-Badges nach Kisten-Check. Kapitel ohne Lernplan-Themen werden
+  // übersprungen: ein komplett ausgeschlossenes Kapitel hätte über die Bedingung
+  // „n > 0 und alles gelernt" das Alles-gemeistert-Badge dauerhaft blockiert.
+  const withPlan = CHAPTERS.map((ch) => ({ ch, n: plannedConceptsOf(ch.id).length })).filter(
+    (e) => e.n > 0,
+  );
+  const learnedAll = withPlan.length > 0 && withPlan.every((e) => learnedCount(e.ch.id) === e.n);
+  const totalConcepts = withPlan.reduce((n, e) => n + e.n, 0);
+  const learnedTotal = withPlan.reduce((n, e) => n + learnedCount(e.ch.id), 0);
   if (totalConcepts > 0 && learnedTotal >= totalConcepts / 2) award('half-way', newBadges);
   if (learnedAll) award('all-master', newBadges);
 
@@ -160,6 +166,7 @@ export function finishRound(input: {
     chapterId: input.chapterId,
     total: input.total,
     correct: input.correct,
+    perfect: input.perfect,
     xpGained: input.xpGained,
     bestCombo: input.bestCombo,
     leveledUpTo: level > levelBefore ? level : null,

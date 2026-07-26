@@ -9,6 +9,15 @@ export const MAX_BOX = 4;
  *  deshalb liegt der Wert hier und nicht in der Quiz-View. */
 export const ROUND_SIZE = 10;
 
+/** Runden-ID der Merkliste-Übungsrunde (kein echtes Kapitel) */
+export const MERK_ROUND = 'merkliste';
+
+/** Ein Konzept mit seinem Kapitel */
+export interface ConceptEntry {
+  chapterId: string;
+  concept: Concept;
+}
+
 /** IDs der aktuell gewählten Themenblöcke (leer/fehlend = alle) */
 export function activeChapterIds(): string[] {
   const sel = state.profile?.chapters;
@@ -19,10 +28,113 @@ export function isChapterActive(chapterId: string): boolean {
   return activeChapterIds().includes(chapterId);
 }
 
-/** Konzepte der gewählten Themenblöcke */
-export function activeConcepts(): { chapterId: string; concept: Concept }[] {
+// ---------------------------------------------------------------------------
+// Unterthemen-Markierungen. Ein Unterthema (Concept.topic) ist 1:1 ein Konzept,
+// markiert wird deshalb über die Konzept-ID.
+// ---------------------------------------------------------------------------
+
+/** „Hatten wir noch nicht" — zählt nicht zum Lernplan */
+export function isExcluded(conceptId: string): boolean {
+  return state.topics.excluded.includes(conceptId);
+}
+
+/** „Muss ich noch lernen" — im Lernplan, ruht in normalen Runden */
+export function isTodo(conceptId: string): boolean {
+  return state.topics.todo.includes(conceptId);
+}
+
+/** Konzepte der gewählten Themenblöcke, ohne Unterthemen-Filter.
+ *  Absichtlich privat: jeder Nenner soll plannedConcepts() nehmen, sonst zählen
+ *  ausgeschlossene Unterthemen wieder mit. */
+function activeConcepts(): ConceptEntry[] {
   const active = new Set(activeChapterIds());
   return ALL_CONCEPTS.filter((e) => active.has(e.chapterId));
+}
+
+/** Der Lernplan: gewählte Themenblöcke minus ausgeschlossene Unterthemen.
+ *  Basis ALLER Nenner (Mastery, Schatzkiste, Notenschätzung, Tagespensum).
+ *  Vorgemerkte Themen bleiben drin — sie müssen ja gelernt werden. */
+export function plannedConcepts(): ConceptEntry[] {
+  const excluded = new Set(state.topics.excluded);
+  return activeConcepts().filter((e) => !excluded.has(e.concept.id));
+}
+
+/** Lernplan-Konzepte eines Kapitels. Die Kapitel-Auswahl wird hier bewusst NICHT
+ *  geprüft — die Kapitelliste zeigt auch abgewählte Kapitel mit echtem Lernstand. */
+export function plannedConceptsOf(chapterId: string): Concept[] {
+  const excluded = new Set(state.topics.excluded);
+  return conceptsOf(chapterId).filter((c) => !excluded.has(c.id));
+}
+
+/** Die Merkliste, quer über alle Kapitel — ignoriert die Kapitel-Auswahl, weil
+ *  diese Themen bewusst einzeln vorgemerkt wurden. */
+export function todoConcepts(): ConceptEntry[] {
+  const excluded = new Set(state.topics.excluded);
+  const todo = new Set(state.topics.todo);
+  return ALL_CONCEPTS.filter((e) => todo.has(e.concept.id) && !excluded.has(e.concept.id));
+}
+
+/** Was eine Runde ziehen darf: Lernplan minus ruhende Merklisten-Themen.
+ *  Ausgeschlossene Unterthemen fliegen auch aus Einzelkapitel-Runden — anders als
+ *  bei der Kapitel-Auswahl, die abgewählte Kapitel direkt spielbar lässt. „Hatten
+ *  wir noch nicht" heißt, der Stoff ist nicht dran, also taucht er nirgends auf. */
+function drawablePool(chapterId: string): ConceptEntry[] {
+  if (chapterId === MERK_ROUND) return todoConcepts();
+  const todo = new Set(state.topics.todo);
+  const pool =
+    chapterId === 'mix'
+      ? plannedConcepts()
+      : plannedConceptsOf(chapterId).map((concept) => ({ chapterId, concept }));
+  return pool.filter((e) => !todo.has(e.concept.id));
+}
+
+/** Ein Unterthema aus dem Lernplan nehmen. false = abgelehnt, weil sonst kein
+ *  einziges Thema übrig bliebe: bei leerem Lernplan ist maxPoints() 0, damit gilt
+ *  pace().done und die Startseite jubelt „Alles gemeistert", ohne dass etwas
+ *  gelernt wäre. */
+export function excludeTopic(conceptId: string): boolean {
+  if (isExcluded(conceptId)) return true;
+  if (plannedConcepts().length <= 1) return false;
+  state.topics.excluded = [...state.topics.excluded, conceptId];
+  // Ausgeschlossen und vorgemerkt schließen sich aus.
+  state.topics.todo = state.topics.todo.filter((id) => id !== conceptId);
+  save();
+  return true;
+}
+
+/** Ein Unterthema zurück in den Lernplan holen */
+export function includeTopic(conceptId: string): void {
+  state.topics.excluded = state.topics.excluded.filter((id) => id !== conceptId);
+  save();
+}
+
+/** Auf die Merkliste. Ein ausgeschlossenes Thema wird dabei wieder aufgenommen
+ *  („brauche ich doch") — die beiden Markierungen schließen sich aus. */
+export function addTodo(conceptId: string): void {
+  state.topics.excluded = state.topics.excluded.filter((id) => id !== conceptId);
+  if (!isTodo(conceptId)) state.topics.todo = [...state.topics.todo, conceptId];
+  save();
+}
+
+/** „Gelernt ✓" — von der Merkliste nehmen */
+export function removeTodo(conceptId: string): void {
+  state.topics.todo = state.topics.todo.filter((id) => id !== conceptId);
+  save();
+}
+
+/** Themenblock in den Lernplan aufnehmen bzw. daraus entfernen.
+ *  false = abgelehnt, weil mindestens ein Themenblock aktiv bleiben muss. */
+export function toggleChapter(chapterId: string): boolean {
+  const p = state.profile;
+  if (!p) return false;
+  if (p.chapters.includes(chapterId)) {
+    if (p.chapters.length === 1) return false;
+    p.chapters = p.chapters.filter((c) => c !== chapterId);
+  } else {
+    p.chapters = [...p.chapters, chapterId];
+  }
+  save();
+  return true;
 }
 
 export function progressOf(conceptId: string): ConceptProgress {
@@ -107,12 +219,10 @@ function toRoundItem(chapterId: string, concept: Concept, correctDisplayIndex: n
 }
 
 /** Stellt eine Runde zusammen: niedrige Boxen und lange nicht Gesehenes zuerst.
- *  chapterId 'mix' zieht aus allen Kapiteln. */
+ *  chapterId 'mix' zieht aus dem ganzen Lernplan, 'merkliste' nur aus den
+ *  vorgemerkten Themen. */
 export function pickRound(chapterId: string, count = ROUND_SIZE): RoundItem[] {
-  const pool =
-    chapterId === 'mix'
-      ? activeConcepts()
-      : conceptsOf(chapterId).map((concept) => ({ chapterId, concept }));
+  const pool = drawablePool(chapterId);
 
   const scored = pool.map((entry) => {
     const p = progressOf(entry.concept.id);
@@ -131,8 +241,9 @@ export function pickRound(chapterId: string, count = ROUND_SIZE): RoundItem[] {
   return chosen.map(({ entry }, i) => toRoundItem(entry.chapterId, entry.concept, positions[i]));
 }
 
-/** Antwort verbuchen: Box rauf/runter, Tageslog & Zähler pflegen. */
-export function applyAnswer(item: RoundItem, correct: boolean): void {
+/** Antwort verbuchen: Box rauf/runter, Tageslog & Zähler pflegen.
+ *  Meldet zurück, ob das Thema damit von der Merkliste verschwunden ist. */
+export function applyAnswer(item: RoundItem, correct: boolean): { todoCleared: boolean } {
   const p = progressOf(item.concept.id);
   const before = p.box;
   if (correct) {
@@ -149,37 +260,51 @@ export function applyAnswer(item: RoundItem, correct: boolean): void {
   log.answered++;
   if (correct) log.correct++;
   log.points += p.box - before;
+
+  // Ein vorgemerktes Thema, das Box 4 erreicht, ist gelernt und hakt sich selbst
+  // ab. Sonst blockiert es dauerhaft Schatzkiste und Tagespensum: es bleibt im
+  // Nenner, wird aber nie abgehakt. Das ist der einzige Schreibpfad für Boxen —
+  // die Invariante gehört hierhin, nicht in die View.
+  const todoCleared = p.box >= MAX_BOX && isTodo(item.concept.id);
+  if (todoCleared) {
+    state.topics.todo = state.topics.todo.filter((id) => id !== item.concept.id);
+  }
+
   save();
+  return { todoCleared };
 }
 
-/** Mastery eines Kapitels: Ø Box-Level der Konzepte, 0..1 */
+/** Mastery eines Kapitels: Ø Box-Level der Lernplan-Konzepte, 0..1.
+ *  Ausgeschlossene Unterthemen fallen aus dem Nenner — sonst wäre die
+ *  100-%-Schatzkiste nach der ersten Ausnahme unerreichbar. */
 export function chapterMastery(chapterId: string): number {
-  const concepts = conceptsOf(chapterId);
+  const concepts = plannedConceptsOf(chapterId);
   if (concepts.length === 0) return 0;
   const sum = concepts.reduce((s, c) => s + (state.progress[c.id]?.box ?? 0), 0);
   return sum / (concepts.length * MAX_BOX);
 }
 
-/** Anzahl gelernter Konzepte (Box >= 4) eines Kapitels */
+/** Anzahl gelernter Konzepte (Box >= 4) im Lernplan eines Kapitels */
 export function learnedCount(chapterId: string): number {
-  return conceptsOf(chapterId).filter((c) => (state.progress[c.id]?.box ?? 0) >= MAX_BOX).length;
+  return plannedConceptsOf(chapterId).filter((c) => (state.progress[c.id]?.box ?? 0) >= MAX_BOX)
+    .length;
 }
 
-/** Gelernte Konzepte in den gewählten Themenblöcken */
+/** Gelernte Konzepte im Lernplan */
 export function totalLearned(): number {
-  return activeConcepts().filter((e) => (state.progress[e.concept.id]?.box ?? 0) >= MAX_BOX).length;
+  return plannedConcepts().filter((e) => (state.progress[e.concept.id]?.box ?? 0) >= MAX_BOX).length;
 }
 
-/** Summe erreichter Box-Stufen (Lernpunkte) in den gewählten Themenblöcken */
+/** Summe erreichter Box-Stufen (Lernpunkte) im Lernplan */
 export function totalPoints(): number {
-  return activeConcepts().reduce((s, e) => s + (state.progress[e.concept.id]?.box ?? 0), 0);
+  return plannedConcepts().reduce((s, e) => s + (state.progress[e.concept.id]?.box ?? 0), 0);
 }
 
 export function maxPoints(): number {
-  return activeConcepts().length * MAX_BOX;
+  return plannedConcepts().length * MAX_BOX;
 }
 
-/** Anzahl Konzepte in den gewählten Themenblöcken */
-export function activeConceptCount(): number {
-  return activeConcepts().length;
+/** Anzahl Konzepte im Lernplan */
+export function plannedConceptCount(): number {
+  return plannedConcepts().length;
 }

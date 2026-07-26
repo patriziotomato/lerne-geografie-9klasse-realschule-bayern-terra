@@ -24,7 +24,7 @@ export function renderResults(root: HTMLElement): void {
   }
 
   const ratio = r.total > 0 ? r.correct / r.total : 0;
-  const perfect = r.correct === r.total;
+  const perfect = r.perfect;
   const headline = perfect
     ? 'PERFEKT! 💯'
     : ratio >= 0.7

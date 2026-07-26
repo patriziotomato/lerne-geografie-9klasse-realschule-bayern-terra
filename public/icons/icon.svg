@@ -1,19 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Geo-Quest">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7c5cff"/>
-      <stop offset="1" stop-color="#22d3ee"/>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9b82ff"/>
+      <stop offset="1" stop-color="#2ee6d0"/>
     </linearGradient>
-    <radialGradient id="globe" cx="0.35" cy="0.3" r="1">
-      <stop offset="0" stop-color="#5eead4"/>
-      <stop offset="0.55" stop-color="#22c55e"/>
-      <stop offset="1" stop-color="#0e7a46"/>
+    <radialGradient id="sphere" cx="0.34" cy="0.28" r="0.95">
+      <stop offset="0" stop-color="#16233c"/>
+      <stop offset="0.62" stop-color="#0b1424"/>
+      <stop offset="1" stop-color="#050a14"/>
     </radialGradient>
+    <clipPath id="globe">
+      <circle cx="256" cy="252" r="150"/>
+    </clipPath>
   </defs>
-  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
-  <circle cx="256" cy="250" r="150" fill="url(#globe)"/>
-  <path d="M256 100a150 150 0 0 1 0 300 150 150 0 0 1 0-300zm0 26c-25 34-40 77-40 124s15 90 40 124c25-34 40-77 40-124s-15-90-40-124zm-105 62a150 150 0 0 0-14 62h68c2-42 13-81 31-113-35 8-66 26-85 51zm210 0c-19-25-50-43-85-51 18 32 29 71 31 113h68a150 150 0 0 0-14-62zM137 276a150 150 0 0 0 14 62c19 25 50 43 85 51-18-32-29-71-31-113h-68zm238 0h-68c-2 42-13 81-31 113 35-8 66-26 85-51a150 150 0 0 0 14-62z"
-    fill="#0b3b22" opacity="0.55"/>
-  <circle cx="256" cy="250" r="150" fill="none" stroke="#083b2a" stroke-width="10" opacity="0.35"/>
-  <text x="256" y="452" font-family="system-ui, sans-serif" font-size="86" font-weight="800" text-anchor="middle" fill="#ffffff">GEO</text>
+
+  <rect width="512" height="512" rx="116" fill="url(#tile)"/>
+
+  <!-- Kugel: dunkler Körper, damit das Gradnetz in Signaturfarbe darauf leuchtet -->
+  <circle cx="256" cy="252" r="150" fill="url(#sphere)"/>
+
+  <!-- Zwei angedeutete Landmassen: Charakter bei großer Darstellung,
+       bei 48 px verschmelzen sie ruhig mit der Kugel. -->
+  <g clip-path="url(#globe)" fill="#2ed77f" opacity="0.82">
+    <path d="M124 198c12-28 40-50 72-46 23 3 32 21 50 25 16 4 31-7 41 5 10 12-1 28-14 37-17 12-23 29-42 36-25 9-54 6-75-9-19-14-26-31-32-48z"/>
+    <path d="M258 326c11-23 36-36 61-33 21 2 35 14 54 12 15-2 27-13 36 0 8 13-3 29-15 39-15 13-21 31-40 37-23 8-50 2-67-13-15-13-23-29-29-42z"/>
+    <path d="M300 160c15-9 34-4 40 8s-6 25-21 25-29-8-31-18 4-11 12-15z"/>
+  </g>
+
+  <g clip-path="url(#globe)" fill="none" stroke="#7ef0e2" stroke-width="5" opacity="0.85">
+    <!-- Breitenkreise: orthographisch projiziert sind das waagerechte Sehnen -->
+    <path d="M106 252h300M126 177h260M126 327h260M181 122h150M181 382h150"/>
+    <!-- Längenkreise -->
+    <path d="M256 102v300"/>
+    <ellipse cx="256" cy="252" rx="75" ry="150"/>
+    <ellipse cx="256" cy="252" rx="130" ry="150"/>
+  </g>
+
+  <circle cx="256" cy="252" r="150" fill="none" stroke="#050a14" stroke-width="9" opacity="0.55"/>
 </svg>

@@ -8,6 +8,8 @@ import { renderResults } from './views/results.ts';
 import { renderBadges } from './views/badges.ts';
 import { renderParents } from './views/parents.ts';
 import { renderSettings } from './views/settings.ts';
+import { renderTopics } from './views/topics.ts';
+import { renderMerkliste } from './views/merkliste.ts';
 import { scheduleWhileOpen } from './logic/reminders.ts';
 
 register('onboarding', renderOnboarding);
@@ -18,6 +20,8 @@ register('results', renderResults);
 register('badges', renderBadges);
 register('parents', renderParents);
 register('settings', renderSettings);
+register('topics', (root, param) => renderTopics(root, param));
+register('merkliste', renderMerkliste);
 
 startRouter(document.getElementById('app')!);
 scheduleWhileOpen();

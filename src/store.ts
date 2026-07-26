@@ -2,7 +2,7 @@ import type { AppState, DayLog, Profile } from './types.ts';
 import { CHAPTERS } from './data/chapters.ts';
 
 const KEY = 'geoquest.geo9.terra.v1';
-const SCHEMA_VERSION = 4;
+const SCHEMA_VERSION = 5;
 
 function defaultState(): AppState {
   return {
@@ -30,6 +30,7 @@ function defaultState(): AppState {
       soundEnabled: true,
       parentPinHash: null,
     },
+    topics: { excluded: [], todo: [] },
   };
 }
 
@@ -65,6 +66,11 @@ function load(): AppState {
       stats: { ...def.stats, ...(parsed.stats ?? {}) },
       settings: { ...def.settings, ...(parsed.settings ?? {}) },
       progress: parsed.progress ?? {},
+      // Profile von vor dem Themenkatalog haben noch keine Markierungen.
+      topics: {
+        excluded: idList(parsed.topics?.excluded),
+        todo: idList(parsed.topics?.todo),
+      },
     };
   } catch {
     return defaultState();
@@ -77,6 +83,17 @@ function load(): AppState {
 function validGrade(grade: unknown): number | null {
   const ok = typeof grade === 'number' && Number.isInteger(grade) && grade >= 1 && grade <= 6;
   return ok ? (grade as number) : null;
+}
+
+/** Konzept-ID-Liste aus dem Speicher säubern: nur Strings, keine Duplikate.
+ *  Der Spread aus dem gespeicherten Objekt allein würde ein kaputtes topics
+ *  (z. B. null aus einem handeditierten Export) übernehmen, und jedes includes()
+ *  darauf würde werfen. Unbekannte IDs bleiben absichtlich drin — geprüft wird per
+ *  Set-Lookup, und ein vorübergehend fehlendes Konzept soll die Markierung nicht
+ *  stillschweigend löschen. */
+function idList(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  return [...new Set(value.filter((v): v is string => typeof v === 'string'))];
 }
 
 /** Globaler App-Zustand. Nach Mutationen save() aufrufen. */
