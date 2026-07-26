@@ -36,6 +36,33 @@ npm run build      # Typecheck + Produktions-Build nach dist/
 npm run preview    # Build lokal testen
 ```
 
+## Design
+
+Das komplette Styling liegt in `src/styles.css` und hängt an einem Token-Block
+am Dateianfang — Flächen, Schrift, Akzente, Radien, Abstände, Elevation. Ein
+Theme ist damit ein reiner Wertetausch, keine zweite Regelmenge:
+
+- **Dark** (Default): Mitternachts-Indigo, Aurora-Schimmer und ein feines
+  Gradnetz als Hintergrund — das Motiv, das die App im Kapitel
+  „Arbeitstechniken" selbst unterrichtet.
+- **Light**: warmes Kartenpapier, gleiche Struktur, eigene Werte im
+  `prefers-color-scheme: light`-Block.
+
+Beide Themes setzen `color-scheme`, damit native Bedienelemente (Datums- und
+Zeit-Picker, Checkboxen, Scrollbars) mitziehen.
+
+Der Signaturverlauf `--grad` (Violett → Aqua) bleibt den Fortschritts- und
+Belohnungsmomenten vorbehalten: Level-Ring, XP-Balken, Wochenbalken, Level-Up,
+Kisten-Pill. Auf gefüllten Verlaufsflächen ist `--on-grad` die passende
+Schriftfarbe — im Dark-Theme dunkel, im Light-Theme weiß, damit der Kontrast in
+beiden Richtungen ≥ 4,5:1 bleibt.
+
+Kapitelfarben stehen als `color` in `src/data/chapters.ts` und landen per
+Inline-`--ch-color` auf Kapitelkarte, Fortschrittsring und Themen-Kachel.
+
+App-Icons werden aus `public/icons/icon.svg` gerendert; die PNG-Größen
+(180/192/512 plus maskable) sind Rasterisate derselben Datei.
+
 ## Inhalte bearbeiten
 
 Die Fragen liegen als editierbare JSON-Dateien in `src/data/questions/*.json`:
