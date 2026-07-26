@@ -1,6 +1,8 @@
-import { state, todayKey } from '../store.ts';
+import { state, save, todayKey } from '../store.ts';
 import { bottomNav } from '../router.ts';
 import { esc, ring } from '../ui.ts';
+import { gradePicker, bindGradePicker } from './gradePicker.ts';
+import { gradeVerdict, type GradeVerdict } from '../logic/grade.ts';
 import { levelProgress } from '../logic/gamification.ts';
 import { pace, daysLeftLabel } from '../logic/pace.ts';
 import { totalLearned, activeConceptCount, activeChapterIds, chapterMastery } from '../logic/leitner.ts';
@@ -17,6 +19,7 @@ export function renderHome(root: HTMLElement): void {
   const overall = totalConcepts > 0 ? learned / totalConcepts : 0;
   const hint = nudge();
   const streakActiveToday = s.lastStudyDay === todayKey();
+  const verdict = gradeVerdict();
 
   // Schwächstes gewähltes Kapitel als Empfehlung
   const activeIds = activeChapterIds();
@@ -39,6 +42,8 @@ export function renderHome(root: HTMLElement): void {
     </header>
 
     ${hint ? `<div class="nudge">${hint.emoji} ${esc(hint.text)}</div>` : ''}
+
+    ${verdict.kind === 'no-target' ? gradeAskCard() : ''}
 
     <section class="card level-card">
       <div class="ring-wrap">
@@ -66,6 +71,8 @@ export function renderHome(root: HTMLElement): void {
             : `<section class="card pace-card behind"><div class="pace-emoji">💪</div><div><strong>Heute noch ${pc.dailyTarget - pc.todayPoints} Lernpunkte</strong><br><span class="muted small">${pc.todayPoints}/${pc.dailyTarget} geschafft — jede richtige Antwort zählt!</span></div></section>`
     }
 
+    ${gradeCard(verdict)}
+
     <a class="btn primary big cta" href="#/quiz/${nextChapter.id}">
       Weiterlernen: ${nextChapter.emoji} ${esc(nextChapter.short)} 🚀
     </a>
@@ -88,6 +95,76 @@ export function renderHome(root: HTMLElement): void {
     </section>
 
     ${bottomNav('home')}`;
+
+  bindGradePicker(root, (grade) => {
+    state.profile!.targetGrade = grade;
+    save();
+    renderHome(root);
+  });
+}
+
+/** Einmalige Nachfrage für alle, die vor dem Zielnoten-Feature angefangen haben. */
+function gradeAskCard(): string {
+  return `
+    <section class="card grade-ask">
+      <div class="card-title">🎯 Welche Note willst du schreiben?</div>
+      <p class="muted small">Dann sage ich dir künftig, für welche Note dein Lernstand gerade reicht — und wie weit es noch bis zu deinem Ziel ist.</p>
+      ${gradePicker(null)}
+    </section>`;
+}
+
+/** „Du hast bisher für eine 4 gelernt, du willst aber eine 2." */
+function gradeCard(v: GradeVerdict): string {
+  if (v.kind === 'no-target') return '';
+
+  const card = (mod: string, emoji: string, body: string) =>
+    `<section class="card grade-card ${mod}">
+      <div class="pace-emoji">${emoji}</div>
+      <div>${body}</div>
+    </section>`;
+
+  if (v.kind === 'no-data') {
+    return card(
+      'unknown',
+      '🔍',
+      `<strong>Noch keine Einschätzung</strong><br>
+       <span class="muted small">Beantworte ein paar Fragen — dann sage ich dir, auf welche Note du gerade zusteuerst. Dein Ziel: <span class="grade-num">${v.target}</span>.</span>`,
+    );
+  }
+
+  if (v.kind === 'ahead') {
+    return card(
+      'ahead',
+      '🌟',
+      `<strong>Besser als dein Ziel!</strong><br>
+       <span class="muted small">Du hast bisher schätzungsweise für eine <span class="grade-num">${v.current}</span> gelernt — dein Ziel war eine <span class="grade-num">${v.target}</span>.</span>`,
+    );
+  }
+
+  if (v.kind === 'on-target') {
+    return card(
+      'reached',
+      '✅',
+      `<strong>Deine <span class="grade-num">${v.target}</span> steht!</strong><br>
+       <span class="muted small">Dein Lernstand reicht gerade für dein Ziel. Halte ihn mit kurzen Runden — sonst rutscht er wieder ab.</span>`,
+    );
+  }
+
+  const early = v.early ? ' Du stehst aber noch ganz am Anfang — das geht jetzt schnell nach oben.' : '';
+  const todo =
+    v.needed > 0
+      ? ` Noch mindestens <strong>${v.needed}</strong> Inhalte, dann steht die <span class="grade-num">${v.target}</span>.`
+      : '';
+
+  // Eigenes Emoji und „wenn die Prüfung heute wäre": Die Pace-Karte darüber blickt auf
+  // die Deadline und kann „auf Kurs" melden, während diese Karte den Stand von jetzt
+  // zeigt. Ohne diese Trennung lesen sich die beiden Karten wie ein Widerspruch.
+  return card(
+    'behind',
+    '📈',
+    `<strong>Du hast bisher schätzungsweise für eine <span class="grade-num">${v.current}</span> gelernt — du willst aber eine <span class="grade-num">${v.target}</span>.</strong><br>
+     <span class="muted small">Das ist der Stand, wenn die Prüfung heute wäre.${todo}${early}</span>`,
+  );
 }
 
 function lastDays(n: number): { date: string; label: string; points: number }[] {

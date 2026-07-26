@@ -45,6 +45,8 @@ export interface Profile {
   studyTimes: string[];
   /** Ausgewählte Themenblöcke (Kapitel-IDs); alle IDs = "Alle Inhalte" */
   chapters: string[];
+  /** Angepeilte Schulnote (1–4); null = noch nicht gefragt */
+  targetGrade: number | null;
   createdAt: string;
 }
 
@@ -120,4 +122,7 @@ export interface RoundResult {
   newBadges: string[];
   /** Kapitel, deren Kiste durch diese Runde freigeschaltet wurde */
   unlockedChests: string[];
+  /** Geschätzte Note vor bzw. nach der Runde; null = zu wenig Daten */
+  gradeBefore: number | null;
+  gradeAfter: number | null;
 }

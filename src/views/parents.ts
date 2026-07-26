@@ -5,6 +5,7 @@ import { CHAPTERS } from '../data/chapters.ts';
 import { conceptsOf } from '../data/content.ts';
 import { chapterMastery, learnedCount, totalLearned, activeConceptCount, isChapterActive } from '../logic/leitner.ts';
 import { pace, daysLeftLabel } from '../logic/pace.ts';
+import { gradeVerdict, gradeLabel, type GradeVerdict } from '../logic/grade.ts';
 
 /** Eltern-Bereich: Lernhistorie, Fortschritt, Bericht — optional PIN-geschützt. */
 
@@ -79,6 +80,8 @@ function renderDashboard(root: HTMLElement): void {
       }</span></div>
     </section>
 
+    ${parentGradeCard(gradeVerdict())}
+
     <section class="card">
       <div class="card-title">Fortschritt pro Kapitel</div>
       ${CHAPTERS.map((ch) => {
@@ -146,15 +149,55 @@ function renderDashboard(root: HTMLElement): void {
   });
 }
 
+/** Noten-Einschätzung, sachlich formuliert — hier lesen Eltern mit. */
+function parentGradeCard(v: GradeVerdict): string {
+  if (v.kind === 'no-target') return '';
+
+  const card = (mod: string, emoji: string, body: string) =>
+    `<section class="card grade-card ${mod}">
+      <div class="pace-emoji">${emoji}</div>
+      <div>${body}</div>
+    </section>`;
+
+  if (v.kind === 'no-data') {
+    return card(
+      'unknown',
+      '🔍',
+      `<strong>Noch keine Noten-Einschätzung</strong><br>
+       <span class="muted small">Dafür sind noch zu wenige Inhalte abgefragt worden. Zielnote: ${v.target} (${gradeLabel(v.target)}).</span>`,
+    );
+  }
+
+  const mod = v.kind === 'ahead' ? 'ahead' : v.kind === 'on-target' ? 'reached' : 'behind';
+  const emoji = v.kind === 'ahead' ? '🌟' : v.kind === 'on-target' ? '✅' : '📈';
+  const todo =
+    v.kind === 'behind' && v.needed > 0
+      ? `<br><span class="muted small">Bis zur ${v.target} fehlen noch mindestens ${v.needed} Inhalte.</span>`
+      : '';
+
+  return card(
+    mod,
+    emoji,
+    `<strong>Stand heute: Note <span class="grade-num">${v.current}</span></strong><br>
+     <span class="muted small">Zielnote: ${v.target} (${gradeLabel(v.target)}). Die Schätzung beschreibt den Lernstand von jetzt, nicht das Ergebnis am Prüfungstag.</span>${todo}`,
+  );
+}
+
 function buildReport(): string {
   const p = state.profile!;
   const s = state.stats;
   const pc = pace();
   const totalMinutes = s.sessions.reduce((n, x) => n + x.minutes, 0);
+  const v = gradeVerdict();
   const lines = [
     `📊 Geo-Quest Lernbericht — ${p.firstName}`,
     p.deadline ? `Ziel: ${new Date(p.deadline).toLocaleDateString('de-DE')} (${daysLeftLabel(pc)})` : 'Kein Ziel-Datum gesetzt',
     `Status: ${pc.done ? 'Alles gelernt 🎓' : !pc.hasDeadline ? 'Freies Lernen 🗓️' : pc.onTrack ? 'Auf Kurs 🎯' : 'Hinter dem Plan ⚠️'}`,
+    ...(v.kind === 'no-target'
+      ? []
+      : v.kind === 'no-data'
+        ? [`Noten-Einschätzung: noch zu wenig Daten · Zielnote ${v.target}`]
+        : [`Noten-Einschätzung: Stand ${v.current} · Zielnote ${v.target}`]),
     `Inhalte gelernt: ${totalLearned()}/${activeConceptCount()}`,
     `Lernzeit gesamt: ${totalMinutes} min in ${s.sessions.length} Einheiten`,
     `Streak: ${s.streak} Tage (Rekord: ${s.bestStreak})`,

@@ -1,10 +1,11 @@
 import { state, save } from '../store.ts';
 import { navigate } from '../router.ts';
 import { esc } from '../ui.ts';
+import { gradePicker, bindGradePicker } from './gradePicker.ts';
 import { CHAPTERS } from '../data/chapters.ts';
 import { conceptsOf } from '../data/content.ts';
 
-/** 2-Schritte-Onboarding: Wer bist du? → Was willst du lernen?
+/** 3-Schritte-Onboarding: Wer bist du? → Was willst du lernen? → Welche Note?
  *  Lernziel-Datum und Lernzeiten sind optional und werden später in den
  *  Einstellungen gesetzt. */
 
@@ -12,24 +13,27 @@ interface Draft {
   firstName: string;
   phone: string;
   chapters: Set<string>;
+  targetGrade: number;
 }
 
 const draft: Draft = {
   firstName: '',
   phone: '',
   chapters: new Set(CHAPTERS.map((c) => c.id)), // Default: Alle Inhalte
+  targetGrade: 2,
 };
 
 let step = 0;
 
+const STEPS = [renderStep1, renderStep2, renderStep3];
+
 export function renderOnboarding(root: HTMLElement): void {
-  const steps = [renderStep1, renderStep2];
   root.innerHTML = `
     <div class="onboarding">
       <div class="ob-progress">
-        ${[0, 1].map((i) => `<span class="ob-dot ${i <= step ? 'on' : ''}"></span>`).join('')}
+        ${STEPS.map((_, i) => `<span class="ob-dot ${i <= step ? 'on' : ''}"></span>`).join('')}
       </div>
-      <div class="ob-body">${steps[step]()}</div>
+      <div class="ob-body">${STEPS[step]()}</div>
     </div>`;
   bind(root);
 }
@@ -82,6 +86,19 @@ function renderStep2(): string {
     <p class="error" id="ob-error" hidden></p>
     <div class="ob-nav">
       <button class="btn ghost" id="ob-back">Zurück</button>
+      <button class="btn primary big" id="ob-next">Weiter 👉</button>
+    </div>`;
+}
+
+function renderStep3(): string {
+  return `
+    <div class="ob-hero">📈</div>
+    <h1>Welche Note<br>willst du schreiben?</h1>
+    <p class="muted">Danach richte ich deinen Lernfortschritt aus: Ich sage dir künftig, für welche Note dein Lernstand gerade reicht — und wie weit es noch bis zu deiner Wunschnote ist. Änderbar bleibt das jederzeit in den Einstellungen.</p>
+    ${gradePicker(draft.targetGrade)}
+    <p class="error" id="ob-error" hidden></p>
+    <div class="ob-nav">
+      <button class="btn ghost" id="ob-back">Zurück</button>
       <button class="btn primary big" id="ob-done">Los geht's! 🚀</button>
     </div>`;
 }
@@ -101,12 +118,17 @@ function bind(root: HTMLElement): void {
   });
 
   root.querySelector('#ob-next')?.addEventListener('click', () => {
-    const name = (root.querySelector('#ob-name') as HTMLInputElement).value.trim();
-    const phone = (root.querySelector('#ob-phone') as HTMLInputElement).value.trim();
-    if (name.length < 2) return showError(root, 'Sag mir bitte deinen Vornamen (min. 2 Zeichen).');
-    if (!/^[+0-9][0-9 \-/]{5,}$/.test(phone)) return showError(root, 'Das sieht noch nicht nach einer Handynummer aus.');
-    draft.firstName = name;
-    draft.phone = phone;
+    if (step === 0) {
+      const name = (root.querySelector('#ob-name') as HTMLInputElement).value.trim();
+      const phone = (root.querySelector('#ob-phone') as HTMLInputElement).value.trim();
+      if (name.length < 2) return showError(root, 'Sag mir bitte deinen Vornamen (min. 2 Zeichen).');
+      if (!/^[+0-9][0-9 \-/]{5,}$/.test(phone)) return showError(root, 'Das sieht noch nicht nach einer Handynummer aus.');
+      draft.firstName = name;
+      draft.phone = phone;
+    }
+    if (step === 1 && draft.chapters.size === 0) {
+      return showError(root, 'Wähl mindestens einen Themenblock.');
+    }
     step++;
     renderOnboarding(root);
   });
@@ -126,6 +148,12 @@ function bind(root: HTMLElement): void {
     });
   });
 
+  // Schritt 3 (Zielnote) braucht keine Prüfung — es ist immer eine Note gewählt.
+  bindGradePicker(root, (grade) => {
+    draft.targetGrade = grade;
+    renderOnboarding(root);
+  });
+
   root.querySelector('#ob-done')?.addEventListener('click', () => {
     if (draft.chapters.size === 0) return showError(root, 'Wähl mindestens einen Themenblock.');
     state.profile = {
@@ -134,6 +162,7 @@ function bind(root: HTMLElement): void {
       deadline: null,
       studyTimes: [],
       chapters: [...draft.chapters],
+      targetGrade: draft.targetGrade,
       createdAt: new Date().toISOString(),
     };
     save();

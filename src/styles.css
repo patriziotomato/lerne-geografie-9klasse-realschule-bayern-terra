@@ -279,6 +279,38 @@ a { color: inherit; text-decoration: none; }
 .pace-card.neutral { border-left: 6px solid var(--accent); }
 .pace-emoji { font-size: 2rem; }
 
+/* Zielnote & Noten-Einschätzung */
+.grade-card { display: flex; gap: 14px; align-items: center; }
+.grade-card.behind { border-left: 6px solid var(--warn); }
+.grade-card.reached { border-left: 6px solid var(--ok); }
+.grade-card.ahead { border-left: 6px solid var(--accent-2); }
+.grade-card.unknown { border-left: 6px solid var(--ring-track); }
+.grade-num { font-weight: 900; color: var(--accent); }
+.grade-picker { display: flex; gap: 8px; margin: 10px 0 2px; }
+.grade-opt {
+  flex: 1;
+  min-width: 0;
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 8px 4px;
+  border: 2px solid var(--card-2);
+  border-radius: 14px;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.08s ease;
+}
+.grade-opt:active { transform: scale(0.96); }
+.grade-opt-num { font-size: 1.35rem; font-weight: 900; line-height: 1; }
+.grade-opt-label { font-size: 0.62rem; color: var(--ink-2); font-weight: 600; text-align: center; }
+.grade-opt.on { background: var(--grad); border-color: transparent; color: #fff; }
+.grade-opt.on .grade-opt-label { color: rgba(255, 255, 255, 0.85); }
+
 .cta { margin-top: 16px; }
 
 .week-card .week-bars {
@@ -406,6 +438,14 @@ a { color: inherit; text-decoration: none; }
 .res-levelup {
   background: var(--grad);
   color: #fff;
+  font-weight: 800;
+  border-radius: 16px;
+  padding: 14px;
+  margin: 12px 0;
+}
+.res-gradeup {
+  background: color-mix(in srgb, var(--ok) 22%, var(--card));
+  border: 2px solid var(--ok);
   font-weight: 800;
   border-radius: 16px;
   padding: 14px;

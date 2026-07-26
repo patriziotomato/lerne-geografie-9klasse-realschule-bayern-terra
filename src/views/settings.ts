@@ -1,5 +1,6 @@
 import { bottomNav } from '../router.ts';
 import { esc, sha256Hex } from '../ui.ts';
+import { gradePicker, bindGradePicker } from './gradePicker.ts';
 import { state, save, resetAll, exportJson } from '../store.ts';
 import { downloadIcs } from '../logic/ics.ts';
 import { requestPermission, scheduleWhileOpen, notificationsSupported } from '../logic/reminders.ts';
@@ -25,6 +26,9 @@ export function renderSettings(root: HTMLElement): void {
         <input id="set-deadline" type="date" value="${p.deadline ?? ''}" />
         <small class="muted">${p.deadline ? 'Daraus berechne ich dein Tagespensum.' : 'Kein Ziel gesetzt — z. B. der Tag der Schulaufgabe.'}</small></label>
       ${p.deadline ? '<button class="btn ghost small" id="set-deadline-clear">Ziel entfernen</button>' : ''}
+      <div class="field"><span>Meine Zielnote</span>
+        ${gradePicker(p.targetGrade)}
+        <small class="muted">Danach richtet sich die Einschätzung auf der Startseite: für welche Note dein Lernstand gerade reicht.</small></div>
     </section>
 
     <section class="card">
@@ -145,6 +149,12 @@ function bind(root: HTMLElement): void {
   });
   root.querySelector('#set-all-topics')!.addEventListener('click', () => {
     p.chapters = CHAPTERS.map((c) => c.id);
+    save();
+    renderSettings(root);
+  });
+
+  bindGradePicker(root, (grade) => {
+    p.targetGrade = grade;
     save();
     renderSettings(root);
   });

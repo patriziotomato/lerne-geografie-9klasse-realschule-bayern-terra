@@ -2,7 +2,7 @@ import type { AppState, DayLog, Profile } from './types.ts';
 import { CHAPTERS } from './data/chapters.ts';
 
 const KEY = 'geoquest.geo9.terra.v1';
-const SCHEMA_VERSION = 2;
+const SCHEMA_VERSION = 3;
 
 function defaultState(): AppState {
   return {
@@ -47,6 +47,8 @@ function load(): AppState {
             rawProfile.chapters && rawProfile.chapters.length > 0
               ? rawProfile.chapters
               : CHAPTERS.map((c) => c.id),
+          // Profile von vor der Zielnoten-Abfrage werden auf der Startseite gefragt.
+          targetGrade: validGrade(rawProfile.targetGrade),
           createdAt: rawProfile.createdAt ?? new Date().toISOString(),
         }
       : null;
@@ -62,6 +64,14 @@ function load(): AppState {
   } catch {
     return defaultState();
   }
+}
+
+/** Zielnote aus dem Speicher übernehmen, sofern sie eine echte Schulnote ist.
+ *  Die Grenzen stehen absichtlich hier inline — ein Import aus logic/grade.ts
+ *  würde einen Zyklus store → grade → store erzeugen. */
+function validGrade(grade: unknown): number | null {
+  const ok = typeof grade === 'number' && Number.isInteger(grade) && grade >= 1 && grade <= 6;
+  return ok ? (grade as number) : null;
 }
 
 /** Globaler App-Zustand. Nach Mutationen save() aufrufen. */
