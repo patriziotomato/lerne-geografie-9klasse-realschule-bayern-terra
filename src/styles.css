@@ -166,6 +166,57 @@ a { color: inherit; text-decoration: none; }
 .ob-nav .ghost { width: 40%; }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
+/* ==== Themen-Auswahl (Onboarding + Einstellungen) ======================= */
+.topic-all {
+  display: flex; align-items: center; gap: 12px;
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: left;
+  color: var(--ink);
+  background: var(--card);
+  border: 2px solid var(--card-2);
+  border-radius: 16px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.topic-all.on { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, var(--card)); }
+.topic-all-emoji { font-size: 1.7rem; }
+.topic-all-text { flex: 1; line-height: 1.3; }
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
+.topic-card {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 14px 8px 10px;
+  font-family: inherit;
+  color: var(--ink);
+  background: var(--card);
+  border: 2px solid var(--card-2);
+  border-radius: 16px;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: transform 0.06s ease, border-color 0.15s, opacity 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.topic-card:active { transform: scale(0.96); }
+.topic-card.on { border-color: var(--ch-color, var(--accent)); opacity: 1; }
+.topic-emoji { font-size: 1.7rem; }
+.topic-name { font-weight: 700; font-size: 0.85rem; }
+.topic-check {
+  position: absolute;
+  top: 6px; right: 9px;
+  font-weight: 900;
+  color: var(--ch-color, var(--accent));
+}
+.topic-all .topic-check { position: static; font-size: 1.2rem; color: var(--accent); }
+
 /* ==== Home ============================================================== */
 .home-head {
   display: flex;
@@ -225,6 +276,7 @@ a { color: inherit; text-decoration: none; }
 .pace-card.ok { border-left: 6px solid var(--ok); }
 .pace-card.behind { border-left: 6px solid var(--warn); }
 .pace-card.done { border-left: 6px solid var(--accent-2); }
+.pace-card.neutral { border-left: 6px solid var(--accent); }
 .pace-emoji { font-size: 2rem; }
 
 .cta { margin-top: 16px; }
@@ -271,7 +323,12 @@ a { color: inherit; text-decoration: none; }
   border-radius: 999px;
 }
 .pill.chest.open { background: var(--grad); color: #fff; }
-.ch-ring { flex: 0 0 auto; }
+.pill.off { border: 1px dashed var(--ink-3); background: transparent; color: var(--ink-3); }
+.ch-side { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.ch-toggle { width: 36px; height: 36px; font-size: 1.15rem; margin: 0; background: transparent; }
+.ch-toggle.on { filter: none; }
+.chapter-card.inactive { opacity: 0.6; border-left-style: dashed; }
+.parent-ch.inactive { opacity: 0.55; }
 
 /* ==== Quiz ============================================================== */
 .quiz-head {

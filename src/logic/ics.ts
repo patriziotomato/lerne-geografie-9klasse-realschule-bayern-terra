@@ -6,9 +6,12 @@ export function buildIcs(): string {
   const p = state.profile;
   if (!p || p.studyTimes.length === 0) return '';
 
-  const untilDate = p.deadline.replace(/-/g, '') + 'T235959';
+  // Mit Lernziel enden die Termine dort; ohne laufen sie unbegrenzt weiter.
+  const rrule = p.deadline
+    ? `RRULE:FREQ=DAILY;UNTIL=${p.deadline.replace(/-/g, '')}T235959`
+    : 'RRULE:FREQ=DAILY';
   const today = new Date();
-  const stamp = formatLocal(today) ;
+  const stamp = formatLocal(today);
 
   const events = p.studyTimes.map((t, i) => {
     const [h, m] = t.split(':').map(Number);
@@ -22,7 +25,7 @@ export function buildIcs(): string {
       `DTSTAMP:${stamp}`,
       `DTSTART:${formatLocal(start)}`,
       `DTEND:${formatLocal(end)}`,
-      `RRULE:FREQ=DAILY;UNTIL=${untilDate}`,
+      rrule,
       'SUMMARY:🌍 Geo lernen (Geo-Quest)',
       'DESCRIPTION:10 Fragen Geografie — dein Streak wartet!',
       'BEGIN:VALARM',

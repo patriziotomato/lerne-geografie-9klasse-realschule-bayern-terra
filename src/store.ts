@@ -1,4 +1,5 @@
-import type { AppState, DayLog } from './types.ts';
+import type { AppState, DayLog, Profile } from './types.ts';
+import { CHAPTERS } from './data/chapters.ts';
 
 const KEY = 'geoquest.geo9.terra.v1';
 const SCHEMA_VERSION = 2;
@@ -34,9 +35,25 @@ function load(): AppState {
     const parsed = JSON.parse(raw) as Partial<AppState>;
     // Sanfte Migration: fehlende Felder mit Defaults auffüllen.
     const def = defaultState();
+    const rawProfile = parsed.profile as Partial<Profile> | null | undefined;
+    const profile: Profile | null = rawProfile
+      ? {
+          firstName: rawProfile.firstName ?? '',
+          phone: rawProfile.phone ?? '',
+          deadline: rawProfile.deadline ?? null,
+          studyTimes: rawProfile.studyTimes ?? [],
+          // Profile von vor der Themenauswahl lernen weiterhin alles.
+          chapters:
+            rawProfile.chapters && rawProfile.chapters.length > 0
+              ? rawProfile.chapters
+              : CHAPTERS.map((c) => c.id),
+          createdAt: rawProfile.createdAt ?? new Date().toISOString(),
+        }
+      : null;
     return {
       ...def,
       ...parsed,
+      profile,
       version: SCHEMA_VERSION,
       stats: { ...def.stats, ...(parsed.stats ?? {}) },
       settings: { ...def.settings, ...(parsed.settings ?? {}) },

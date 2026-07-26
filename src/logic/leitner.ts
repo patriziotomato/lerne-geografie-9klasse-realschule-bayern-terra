@@ -1,8 +1,25 @@
 import type { Concept, ConceptProgress, Variant } from '../types.ts';
 import { ALL_CONCEPTS, conceptsOf } from '../data/content.ts';
+import { CHAPTERS } from '../data/chapters.ts';
 import { state, save, todayLog } from '../store.ts';
 
 export const MAX_BOX = 4;
+
+/** IDs der aktuell gewählten Themenblöcke (leer/fehlend = alle) */
+export function activeChapterIds(): string[] {
+  const sel = state.profile?.chapters;
+  return sel && sel.length > 0 ? sel : CHAPTERS.map((c) => c.id);
+}
+
+export function isChapterActive(chapterId: string): boolean {
+  return activeChapterIds().includes(chapterId);
+}
+
+/** Konzepte der gewählten Themenblöcke */
+export function activeConcepts(): { chapterId: string; concept: Concept }[] {
+  const active = new Set(activeChapterIds());
+  return ALL_CONCEPTS.filter((e) => active.has(e.chapterId));
+}
 
 export function progressOf(conceptId: string): ConceptProgress {
   let p = state.progress[conceptId];
@@ -61,7 +78,7 @@ function toRoundItem(chapterId: string, concept: Concept): RoundItem {
 export function pickRound(chapterId: string, count = 10): RoundItem[] {
   const pool =
     chapterId === 'mix'
-      ? ALL_CONCEPTS
+      ? activeConcepts()
       : conceptsOf(chapterId).map((concept) => ({ chapterId, concept }));
 
   const scored = pool.map((entry) => {
@@ -111,15 +128,21 @@ export function learnedCount(chapterId: string): number {
   return conceptsOf(chapterId).filter((c) => (state.progress[c.id]?.box ?? 0) >= MAX_BOX).length;
 }
 
+/** Gelernte Konzepte in den gewählten Themenblöcken */
 export function totalLearned(): number {
-  return ALL_CONCEPTS.filter((e) => (state.progress[e.concept.id]?.box ?? 0) >= MAX_BOX).length;
+  return activeConcepts().filter((e) => (state.progress[e.concept.id]?.box ?? 0) >= MAX_BOX).length;
 }
 
-/** Summe aller erreichten Box-Stufen (Lernpunkte) */
+/** Summe erreichter Box-Stufen (Lernpunkte) in den gewählten Themenblöcken */
 export function totalPoints(): number {
-  return ALL_CONCEPTS.reduce((s, e) => s + (state.progress[e.concept.id]?.box ?? 0), 0);
+  return activeConcepts().reduce((s, e) => s + (state.progress[e.concept.id]?.box ?? 0), 0);
 }
 
 export function maxPoints(): number {
-  return ALL_CONCEPTS.length * MAX_BOX;
+  return activeConcepts().length * MAX_BOX;
+}
+
+/** Anzahl Konzepte in den gewählten Themenblöcken */
+export function activeConceptCount(): number {
+  return activeConcepts().length;
 }
