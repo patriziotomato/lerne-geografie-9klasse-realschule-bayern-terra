@@ -3,6 +3,18 @@ import { esc, confetti, countUp, vibrate } from '../ui.ts';
 import { takeLastResult } from './quiz.ts';
 import { badgeById } from '../logic/gamification.ts';
 import { chapterById } from '../data/chapters.ts';
+import { gradeVerdict, roundsLabel, type Milestone } from '../logic/grade.ts';
+import { notify } from '../logic/notify.ts';
+
+/** Nächster Meilenstein nach dieser Runde. Direkt neben „Nächste Runde" wirkt die
+ *  Zahl am stärksten — sie ist nach jeder Runde um eins kleiner. Wer sein Ziel schon
+ *  erreicht hat, braucht hier keinen Ansporn. */
+function nextMilestone(): Milestone | null {
+  const v = gradeVerdict();
+  if (v.kind === 'no-data' || v.kind === 'warmup') return v.next;
+  if (v.kind === 'behind') return v.next;
+  return null;
+}
 
 export function renderResults(root: HTMLElement): void {
   const r = takeLastResult();
@@ -22,6 +34,11 @@ export function renderResults(root: HTMLElement): void {
         : 'Dranbleiben! 🌱';
 
   const retryHash = `#/quiz/${r.chapterId}`;
+  const next = nextMilestone();
+  const nextText =
+    next && next.rounds
+      ? `Noch ${roundsLabel(next.rounds)} bis zur Note ${next.grade}`
+      : null;
 
   root.innerHTML = `
     <div class="results">
@@ -34,10 +51,12 @@ export function renderResults(root: HTMLElement): void {
       ${r.leveledUpTo ? `<div class="res-levelup pop">🎉 LEVEL UP! Du bist jetzt Level ${r.leveledUpTo}!</div>` : ''}
 
       ${
-        r.gradeAfter !== null && r.gradeBefore !== null && r.gradeAfter < r.gradeBefore
-          ? `<div class="res-gradeup pop">📈 Notensprung! Dein Lernstand reicht jetzt für eine ${r.gradeAfter}.</div>`
+        r.newBestGrade !== null
+          ? `<div class="res-gradeup pop">📈 Notensprung! Dein Lernstand reicht jetzt für eine ${r.newBestGrade}.</div>`
           : ''
       }
+
+      ${nextText ? `<div class="res-milestone">🎯 ${esc(nextText)}</div>` : ''}
 
       ${
         r.newBadges.length > 0
@@ -62,7 +81,19 @@ export function renderResults(root: HTMLElement): void {
     ${bottomNav('home')}`;
 
   countUp(root.querySelector('#xp-count') as HTMLElement, r.xpGained);
-  if (perfect || r.leveledUpTo || r.newBadges.length > 0) confetti();
+  if (perfect || r.leveledUpTo || r.newBadges.length > 0 || r.newBestGrade !== null) confetti();
+
+  // Eine erstmals erreichte Note ist die Rückmeldung, auf die alles hinarbeitet —
+  // deshalb zusätzlich fühlbar und als System-Benachrichtigung, die in der Leiste
+  // stehen bleibt. Ohne erteilte Berechtigung bleibt notify() einfach still.
+  if (r.newBestGrade !== null) {
+    vibrate([40, 30, 80]);
+    void notify(
+      'Notensprung! 🎉',
+      `Dein Lernstand reicht jetzt für eine ${r.newBestGrade}.${nextText ? ` ${nextText}.` : ''}`,
+      'geoquest-gradeup',
+    );
+  }
 
   // Schatzkisten nacheinander präsentieren
   const chestArea = root.querySelector('#chest-area') as HTMLElement;

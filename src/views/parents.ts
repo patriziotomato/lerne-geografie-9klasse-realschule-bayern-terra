@@ -5,7 +5,7 @@ import { CHAPTERS } from '../data/chapters.ts';
 import { conceptsOf } from '../data/content.ts';
 import { chapterMastery, learnedCount, totalLearned, activeConceptCount, isChapterActive } from '../logic/leitner.ts';
 import { pace, daysLeftLabel } from '../logic/pace.ts';
-import { gradeVerdict, gradeLabel, type GradeVerdict } from '../logic/grade.ts';
+import { gradeVerdict, gradeLabel, roundsLabel, type GradeVerdict } from '../logic/grade.ts';
 
 /** Eltern-Bereich: Lernhistorie, Fortschritt, Bericht — optional PIN-geschützt. */
 
@@ -170,9 +170,27 @@ function parentGradeCard(v: GradeVerdict): string {
 
   const mod = v.kind === 'ahead' ? 'ahead' : v.kind === 'on-target' ? 'reached' : 'behind';
   const emoji = v.kind === 'ahead' ? '🌟' : v.kind === 'on-target' ? '✅' : '📈';
+
+  // Hier steht die Note ungeschönt — auch eine 6. Ergänzt um die Restdistanz in
+  // Runden, weil „noch mindestens X Inhalte" nichts darüber sagt, wie viel Lernzeit
+  // das bedeutet: Eine Runde hebt zehn Inhalte um je eine Box, nicht auf gemeistert.
+  const distances: string[] = [];
+  if (v.kind === 'warmup' && v.next.rounds) {
+    distances.push(`Bis zur Note ${v.next.grade} sind es ${roundsLabel(v.next.rounds)}`);
+  }
+  if (v.kind === 'behind') {
+    if (v.next && v.next.rounds && v.next.grade !== v.target) {
+      distances.push(`Bis zur Note ${v.next.grade} sind es ${roundsLabel(v.next.rounds)}`);
+    }
+    if (v.targetRounds) {
+      distances.push(`bis zur Zielnote ${v.target} ${roundsLabel(v.targetRounds)}`);
+    } else if (v.needed > 0) {
+      distances.push(`bis zur Zielnote ${v.target} fehlen mindestens ${v.needed} Inhalte`);
+    }
+  }
   const todo =
-    v.kind === 'behind' && v.needed > 0
-      ? `<br><span class="muted small">Bis zur ${v.target} fehlen noch mindestens ${v.needed} Inhalte.</span>`
+    distances.length > 0
+      ? `<br><span class="muted small">${distances.join(' · ')}.</span>`
       : '';
 
   return card(

@@ -90,6 +90,9 @@ export interface Stats {
   bestStreak: number;
   lastStudyDay: string | null;
   badges: string[];
+  /** Beste je erreichte Notenschätzung. Gefeiert wird nur eine neue Bestnote —
+   *  sonst gäbe es bei jedem Auf und Ab (5 → 4 → 5 → 4) erneut Konfetti. */
+  bestGrade: number | null;
   /** Kapitel-IDs, deren Schatzkiste geöffnet wurde */
   openedChests: string[];
   history: DayLog[];
@@ -122,7 +125,8 @@ export interface RoundResult {
   newBadges: string[];
   /** Kapitel, deren Kiste durch diese Runde freigeschaltet wurde */
   unlockedChests: string[];
-  /** Geschätzte Note vor bzw. nach der Runde; null = zu wenig Daten */
-  gradeBefore: number | null;
-  gradeAfter: number | null;
+  /** Mit dieser Runde erstmals erreichte Bestnote; null = kein neuer Rekord.
+   *  Ersetzt den früheren Vorher/Nachher-Vergleich: Gegen den persistenten
+   *  stats.bestGrade gemessen, feiert ein Auf und Ab nicht mehrfach. */
+  newBestGrade: number | null;
 }
