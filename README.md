@@ -28,6 +28,12 @@ Kapitelstruktur des Terra-Buchs (Klett). Pures TypeScript — kein Framework.
   aus, wie viel pro Tag nötig ist, und zeigt, ob man auf Kurs ist.
 - **Gamification**: XP, Level, Tages-Streaks, Combos, ~16 Abzeichen, Konfetti —
   und pro komplett gelerntem Kapitel eine Schatzkiste mit Sammel-Badge.
+- **Zielnote & Meilensteine**: Zielnote wählen, dann zeigt die App, wie viele
+  Fragerunden noch bis zur nächstbesseren Note fehlen — die Zahl sinkt mit jeder
+  Runde. Solange der Lernstand rechnerisch erst bei einer 6 liegt (am Anfang zählt
+  jeder ungelernte Inhalt mit 0), wird bewusst keine Note genannt, sondern nur der
+  Weg dorthin. Eine erstmals erreichte Note gibt Konfetti und eine
+  Benachrichtigung. Der Eltern-Bereich zeigt weiterhin den ungeschönten Stand.
 - **Lernzeiten & Erinnerungen**: Feste Lernzeiten (z. B. 14:30 & 20:30),
   Benachrichtigungen bei geöffneter App, Motivations-Nudges und Kalender-Export
   (.ics) für zuverlässige System-Erinnerungen. Handynummer wird fürs spätere

@@ -710,6 +710,14 @@ strong {
 .pace-card.neutral::before {
   background: var(--ink-3);
 }
+/* Noch keine Note, nur der Weg dorthin — bewusst nicht in Warnfarbe, sondern
+   im Akzent: der Zustand ist positiv gemeint. „unknown" bleibt daneben
+   neutral, weil dort schlicht die Daten fehlen.
+   Die Hintergrundtönungen, die diesen Zustand ursprünglich begleitet haben,
+   entfallen — Pace- und Noten-Karten tragen ihre Aussage über die Kante. */
+.grade-card.warmup::before {
+  background: var(--accent);
+}
 .pace-emoji {
   font-size: 1.4rem;
   flex: 0 0 auto;
@@ -1129,6 +1137,14 @@ strong {
 }
 .res-gradeup {
   border-left-color: var(--accent);
+}
+/* Restdistanz zur nächsten Note — ruhiger als die Feier-Banner darüber. */
+.res-milestone {
+  box-shadow: inset 0 0 0 1px var(--line);
+  border-radius: var(--r-md);
+  padding: var(--s-3) var(--s-4);
+  margin: var(--s-3) 0;
+  font-weight: 700;
 }
 .res-badges {
   display: flex;

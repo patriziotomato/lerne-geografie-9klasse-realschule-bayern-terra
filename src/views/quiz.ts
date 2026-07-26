@@ -8,16 +8,14 @@ import {
   plannedConceptsOf,
   plannedConcepts,
   MERK_ROUND,
+  ROUND_SIZE,
   type RoundItem,
 } from '../logic/leitner.ts';
 import { xpForAnswer, PERFECT_BONUS, finishRound } from '../logic/gamification.ts';
-import { estimatedGrade } from '../logic/grade.ts';
 import { recordAnswer } from '../logic/session.ts';
 import { chapterById, roundLabel } from '../data/chapters.ts';
 import type { RoundResult } from '../types.ts';
 import { state } from '../store.ts';
-
-const ROUND_SIZE = 10;
 
 /** Wartezeit, bevor nach einer richtigen Antwort automatisch weitergeblättert
  *  wird. Nach einer falschen Antwort läuft kein Timer — dort soll die Erklärung
@@ -35,9 +33,6 @@ interface RoundState {
   answered: boolean;
   /** Wie viele Fragen ungewertet aus der Runde geflogen sind (🚫 / 📌) */
   dropped: number;
-  /** Geschätzte Note beim Rundenstart — applyAnswer() verändert die Boxen laufend,
-   *  am Rundenende ließe sich das „Vorher" nicht mehr rekonstruieren. */
-  gradeBefore: number | null;
 }
 
 let round: RoundState | null = null;
@@ -77,7 +72,6 @@ export function renderQuiz(root: HTMLElement, chapterId = 'mix'): void {
       xp: 0,
       answered: false,
       dropped: 0,
-      gradeBefore: estimatedGrade(),
     };
   }
 
@@ -303,7 +297,6 @@ function finishAndGoToResults(): void {
     perfect,
     xpGained: totalXp,
     bestCombo: r.bestCombo,
-    gradeBefore: r.gradeBefore,
   });
   if (perfect && state.stats.sessions.length > 0) {
     // Bonus-XP auch in der Session verbuchen

@@ -1,22 +1,12 @@
 import { state, todayKey } from '../store.ts';
+import { notify, notificationsSupported } from './notify.ts';
 
 /** Erinnerungen ohne Server: Benachrichtigungen können nur ausgelöst werden,
  *  solange die App/PWA geöffnet ist (Web-Limitierung). Zusätzlich gibt es
- *  Motivations-Nudges beim Öffnen und den Kalender-Export (ics.ts). */
+ *  Motivations-Nudges beim Öffnen und den Kalender-Export (ics.ts).
+ *  Das Anzeigen selbst liegt in notify.ts. */
 
 let timer: number | null = null;
-
-export function notificationsSupported(): boolean {
-  return 'Notification' in window;
-}
-
-export async function requestPermission(): Promise<boolean> {
-  if (!notificationsSupported()) return false;
-  if (Notification.permission === 'granted') return true;
-  if (Notification.permission === 'denied') return false;
-  const result = await Notification.requestPermission();
-  return result === 'granted';
-}
 
 /** Nächste eingestellte Lernzeit ab jetzt (heute oder morgen) */
 export function nextStudyTime(now = new Date()): Date | null {
@@ -48,14 +38,12 @@ export function scheduleWhileOpen(): void {
 
   timer = window.setTimeout(() => {
     const name = state.profile?.firstName ?? '';
-    try {
-      new Notification('Zeit zum Lernen! 🌍', {
-        body: `${name ? name + ', d' : 'D'}eine Geo-Runde wartet. 10 Fragen — los geht's! 🚀`,
-        tag: 'geoquest-reminder',
-      });
-    } catch {
-      // Einige Plattformen erlauben den Konstruktor nicht — dann still bleiben.
-    }
+    void notify(
+      'Zeit zum Lernen! 🌍',
+      `${name ? name + ', d' : 'D'}eine Geo-Runde wartet. 10 Fragen — los geht's! 🚀`,
+      'geoquest-reminder',
+      { route: '#/quiz/mix' },
+    );
     scheduleWhileOpen(); // nächste Zeit planen
   }, delay);
 }

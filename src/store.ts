@@ -5,7 +5,7 @@ import { CHAPTERS } from './data/chapters.ts';
  *  index.html, das das Farbschema noch vor dem ersten Paint setzt. Wird er
  *  hier geändert, muss er dort mitgeändert werden. */
 const KEY = 'geoquest.geo9.terra.v1';
-const SCHEMA_VERSION = 4;
+const SCHEMA_VERSION = 5;
 
 function defaultState(): AppState {
   return {
@@ -19,6 +19,11 @@ function defaultState(): AppState {
       bestStreak: 0,
       lastStudyDay: null,
       badges: [],
+      // Bestandsnutzer starten hier bei null, weil store.ts die Note nicht selbst
+      // schätzen darf (der Import aus logic/grade.ts wäre ein Zyklus, s. u.). Sie
+      // bekommen dadurch beim nächsten Rundenende einmal Konfetti für eine Note, die
+      // sie schon hatten — ein harmloser Preis für eine Migration ohne Sonderfall.
+      bestGrade: null,
       openedChests: [],
       history: [],
       sessions: [],

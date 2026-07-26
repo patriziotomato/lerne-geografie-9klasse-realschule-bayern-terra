@@ -2,7 +2,7 @@ import { state, save, todayKey } from '../store.ts';
 import { bottomNav } from '../router.ts';
 import { esc, ring } from '../ui.ts';
 import { gradePicker, bindGradePicker } from './gradePicker.ts';
-import { gradeVerdict, type GradeVerdict } from '../logic/grade.ts';
+import { gradeVerdict, roundsLabel, type GradeVerdict } from '../logic/grade.ts';
 import { levelProgress } from '../logic/gamification.ts';
 import { pace, daysLeftLabel } from '../logic/pace.ts';
 import {
@@ -142,12 +142,21 @@ function gradeCard(v: GradeVerdict): string {
       <div>${body}</div>
     </section>`;
 
-  if (v.kind === 'no-data') {
+  // Am Anfang zählt jeder ungelernte Inhalt mit 0 — die Schätzung wäre also zwingend
+  // eine 6 und würde nur den offenen Stoff spiegeln, nicht den Lernenden. Statt einer
+  // Note steht hier deshalb der nächste erreichbare Meilenstein; seine Zahl sinkt mit
+  // jeder Runde um eins und ist damit die Rückmeldung, die eine 6 nie war.
+  if (v.kind === 'no-data' || v.kind === 'warmup') {
+    const rounds = v.next.rounds;
     return card(
-      'unknown',
-      '🔍',
-      `<strong>Noch keine Einschätzung</strong><br>
-       <span class="muted small">Beantworte ein paar Fragen — dann sage ich dir, auf welche Note du gerade zusteuerst. Dein Ziel: <span class="grade-num">${v.target}</span>.</span>`,
+      'warmup',
+      '📈',
+      `<strong>Auf dem Weg zur <span class="grade-num">${v.next.grade}</span></strong><br>
+       <span class="muted small">${
+         rounds
+           ? `Noch <strong>${roundsLabel(rounds)}</strong>, dann reicht dein Lernstand für eine <span class="grade-num">${v.next.grade}</span>.`
+           : 'Jede Runde bringt dich näher ran.'
+       } Dein Ziel: <span class="grade-num">${v.target}</span>.</span>`,
     );
   }
 
@@ -170,10 +179,22 @@ function gradeCard(v: GradeVerdict): string {
   }
 
   const early = v.early ? ' Du stehst aber noch ganz am Anfang — das geht jetzt schnell nach oben.' : '';
-  const todo =
-    v.needed > 0
-      ? ` Noch mindestens <strong>${v.needed}</strong> Inhalte, dann steht die <span class="grade-num">${v.target}</span>.`
-      : '';
+
+  // Erst die kleine, erreichbare Zahl (nächstbessere Note), das Ziel nachgestellt.
+  // Fällt die nächstbessere Note mit der Zielnote zusammen, bleibt es bei einem Satz.
+  const nextRounds = v.next?.rounds ?? null;
+  let todo = '';
+  if (v.next && nextRounds && v.next.grade !== v.target) {
+    todo =
+      ` Noch <strong>${roundsLabel(nextRounds)}</strong> bis zur <span class="grade-num">${v.next.grade}</span>` +
+      (v.targetRounds
+        ? ` — bis zu deiner <span class="grade-num">${v.target}</span> sind es ${roundsLabel(v.targetRounds)}.`
+        : '.');
+  } else if (v.targetRounds) {
+    todo = ` Noch <strong>${roundsLabel(v.targetRounds)}</strong>, dann steht die <span class="grade-num">${v.target}</span>.`;
+  } else if (v.needed > 0) {
+    todo = ` Noch mindestens <strong>${v.needed}</strong> Inhalte, dann steht die <span class="grade-num">${v.target}</span>.`;
+  }
 
   // Eigenes Emoji und „wenn die Prüfung heute wäre": Die Pace-Karte darüber blickt auf
   // die Deadline und kann „auf Kurs" melden, während diese Karte den Stand von jetzt
