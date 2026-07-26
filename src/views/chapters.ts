@@ -16,7 +16,7 @@ export function renderChapters(root: HTMLElement): void {
         const chestOpen = state.stats.openedChests.includes(ch.id);
         const active = isChapterActive(ch.id);
         return `
-        <a class="card chapter-card ${active ? '' : 'inactive'}" href="#/quiz/${ch.id}" style="--ch-color:${ch.color}">
+        <a class="card chapter-card ${active ? '' : 'inactive'}" href="#/quiz/${ch.id}">
           <div class="ch-emoji" aria-hidden="true">${ch.emoji}</div>
           <div class="ch-info">
             <div class="ch-title">${esc(ch.title)}</div>
@@ -32,7 +32,7 @@ export function renderChapters(root: HTMLElement): void {
               aria-label="${active ? 'Aus dem Lernplan entfernen' : 'Zum Lernplan hinzufügen'}"
               title="${active ? 'Im Lernplan' : 'Nicht im Lernplan'}">${active ? '⭐' : '☆'}</button>
             <div class="ring-wrap small">
-              ${ring(mastery, 56, 7, ch.color, `${Math.round(mastery * 100)} % gemeistert`)}
+              ${ring(mastery, 56, 7, 'var(--accent)', `${Math.round(mastery * 100)} % gemeistert`)}
               <div class="ring-center small">${Math.round(mastery * 100)}%</div>
             </div>
           </div>

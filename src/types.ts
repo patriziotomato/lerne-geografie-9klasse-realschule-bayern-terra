@@ -29,8 +29,6 @@ export interface Chapter {
   title: string;
   short: string;
   emoji: string;
-  /** Akzentfarbe der Kapitel-Kachel (Identität, dekorativ) */
-  color: string;
   description: string;
   /** Belohnung in der Schatzkiste bei 100 % Mastery */
   chestBadge: { emoji: string; name: string };

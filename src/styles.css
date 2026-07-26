@@ -36,22 +36,23 @@
   --ink-2: #99a2b1;
   --ink-3: #69727f;
 
-  /* Ein Akzent, gedämpft. Wird aus home.ts für den Level-Ring referenziert. */
-  --accent: #8090cc;
+  /* Die eine Markenfarbe. Trägt Aktion, Fortschritt UND „richtig" — es gibt
+     bewusst keine zweite Positivfarbe. Wird aus home.ts für den Level-Ring
+     referenziert. */
+  --accent: #e06fae;
   --on-accent: #0b1020;
-  --accent-wash: rgba(128, 144, 204, 0.14);
+  --accent-wash: rgba(224, 111, 174, 0.14);
 
-  /* Semantik — entsättigt, damit nichts schreit. „Richtig" ist Pink; damit
-     es neben „falsch" nicht verschwimmt, liegt --danger bewusst im warmen
-     Rot statt im Rosé — sonst trennten die beiden nur ~25° Farbton. */
-  --ok: #e06fae;
+  /* Nur noch zwei Signalfarben neben dem Akzent. --danger liegt im warmen
+     Rot statt im Rosé: neben dem pinken „richtig" trennten die beiden sonst
+     nur ~25° Farbton, und im Quiz stehen sie direkt untereinander. */
   --danger: #e4664f;
   --warn: #d3a04a;
 
   /* Der Ring-Track wird aus ui.ts heraus referenziert (ring()). */
   --ring-track: rgba(255, 255, 255, 0.1);
   --track: rgba(255, 255, 255, 0.09);
-  --focus: #8090cc;
+  --focus: var(--ink);
 
   /* Elevation: praktisch nur Kante, Schatten erst bei echten Overlays */
   --e-1: 0 0 0 1px var(--line);
@@ -109,19 +110,18 @@
   --ink-3: #878e9b;
 
   /* Tiefer als im Dark-Theme, damit weiße Schrift darauf 4,5:1 erreicht */
-  --accent: #3d4f96;
+  --accent: #b03579;
   --on-accent: #ffffff;
-  --accent-wash: rgba(61, 79, 150, 0.09);
+  --accent-wash: rgba(176, 53, 121, 0.09);
 
   /* Dunkel genug, dass weiße Schrift darauf und die Farbe selbst als Text
      auf hellem Grund jeweils >= 4,5:1 erreichen. */
-  --ok: #b03579;
   --danger: #bf3f24;
   --warn: #8a6011;
 
   --ring-track: rgba(20, 26, 38, 0.12);
   --track: rgba(20, 26, 38, 0.09);
-  --focus: #3d4f96;
+  --focus: var(--ink);
 
   --e-1: 0 0 0 1px var(--line);
   --e-2: 0 1px 2px rgba(16, 20, 28, 0.05), 0 0 0 1px var(--line);
@@ -557,7 +557,7 @@ strong {
 }
 .topic-card.on {
   opacity: 1;
-  border-color: var(--ch-color, var(--accent));
+  border-color: var(--accent);
 }
 .topic-emoji {
   font-size: 1.4rem;
@@ -697,7 +697,7 @@ strong {
 }
 .pace-card.ok::before,
 .grade-card.reached::before {
-  background: var(--ok);
+  background: var(--accent);
 }
 .pace-card.behind::before,
 .grade-card.behind::before {
@@ -833,7 +833,7 @@ strong {
   padding-left: var(--s-5);
 }
 .chapter-card::before {
-  background: var(--ch-color);
+  background: var(--accent);
 }
 .ch-emoji {
   font-size: 1.4rem;
@@ -918,17 +918,17 @@ strong {
   transition: background 0.25s ease;
 }
 .qdot.done {
-  background: var(--ok);
+  background: var(--accent);
 }
 .qdot.now {
-  background: var(--accent);
+  background: var(--ink);
 }
 .combo {
   min-width: 42px;
   text-align: right;
   font-weight: 650;
   font-size: var(--text-md);
-  color: var(--warn);
+  color: var(--accent);
 }
 
 .quiz-chapter {
@@ -990,11 +990,11 @@ strong {
     color 0.2s ease;
 }
 .answer.correct {
-  border-color: var(--ok);
-  background: color-mix(in srgb, var(--ok) 9%, var(--surface));
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 9%, var(--surface));
 }
 .answer.correct .answer-key {
-  background: var(--ok);
+  background: var(--accent);
   color: var(--surface);
 }
 .answer.wrong {
@@ -1031,7 +1031,7 @@ strong {
   border-left-width: 3px;
 }
 .feedback.ok {
-  border-left-color: var(--ok);
+  border-left-color: var(--accent);
 }
 .feedback.bad {
   border-left-color: var(--danger);
@@ -1059,7 +1059,7 @@ strong {
 .fb-autobar span {
   display: block;
   height: 100%;
-  background: var(--ok);
+  background: var(--accent);
   transform-origin: left center;
   animation: autobar 1.2s linear forwards;
 }
@@ -1128,7 +1128,7 @@ strong {
   border-left-color: var(--accent);
 }
 .res-gradeup {
-  border-left-color: var(--ok);
+  border-left-color: var(--accent);
 }
 .res-badges {
   display: flex;

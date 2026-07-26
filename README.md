@@ -72,22 +72,28 @@ einer davon in `store.ts` oder `styles.css`, muss `index.html` mit.
 
 Drei Regeln halten die Oberfläche ruhig:
 
-1. **Ein Akzent.** `--accent` trägt jede Aktion und jeden Fortschritt —
-   Primärbutton, Level-Ring, XP- und Wochenbalken, aktiver Tab, Zielnote. Es
-   gibt keine Verläufe.
-2. **Farbe bedeutet etwas.** Außer dem Akzent erscheinen nur `--ok`,
-   `--danger` und `--warn`, und nur dort, wo sie eine Aussage tragen
-   (richtig, falsch, hinter dem Plan). Alles andere ist Graustufe.
+1. **Eine Markenfarbe.** `--accent` (Pink) trägt Aktion, Fortschritt *und*
+   „richtig": Primärbutton, Level-Ring, XP- und Wochenbalken, aktiver Tab,
+   Zielnote, korrekte Antwort, Kapitelkante. Es gibt keine zweite
+   Positivfarbe und keine Verläufe.
+2. **Farbe bedeutet etwas.** Neben dem Akzent existieren nur `--danger`
+   (falsch, zerstörende Aktion) und `--warn` (hinter dem Plan). Alles andere
+   ist Graustufe — auch das Konfetti zieht seine Farben aus diesen Tokens.
 3. **Kanten statt Schatten.** Flächen werden über `--line` und kleine Radien
    (3–10 px) getrennt; Schatten bleiben echten Overlays vorbehalten.
 
+`--danger` liegt bewusst im warmen Rot statt im Rosé: neben dem pinken
+„richtig" trennten die beiden sonst nur rund 25° Farbton, und im Quiz stehen
+sie direkt untereinander.
+
 Alle Farbpaare, die Text tragen, sind auf ≥ 4,5:1 ausgelegt — in beiden
 Themes. Deshalb ist `--accent` im Light-Theme deutlich dunkler als im
-Dark-Theme, und `--on-accent` wechselt entsprechend.
+Dark-Theme, und `--on-accent` wechselt entsprechend. Der Fokusring nutzt
+`--ink`: auf einer Akzentfläche wäre ein Akzentring kaum zu sehen.
 
-Kapitelfarben stehen als `color` in `src/data/chapters.ts` und landen per
-Inline-`--ch-color` auf Kapitelkarte, Fortschrittsring und Themen-Kachel. Es
-sind bewusst entsättigte Mitteltöne, damit sie auf beiden Untergründen tragen.
+Kapitel haben **keine** eigenen Farben — sie unterscheiden sich über Emoji
+und Titel. Sechs zusätzliche Farbtöne für Kapitelkarte, Ring und
+Themen-Kachel waren der größte Posten im Farbhaushalt.
 
 App-Icons werden aus `public/icons/icon.svg` gerendert; die PNG-Größen
 (180/192/512 plus maskable) sind Rasterisate derselben Datei.
@@ -117,7 +123,7 @@ Die Fragen liegen als editierbare JSON-Dateien in `src/data/questions/*.json`:
 ```
 
 Die App mischt die Antwortreihenfolge beim Anzeigen. Kapitel-Metadaten (Titel,
-Emoji, Farben, Kisten-Badges) stehen in `src/data/chapters.ts`.
+Emoji, Kisten-Badges) stehen in `src/data/chapters.ts`.
 
 ### Regeln für neue Fragen
 

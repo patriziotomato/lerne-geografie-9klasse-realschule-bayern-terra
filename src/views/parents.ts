@@ -90,7 +90,7 @@ function renderDashboard(root: HTMLElement): void {
         return `
         <div class="parent-ch ${active ? '' : 'inactive'}">
           <div class="parent-ch-head"><span>${ch.emoji} ${esc(ch.short)}${active ? '' : ' <span class="pill off">nicht im Lernplan</span>'}</span><span class="muted small">${learnedCount(ch.id)}/${conceptsOf(ch.id).length} · ${Math.round(m * 100)} %</span></div>
-          <div class="bar"><span style="width:${(m * 100).toFixed(0)}%; background:${ch.color}"></span></div>
+          <div class="bar"><span style="width:${(m * 100).toFixed(0)}%"></span></div>
         </div>`;
       }).join('')}
     </section>

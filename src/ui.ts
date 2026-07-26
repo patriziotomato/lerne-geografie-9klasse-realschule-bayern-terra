@@ -26,7 +26,15 @@ export function ring(ratio: number, size: number, stroke: number, color: string,
 
 /** Konfetti-Regen (rein CSS/DOM, entfernt sich selbst) */
 export function confetti(durationMs = 2600): void {
-  const colors = ['#d3a04a', '#c4708f', '#5b82c4', '#e06fae', '#8878c8', '#4f9aa8'];
+  // Aus der Palette statt aus eigenen Hexwerten: so bringt der Jubel keine
+  // Farben mit, die es sonst nirgends gibt, und zieht beim Theme-Wechsel mit.
+  const css = getComputedStyle(document.documentElement);
+  const token = (name: string, fallback: string) => css.getPropertyValue(name).trim() || fallback;
+  const colors = [
+    token('--accent', '#e06fae'),
+    token('--warn', '#d3a04a'),
+    token('--ink-2', '#99a2b1'),
+  ];
   const host = document.createElement('div');
   host.className = 'confetti-host';
   host.setAttribute('aria-hidden', 'true');
