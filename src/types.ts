@@ -29,8 +29,6 @@ export interface Chapter {
   title: string;
   short: string;
   emoji: string;
-  /** Akzentfarbe der Kapitel-Kachel (Identität, dekorativ) */
-  color: string;
   description: string;
   /** Belohnung in der Schatzkiste bei 100 % Mastery */
   chestBadge: { emoji: string; name: string };
@@ -99,11 +97,15 @@ export interface Stats {
   sessions: SessionLog[];
 }
 
+/** Farbschema-Wunsch. 'system' folgt der Geräteeinstellung. */
+export type ThemeChoice = 'system' | 'light' | 'dark';
+
 export interface Settings {
   remindersEnabled: boolean;
   soundEnabled: boolean;
   /** SHA-256-Hex der Eltern-PIN, null = nicht gesetzt */
   parentPinHash: string | null;
+  theme: ThemeChoice;
 }
 
 /** Markierungen einzelner Unterthemen. Werte sind Konzept-IDs: Unterthema

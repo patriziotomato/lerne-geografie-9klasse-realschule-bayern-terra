@@ -68,7 +68,7 @@ function list(entries: ConceptEntry[]): string {
       .map(([chapterId, items]) => {
         const ch = chapterById(chapterId);
         return `
-      <section class="card" style="--ch-color:${ch?.color ?? 'var(--accent)'}">
+      <section class="card">
         <div class="card-title">${ch?.emoji ?? '📚'} ${esc(ch?.short ?? '')}</div>
         ${items
           .map((e) => {

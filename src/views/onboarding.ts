@@ -74,7 +74,7 @@ function renderStep2(): string {
       ${CHAPTERS.map((ch) => {
         const on = draft.chapters.has(ch.id);
         return `
-        <button class="topic-card ${on ? 'on' : ''}" data-id="${ch.id}" style="--ch-color:${ch.color}">
+        <button class="topic-card ${on ? 'on' : ''}" data-id="${ch.id}">
           <span class="topic-emoji">${ch.emoji}</span>
           <span class="topic-name">${esc(ch.short)}</span>
           <span class="topic-check">${on ? '✓' : ''}</span>

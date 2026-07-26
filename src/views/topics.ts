@@ -39,7 +39,7 @@ function renderOverview(root: HTMLElement): void {
       const todo = all.filter((c) => isTodo(c.id)).length;
       const active = isChapterActive(ch.id);
       return `
-      <section class="card ${active ? '' : 'chapter-card inactive'}" style="--ch-color:${ch.color}">
+      <section class="card ${active ? '' : 'chapter-card inactive'}">
         <div class="topic-row">
           <div class="topic-row-main">
             <strong>${ch.emoji} ${esc(ch.title)}</strong><br>

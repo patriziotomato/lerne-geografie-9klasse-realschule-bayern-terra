@@ -40,6 +40,8 @@ Kapitelstruktur des Terra-Buchs (Klett). Pures TypeScript — kein Framework.
   SMS-Feature bereits erfasst (bleibt lokal).
 - **Eltern-Bereich** (optional PIN-geschützt): Lernhistorie (wann, wie lange,
   wie viele Fragen, Quote), Fortschritt pro Kapitel, teilbarer Bericht.
+- **Farbschema wählbar**: Automatisch (folgt dem Gerät), Hell oder Dunkel —
+  einstellbar unter „Mehr → Darstellung".
 - **PWA**: Installierbar auf dem Homescreen, funktioniert offline.
 
 ## Entwicklung
@@ -54,26 +56,59 @@ npm run preview    # Build lokal testen
 ## Design
 
 Das komplette Styling liegt in `src/styles.css` und hängt an einem Token-Block
-am Dateianfang — Flächen, Schrift, Akzente, Radien, Abstände, Elevation. Ein
+am Dateianfang — Flächen, Schrift, Akzent, Radien, Abstände, Elevation. Ein
 Theme ist damit ein reiner Wertetausch, keine zweite Regelmenge:
 
-- **Dark** (Default): Mitternachts-Indigo, Aurora-Schimmer und ein feines
-  Gradnetz als Hintergrund — das Motiv, das die App im Kapitel
-  „Arbeitstechniken" selbst unterrichtet.
-- **Light**: warmes Kartenpapier, gleiche Struktur, eigene Werte im
-  `prefers-color-scheme: light`-Block.
+- **Dark** (Default): neutrales Schiefergrau.
+- **Light**: neutrales Off-White, gleiche Struktur, eigene Werte.
 
 Beide Themes setzen `color-scheme`, damit native Bedienelemente (Datums- und
 Zeit-Picker, Checkboxen, Scrollbars) mitziehen.
 
-Der Signaturverlauf `--grad` (Violett → Aqua) bleibt den Fortschritts- und
-Belohnungsmomenten vorbehalten: Level-Ring, XP-Balken, Wochenbalken, Level-Up,
-Kisten-Pill. Auf gefüllten Verlaufsflächen ist `--on-grad` die passende
-Schriftfarbe — im Dark-Theme dunkel, im Light-Theme weiß, damit der Kontrast in
-beiden Richtungen ≥ 4,5:1 bleibt.
+### Farbschema umschalten
 
-Kapitelfarben stehen als `color` in `src/data/chapters.ts` und landen per
-Inline-`--ch-color` auf Kapitelkarte, Fortschrittsring und Themen-Kachel.
+Das Schema hängt an `[data-theme]` auf `<html>`, **nicht** an
+`prefers-color-scheme` — sonst ließe es sich in den Einstellungen nicht gegen
+die Geräteeinstellung setzen. Beteiligt sind drei Stellen:
+
+| Stelle | Aufgabe |
+|---|---|
+| `src/logic/theme.ts` | löst `'system'` gegen `matchMedia` auf, schreibt `data-theme` und die `theme-color`-Meta, reagiert auf Wechsel der Geräteeinstellung |
+| `index.html` | Bootstrap-Skript, das `data-theme` **vor dem ersten Paint** setzt — sonst blitzt beim Start das falsche Schema auf |
+| `src/styles.css` | `:root, :root[data-theme='dark']` bzw. `:root[data-theme='light']` |
+
+Die Wahl (`settings.theme`: `'system' | 'light' | 'dark'`, Vorgabe `'system'`)
+liegt im normalen `localStorage`-Zustand; Profile von vorher fallen über
+`validTheme()` auf `'system'` zurück und verhalten sich damit wie bisher.
+
+Weil das Bootstrap-Skript ohne Modul-Import auskommen muss, sind der
+Storage-Schlüssel und die beiden `--bg`-Werte dort gespiegelt. Ändert sich
+einer davon in `store.ts` oder `styles.css`, muss `index.html` mit.
+
+Drei Regeln halten die Oberfläche ruhig:
+
+1. **Eine Markenfarbe.** `--accent` (Pink) trägt Aktion, Fortschritt *und*
+   „richtig": Primärbutton, Level-Ring, XP- und Wochenbalken, aktiver Tab,
+   Zielnote, korrekte Antwort, Kapitelkante. Es gibt keine zweite
+   Positivfarbe und keine Verläufe.
+2. **Farbe bedeutet etwas.** Neben dem Akzent existieren nur `--danger`
+   (falsch, zerstörende Aktion) und `--warn` (hinter dem Plan). Alles andere
+   ist Graustufe — auch das Konfetti zieht seine Farben aus diesen Tokens.
+3. **Kanten statt Schatten.** Flächen werden über `--line` und kleine Radien
+   (3–10 px) getrennt; Schatten bleiben echten Overlays vorbehalten.
+
+`--danger` liegt bewusst im warmen Rot statt im Rosé: neben dem pinken
+„richtig" trennten die beiden sonst nur rund 25° Farbton, und im Quiz stehen
+sie direkt untereinander.
+
+Alle Farbpaare, die Text tragen, sind auf ≥ 4,5:1 ausgelegt — in beiden
+Themes. Deshalb ist `--accent` im Light-Theme deutlich dunkler als im
+Dark-Theme, und `--on-accent` wechselt entsprechend. Der Fokusring nutzt
+`--ink`: auf einer Akzentfläche wäre ein Akzentring kaum zu sehen.
+
+Kapitel haben **keine** eigenen Farben — sie unterscheiden sich über Emoji
+und Titel. Sechs zusätzliche Farbtöne für Kapitelkarte, Ring und
+Themen-Kachel waren der größte Posten im Farbhaushalt.
 
 App-Icons werden aus `public/icons/icon.svg` gerendert; die PNG-Größen
 (180/192/512 plus maskable) sind Rasterisate derselben Datei.
@@ -103,7 +138,7 @@ Die Fragen liegen als editierbare JSON-Dateien in `src/data/questions/*.json`:
 ```
 
 Die App mischt die Antwortreihenfolge beim Anzeigen. Kapitel-Metadaten (Titel,
-Emoji, Farben, Kisten-Badges) stehen in `src/data/chapters.ts`.
+Emoji, Kisten-Badges) stehen in `src/data/chapters.ts`.
 
 ### Regeln für neue Fragen
 

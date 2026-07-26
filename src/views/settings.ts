@@ -5,6 +5,8 @@ import { state, save, resetAll, exportJson } from '../store.ts';
 import { downloadIcs } from '../logic/ics.ts';
 import { scheduleWhileOpen } from '../logic/reminders.ts';
 import { requestPermission, notificationsSupported } from '../logic/notify.ts';
+import { THEME_CHOICES, setTheme, resolvedTheme } from '../logic/theme.ts';
+import type { ThemeChoice } from '../types.ts';
 import { CHAPTERS } from '../data/chapters.ts';
 import { plannedConceptCount, toggleChapter, todoConcepts } from '../logic/leitner.ts';
 
@@ -39,7 +41,7 @@ export function renderSettings(root: HTMLElement): void {
         ${CHAPTERS.map((ch) => {
           const on = p.chapters.includes(ch.id);
           return `
-          <button class="topic-card ${on ? 'on' : ''}" data-id="${ch.id}" style="--ch-color:${ch.color}">
+          <button class="topic-card ${on ? 'on' : ''}" data-id="${ch.id}">
             <span class="topic-emoji">${ch.emoji}</span>
             <span class="topic-name">${esc(ch.short)}</span>
             <span class="topic-check">${on ? '✓' : ''}</span>
@@ -94,6 +96,25 @@ export function renderSettings(root: HTMLElement): void {
       <a class="btn ghost" href="#/parents">Eltern-Bereich öffnen</a>
       <button class="btn ghost" id="set-pin">${st.parentPinHash ? 'PIN ändern' : 'PIN festlegen'}</button>
       ${st.parentPinHash ? '<button class="btn ghost" id="del-pin">PIN entfernen</button>' : ''}
+    </section>
+
+    <section class="card">
+      <div class="card-title">Darstellung</div>
+      <div class="field">
+        <span>Farbschema</span>
+        <div class="seg" role="group" aria-label="Farbschema">
+          ${THEME_CHOICES.map(
+            (c) => `
+            <button type="button" class="seg-opt ${st.theme === c.value ? 'on' : ''}"
+              data-theme-choice="${c.value}" aria-pressed="${st.theme === c.value}">${c.label}</button>`,
+          ).join('')}
+        </div>
+        <small class="muted">${
+          st.theme === 'system'
+            ? `Folgt deinem Gerät — gerade ${resolvedTheme() === 'dark' ? 'dunkel' : 'hell'}.`
+            : 'Gilt auf diesem Gerät, unabhängig von der Systemeinstellung.'
+        }</small>
+      </div>
     </section>
 
     <section class="card">
@@ -193,6 +214,13 @@ function bind(root: HTMLElement): void {
     renderSettings(root);
   });
   root.querySelector('#set-ics')?.addEventListener('click', downloadIcs);
+
+  root.querySelectorAll<HTMLButtonElement>('.seg-opt').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      setTheme(btn.dataset.themeChoice as ThemeChoice);
+      renderSettings(root);
+    });
+  });
 
   root.querySelector('#set-sound')!.addEventListener('change', (e) => {
     state.settings.soundEnabled = (e.target as HTMLInputElement).checked;

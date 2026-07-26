@@ -11,6 +11,7 @@ import { renderSettings } from './views/settings.ts';
 import { renderTopics } from './views/topics.ts';
 import { renderMerkliste } from './views/merkliste.ts';
 import { scheduleWhileOpen } from './logic/reminders.ts';
+import { applyTheme, watchSystemTheme } from './logic/theme.ts';
 
 register('onboarding', renderOnboarding);
 register('home', renderHome);
@@ -22,6 +23,12 @@ register('parents', renderParents);
 register('settings', renderSettings);
 register('topics', (root, param) => renderTopics(root, param));
 register('merkliste', renderMerkliste);
+
+// Das Bootstrap-Skript in index.html hat das Schema schon gesetzt; hier wird
+// es gegen den geladenen Zustand nochmal bestätigt (und korrigiert, falls der
+// Speicher inzwischen migriert wurde).
+applyTheme();
+watchSystemTheme();
 
 startRouter(document.getElementById('app')!);
 scheduleWhileOpen();

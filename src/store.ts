@@ -1,6 +1,9 @@
-import type { AppState, DayLog, Profile } from './types.ts';
+import type { AppState, DayLog, Profile, ThemeChoice } from './types.ts';
 import { CHAPTERS } from './data/chapters.ts';
 
+/** ACHTUNG: Dieser Schlüssel steht ein zweites Mal im Bootstrap-Skript in
+ *  index.html, das das Farbschema noch vor dem ersten Paint setzt. Wird er
+ *  hier geändert, muss er dort mitgeändert werden. */
 const KEY = 'geoquest.geo9.terra.v1';
 const SCHEMA_VERSION = 5;
 
@@ -29,6 +32,7 @@ function defaultState(): AppState {
       remindersEnabled: true,
       soundEnabled: true,
       parentPinHash: null,
+      theme: 'system',
     },
     topics: { excluded: [], todo: [] },
   };
@@ -64,7 +68,11 @@ function load(): AppState {
       profile,
       version: SCHEMA_VERSION,
       stats: { ...def.stats, ...(parsed.stats ?? {}) },
-      settings: { ...def.settings, ...(parsed.settings ?? {}) },
+      settings: {
+        ...def.settings,
+        ...(parsed.settings ?? {}),
+        theme: validTheme(parsed.settings?.theme),
+      },
       progress: parsed.progress ?? {},
       // Profile von vor dem Themenkatalog haben noch keine Markierungen.
       topics: {
@@ -80,6 +88,12 @@ function load(): AppState {
 /** Zielnote aus dem Speicher übernehmen, sofern sie eine echte Schulnote ist.
  *  Die Grenzen stehen absichtlich hier inline — ein Import aus logic/grade.ts
  *  würde einen Zyklus store → grade → store erzeugen. */
+/** Profile von vor der Farbschema-Wahl (und alles Unbekannte) folgen dem
+ *  System — das ist der Zustand, den sie bisher hatten. */
+function validTheme(theme: unknown): ThemeChoice {
+  return theme === 'light' || theme === 'dark' || theme === 'system' ? theme : 'system';
+}
+
 function validGrade(grade: unknown): number | null {
   const ok = typeof grade === 'number' && Number.isInteger(grade) && grade >= 1 && grade <= 6;
   return ok ? (grade as number) : null;
