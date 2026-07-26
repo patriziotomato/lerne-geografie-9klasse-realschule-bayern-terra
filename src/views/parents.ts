@@ -2,8 +2,7 @@ import { bottomNav } from '../router.ts';
 import { esc, fmtDate, fmtTime, sha256Hex } from '../ui.ts';
 import { state, todayKey } from '../store.ts';
 import { CHAPTERS } from '../data/chapters.ts';
-import { conceptsOf } from '../data/content.ts';
-import { chapterMastery, learnedCount, totalLearned, activeConceptCount, isChapterActive } from '../logic/leitner.ts';
+import { chapterMastery, learnedCount, totalLearned, plannedConceptCount, isChapterActive, plannedConceptsOf } from '../logic/leitner.ts';
 import { pace, daysLeftLabel } from '../logic/pace.ts';
 import { gradeVerdict, gradeLabel, type GradeVerdict } from '../logic/grade.ts';
 
@@ -67,7 +66,7 @@ function renderDashboard(root: HTMLElement): void {
       <div class="tile"><div class="tile-num">${totalMinutes}</div><div class="tile-label">Minuten gesamt</div></div>
       <div class="tile"><div class="tile-num">${s.sessions.length}</div><div class="tile-label">Lerneinheiten</div></div>
       <div class="tile"><div class="tile-num">${quote}%</div><div class="tile-label">Richtig-Quote</div></div>
-      <div class="tile"><div class="tile-num">${learned}/${activeConceptCount()}</div><div class="tile-label">Inhalte gelernt</div></div>
+      <div class="tile"><div class="tile-num">${learned}/${plannedConceptCount()}</div><div class="tile-label">Inhalte gelernt</div></div>
     </section>
 
     <section class="card ${pc.done ? 'pace-card done' : !pc.hasDeadline ? 'pace-card neutral' : pc.onTrack ? 'pace-card ok' : 'pace-card behind'}">
@@ -89,7 +88,7 @@ function renderDashboard(root: HTMLElement): void {
         const active = isChapterActive(ch.id);
         return `
         <div class="parent-ch ${active ? '' : 'inactive'}">
-          <div class="parent-ch-head"><span>${ch.emoji} ${esc(ch.short)}${active ? '' : ' <span class="pill off">nicht im Lernplan</span>'}</span><span class="muted small">${learnedCount(ch.id)}/${conceptsOf(ch.id).length} · ${Math.round(m * 100)} %</span></div>
+          <div class="parent-ch-head"><span>${ch.emoji} ${esc(ch.short)}${active ? '' : ' <span class="pill off">nicht im Lernplan</span>'}</span><span class="muted small">${learnedCount(ch.id)}/${plannedConceptsOf(ch.id).length} · ${Math.round(m * 100)} %</span></div>
           <div class="bar"><span style="width:${(m * 100).toFixed(0)}%; background:${ch.color}"></span></div>
         </div>`;
       }).join('')}
@@ -198,7 +197,7 @@ function buildReport(): string {
       : v.kind === 'no-data'
         ? [`Noten-Einschätzung: noch zu wenig Daten · Zielnote ${v.target}`]
         : [`Noten-Einschätzung: Stand ${v.current} · Zielnote ${v.target}`]),
-    `Inhalte gelernt: ${totalLearned()}/${activeConceptCount()}`,
+    `Inhalte gelernt: ${totalLearned()}/${plannedConceptCount()}`,
     `Lernzeit gesamt: ${totalMinutes} min in ${s.sessions.length} Einheiten`,
     `Streak: ${s.streak} Tage (Rekord: ${s.bestStreak})`,
     '',

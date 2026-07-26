@@ -5,7 +5,7 @@ import { state, save, resetAll, exportJson } from '../store.ts';
 import { downloadIcs } from '../logic/ics.ts';
 import { requestPermission, scheduleWhileOpen, notificationsSupported } from '../logic/reminders.ts';
 import { CHAPTERS } from '../data/chapters.ts';
-import { conceptsOf } from '../data/content.ts';
+import { plannedConceptCount, toggleChapter, todoConcepts } from '../logic/leitner.ts';
 
 export function renderSettings(root: HTMLElement): void {
   const p = state.profile!;
@@ -46,7 +46,10 @@ export function renderSettings(root: HTMLElement): void {
         }).join('')}
       </div>
       <button class="btn ghost small" id="set-all-topics">🌍 Alle Inhalte auswählen</button>
-      <p class="muted small">${p.chapters.length} Themenblöcke · ${p.chapters.reduce((n, id) => n + conceptsOf(id).length, 0)} Inhalte im Lernplan</p>
+      <p class="muted small">${p.chapters.length} Themenblöcke · ${plannedConceptCount()} Inhalte im Lernplan</p>
+      <a class="btn ghost" href="#/topics">🗂️ Themenkatalog</a>
+      <p class="muted small">Dort kannst du einzelne Unterthemen ausnehmen, die im Unterricht noch nicht dran waren.</p>
+      <a class="btn ghost" href="#/merkliste">📌 Merkliste${todoConcepts().length > 0 ? ` (${todoConcepts().length})` : ''}</a>
     </section>
 
     <section class="card">
@@ -136,15 +139,7 @@ function bind(root: HTMLElement): void {
 
   root.querySelectorAll<HTMLButtonElement>('.topic-card').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const id = btn.dataset.id!;
-      if (p.chapters.includes(id)) {
-        if (p.chapters.length === 1) return; // mindestens ein Thema bleibt aktiv
-        p.chapters = p.chapters.filter((c) => c !== id);
-      } else {
-        p.chapters = [...p.chapters, id];
-      }
-      save();
-      renderSettings(root);
+      if (toggleChapter(btn.dataset.id!)) renderSettings(root);
     });
   });
   root.querySelector('#set-all-topics')!.addEventListener('click', () => {

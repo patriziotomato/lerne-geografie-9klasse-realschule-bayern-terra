@@ -5,7 +5,13 @@ import { gradePicker, bindGradePicker } from './gradePicker.ts';
 import { gradeVerdict, type GradeVerdict } from '../logic/grade.ts';
 import { levelProgress } from '../logic/gamification.ts';
 import { pace, daysLeftLabel } from '../logic/pace.ts';
-import { totalLearned, activeConceptCount, activeChapterIds, chapterMastery } from '../logic/leitner.ts';
+import {
+  totalLearned,
+  plannedConceptCount,
+  activeChapterIds,
+  chapterMastery,
+  todoConcepts,
+} from '../logic/leitner.ts';
 import { CHAPTERS } from '../data/chapters.ts';
 import { nudge } from '../logic/reminders.ts';
 
@@ -15,7 +21,7 @@ export function renderHome(root: HTMLElement): void {
   const lp = levelProgress(s.xp);
   const pc = pace();
   const learned = totalLearned();
-  const totalConcepts = activeConceptCount();
+  const totalConcepts = plannedConceptCount();
   const overall = totalConcepts > 0 ? learned / totalConcepts : 0;
   const hint = nudge();
   const streakActiveToday = s.lastStudyDay === todayKey();
@@ -71,6 +77,8 @@ export function renderHome(root: HTMLElement): void {
             : `<section class="card pace-card behind"><div class="pace-emoji">💪</div><div><strong>Heute noch ${pc.dailyTarget - pc.todayPoints} Lernpunkte</strong><br><span class="muted small">${pc.todayPoints}/${pc.dailyTarget} geschafft — jede richtige Antwort zählt!</span></div></section>`
     }
 
+    ${todoCard(todoConcepts().length)}
+
     ${gradeCard(verdict)}
 
     <a class="btn primary big cta" href="#/quiz/${nextChapter.id}">
@@ -101,6 +109,17 @@ export function renderHome(root: HTMLElement): void {
     save();
     renderHome(root);
   });
+}
+
+/** „3 Themen auf der Merkliste" — nur wenn wirklich etwas offen ist. */
+function todoCard(n: number): string {
+  if (n === 0) return '';
+  return `
+    <a class="card pace-card neutral" href="#/merkliste">
+      <div class="pace-emoji">📌</div>
+      <div><strong>${n === 1 ? '1 Thema' : `${n} Themen`} auf der Merkliste</strong><br>
+      <span class="muted small">Vorgemerkt zum Lernen — jetzt gezielt üben!</span></div>
+    </a>`;
 }
 
 /** Einmalige Nachfrage für alle, die vor dem Zielnoten-Feature angefangen haben. */
