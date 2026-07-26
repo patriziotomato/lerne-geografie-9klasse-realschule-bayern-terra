@@ -1,15 +1,17 @@
 import { state, save } from '../store.ts';
 import { navigate } from '../router.ts';
 import { esc } from '../ui.ts';
+import { gradePicker, bindGradePicker } from './gradePicker.ts';
 import { requestPermission } from '../logic/reminders.ts';
 import { TOTAL_CONCEPTS } from '../data/content.ts';
 
-/** 3-Schritte-Onboarding: Wer bist du? → Bis wann? → Wann lernst du? */
+/** 4-Schritte-Onboarding: Wer bist du? → Bis wann? → Welche Note? → Wann lernst du? */
 
 interface Draft {
   firstName: string;
   phone: string;
   deadline: string;
+  targetGrade: number;
   studyTimes: string[];
 }
 
@@ -17,6 +19,7 @@ const draft: Draft = {
   firstName: '',
   phone: '',
   deadline: defaultDeadline(),
+  targetGrade: 2,
   studyTimes: ['14:30', '20:30'],
 };
 
@@ -31,14 +34,15 @@ function minDeadline(): string {
   return new Date(Date.now() + 86400000).toISOString().slice(0, 10);
 }
 
+const STEPS = [renderStep1, renderStep2, renderStep3, renderStep4];
+
 export function renderOnboarding(root: HTMLElement): void {
-  const steps = [renderStep1, renderStep2, renderStep3];
   root.innerHTML = `
     <div class="onboarding">
       <div class="ob-progress">
-        ${[0, 1, 2].map((i) => `<span class="ob-dot ${i <= step ? 'on' : ''}"></span>`).join('')}
+        ${STEPS.map((_, i) => `<span class="ob-dot ${i <= step ? 'on' : ''}"></span>`).join('')}
       </div>
-      <div class="ob-body">${steps[step]()}</div>
+      <div class="ob-body">${STEPS[step]()}</div>
     </div>`;
   bind(root);
 }
@@ -78,6 +82,18 @@ function renderStep2(): string {
 }
 
 function renderStep3(): string {
+  return `
+    <div class="ob-hero">🎯</div>
+    <h1>Welche Note<br>willst du schreiben?</h1>
+    <p class="muted">Danach richte ich deinen Lernfortschritt aus: Ich sage dir künftig, für welche Note dein Lernstand gerade reicht — und wie weit es noch bis zu deiner Wunschnote ist. Änderbar bleibt das jederzeit in den Einstellungen.</p>
+    ${gradePicker(draft.targetGrade)}
+    <div class="ob-nav">
+      <button class="btn ghost" id="ob-back">Zurück</button>
+      <button class="btn primary big" id="ob-next">Weiter 👉</button>
+    </div>`;
+}
+
+function renderStep4(): string {
   return `
     <div class="ob-hero">⏰</div>
     <h1>Wann willst du<br>lernen?</h1>
@@ -131,7 +147,13 @@ function bind(root: HTMLElement): void {
       if (!dl || dl < minDeadline()) return showError(root, 'Wähl ein Datum in der Zukunft.');
       draft.deadline = dl;
     }
+    // Schritt 3 (Zielnote) braucht keine Prüfung — es ist immer eine Note gewählt.
     step++;
+    renderOnboarding(root);
+  });
+
+  bindGradePicker(root, (grade) => {
+    draft.targetGrade = grade;
     renderOnboarding(root);
   });
 
@@ -159,6 +181,7 @@ function bind(root: HTMLElement): void {
       phone: draft.phone,
       deadline: draft.deadline,
       studyTimes: times,
+      targetGrade: draft.targetGrade,
       createdAt: new Date().toISOString(),
     };
     save();

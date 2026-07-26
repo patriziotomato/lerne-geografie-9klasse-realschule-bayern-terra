@@ -43,6 +43,8 @@ export interface Profile {
   deadline: string;
   /** Uhrzeiten "HH:MM", zu denen gelernt werden soll */
   studyTimes: string[];
+  /** Angepeilte Schulnote (1–4); null = noch nicht gefragt */
+  targetGrade: number | null;
   createdAt: string;
 }
 
@@ -118,4 +120,7 @@ export interface RoundResult {
   newBadges: string[];
   /** Kapitel, deren Kiste durch diese Runde freigeschaltet wurde */
   unlockedChests: string[];
+  /** Geschätzte Note vor bzw. nach der Runde; null = zu wenig Daten */
+  gradeBefore: number | null;
+  gradeAfter: number | null;
 }

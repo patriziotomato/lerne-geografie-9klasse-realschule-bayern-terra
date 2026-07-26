@@ -1,7 +1,7 @@
-import type { AppState, DayLog } from './types.ts';
+import type { AppState, DayLog, Profile } from './types.ts';
 
 const KEY = 'geoquest.geo9.terra.v1';
-const SCHEMA_VERSION = 2;
+const SCHEMA_VERSION = 3;
 
 function defaultState(): AppState {
   return {
@@ -38,6 +38,7 @@ function load(): AppState {
       ...def,
       ...parsed,
       version: SCHEMA_VERSION,
+      profile: migrateProfile(parsed.profile),
       stats: { ...def.stats, ...(parsed.stats ?? {}) },
       settings: { ...def.settings, ...(parsed.settings ?? {}) },
       progress: parsed.progress ?? {},
@@ -45,6 +46,16 @@ function load(): AppState {
   } catch {
     return defaultState();
   }
+}
+
+/** Profile aus älteren Schema-Versionen auffüllen (v2 kannte noch keine Zielnote).
+ *  Die Schwellen bleiben absichtlich hier inline — ein Import aus logic/grade.ts
+ *  würde einen Zyklus store → grade → store erzeugen. */
+function migrateProfile(profile: Profile | null | undefined): Profile | null {
+  if (!profile) return null;
+  const g = profile.targetGrade;
+  const valid = typeof g === 'number' && Number.isInteger(g) && g >= 1 && g <= 6;
+  return { ...profile, targetGrade: valid ? g : null };
 }
 
 /** Globaler App-Zustand. Nach Mutationen save() aufrufen. */

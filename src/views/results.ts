@@ -34,6 +34,12 @@ export function renderResults(root: HTMLElement): void {
       ${r.leveledUpTo ? `<div class="res-levelup pop">🎉 LEVEL UP! Du bist jetzt Level ${r.leveledUpTo}!</div>` : ''}
 
       ${
+        r.gradeAfter !== null && r.gradeBefore !== null && r.gradeAfter < r.gradeBefore
+          ? `<div class="res-gradeup pop">📈 Notensprung! Dein Lernstand reicht jetzt für eine ${r.gradeAfter}.</div>`
+          : ''
+      }
+
+      ${
         r.newBadges.length > 0
           ? `<div class="res-badges">
               ${r.newBadges

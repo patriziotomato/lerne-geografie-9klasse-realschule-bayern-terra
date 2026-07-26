@@ -1,5 +1,6 @@
 import { bottomNav } from '../router.ts';
 import { esc, sha256Hex } from '../ui.ts';
+import { gradePicker, bindGradePicker } from './gradePicker.ts';
 import { state, save, resetAll, exportJson } from '../store.ts';
 import { downloadIcs } from '../logic/ics.ts';
 import { requestPermission, scheduleWhileOpen, notificationsSupported } from '../logic/reminders.ts';
@@ -21,6 +22,9 @@ export function renderSettings(root: HTMLElement): void {
         <small class="muted">Für spätere SMS-Erinnerungen — bleibt bis dahin nur auf diesem Gerät.</small></label>
       <label class="field"><span>Lernziel-Datum</span>
         <input id="set-deadline" type="date" value="${p.deadline}" /></label>
+      <div class="field"><span>Meine Zielnote</span>
+        ${gradePicker(p.targetGrade)}
+        <small class="muted">Danach richtet sich die Einschätzung auf der Startseite: für welche Note dein Lernstand gerade reicht.</small></div>
     </section>
 
     <section class="card">
@@ -97,6 +101,12 @@ function bind(root: HTMLElement): void {
       p.deadline = v;
       save();
     }
+  });
+
+  bindGradePicker(root, (grade) => {
+    p.targetGrade = grade;
+    save();
+    renderSettings(root);
   });
 
   root.querySelectorAll<HTMLInputElement>('.set-time').forEach((input) => {

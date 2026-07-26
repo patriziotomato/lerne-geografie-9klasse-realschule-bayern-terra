@@ -2,6 +2,7 @@ import type { RoundResult } from '../types.ts';
 import { state, save, todayKey, todayLog } from '../store.ts';
 import { CHAPTERS } from '../data/chapters.ts';
 import { chapterMastery, learnedCount } from './leitner.ts';
+import { estimatedGrade } from './grade.ts';
 import { conceptsOf } from '../data/content.ts';
 
 /** XP für eine richtige Antwort bei gegebener Combo (Anzahl richtiger davor in Serie) */
@@ -98,6 +99,8 @@ export function finishRound(input: {
   correct: number;
   xpGained: number;
   bestCombo: number;
+  /** Geschätzte Note beim Rundenstart — die Boxen sind jetzt schon verändert. */
+  gradeBefore: number | null;
 }): RoundResult {
   const s = state.stats;
   const levelBefore = levelForXp(s.xp);
@@ -154,5 +157,7 @@ export function finishRound(input: {
     leveledUpTo: level > levelBefore ? level : null,
     newBadges,
     unlockedChests,
+    gradeBefore: input.gradeBefore,
+    gradeAfter: estimatedGrade(),
   };
 }
