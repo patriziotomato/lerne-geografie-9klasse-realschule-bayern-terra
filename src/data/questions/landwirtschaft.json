@@ -1,0 +1,714 @@
+{
+  "chapterId": "landwirtschaft",
+  "concepts": [
+    {
+      "id": "landwirtschaft-c01",
+      "topic": "Konventionelle Landwirtschaft",
+      "variants": [
+        {
+          "text": "Was ist ein typisches Merkmal der konventionellen Landwirtschaft?",
+          "options": [
+            "Es dürfen chemisch-synthetische Pflanzenschutzmittel und Mineraldünger eingesetzt werden.",
+            "Auf Mineraldünger wird vollständig verzichtet.",
+            "Die Zahl der Tiere ist streng an die Fläche des Betriebs gebunden.",
+            "Unkraut wird ausschließlich mechanisch, etwa durch Hacken, entfernt."
+          ],
+          "explanation": "In der konventionellen Landwirtschaft sind Mineraldünger und chemische Pflanzenschutzmittel erlaubt, um hohe Erträge zu erzielen.",
+          "difficulty": 1
+        },
+        {
+          "text": "Ein Landwirt will auf seinen Feldern möglichst hohe Erträge erzielen und setzt dafür Mineraldünger und chemische Spritzmittel ein. Welcher Wirtschaftsweise entspricht das?",
+          "options": [
+            "Der konventionellen Landwirtschaft",
+            "Der ökologischen Landwirtschaft",
+            "Der Subsistenzwirtschaft",
+            "Der Almwirtschaft"
+          ],
+          "explanation": "Der Einsatz von Mineraldünger und chemischen Spritzmitteln zur Ertragssteigerung ist kennzeichnend für die konventionelle Landwirtschaft.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Aussage über die konventionelle Landwirtschaft stimmt NICHT?",
+          "options": [
+            "Sie verzichtet grundsätzlich auf chemisch-synthetische Pflanzenschutzmittel.",
+            "Sie erzielt in der Regel höhere Erträge pro Hektar als der Ökolandbau.",
+            "Sie setzt häufig Mineraldünger ein.",
+            "Sie produziert Lebensmittel meist günstiger als der Ökolandbau."
+          ],
+          "explanation": "Gerade der Einsatz chemisch-synthetischer Pflanzenschutzmittel ist in der konventionellen Landwirtschaft erlaubt und verbreitet – der Verzicht darauf kennzeichnet den Ökolandbau.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c02",
+      "topic": "Ökologische Landwirtschaft",
+      "variants": [
+        {
+          "text": "Worauf verzichten Betriebe der ökologischen Landwirtschaft?",
+          "options": [
+            "Auf chemisch-synthetische Pflanzenschutzmittel und leicht löslichen Mineraldünger",
+            "Auf jede Form von Tierhaltung",
+            "Auf den Einsatz von Maschinen wie Traktoren",
+            "Auf den Verkauf ihrer Produkte im Supermarkt"
+          ],
+          "explanation": "Ökobetriebe düngen organisch und bekämpfen Schädlinge ohne chemisch-synthetische Mittel; Maschinen und Tierhaltung sind selbstverständlich erlaubt.",
+          "difficulty": 1
+        },
+        {
+          "text": "Wie halten Öko-Landwirte ihre Böden fruchtbar, ohne Mineraldünger einzusetzen?",
+          "options": [
+            "Durch Fruchtfolge und organische Düngung, zum Beispiel mit Mist und Kompost",
+            "Durch den Anbau derselben Pflanze über viele Jahre auf demselben Feld",
+            "Durch besonders häufiges und tiefes Umpflügen der Felder",
+            "Durch das Abbrennen der Stoppelfelder nach jeder Ernte"
+          ],
+          "explanation": "Im Ökolandbau sorgen wechselnde Fruchtfolgen und organischer Dünger wie Mist oder Kompost dafür, dass der Boden fruchtbar bleibt.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage beschreibt die ökologische Landwirtschaft richtig?",
+          "options": [
+            "Die Zahl der Tiere ist an die Fläche des Betriebs gekoppelt, damit nicht zu viel Gülle anfällt.",
+            "Sie erzielt pro Hektar meist höhere Erträge als konventionelle Betriebe.",
+            "Chemische Spritzmittel sind erlaubt, solange sie sparsam eingesetzt werden.",
+            "Die Tiere werden überwiegend in großen geschlossenen Ställen ohne Auslauf gehalten."
+          ],
+          "explanation": "Die flächengebundene Tierhaltung ist ein Grundprinzip des Ökolandbaus: Es dürfen nur so viele Tiere gehalten werden, wie die eigene Fläche verträgt.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c03",
+      "topic": "Vor- und Nachteile öko vs. konventionell",
+      "variants": [
+        {
+          "text": "Welcher Nachteil ist typisch für die ökologische Landwirtschaft im Vergleich zur konventionellen?",
+          "options": [
+            "Die Erträge pro Hektar sind meist niedriger, deshalb sind die Produkte teurer.",
+            "Die Böden werden stärker mit Nitrat belastet.",
+            "Es werden mehr chemische Spritzmittel benötigt.",
+            "Die Tiere haben in der Regel weniger Platz im Stall."
+          ],
+          "explanation": "Weil im Ökolandbau auf Mineraldünger und chemische Spritzmittel verzichtet wird, fallen die Erträge geringer aus und die Produkte kosten mehr.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum kann konventionell erzeugtes Gemüse im Supermarkt meist billiger angeboten werden als Bio-Gemüse?",
+          "options": [
+            "Weil durch Mineraldünger und Pflanzenschutzmittel höhere Erträge pro Fläche erzielt werden",
+            "Weil Bio-Betriebe keine staatliche Unterstützung erhalten dürfen",
+            "Weil Bio-Gemüse grundsätzlich aus dem Ausland importiert werden muss",
+            "Weil für konventionelles Gemüse keine Qualitätskontrollen vorgeschrieben sind"
+          ],
+          "explanation": "Höhere Erträge pro Fläche senken die Produktionskosten je Kilogramm, deshalb ist konventionelle Ware im Laden meist günstiger.",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c04",
+      "topic": "Massentierhaltung und Tierwohl",
+      "variants": [
+        {
+          "text": "Was versteht man unter Massentierhaltung?",
+          "options": [
+            "Die Haltung sehr vieler Tiere auf engem Raum, um möglichst günstig Fleisch, Milch oder Eier zu erzeugen",
+            "Die Haltung weniger Tiere auf großen Weideflächen",
+            "Die Haltung von Wildtieren in Naturschutzgebieten",
+            "Die Haltung von Tieren ausschließlich zur Landschaftspflege"
+          ],
+          "explanation": "Bei der Massentierhaltung werden sehr große Tierbestände auf wenig Raum gehalten, um die Produktionskosten niedrig zu halten.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welches Problem wird häufig mit der Massentierhaltung in Verbindung gebracht?",
+          "options": [
+            "Der hohe Einsatz von Antibiotika, weil sich Krankheiten in engen Ställen schnell ausbreiten",
+            "Der große Weideflächen-Bedarf, da alle Tiere täglich Auslauf im Freien haben",
+            "Steigende Fleischpreise durch zu geringe Produktionsmengen",
+            "Ein Mangel an Gülle, sodass die Felder zu wenig gedüngt werden"
+          ],
+          "explanation": "Wo viele Tiere dicht zusammenleben, verbreiten sich Krankheitserreger schnell – deshalb werden in der Massentierhaltung oft Antibiotika eingesetzt.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zur Massentierhaltung stimmt NICHT?",
+          "options": [
+            "Die Tiere haben dort in der Regel viel Platz und täglichen Auslauf im Freien.",
+            "Durch die großen Tierbestände fällt sehr viel Gülle an.",
+            "Fleisch kann durch diese Haltungsform besonders billig produziert werden.",
+            "Auf engem Raum können sich Krankheiten schnell ausbreiten."
+          ],
+          "explanation": "Kennzeichen der Massentierhaltung ist gerade der geringe Platz pro Tier; viel Auslauf im Freien ist dort die Ausnahme.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c05",
+      "topic": "Börden und Lössböden",
+      "variants": [
+        {
+          "text": "Warum sind die Börden, wie die Magdeburger Börde, besonders gute Ackerbaugebiete?",
+          "options": [
+            "Weil dort fruchtbare Lössböden liegen, die Wasser und Nährstoffe gut speichern",
+            "Weil dort besonders viele Moore trockengelegt wurden",
+            "Weil die sandigen Böden dort besonders leicht zu bearbeiten sind",
+            "Weil dort besonders hohe Niederschläge von über 2000 mm im Jahr fallen"
+          ],
+          "explanation": "Die Börden verdanken ihre Fruchtbarkeit dem Löss, einem feinen Boden, der Wasser und Nährstoffe hervorragend speichert.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Feldfrüchte werden in der Magdeburger Börde wegen der fruchtbaren Böden vor allem angebaut?",
+          "options": [
+            "Weizen und Zuckerrüben, die nährstoffreiche Böden brauchen",
+            "Vor allem Roggen und Kartoffeln, die auch auf armen Böden gedeihen",
+            "Wein und Hopfen, die vor allem viel Wärme benötigen",
+            "Reis und Soja, die sehr viel Wasser benötigen"
+          ],
+          "explanation": "Anspruchsvolle Kulturen wie Weizen und Zuckerrüben gedeihen besonders gut auf den nährstoffreichen Lössböden der Börden.",
+          "difficulty": 2
+        },
+        {
+          "text": "Woraus ist der fruchtbare Lössboden der Börden entstanden?",
+          "options": [
+            "Aus feinem Staub, den der Wind während der Eiszeiten dort abgelagert hat",
+            "Aus erkalteter Lava früherer Vulkanausbrüche",
+            "Aus Sand, den Flüsse erst vor wenigen Jahrzehnten angeschwemmt haben",
+            "Aus Ablagerungen tropischer Meere im Erdaltertum"
+          ],
+          "explanation": "Löss ist ein feines, vom Wind transportiertes Sediment, das während der Eiszeiten abgelagert wurde und sehr fruchtbare Böden bildet.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c06",
+      "topic": "Milchwirtschaft im Alpenvorland",
+      "variants": [
+        {
+          "text": "Warum ist das Alpenvorland ein Zentrum der Milchviehhaltung?",
+          "options": [
+            "Weil das feucht-kühle Klima dort ideales Grünland für Wiesen und Weiden schafft",
+            "Weil dort fruchtbare Schwarzerdeböden ideale Bedingungen für Futtermais bieten",
+            "Weil Milchkühe die kühle Höhenluft für die Milchbildung brauchen",
+            "Weil Ackerbau im Alpenvorland grundsätzlich verboten ist"
+          ],
+          "explanation": "Die hohen Niederschläge und das kühle Klima des Alpenvorlands lassen Gras besonders gut wachsen – beste Voraussetzungen für Wiesen, Weiden und Milchkühe.",
+          "difficulty": 1
+        },
+        {
+          "text": "Ein Betrieb im bayerischen Alpenvorland nutzt seine Flächen fast nur als Wiesen und Weiden. Welche Erklärung passt dazu?",
+          "options": [
+            "Die hohen Niederschläge und die kürzere Vegetationszeit begünstigen Gras statt Ackerkulturen – Grünlandwirtschaft lohnt sich dort am meisten.",
+            "Die Böden sind so nährstoffreich, dass sich Getreideanbau nicht lohnen würde.",
+            "Wiesen bringen pro Hektar mehr Geld als jede andere Nutzung in Deutschland.",
+            "Auf Grünland muss der Betrieb keine EU-Vorschriften beachten."
+          ],
+          "explanation": "Wo viel Regen fällt und die Sommer kürzer sind, wächst Gras zuverlässiger als Getreide – deshalb dominiert im Alpenvorland die Grünland- und Milchwirtschaft.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c07",
+      "topic": "Sonderkultur Hopfen in der Hallertau",
+      "variants": [
+        {
+          "text": "Wofür ist die Hallertau in Bayern bekannt?",
+          "options": [
+            "Sie ist das größte zusammenhängende Hopfenanbaugebiet der Welt.",
+            "Sie ist das größte Weinanbaugebiet Deutschlands.",
+            "Sie ist Deutschlands größtes Anbaugebiet für Spargel.",
+            "Sie ist das wichtigste Anbaugebiet für Tabak in Europa."
+          ],
+          "explanation": "In der Hallertau zwischen Ingolstadt und Landshut liegt das größte zusammenhängende Hopfenanbaugebiet der Welt.",
+          "difficulty": 1
+        },
+        {
+          "text": "Was versteht man unter Sonderkulturen wie dem Hopfen in der Hallertau?",
+          "options": [
+            "Kulturen, die viel Arbeit und Pflege erfordern, aber auf kleiner Fläche hohe Erlöse bringen",
+            "Pflanzen, die ohne menschliche Pflege wild wachsen und nur geerntet werden",
+            "Getreidearten, die auf besonders großen Flächen mit Maschinen angebaut werden",
+            "Futterpflanzen, die ausschließlich für die Tierhaltung angebaut werden"
+          ],
+          "explanation": "Sonderkulturen wie Hopfen, Wein oder Obst sind arbeits- und kostenintensiv, erzielen aber pro Hektar deutlich höhere Erlöse als etwa Getreide.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c08",
+      "topic": "Obst- und Weinbau in Gunsträumen",
+      "variants": [
+        {
+          "text": "Warum eignet sich die Region am Bodensee besonders gut für den Obstanbau?",
+          "options": [
+            "Der See speichert Wärme und mildert das Klima, sodass Frostschäden seltener sind.",
+            "Der hohe Salzgehalt des Sees düngt die umliegenden Böden.",
+            "Das raue Gebirgsklima härtet die Obstbäume ab.",
+            "Der See sorgt für besonders lange, kalte Winter, die Apfelbäume benötigen."
+          ],
+          "explanation": "Das Wasser des Bodensees wirkt wie ein Wärmespeicher: Es gleicht Temperaturschwankungen aus und schützt die Obstblüte vor Spätfrösten.",
+          "difficulty": 1
+        },
+        {
+          "text": "Weinreben und Obstbäume stellen ähnliche Ansprüche an ihre Standorte. Welche Bedingungen sind das?",
+          "options": [
+            "Viel Sonne, Wärme und Schutz vor starkem Frost, zum Beispiel an Südhängen oder in Seenähe",
+            "Kühle, schattige Nordhänge mit langen Frostperioden",
+            "Staunasse Böden in Flusstälern, die regelmäßig überschwemmt werden",
+            "Hochlagen über 1500 Meter mit kurzen, kühlen Sommern"
+          ],
+          "explanation": "Wein und Obst sind wärmeliebende Sonderkulturen: Sie brauchen sonnige, frostgeschützte Lagen wie Südhänge oder Ufergebiete großer Seen.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c09",
+      "topic": "Strukturwandel und Höfesterben",
+      "variants": [
+        {
+          "text": "Was versteht man unter dem Strukturwandel in der Landwirtschaft?",
+          "options": [
+            "Die Zahl der Betriebe nimmt ab, während die verbleibenden Betriebe immer größer werden.",
+            "Immer mehr Städter gründen kleine Bauernhöfe auf dem Land.",
+            "Die Felder werden in immer kleinere Parzellen aufgeteilt.",
+            "Die Landwirtschaft verzichtet zunehmend auf Maschinen und kehrt zur Handarbeit zurück."
+          ],
+          "explanation": "Seit Jahrzehnten geben viele kleine Höfe auf, während die übrigen Betriebe wachsen – das nennt man Strukturwandel oder auch Höfesterben.",
+          "difficulty": 1
+        },
+        {
+          "text": "Was bedeutet der Ausdruck 'Wachse oder weiche' im Zusammenhang mit dem Höfesterben?",
+          "options": [
+            "Betriebe müssen sich vergrößern, um wirtschaftlich zu überleben – sonst müssen sie aufgeben.",
+            "Landwirte müssen jedes Jahr einen Teil ihrer Flächen brachliegen lassen.",
+            "Nur Betriebe, die auf Ökolandbau umstellen, dürfen weiter produzieren.",
+            "Junge Landwirte müssen den elterlichen Hof verlassen und eigene Höfe gründen."
+          ],
+          "explanation": "Wegen sinkender Erzeugerpreise und hoher Kosten lohnt sich Landwirtschaft oft nur noch in großen Betrieben – wer nicht wachsen kann, gibt häufig auf.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zum Strukturwandel in der deutschen Landwirtschaft stimmt NICHT?",
+          "options": [
+            "Die durchschnittliche Größe der Betriebe ist in den letzten Jahrzehnten deutlich gesunken.",
+            "Viele kleine Familienbetriebe haben aufgegeben, weil sie nicht kostendeckend wirtschaften konnten.",
+            "Immer weniger Menschen arbeiten in der Landwirtschaft.",
+            "Moderne Maschinen ersetzen heute viele Arbeitskräfte."
+          ],
+          "explanation": "Das Gegenteil ist richtig: Die durchschnittliche Betriebsgröße ist deutlich gestiegen, weil verbleibende Höfe die Flächen aufgegebener Betriebe übernehmen.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c10",
+      "topic": "Technisierung und Precision Farming",
+      "variants": [
+        {
+          "text": "Was versteht man unter Precision Farming (Präzisionslandwirtschaft)?",
+          "options": [
+            "Den Einsatz von GPS und Sensoren, um Dünger und Pflanzenschutzmittel punktgenau und bedarfsgerecht auszubringen",
+            "Das Pflügen der Felder ausschließlich per Hand, um den Boden zu schonen",
+            "Den Anbau von Pflanzen in exakt vermessenen Gewächshäusern in der Stadt",
+            "Die Züchtung besonders kleiner Pflanzen, die weniger Platz brauchen"
+          ],
+          "explanation": "Beim Precision Farming steuern GPS-Daten und Sensoren die Maschinen so, dass jede Teilfläche genau die benötigte Menge Dünger oder Spritzmittel erhält.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welchen Vorteil bietet die zunehmende Technisierung der Landwirtschaft?",
+          "options": [
+            "Große Flächen können mit wenigen Arbeitskräften schnell und effizient bewirtschaftet werden.",
+            "Die Anschaffung moderner Maschinen ist gerade für kleine Betriebe besonders günstig.",
+            "Durch Maschinen steigt die Zahl der Arbeitsplätze auf den Höfen stark an.",
+            "Maschinen verhindern zuverlässig jede Verdichtung des Bodens."
+          ],
+          "explanation": "Moderne Maschinen wie Mähdrescher erledigen die Arbeit vieler Menschen – dadurch lassen sich große Flächen mit wenig Personal bewirtschaften.",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c11",
+      "topic": "EU-Agrarpolitik und Subventionen",
+      "variants": [
+        {
+          "text": "Warum erhalten Landwirte in der EU Subventionen aus der Gemeinsamen Agrarpolitik (GAP)?",
+          "options": [
+            "Um ihre Einkommen zu sichern und die Versorgung der Bevölkerung mit Lebensmitteln zu gewährleisten",
+            "Um die Lebensmittelpreise für die Verbraucher künstlich zu erhöhen",
+            "Um gezielt kleine Höfe zu schließen und nur Großbetriebe zu erhalten",
+            "Um den Import von Lebensmitteln aus anderen Ländern zu bezahlen"
+          ],
+          "explanation": "Die GAP soll den Landwirten ein verlässliches Einkommen sichern und dafür sorgen, dass Europa ausreichend mit Lebensmitteln versorgt ist.",
+          "difficulty": 2
+        },
+        {
+          "text": "Wonach richtet sich die Höhe der wichtigsten EU-Direktzahlungen an einen landwirtschaftlichen Betrieb vor allem?",
+          "options": [
+            "Nach der Größe der bewirtschafteten Fläche",
+            "Nach der Menge der verkauften Produkte",
+            "Nach dem Gewinn, den der Betrieb im Vorjahr erzielt hat",
+            "Nach der Zahl der Beschäftigten auf dem Hof"
+          ],
+          "explanation": "Die Direktzahlungen der EU werden hauptsächlich pro Hektar bewirtschafteter Fläche gezahlt – große Betriebe erhalten deshalb mehr Geld als kleine.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c12",
+      "topic": "Nitrat im Grundwasser",
+      "variants": [
+        {
+          "text": "Wie gelangt Nitrat in vielen Agrarregionen ins Grundwasser?",
+          "options": [
+            "Durch Überdüngung: Wird mehr Gülle und Dünger ausgebracht, als die Pflanzen aufnehmen können, sickert der Rest in den Boden.",
+            "Durch die Abgase von Traktoren, die sich auf den Feldern absetzen",
+            "Durch das Versprühen von Wasser bei der Feldbewässerung",
+            "Durch den natürlichen Zerfall von Gesteinen im Untergrund"
+          ],
+          "explanation": "Überschüssiger Stickstoff aus Gülle und Dünger wird von den Pflanzen nicht aufgenommen und gelangt als Nitrat mit dem Sickerwasser ins Grundwasser.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum ist zu viel Nitrat im Grundwasser ein Problem?",
+          "options": [
+            "Das Grundwasser dient als Trinkwasser und muss bei hoher Belastung aufwendig aufbereitet werden; besonders für Säuglinge kann Nitrat schädlich sein.",
+            "Nitrat lässt das Grundwasser schneller verdunsten, sodass die Brunnen austrocknen.",
+            "Nitrat färbt das Trinkwasser dunkel und macht es dadurch unverkäuflich.",
+            "Nitrat greift vor allem die Wasserleitungen an und lässt sie rosten."
+          ],
+          "explanation": "Ein großer Teil unseres Trinkwassers stammt aus dem Grundwasser; überschreitet der Nitratwert den Grenzwert von 50 mg pro Liter, wird die Aufbereitung teuer und aufwendig.",
+          "difficulty": 2
+        },
+        {
+          "text": "In welchen Regionen Deutschlands ist das Grundwasser besonders stark mit Nitrat belastet?",
+          "options": [
+            "In Regionen mit intensiver Tierhaltung, weil dort große Mengen Gülle auf die Felder ausgebracht werden",
+            "In dicht bebauten Innenstädten, weil dort besonders viele Menschen leben",
+            "In großen Waldgebieten, weil verrottendes Laub viel Nitrat freisetzt",
+            "Im Hochgebirge, weil der Regen dort Nitrat aus dem Gestein löst"
+          ],
+          "explanation": "Wo viele Tiere gehalten werden, fällt viel Gülle an – wird sie auf die Felder ausgebracht, steigt dort die Nitratbelastung des Grundwassers.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c13",
+      "topic": "Monokulturen, Pestizide und Artensterben",
+      "variants": [
+        {
+          "text": "Was ist eine Monokultur?",
+          "options": [
+            "Der großflächige Anbau nur einer einzigen Pflanzenart, oft über mehrere Jahre auf derselben Fläche",
+            "Der gleichzeitige Anbau vieler verschiedener Pflanzenarten auf einem Feld",
+            "Eine Anbaumethode, bei der jedes Jahr die Feldfrucht gewechselt wird",
+            "Ein Feld, das zur Erholung des Bodens brachliegt"
+          ],
+          "explanation": "Bei einer Monokultur wächst auf großen Flächen nur eine Pflanzenart, zum Beispiel Mais – oft jahrelang auf demselben Feld.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Folge kann der großflächige Einsatz von Pestiziden haben?",
+          "options": [
+            "Neben den Schädlingen sterben auch nützliche Insekten wie Wildbienen, wodurch die Artenvielfalt sinkt.",
+            "Die Zahl der Insektenarten auf den Feldern steigt deutlich an.",
+            "Die Pflanzen benötigen kein Wasser mehr und wachsen schneller.",
+            "Der Boden wird dauerhaft fruchtbarer, weil Pestizide wie Dünger wirken."
+          ],
+          "explanation": "Pestizide wirken nicht nur gegen Schädlinge: Auch Nützlinge wie Wildbienen sterben, und mit den Insekten verschwinden Vögel und andere Tiere.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welcher weitere Nachteil ist typisch für Monokulturen?",
+          "options": [
+            "Der Boden wird einseitig ausgelaugt, und Schädlinge können sich stark vermehren, weil sie überall dieselbe Wirtspflanze finden.",
+            "Die Ernte muss von Hand erfolgen, weil Maschinen in Monokulturen nicht einsetzbar sind.",
+            "Der Boden wird von Jahr zu Jahr nährstoffreicher, sodass Dünger überflüssig wird.",
+            "Es treten keine Schädlinge auf, weil nur eine Pflanzenart wächst."
+          ],
+          "explanation": "Weil immer dieselbe Pflanze dem Boden dieselben Nährstoffe entzieht und Schädlinge reichlich Nahrung finden, brauchen Monokulturen viel Dünger und Pflanzenschutzmittel.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c14",
+      "topic": "Bewässerungslandwirtschaft und Wasserverbrauch",
+      "variants": [
+        {
+          "text": "Wie viel des weltweit genutzten Süßwassers verbraucht die Landwirtschaft ungefähr?",
+          "options": [
+            "Etwa 70 Prozent",
+            "Etwa 10 Prozent",
+            "Etwa 30 Prozent",
+            "Etwa 95 Prozent"
+          ],
+          "explanation": "Rund 70 Prozent des weltweit entnommenen Süßwassers werden für die Landwirtschaft verwendet, vor allem zur Bewässerung von Feldern.",
+          "difficulty": 3
+        },
+        {
+          "text": "Welches Problem kann bei falscher Bewässerung in trockenen Regionen entstehen?",
+          "options": [
+            "Versalzung der Böden: Das Wasser verdunstet, und die zurückbleibenden Salze machen den Boden unfruchtbar.",
+            "Die Felder vermooren und verwandeln sich dauerhaft in Sümpfe.",
+            "Das Wasser wäscht alle Salze aus dem Boden, wodurch den Pflanzen Mineralien fehlen.",
+            "Die Bewässerung kühlt die Böden so stark ab, dass Saatgut nicht mehr keimt."
+          ],
+          "explanation": "In heißen, trockenen Gebieten verdunstet Bewässerungswasser schnell; die im Wasser gelösten Salze bleiben zurück und reichern sich im Boden an.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c15",
+      "topic": "Virtuelles Wasser",
+      "variants": [
+        {
+          "text": "Was versteht man unter 'virtuellem Wasser'?",
+          "options": [
+            "Die gesamte Wassermenge, die für die Herstellung eines Produkts verbraucht wird",
+            "Das Wasser, das im fertigen Produkt selbst noch enthalten ist",
+            "Wasser, das beim Transport der Waren verloren geht",
+            "Sauberes Trinkwasser, das in Flaschen verkauft wird"
+          ],
+          "explanation": "Virtuelles Wasser bezeichnet das gesamte Wasser, das bei der Erzeugung eines Produkts eingesetzt wird – vom Anbau bis zur Verarbeitung.",
+          "difficulty": 1
+        },
+        {
+          "text": "Wie viel Wasser steckt ungefähr in einem Kilogramm Rindfleisch, wenn man das virtuelle Wasser mitrechnet?",
+          "options": [
+            "Rund 15.000 Liter",
+            "Rund 15 Liter",
+            "Rund 150 Liter",
+            "Rund 1.500 Liter"
+          ],
+          "explanation": "Für Futteranbau, Tränken und Verarbeitung werden pro Kilogramm Rindfleisch etwa 15.000 Liter Wasser benötigt – weit mehr als für pflanzliche Lebensmittel.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum importiert Deutschland mit Lebensmitteln wie Tomaten aus Südspanien auch 'virtuelles Wasser'?",
+          "options": [
+            "Weil für den Anbau dieser Produkte im Herkunftsland große Wassermengen verbraucht wurden, die dort oft knapp sind",
+            "Weil die Früchte zu über 99 Prozent aus Wasser bestehen",
+            "Weil die Ware während des Transports ständig mit Trinkwasser besprüht wird",
+            "Weil deutsche Supermärkte das Gemüse vor dem Verkauf wässern müssen"
+          ],
+          "explanation": "Mit jedem importierten Produkt wird auch das Wasser 'mitgekauft', das im Anbauland dafür verbraucht wurde – problematisch, wenn Wasser dort ohnehin knapp ist.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c16",
+      "topic": "Globale Nahrungsmittelproduktion und Lieferketten",
+      "variants": [
+        {
+          "text": "Warum sind in deutschen Supermärkten das ganze Jahr über frische Erdbeeren oder Trauben erhältlich?",
+          "options": [
+            "Weil sie außerhalb der heimischen Saison aus Ländern wie Spanien, Südafrika oder Chile importiert werden",
+            "Weil deutsche Erdbeeren auch im Winter im Freiland reifen",
+            "Weil Erdbeeren jahrelang gelagert werden können, ohne zu verderben",
+            "Weil sie in Deutschland ganzjährig in unbeheizten Gewächshäusern wachsen"
+          ],
+          "explanation": "Globale Lieferketten machen es möglich: Außerhalb der deutschen Saison kommt frisches Obst aus Ländern, in denen gerade Erntezeit ist.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Aussage über globale Lieferketten bei Lebensmitteln stimmt?",
+          "options": [
+            "Lange Transportwege per Schiff oder Flugzeug verursachen zusätzliche Treibhausgase.",
+            "Importierte Lebensmittel sind immer klimafreundlicher als heimische Produkte.",
+            "Die Transportkosten spielen für den Preis von Lebensmitteln keine Rolle.",
+            "Eingeflogene Ware verursacht weniger Emissionen als Schiffstransporte."
+          ],
+          "explanation": "Je länger der Transportweg und je energieaufwendiger das Verkehrsmittel – besonders das Flugzeug –, desto mehr Treibhausgase entstehen pro Kilogramm Ware.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c17",
+      "topic": "Fleischkonsum und Flächenverbrauch",
+      "variants": [
+        {
+          "text": "Warum verbraucht die Erzeugung von Fleisch deutlich mehr Fläche als der Anbau pflanzlicher Lebensmittel?",
+          "options": [
+            "Weil zusätzlich zur Stallfläche große Flächen für den Anbau von Futtermitteln benötigt werden",
+            "Weil Tiere nur auf besonders unfruchtbaren Böden gehalten werden dürfen",
+            "Weil für jedes Tier gesetzlich ein Hektar Auslauf vorgeschrieben ist",
+            "Weil Schlachthöfe mehr Fläche belegen als alle Äcker zusammen"
+          ],
+          "explanation": "Der größte Flächenbedarf der Fleischproduktion entsteht durch den Anbau von Futtermitteln wie Mais und Soja, die zuerst an die Tiere verfüttert werden.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was versteht man unter 'Veredelungsverlusten' bei der Fleischproduktion?",
+          "options": [
+            "Ein großer Teil der Kalorien aus dem Futter geht verloren: Für 1 kg Fleisch müssen mehrere Kilogramm Futter verfüttert werden.",
+            "Beim Schlachten wird ein Teil des Fleisches aussortiert und weggeworfen.",
+            "Beim Kochen verliert Fleisch einen Teil seines Gewichts.",
+            "Beim Transport verdirbt ein Teil der Ware, bevor sie den Handel erreicht."
+          ],
+          "explanation": "Tiere verbrauchen den Großteil der Futterenergie für ihren eigenen Stoffwechsel – deshalb kommen von vielen Futterkalorien nur wenige als Fleisch beim Menschen an.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zum Zusammenhang von Fleischkonsum und Welternährung stimmt?",
+          "options": [
+            "Würde weniger Getreide und Soja an Tiere verfüttert, stünden mehr pflanzliche Kalorien direkt für die menschliche Ernährung zur Verfügung.",
+            "Fleischproduktion liefert pro Hektar mehr Kalorien als jeder Pflanzenanbau.",
+            "Der Futtermittelanbau benötigt weltweit kaum Ackerfläche.",
+            "Der Fleischkonsum hat keinen Einfluss auf die weltweite Flächennutzung."
+          ],
+          "explanation": "Ein erheblicher Teil der weltweiten Getreide- und Sojaernte wird verfüttert; direkt gegessen könnten diese Kalorien deutlich mehr Menschen ernähren.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c18",
+      "topic": "Ökologischer Fußabdruck der Ernährung",
+      "variants": [
+        {
+          "text": "Wie können Verbraucher den ökologischen Fußabdruck ihrer Ernährung verringern?",
+          "options": [
+            "Indem sie saisonales und regionales Obst und Gemüse kaufen und weniger Fleisch essen",
+            "Indem sie möglichst viele eingeflogene exotische Früchte kaufen",
+            "Indem sie hauptsächlich tiefgekühlte Fertiggerichte essen",
+            "Indem sie Gemüse bevorzugt aus beheizten Gewächshäusern kaufen"
+          ],
+          "explanation": "Kurze Transportwege, Verzicht auf beheizte Gewächshäuser außerhalb der Saison und weniger Fleisch senken den Energie- und Flächenverbrauch der Ernährung deutlich.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum kann ein Apfel aus der Region im Frühjahr eine schlechtere Klimabilanz haben als ein Apfel aus Neuseeland?",
+          "options": [
+            "Weil regionale Äpfel dann schon monatelang in gekühlten Lagern liegen, was viel Energie verbraucht",
+            "Weil neuseeländische Äpfel grundsätzlich ohne Dünger angebaut werden",
+            "Weil der Transport per Schiff überhaupt keine Emissionen verursacht",
+            "Weil regionale Äpfel im Frühjahr noch einmal gespritzt werden müssen"
+          ],
+          "explanation": "Die monatelange Kühllagerung heimischer Äpfel kostet viel Energie – deshalb reicht 'regional' allein nicht aus, wichtig ist auch der saisonale Einkauf.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c19",
+      "topic": "Bio-Siegel und Gütesiegel",
+      "variants": [
+        {
+          "text": "Was garantiert das EU-Bio-Siegel (grünes Blatt aus Sternen) auf einem Lebensmittel?",
+          "options": [
+            "Dass das Produkt nach den Regeln des ökologischen Landbaus erzeugt wurde, zum Beispiel ohne chemisch-synthetische Pflanzenschutzmittel",
+            "Dass das Produkt aus der Region des Käufers stammt",
+            "Dass das Produkt vegan ist und keine tierischen Bestandteile enthält",
+            "Dass das Produkt in Handarbeit ohne Maschinen hergestellt wurde"
+          ],
+          "explanation": "Das EU-Bio-Siegel kennzeichnet Produkte aus kontrolliert ökologischem Landbau; über Herkunftsregion oder vegane Zutaten sagt es nichts aus.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Aussage über Bio- und Gütesiegel stimmt?",
+          "options": [
+            "Anbauverbände wie Bioland oder Demeter haben teils strengere Regeln als das EU-Bio-Siegel.",
+            "Alle Siegel auf Lebensmitteln werden vom Staat vergeben und bedeuten dasselbe.",
+            "Ein Bio-Siegel garantiert, dass das Produkt aus Deutschland stammt.",
+            "Produkte ohne Siegel dürfen in der EU nicht verkauft werden."
+          ],
+          "explanation": "Die deutschen Anbauverbände stellen in vielen Punkten – etwa bei Tierhaltung und Düngung – höhere Anforderungen, als sie das EU-Bio-Siegel vorschreibt.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c20",
+      "topic": "Welternährung und Hunger",
+      "variants": [
+        {
+          "text": "Warum hungern weltweit Millionen Menschen, obwohl insgesamt genug Nahrung für alle produziert wird?",
+          "options": [
+            "Weil die Nahrung ungleich verteilt ist und viele Menschen zu arm sind, um sich Lebensmittel zu kaufen",
+            "Weil die Weltbevölkerung schneller wächst, als überhaupt Nahrung produziert werden kann",
+            "Weil in armen Ländern grundsätzlich keine Landwirtschaft möglich ist",
+            "Weil Lebensmittel nur in Industrieländern haltbar gemacht werden können"
+          ],
+          "explanation": "Hunger ist vor allem ein Verteilungs- und Armutsproblem: Rechnerisch reicht die weltweite Nahrungsproduktion aus, aber viele Menschen haben keinen Zugang dazu.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Ursachen können Hungerkrisen auslösen oder verschärfen?",
+          "options": [
+            "Kriege, Dürren und stark steigende Lebensmittelpreise",
+            "Zu hohe Ernteerträge in den betroffenen Ländern",
+            "Sinkende Preise für Getreide auf dem Weltmarkt",
+            "Der Rückgang der Weltbevölkerung in den letzten Jahren"
+          ],
+          "explanation": "Bewaffnete Konflikte, Naturkatastrophen wie Dürren und Preissprünge bei Grundnahrungsmitteln treffen arme Menschen am härtesten und lösen Hungerkrisen aus.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zur Welternährung stimmt NICHT?",
+          "options": [
+            "Hunger entsteht vor allem, weil weltweit zu wenig Nahrung erzeugt wird.",
+            "Armut ist eine der Hauptursachen für Hunger.",
+            "Konflikte und Kriege können die Versorgung mit Lebensmitteln unterbrechen.",
+            "Auch Dürren und Überschwemmungen können ganze Ernten vernichten."
+          ],
+          "explanation": "Weltweit wird genug Nahrung für alle Menschen erzeugt – Hunger entsteht hauptsächlich durch Armut, Kriege und ungleiche Verteilung, nicht durch eine zu geringe Gesamtproduktion.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c21",
+      "topic": "Lebensmittelverschwendung",
+      "variants": [
+        {
+          "text": "Wo entsteht in Deutschland der größte Teil der Lebensmittelabfälle?",
+          "options": [
+            "In privaten Haushalten",
+            "In der Landwirtschaft auf den Feldern",
+            "In Restaurants und Kantinen",
+            "Im Supermarkt und Großhandel"
+          ],
+          "explanation": "Mehr als die Hälfte der Lebensmittelabfälle in Deutschland fällt in privaten Haushalten an – jeder Einzelne kann also viel zur Vermeidung beitragen.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was bedeutet das Mindesthaltbarkeitsdatum (MHD) auf Lebensmitteln?",
+          "options": [
+            "Bis zu diesem Datum garantiert der Hersteller die volle Qualität – danach ist das Produkt oft trotzdem noch genießbar.",
+            "Ab diesem Datum ist das Lebensmittel gesundheitsschädlich und muss sofort entsorgt werden.",
+            "Das Datum gibt an, wann das Lebensmittel hergestellt wurde.",
+            "Bis zu diesem Datum muss das Lebensmittel im Laden verkauft sein."
+          ],
+          "explanation": "Das MHD ist kein Verfallsdatum: Viele Lebensmittel sind nach Ablauf noch einwandfrei – prüfen durch Ansehen, Riechen und Probieren lohnt sich.",
+          "difficulty": 1
+        },
+        {
+          "text": "Wie können Verbraucher Lebensmittelverschwendung verringern?",
+          "options": [
+            "Einkäufe planen, Reste verwerten und Lebensmittel nach Ablauf des MHD erst prüfen, statt sie sofort wegzuwerfen",
+            "Grundsätzlich größere Vorratspackungen kaufen, weil sie günstiger sind",
+            "Lebensmittel direkt nach Ablauf des MHD ungeöffnet entsorgen",
+            "Nur noch abgepackte Fertiggerichte kaufen, damit nichts übrig bleibt"
+          ],
+          "explanation": "Wer geplant einkauft, Reste verwertet und Lebensmittel nach dem MHD erst prüft, wirft deutlich weniger weg – das spart Geld und schont Ressourcen.",
+          "difficulty": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "lerne-geografie-9",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Gamifizierte Lern-App: Geografie 9. Klasse Realschule Bayern (Terra, Klett)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vite": "^5.4.8"
+  }
+}

@@ -1,0 +1,731 @@
+{
+  "chapterId": "europa",
+  "concepts": [
+    {
+      "id": "europa-c01",
+      "topic": "Friedensidee und Montanunion",
+      "variants": [
+        {
+          "text": "Warum schlossen sich europäische Staaten nach dem Zweiten Weltkrieg enger zusammen?",
+          "options": [
+            "Sie wollten durch enge Zusammenarbeit einen neuen Krieg in Europa verhindern.",
+            "Sie wollten vor allem sofort eine gemeinsame Währung einführen.",
+            "Sie wollten alle Staaten Europas zu einem einzigen Land vereinigen.",
+            "Sie wollten sich wirtschaftlich vom Rest der Welt abschotten."
+          ],
+          "explanation": "Nach den Zerstörungen des Zweiten Weltkriegs stand der Wunsch nach dauerhaftem Frieden im Mittelpunkt. Durch wirtschaftliche und politische Zusammenarbeit sollten die früheren Kriegsgegner eng verbunden werden.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum stellten Frankreich, die Bundesrepublik Deutschland und vier weitere Länder 1952 ausgerechnet ihre Kohle- und Stahlindustrie unter gemeinsame Aufsicht (Montanunion)?",
+          "options": [
+            "Kohle und Stahl waren für die Rüstung entscheidend – ihre gemeinsame Kontrolle sollte einen neuen Krieg praktisch unmöglich machen.",
+            "Beide Rohstoffe gingen in Europa zur Neige und mussten streng rationiert werden.",
+            "Die USA verlangten die gemeinsame Verwaltung als Bedingung für jede Wirtschaftshilfe.",
+            "Die Länder wollten damit vor allem die Heizkosten der privaten Haushalte senken."
+          ],
+          "explanation": "Ohne Kohle und Stahl konnte damals kein Land Waffen und Panzer produzieren. Wer diese Industrien gemeinsam verwaltet, kann nicht heimlich gegeneinander aufrüsten – das war die Friedensidee der Montanunion.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage über die Anfänge der europäischen Einigung stimmt?",
+          "options": [
+            "Die Montanunion von 1952 war der erste Schritt: Sechs Länder verwalteten ihre Kohle- und Stahlindustrie gemeinsam.",
+            "Die europäische Einigung begann erst mit der Einführung des Euro-Bargelds.",
+            "Großbritannien gehörte zu den sechs Gründungsmitgliedern der Montanunion.",
+            "Die Montanunion regelte von Anfang an eine gemeinsame Außen- und Verteidigungspolitik."
+          ],
+          "explanation": "Den Anfang machte die Montanunion mit sechs Gründungsländern: Frankreich, die Bundesrepublik Deutschland, Italien, Belgien, die Niederlande und Luxemburg. Großbritannien war nicht dabei, und es ging zunächst nur um Kohle und Stahl.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c02",
+      "topic": "Von der EWG zur Europäischen Union",
+      "variants": [
+        {
+          "text": "Was wurde 1957 mit den Römischen Verträgen gegründet?",
+          "options": [
+            "Die Europäische Wirtschaftsgemeinschaft (EWG), ein gemeinsamer Markt von sechs Ländern.",
+            "Die Europäische Union in ihrer heutigen Form mit 27 Mitgliedstaaten.",
+            "Die Eurozone mit einer gemeinsamen Währung.",
+            "Das Verteidigungsbündnis NATO."
+          ],
+          "explanation": "Mit den Römischen Verträgen gründeten die sechs Montanunion-Länder 1957 die EWG. Ziel war ein gemeinsamer Markt, in dem Waren leichter gehandelt werden können.",
+          "difficulty": 1
+        },
+        {
+          "text": "Wie entwickelte sich aus der rein wirtschaftlichen Zusammenarbeit die heutige Europäische Union?",
+          "options": [
+            "Aus der EWG von 1957 wurde durch den Vertrag von Maastricht 1993 die EU, die auch politisch enger zusammenarbeitet.",
+            "Die EU wurde direkt 1945 nach Kriegsende gegründet und hat sich seitdem kaum verändert.",
+            "Die EU entstand erst 2002 mit der Ausgabe des Euro-Bargelds.",
+            "Die EWG wurde 1993 ersatzlos aufgelöst, und die EU wurde völlig unabhängig davon neu gegründet."
+          ],
+          "explanation": "Die Zusammenarbeit wurde Schritt für Schritt ausgebaut: von der Montanunion über die EWG bis zur EU. Mit dem Vertrag von Maastricht (in Kraft seit 1993) kamen zur Wirtschaft weitere politische Aufgabenfelder hinzu.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c03",
+      "topic": "EU-Erweiterungen und Mitglieder heute",
+      "variants": [
+        {
+          "text": "Wie viele Mitgliedstaaten hat die Europäische Union heute?",
+          "options": [
+            "27",
+            "28",
+            "12",
+            "35"
+          ],
+          "explanation": "Seit dem Austritt Großbritanniens hat die EU 27 Mitgliedstaaten. Vorher waren es 28.",
+          "difficulty": 1
+        },
+        {
+          "text": "Was war das Besondere an der EU-Erweiterung im Jahr 2004?",
+          "options": [
+            "Zehn Länder traten gleichzeitig bei, darunter viele mittel- und osteuropäische Staaten wie Polen und Ungarn.",
+            "Damals traten die Gründungsmitglieder Frankreich und Italien bei.",
+            "Die EU nahm zum ersten Mal ein Land außerhalb Europas auf.",
+            "Alle Beitrittsländer mussten am Beitrittstag sofort den Euro einführen."
+          ],
+          "explanation": "2004 fand die bisher größte Erweiterung statt: Zehn Staaten kamen auf einmal dazu, viele davon ehemals kommunistische Länder Mittel- und Osteuropas. Man spricht deshalb auch von der Osterweiterung.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage über die Entwicklung der EU-Mitgliedschaft stimmt?",
+          "options": [
+            "Die EU wuchs von sechs Gründungsländern in mehreren Erweiterungsrunden – zuletzt trat 2013 Kroatien bei.",
+            "Seit der Gründung der EWG wurden keine neuen Länder mehr aufgenommen.",
+            "Norwegen und die Schweiz gehören zu den neuesten EU-Mitgliedern.",
+            "Die Türkei ist seit 2004 Vollmitglied der Europäischen Union."
+          ],
+          "explanation": "Aus sechs Gründungsländern wurden durch mehrere Erweiterungsrunden 28, seit dem Brexit 27 Mitglieder. Kroatien ist das jüngste Mitglied, Norwegen und die Schweiz gehören der EU nicht an.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c04",
+      "topic": "Europäisches Parlament",
+      "variants": [
+        {
+          "text": "Welche EU-Institution wird von den Bürgerinnen und Bürgern alle fünf Jahre direkt gewählt?",
+          "options": [
+            "Das Europäische Parlament",
+            "Die Europäische Kommission",
+            "Der Europäische Gerichtshof",
+            "Die Europäische Zentralbank"
+          ],
+          "explanation": "Das Europäische Parlament ist die einzige EU-Institution, deren Mitglieder direkt von den Bürgerinnen und Bürgern gewählt werden. Die Europawahl findet alle fünf Jahre statt.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Aufgaben hat das Europäische Parlament?",
+          "options": [
+            "Es beschließt gemeinsam mit dem Rat der EU die europäischen Gesetze und kontrolliert die Kommission.",
+            "Es schlägt als einzige Institution neue EU-Gesetze vor.",
+            "Es legt die Leitzinsen für den Euro-Raum fest.",
+            "Es entscheidet als Gericht über Streitfälle zwischen den Mitgliedstaaten."
+          ],
+          "explanation": "Das Parlament wirkt an der EU-Gesetzgebung mit, beschließt den Haushalt mit und kontrolliert die Kommission. Gesetzesvorschläge kommen dagegen von der Kommission, die Zinsen legt die EZB fest.",
+          "difficulty": 2
+        },
+        {
+          "text": "In welcher Stadt hat das Europäische Parlament seinen offiziellen Sitz?",
+          "options": [
+            "Straßburg",
+            "Brüssel",
+            "Luxemburg",
+            "Frankfurt am Main"
+          ],
+          "explanation": "Der offizielle Sitz des Europäischen Parlaments ist Straßburg, dort finden die großen Plenarsitzungen statt. In Brüssel tagen vor allem die Ausschüsse, weshalb die Stadt oft verwechselt wird.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c05",
+      "topic": "Europäische Kommission",
+      "variants": [
+        {
+          "text": "Welche Aufgabe hat die Europäische Kommission?",
+          "options": [
+            "Sie schlägt neue EU-Gesetze vor und achtet als \"Hüterin der Verträge\" auf deren Einhaltung.",
+            "Sie wählt die Abgeordneten des Europäischen Parlaments.",
+            "Sie druckt die Euro-Banknoten und legt die Leitzinsen fest.",
+            "Sie spricht als Gericht Urteile über die Mitgliedstaaten."
+          ],
+          "explanation": "Die Kommission hat das Vorschlagsrecht für neue EU-Gesetze und überwacht, dass alle Mitglieder die gemeinsamen Regeln einhalten. Deshalb nennt man sie auch die Hüterin der Verträge.",
+          "difficulty": 1
+        },
+        {
+          "text": "Ein Mitgliedstaat hält sich nicht an gemeinsames EU-Recht. Welche Institution mit Sitz in Brüssel kann deshalb ein Verfahren gegen ihn einleiten?",
+          "options": [
+            "Die Europäische Kommission",
+            "Die Europäische Zentralbank",
+            "Das Europäische Parlament",
+            "Der Europarat"
+          ],
+          "explanation": "Als Hüterin der Verträge wacht die Kommission in Brüssel über die Einhaltung des EU-Rechts und kann Vertragsverletzungsverfahren einleiten. Der Europarat ist übrigens gar keine EU-Institution.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c06",
+      "topic": "Rat der Europäischen Union",
+      "variants": [
+        {
+          "text": "Wer trifft sich im Rat der Europäischen Union, dem sogenannten Ministerrat?",
+          "options": [
+            "Die Fachministerinnen und Fachminister der Mitgliedstaaten, je nach Thema zum Beispiel die Umwelt- oder Agrarminister.",
+            "Direkt gewählte Abgeordnete aus allen EU-Ländern.",
+            "Die obersten Richterinnen und Richter der Mitgliedstaaten.",
+            "Die Bürgermeister der europäischen Hauptstädte."
+          ],
+          "explanation": "Im Rat der EU vertreten die Fachminister die Regierungen ihrer Länder. Geht es etwa um Landwirtschaft, treffen sich die Agrarminister aller Mitgliedstaaten.",
+          "difficulty": 2
+        },
+        {
+          "text": "Worin unterscheidet sich der Rat der EU vom Europäischen Rat?",
+          "options": [
+            "Im Rat der EU beschließen die Fachminister die Gesetze mit, im Europäischen Rat legen die Staats- und Regierungschefs die großen Leitlinien fest.",
+            "Der Rat der EU besteht aus Richtern, der Europäische Rat aus Ministern.",
+            "Beide Bezeichnungen stehen für genau dieselbe Institution.",
+            "Der Europäische Rat beschließt alle Gesetze allein, der Rat der EU darf ihn nur beraten."
+          ],
+          "explanation": "Die ähnlichen Namen werden leicht verwechselt: Der Rat der EU (Ministerrat) ist an der Gesetzgebung beteiligt, während der Europäische Rat der Gipfel der Staats- und Regierungschefs ist und die grundsätzliche Richtung der EU-Politik bestimmt.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c07",
+      "topic": "Europäischer Gerichtshof",
+      "variants": [
+        {
+          "text": "Welche Aufgabe hat der Europäische Gerichtshof (EuGH)?",
+          "options": [
+            "Er wacht darüber, dass das EU-Recht in allen Mitgliedstaaten eingehalten und einheitlich angewendet wird.",
+            "Er schlägt neue Gesetze für die Europäische Union vor.",
+            "Er verwaltet den EU-Haushalt und verteilt die Fördergelder.",
+            "Er entscheidet, welche Länder neu in die EU aufgenommen werden."
+          ],
+          "explanation": "Der EuGH ist das oberste Gericht der EU. Er sorgt dafür, dass das gemeinsame Recht überall gleich ausgelegt wird, und entscheidet in Streitfällen.",
+          "difficulty": 1
+        },
+        {
+          "text": "In welcher Stadt hat der Europäische Gerichtshof seinen Sitz?",
+          "options": [
+            "Luxemburg",
+            "Straßburg",
+            "Brüssel",
+            "Den Haag"
+          ],
+          "explanation": "Der EuGH hat seinen Sitz in Luxemburg. In Den Haag sitzt dagegen der Internationale Gerichtshof der Vereinten Nationen, was oft verwechselt wird.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c08",
+      "topic": "Europäische Zentralbank",
+      "variants": [
+        {
+          "text": "Welche Aufgabe hat die Europäische Zentralbank (EZB) mit Sitz in Frankfurt am Main?",
+          "options": [
+            "Sie sorgt für stabile Preise im Euro-Raum und legt dafür die Leitzinsen fest.",
+            "Sie beschließt die Gesetze der Europäischen Union.",
+            "Sie verteilt Fördergelder an strukturschwache Regionen.",
+            "Sie legt die Staatshaushalte der einzelnen Mitgliedsländer fest."
+          ],
+          "explanation": "Hauptziel der EZB ist die Preisstabilität im Euro-Raum. Mit ihrer Zinspolitik steuert sie, wie teuer es ist, sich Geld zu leihen.",
+          "difficulty": 1
+        },
+        {
+          "text": "Die Preise im Euro-Raum steigen stark an. Welche Institution kann mit einer Erhöhung der Leitzinsen gegen diese Inflation vorgehen?",
+          "options": [
+            "Die Europäische Zentralbank in Frankfurt am Main",
+            "Die Europäische Kommission in Brüssel",
+            "Das Europäische Parlament in Straßburg",
+            "Der Europäische Gerichtshof in Luxemburg"
+          ],
+          "explanation": "Für die Geldpolitik im Euro-Raum ist allein die EZB zuständig. Höhere Leitzinsen machen Kredite teurer, dadurch wird weniger Geld ausgegeben und der Preisanstieg gebremst.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c09",
+      "topic": "Binnenmarkt und die vier Freiheiten",
+      "variants": [
+        {
+          "text": "Welche \"vier Freiheiten\" gelten im Europäischen Binnenmarkt?",
+          "options": [
+            "Freier Verkehr von Waren, Personen, Dienstleistungen und Kapital",
+            "Freier Verkehr von Waren, Energie, Daten und Rohstoffen",
+            "Meinungs-, Presse-, Religions- und Versammlungsfreiheit",
+            "Freier Verkehr von Personen, Tieren, Pflanzen und Lebensmitteln"
+          ],
+          "explanation": "Im Binnenmarkt können Waren, Personen, Dienstleistungen und Kapital ohne Hindernisse über die Grenzen der Mitgliedstaaten gelangen. Das sind die sogenannten vier Freiheiten.",
+          "difficulty": 1
+        },
+        {
+          "text": "Eine Schreinerei aus Bayern verkauft ihre Möbel nach Frankreich, ohne dafür Zölle zu zahlen. Welche Freiheit des Binnenmarkts nutzt sie?",
+          "options": [
+            "Den freien Warenverkehr",
+            "Den freien Kapitalverkehr",
+            "Die Personenfreizügigkeit",
+            "Den freien Dienstleistungsverkehr"
+          ],
+          "explanation": "Möbel sind Waren, deshalb greift hier der freie Warenverkehr. Innerhalb des Binnenmarkts werden auf solche Lieferungen keine Zölle erhoben.",
+          "difficulty": 2
+        },
+        {
+          "text": "Eine spanische Krankenpflegerin darf ohne besondere Arbeitserlaubnis in München leben und arbeiten. Welche Binnenmarkt-Freiheit steckt dahinter?",
+          "options": [
+            "Die Personenfreizügigkeit, also der freie Personenverkehr",
+            "Der freie Warenverkehr",
+            "Der freie Kapitalverkehr",
+            "Der freie Dienstleistungsverkehr für Unternehmen"
+          ],
+          "explanation": "Die Personenfreizügigkeit erlaubt es EU-Bürgerinnen und EU-Bürgern, in jedem Mitgliedsland zu wohnen und zu arbeiten. Eine gesonderte Arbeitserlaubnis ist dafür nicht nötig.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c10",
+      "topic": "Euro und Eurozone",
+      "variants": [
+        {
+          "text": "Was versteht man unter der \"Eurozone\"?",
+          "options": [
+            "Die Gruppe der EU-Länder, die den Euro als offizielle Währung nutzen – derzeit 20 Staaten.",
+            "Alle Länder Europas, auch die außerhalb der EU.",
+            "Nur die sechs Gründungsländer der Europäischen Union.",
+            "Die Länder, die untereinander die Grenzkontrollen abgeschafft haben."
+          ],
+          "explanation": "Zur Eurozone gehören die 20 EU-Staaten, in denen der Euro offizielles Zahlungsmittel ist. Der Verzicht auf Grenzkontrollen ist dagegen Sache des Schengen-Raums.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Aussage über den Euro stimmt?",
+          "options": [
+            "Nicht alle EU-Länder haben den Euro – Schweden und Polen zum Beispiel behalten ihre eigene Währung.",
+            "Jedes EU-Land muss den Euro sofort am Tag seines Beitritts einführen.",
+            "Der Euro gilt nur in den sechs Gründungsländern der EU.",
+            "Der Euro wurde schon 1957 mit den Römischen Verträgen eingeführt."
+          ],
+          "explanation": "EU-Mitgliedschaft und Euro sind nicht dasselbe: 20 der 27 EU-Länder zahlen mit dem Euro. Länder wie Schweden, Polen oder Dänemark nutzen weiterhin ihre nationale Währung.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welchen Vorteil bringt der Euro für Urlauber und Unternehmen?",
+          "options": [
+            "Sie müssen kein Geld mehr umtauschen und können Preise zwischen den Euro-Ländern direkt vergleichen.",
+            "Alle Produkte kosten in jedem Euro-Land automatisch genau gleich viel.",
+            "In den Euro-Ländern muss keine Mehrwertsteuer mehr bezahlt werden.",
+            "Man kann überall auf der Welt ohne Umtausch mit Euro-Bargeld bezahlen."
+          ],
+          "explanation": "Die gemeinsame Währung erspart den Geldumtausch und die Umtauschgebühren. Außerdem lassen sich Preise über Ländergrenzen hinweg leichter vergleichen – gleich teuer ist deshalb aber nicht alles.",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "europa-c11",
+      "topic": "Schengen-Raum",
+      "variants": [
+        {
+          "text": "Was bedeutet das Schengener Abkommen für Reisende?",
+          "options": [
+            "Zwischen den Mitgliedsländern gibt es im Normalfall keine Grenzkontrollen mehr.",
+            "In allen Mitgliedsländern gilt automatisch der Euro als Währung.",
+            "Reisende brauchen innerhalb des Schengen-Raums überhaupt keine Ausweisdokumente mehr.",
+            "Reisende müssen sich vor jedem Grenzübertritt online anmelden."
+          ],
+          "explanation": "Im Schengen-Raum wurden die regelmäßigen Kontrollen an den Binnengrenzen abgeschafft, man kann also meist ohne Anhalten über die Grenze fahren. Einen gültigen Ausweis muss man trotzdem dabeihaben.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Aussage über den Schengen-Raum stimmt?",
+          "options": [
+            "Auch Nicht-EU-Länder wie die Schweiz und Norwegen gehören zum Schengen-Raum.",
+            "Der Schengen-Raum umfasst genau die Länder, die auch den Euro eingeführt haben.",
+            "Nur EU-Mitglieder dürfen dem Schengen-Raum angehören.",
+            "Irland war das erste Land, das die Grenzkontrollen abgeschafft hat."
+          ],
+          "explanation": "Schengen-Raum, EU und Eurozone decken sich nicht: Die Schweiz, Norwegen und Island machen bei Schengen mit, obwohl sie keine EU-Mitglieder sind. Das EU-Land Irland ist dagegen nicht dabei.",
+          "difficulty": 3
+        },
+        {
+          "text": "Familie Huber fährt mit dem Auto von München über Österreich nach Italien in den Urlaub, ohne an einer Grenze anhalten zu müssen. Welches Abkommen macht das möglich?",
+          "options": [
+            "Das Schengener Abkommen",
+            "Der Vertrag von Maastricht",
+            "Die Römischen Verträge",
+            "Der Vertrag über die Montanunion"
+          ],
+          "explanation": "Der Wegfall der Grenzkontrollen zwischen den Mitgliedsländern geht auf das Schengener Abkommen zurück. Es ist nach einem kleinen Ort in Luxemburg benannt, in dem es unterzeichnet wurde.",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "europa-c12",
+      "topic": "Brexit",
+      "variants": [
+        {
+          "text": "Was versteht man unter dem \"Brexit\"?",
+          "options": [
+            "Den Austritt Großbritanniens (des Vereinigten Königreichs) aus der Europäischen Union.",
+            "Den Beitritt Großbritanniens zur Eurozone.",
+            "Ein Handelsabkommen zwischen Großbritannien und den USA.",
+            "Den Ausschluss Großbritanniens aus dem Schengen-Raum."
+          ],
+          "explanation": "Das Kunstwort Brexit setzt sich aus \"Britain\" und \"Exit\" zusammen. Nach einer Volksabstimmung 2016 verließ Großbritannien die EU Anfang 2020 als erstes Land überhaupt.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Folge hat der Brexit für den Handel zwischen der EU und Großbritannien?",
+          "options": [
+            "An den Grenzen sind wieder Zollformalitäten und Kontrollen nötig, was den Handel aufwendiger macht.",
+            "Der Handel läuft völlig unverändert weiter wie vor dem Austritt.",
+            "Großbritannien darf überhaupt keine Waren mehr in die EU verkaufen.",
+            "Britische Waren wurden in der EU automatisch günstiger."
+          ],
+          "explanation": "Großbritannien gehört seit dem Brexit nicht mehr zum Binnenmarkt. Für Waren sind deshalb wieder Zollpapiere und Kontrollen nötig, was Zeit und Geld kostet.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c13",
+      "topic": "EU-Regionalförderung",
+      "variants": [
+        {
+          "text": "Warum unterstützt die EU strukturschwache Regionen mit Fördergeldern?",
+          "options": [
+            "Sie will die wirtschaftlichen Unterschiede zwischen den Regionen verringern und möglichst gleichwertige Lebensverhältnisse schaffen.",
+            "Sie will erreichen, dass mehr Menschen in die großen Hauptstädte umziehen.",
+            "Sie belohnt damit die Regionen, die besonders viele Steuern nach Brüssel überweisen.",
+            "Sie finanziert damit ausschließlich den Bau neuer Flughäfen."
+          ],
+          "explanation": "Innerhalb der EU gibt es wohlhabende und wirtschaftlich schwache Regionen. Mit der Regionalförderung sollen ärmere Gebiete aufholen, damit die Menschen dort ähnliche Chancen haben.",
+          "difficulty": 2
+        },
+        {
+          "text": "Eine ländliche Region mit hoher Arbeitslosigkeit erhält EU-Gelder für schnelles Internet und die Ansiedlung neuer Betriebe. Woher stammt dieses Geld?",
+          "options": [
+            "Aus den EU-Strukturfonds, zum Beispiel dem Europäischen Fonds für regionale Entwicklung (EFRE).",
+            "Aus den Zinseinnahmen der Europäischen Zentralbank.",
+            "Aus einem Sonderfonds, in den ausschließlich Deutschland einzahlt.",
+            "Aus dem gemeinsamen Verteidigungshaushalt der NATO."
+          ],
+          "explanation": "Für die Regionalförderung nutzt die EU ihre Strukturfonds, allen voran den EFRE. Daraus werden etwa Infrastruktur, Unternehmen und Bildungsprojekte in strukturschwachen Regionen mitfinanziert.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c14",
+      "topic": "Die EU im Alltag",
+      "variants": [
+        {
+          "text": "Woran merken Jugendliche in Deutschland im Alltag ganz direkt, dass es die EU gibt?",
+          "options": [
+            "Beim Telefonieren und Surfen im EU-Ausland fallen keine zusätzlichen Roaming-Gebühren an.",
+            "Die EU legt die Noten an den bayerischen Schulen fest.",
+            "Die EU bezahlt allen Schülerinnen und Schülern das Busticket.",
+            "Die EU bestimmt die Öffnungszeiten der Geschäfte in Deutschland."
+          ],
+          "explanation": "Seit 2017 gilt in der EU \"Roam like at home\": Im EU-Ausland telefoniert und surft man zu den Konditionen des Heimattarifs. Schulnoten oder Ladenöffnungszeiten regeln dagegen die Länder selbst.",
+          "difficulty": 1
+        },
+        {
+          "text": "Was ist Erasmus+?",
+          "options": [
+            "Ein EU-Programm, das Auslandsaufenthalte von Schülern, Auszubildenden und Studierenden fördert.",
+            "Eine europäische Fluggesellschaft für günstige Städtereisen.",
+            "Ein Handelsabkommen zwischen der EU und Kanada.",
+            "Eine EU-Behörde für den Schutz der Außengrenzen."
+          ],
+          "explanation": "Mit Erasmus+ unterstützt die EU Austausch und Lernaufenthalte im europäischen Ausland finanziell. Davon profitieren Schüler, Azubis und Studierende.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welches Beispiel zeigt, wie die EU Verbraucher beim Online-Shopping schützt?",
+          "options": [
+            "Online-Käufe können in der Regel innerhalb von 14 Tagen ohne Angabe von Gründen widerrufen werden.",
+            "Online-Händler dürfen Bestellungen erst ab einem Warenwert von 100 Euro verschicken.",
+            "Beim Online-Kauf ist eine Rückgabe grundsätzlich ausgeschlossen.",
+            "Die EU übernimmt die Versandkosten für alle Rücksendungen."
+          ],
+          "explanation": "Das 14-tägige Widerrufsrecht bei Online-Bestellungen geht auf EU-Regeln zurück und gilt in allen Mitgliedsländern. Es ist ein typisches Beispiel für den europäischen Verbraucherschutz.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c15",
+      "topic": "Globalisierung: Definition und Dimensionen",
+      "variants": [
+        {
+          "text": "Was versteht man unter Globalisierung?",
+          "options": [
+            "Die zunehmende weltweite Verflechtung von Wirtschaft, Kultur, Kommunikation und Verkehr über Ländergrenzen hinweg.",
+            "Die Vereinigung aller Staaten der Erde zu einem einzigen Weltstaat.",
+            "Den Umzug aller großen Unternehmen nach Asien.",
+            "Die weltweite Einführung einer einheitlichen Währung."
+          ],
+          "explanation": "Globalisierung bedeutet, dass Länder, Menschen und Unternehmen weltweit immer enger vernetzt sind. Das betrifft nicht nur die Wirtschaft, sondern auch Kultur, Kommunikation und Verkehr.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welches Beispiel gehört zur kulturellen Dimension der Globalisierung?",
+          "options": [
+            "Amerikanische Serien, koreanische Popmusik und italienische Küche sind auf der ganzen Welt verbreitet.",
+            "Ein Containerschiff transportiert Fernseher von Shanghai nach Hamburg.",
+            "Eine deutsche Bank kauft Aktien eines amerikanischen Unternehmens.",
+            "Ein Staat erhöht die Zölle auf importierten Stahl."
+          ],
+          "explanation": "Wenn sich Musik, Filme, Essen oder Mode weltweit verbreiten, ist das die kulturelle Seite der Globalisierung. Warentransporte und Aktienkäufe gehören dagegen zur wirtschaftlichen Dimension.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zur Globalisierung stimmt NICHT?",
+          "options": [
+            "Globalisierung betrifft ausschließlich die Wirtschaft.",
+            "Globalisierung zeigt sich auch in Kultur und Kommunikation, etwa durch soziale Medien.",
+            "Durch die Globalisierung sind Länder wirtschaftlich stärker voneinander abhängig.",
+            "Der weltweite Austausch von Waren und Personen hat durch die Globalisierung zugenommen."
+          ],
+          "explanation": "Die Globalisierung hat viele Dimensionen: Neben der Wirtschaft verflechten sich auch Kultur, Kommunikation, Verkehr und Politik weltweit. Die Aussage, sie betreffe nur die Wirtschaft, ist deshalb falsch.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c16",
+      "topic": "Treiber der Globalisierung",
+      "variants": [
+        {
+          "text": "Welche Erfindung hat den weltweiten Warentransport enorm verbilligt und gilt deshalb als ein Motor der Globalisierung?",
+          "options": [
+            "Der genormte Container, der sich schnell zwischen Schiff, Lkw und Bahn umladen lässt.",
+            "Das Fließband in den Autofabriken.",
+            "Die Dampfeisenbahn des 19. Jahrhunderts.",
+            "Das Überschall-Passagierflugzeug."
+          ],
+          "explanation": "Weil Container genormt sind, können sie ohne Umpacken zwischen Schiff, Lkw und Bahn wechseln. Das machte den Transport um die halbe Welt so billig, dass sich weltweiter Handel für fast alle Waren lohnt.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum gilt das Internet als wichtiger Treiber der Globalisierung?",
+          "options": [
+            "Informationen, Aufträge und Zahlungen lassen sich in Sekunden weltweit austauschen – so können Firmen über Kontinente hinweg zusammenarbeiten.",
+            "Das Internet hat alle Transportkosten für Waren auf null gesenkt.",
+            "Das Internet zwingt alle Staaten, ihre Grenzen für Waren zu öffnen.",
+            "Das Internet wird nur von großen Konzernen genutzt, nicht von kleinen Firmen."
+          ],
+          "explanation": "Über das Internet können Entwickler, Zulieferer und Kunden auf verschiedenen Kontinenten in Echtzeit zusammenarbeiten. Erst diese schnelle Kommunikation macht weltweit verteilte Produktion möglich.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welcher der folgenden Faktoren hat die Globalisierung NICHT vorangetrieben?",
+          "options": [
+            "Die Erhöhung von Zöllen und Handelsschranken zwischen den Staaten.",
+            "Günstige Transporte durch die Containerschifffahrt.",
+            "Schnelle weltweite Kommunikation über das Internet.",
+            "Die Öffnung vieler Märkte durch internationale Handelsabkommen."
+          ],
+          "explanation": "Die Globalisierung wurde durch billige Transporte, schnelle Kommunikation und offene Märkte beschleunigt. Höhere Zölle und Handelsschranken bremsen den Welthandel dagegen aus.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c17",
+      "topic": "Global Players",
+      "variants": [
+        {
+          "text": "Was ist ein \"Global Player\"?",
+          "options": [
+            "Ein Großkonzern, der weltweit produziert und seine Produkte auf der ganzen Welt verkauft, zum Beispiel Apple oder Volkswagen.",
+            "Ein kleines Familienunternehmen, das seine Produkte nur in der eigenen Region verkauft.",
+            "Eine staatliche Behörde, die den internationalen Handel überwacht.",
+            "Ein Land, das besonders viele Waren exportiert."
+          ],
+          "explanation": "Global Players sind weltweit tätige Großunternehmen mit Standorten und Kunden in vielen Ländern. Bekannte Beispiele sind Apple, Volkswagen, Samsung oder Nestlé.",
+          "difficulty": 1
+        },
+        {
+          "text": "Nach welchen Überlegungen wählen Global Players ihre Produktionsstandorte aus?",
+          "options": [
+            "Sie vergleichen weltweit Bedingungen wie Lohnkosten, Steuern und die Nähe zu Absatzmärkten und wählen den jeweils günstigsten Standort.",
+            "Sie produzieren grundsätzlich nur im Land ihres Firmensitzes.",
+            "Sie wählen bewusst die Standorte mit den höchsten Löhnen und Steuern.",
+            "Sie dürfen nur in Ländern produzieren, die zur Europäischen Union gehören."
+          ],
+          "explanation": "Global Players vergleichen Standortfaktoren rund um den Globus. Produziert wird dort, wo Kosten, Fachkräfte und Marktnähe zusammen den größten Vorteil bieten.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c18",
+      "topic": "Harte und weiche Standortfaktoren",
+      "variants": [
+        {
+          "text": "Was versteht man unter \"harten\" Standortfaktoren?",
+          "options": [
+            "Gut messbare Bedingungen wie Verkehrsanbindung, Lohnkosten, Steuern oder verfügbare Arbeitskräfte.",
+            "Schwer messbare Dinge wie das Image einer Stadt oder ihr Freizeitangebot.",
+            "Ausschließlich die Bodenschätze, die direkt am Standort vorkommen.",
+            "Gesetze, die den Unternehmen einen bestimmten Standort vorschreiben."
+          ],
+          "explanation": "Harte Standortfaktoren lassen sich in Zahlen ausdrücken, etwa Löhne, Steuern oder die Entfernung zur Autobahn. Image und Freizeitwert zählen dagegen zu den weichen Faktoren.",
+          "difficulty": 1
+        },
+        {
+          "text": "Ein IT-Unternehmen zieht nach München, weil die Stadt ein attraktives Kultur- und Freizeitangebot bietet und Fachkräfte gern dort leben. Um welche Art von Standortfaktor handelt es sich?",
+          "options": [
+            "Um einen weichen Standortfaktor",
+            "Um einen harten Standortfaktor",
+            "Um einen Infrastrukturfaktor",
+            "Um einen Rohstofffaktor"
+          ],
+          "explanation": "Lebensqualität, Image und Freizeitwert lassen sich kaum in Zahlen messen und zählen deshalb zu den weichen Standortfaktoren. Trotzdem beeinflussen sie, wo sich Firmen und Fachkräfte niederlassen.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage über Standortfaktoren stimmt?",
+          "options": [
+            "Weiche Standortfaktoren wie Lebensqualität werden wichtiger, weil Unternehmen um qualifizierte Fachkräfte konkurrieren.",
+            "Harte Standortfaktoren wie Löhne und Steuern spielen heute keine Rolle mehr.",
+            "Weiche Standortfaktoren lassen sich exakt in Euro und Cent messen.",
+            "Für alle Branchen sind genau dieselben Standortfaktoren entscheidend."
+          ],
+          "explanation": "Gerade Firmen, die um Fachkräfte werben, achten zunehmend darauf, wo Menschen gerne leben. Harte Faktoren bleiben trotzdem wichtig, und je nach Branche zählen unterschiedliche Faktoren.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c19",
+      "topic": "Internationale Arbeitsteilung und Produktionsverlagerung",
+      "variants": [
+        {
+          "text": "Was bedeutet \"internationale Arbeitsteilung\" bei der Herstellung eines Smartphones?",
+          "options": [
+            "Die einzelnen Produktionsschritte finden in verschiedenen Ländern statt – etwa Entwicklung in den USA, Chipfertigung in Ostasien und Zusammenbau in China.",
+            "Jedes Land baut komplett eigene Smartphones nur für den eigenen Markt.",
+            "Alle Smartphones der Welt werden in einer einzigen großen Fabrik hergestellt.",
+            "Die Beschäftigten eines Werks teilen sich die Arbeit in Früh- und Spätschicht auf."
+          ],
+          "explanation": "Bei der internationalen Arbeitsteilung übernimmt jedes Land den Produktionsschritt, den es am günstigsten oder besten ausführen kann. Ein Smartphone hat deshalb Bauteile und Arbeitsschritte aus vielen Ländern.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum lassen viele Bekleidungsfirmen ihre Jeans in Ländern wie Bangladesch nähen?",
+          "options": [
+            "Weil die Löhne dort deutlich niedriger sind und die Produktion dadurch viel billiger wird.",
+            "Weil es in Europa gesetzlich verboten ist, Kleidung zu nähen.",
+            "Weil Baumwolle ausschließlich in Bangladesch angebaut wird.",
+            "Weil die Transportwege von dort nach Europa besonders kurz sind."
+          ],
+          "explanation": "Entscheidend sind die niedrigen Lohnkosten: Näharbeiten sind sehr arbeitsintensiv und lassen sich in Niedriglohnländern viel günstiger erledigen. Die langen Transportwege nehmen die Firmen dafür in Kauf.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c20",
+      "topic": "Deutschland im Welthandel",
+      "variants": [
+        {
+          "text": "Warum wird Deutschland als \"Exportnation\" bezeichnet?",
+          "options": [
+            "Es verkauft besonders viele Waren wie Autos, Maschinen und chemische Erzeugnisse ins Ausland – viele Arbeitsplätze hängen davon ab.",
+            "Es führt fast alle Waren ein und stellt selbst kaum noch etwas her.",
+            "Es exportiert vor allem Rohstoffe wie Erdöl und Erze.",
+            "Es handelt ausschließlich mit seinen direkten Nachbarländern."
+          ],
+          "explanation": "Deutschland gehört zu den größten Exportnationen der Welt. Typische Ausfuhrgüter sind Fahrzeuge, Maschinen sowie chemische und pharmazeutische Produkte, und ein großer Teil der Arbeitsplätze hängt am Export.",
+          "difficulty": 1
+        },
+        {
+          "text": "Zwischen welchen drei großen Wirtschaftsregionen fließen die stärksten Welthandelsströme?",
+          "options": [
+            "Zwischen Europa, Nordamerika und Ostasien.",
+            "Zwischen Südamerika, Afrika und Ozeanien.",
+            "Zwischen Nordafrika, Zentralasien und der Karibik.",
+            "Zwischen Russland, Indien und Brasilien."
+          ],
+          "explanation": "Die drei wirtschaftsstärksten Regionen der Erde sind Europa, Nordamerika und Ostasien. Zwischen ihnen werden die mit Abstand größten Warenmengen gehandelt.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c21",
+      "topic": "Chancen und Risiken der Globalisierung",
+      "variants": [
+        {
+          "text": "Welche Chance bietet die Globalisierung den Verbrauchern in Deutschland?",
+          "options": [
+            "Eine große Auswahl an Produkten aus aller Welt, oft zu günstigen Preisen.",
+            "Alle Produkte werden künftig wieder ausschließlich in Deutschland hergestellt.",
+            "Es gibt keine Werbung mehr für ausländische Produkte.",
+            "Die Preise steigen dauerhaft, weil weltweite Transporte immer teurer werden."
+          ],
+          "explanation": "Durch den weltweiten Handel stehen Verbrauchern Waren aus vielen Ländern zur Verfügung, vom tropischen Obst bis zur günstigen Elektronik. Der internationale Wettbewerb drückt zudem oft die Preise.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Aussage beschreibt ein Risiko der Globalisierung?",
+          "options": [
+            "Verlagern Firmen ihre Produktion in Billiglohnländer, können in Deutschland Arbeitsplätze verloren gehen.",
+            "Durch den weltweiten Handel sinkt die Auswahl an Produkten in den Geschäften.",
+            "Die internationale Zusammenarbeit von Unternehmen ist grundsätzlich verboten.",
+            "Durch die Globalisierung gibt es keine Wirtschaftskrisen mehr."
+          ],
+          "explanation": "Wenn Unternehmen ihre Produktion ins kostengünstigere Ausland verlagern, fallen im Inland Arbeitsplätze weg. Weitere Risiken sind schlechte Arbeitsbedingungen in armen Ländern, Umweltbelastungen durch Transporte und die schnelle Ausbreitung von Krisen.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c22",
+      "topic": "Fairer Handel (Fairtrade)",
+      "variants": [
+        {
+          "text": "Was ist das Ziel des fairen Handels (Fairtrade)?",
+          "options": [
+            "Erzeuger in Entwicklungsländern sollen faire Preise für ihre Produkte erhalten und unter menschenwürdigen Bedingungen arbeiten.",
+            "Produkte aus Entwicklungsländern sollen möglichst billig verkauft werden.",
+            "Der Handel mit Entwicklungsländern soll vollständig beendet werden.",
+            "Nur europäische Bauern sollen ihre Waren weltweit verkaufen dürfen."
+          ],
+          "explanation": "Der faire Handel garantiert den Erzeugern feste Mindestpreise und zusätzliche Prämien, außerdem gelten Regeln gegen ausbeuterische Kinderarbeit. So sollen Bauernfamilien im globalen Süden von ihrer Arbeit leben können.",
+          "difficulty": 1
+        },
+        {
+          "text": "Woran erkennen Kundinnen und Kunden im Supermarkt fair gehandelte Produkte wie Kaffee, Kakao oder Bananen?",
+          "options": [
+            "An einem Fairtrade-Siegel auf der Verpackung.",
+            "Am besonders niedrigen Preis im Vergleich zu ähnlichen Produkten.",
+            "Daran, dass sie nur an der Frischetheke verkauft werden.",
+            "An der Herkunftsangabe \"Hergestellt in der EU\"."
+          ],
+          "explanation": "Fair gehandelte Produkte tragen ein Siegel, das die Einhaltung der Fairtrade-Standards bestätigt. Sie sind meist etwas teurer als herkömmliche Ware, weil die Erzeuger besser bezahlt werden.",
+          "difficulty": 2
+        }
+      ]
+    }
+  ]
+}
