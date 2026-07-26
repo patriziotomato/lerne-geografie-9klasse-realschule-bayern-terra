@@ -396,6 +396,27 @@ a { color: inherit; text-decoration: none; }
 .fb-head { font-weight: 800; font-size: 1.05rem; margin-bottom: 6px; }
 .fb-expl { color: var(--ink-2); line-height: 1.45; margin-bottom: 12px; }
 
+/* Ablaufender Balken für "Auto-Weiter" nach einer richtigen Antwort. */
+.fb-autobar {
+  height: 3px; margin-top: 10px;
+  border-radius: 2px; overflow: hidden;
+  background: color-mix(in srgb, var(--ok) 25%, transparent);
+}
+.fb-autobar span {
+  display: block; height: 100%;
+  background: var(--ok);
+  transform-origin: left center;
+  animation: autobar 1.2s linear forwards;
+}
+@keyframes autobar {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  /* Ohne Animation, aber der Timer läuft weiter. */
+  .fb-autobar span { animation: none; }
+}
+
 /* ==== Results =========================================================== */
 .results { text-align: center; padding-top: 28px; }
 .res-headline { font-size: 2rem; font-weight: 900; }

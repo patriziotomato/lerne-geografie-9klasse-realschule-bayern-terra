@@ -9,6 +9,11 @@ import { state } from '../store.ts';
 
 const ROUND_SIZE = 10;
 
+/** Wartezeit, bevor nach einer richtigen Antwort automatisch weitergeblättert
+ *  wird. Nach einer falschen Antwort läuft kein Timer — dort soll die Erklärung
+ *  in Ruhe gelesen werden. */
+const AUTO_ADVANCE_MS = 1200;
+
 interface RoundState {
   chapterId: string;
   items: RoundItem[];
@@ -22,6 +27,14 @@ interface RoundState {
 
 let round: RoundState | null = null;
 let lastResult: RoundResult | null = null;
+let advanceTimer: number | null = null;
+
+function clearAdvance(): void {
+  if (advanceTimer !== null) {
+    clearTimeout(advanceTimer);
+    advanceTimer = null;
+  }
+}
 
 export function takeLastResult(): RoundResult | null {
   const r = lastResult;
@@ -30,6 +43,8 @@ export function takeLastResult(): RoundResult | null {
 }
 
 export function renderQuiz(root: HTMLElement, chapterId = 'mix'): void {
+  clearAdvance();
+
   // Neue Runde starten, wenn keine läuft oder das Kapitel wechselt
   if (!round || round.chapterId !== chapterId || round.index >= round.items.length) {
     const items = pickRound(chapterId, ROUND_SIZE);
@@ -48,6 +63,11 @@ export function renderQuiz(root: HTMLElement, chapterId = 'mix'): void {
       answered: false,
     };
   }
+
+  // Beim Wiedereinstieg in eine laufende Runde die Frage wieder freigeben:
+  // renderQuestion() zeichnet frische, aktive Buttons, answered wäre aber noch
+  // vom Abbrechen her gesetzt und würde jeden Klick verschlucken.
+  round.answered = false;
   renderQuestion(root);
 }
 
@@ -127,10 +147,24 @@ function answer(root: HTMLElement, btn: HTMLButtonElement): void {
       <div class="fb-head">${isCorrect ? `Richtig! +${gained} XP ${r.combo >= 3 ? '⚡' : '🎉'}` : 'Leider falsch 😅'}</div>
       <div class="fb-expl">${esc(item.variant.explanation)}</div>
       <button class="btn primary big" id="next">${last ? 'Runde abschließen 🏁' : 'Weiter 👉'}</button>
+      ${isCorrect ? '<div class="fb-autobar"><span></span></div>' : ''}
     </div>`;
-  feedback.querySelector('#next')!.scrollIntoView({ behavior: 'smooth', block: 'end' });
 
-  feedback.querySelector('#next')!.addEventListener('click', () => {
+  const nextBtn = feedback.querySelector<HTMLButtonElement>('#next')!;
+  // Bei richtiger Antwort läuft gleich der Auto-Weiter-Timer — eine weiche
+  // Scroll-Animation käme ihm dabei in die Quere.
+  nextBtn.scrollIntoView({ behavior: isCorrect ? 'auto' : 'smooth', block: 'end' });
+
+  let advanced = false;
+  const goNext = (): void => {
+    clearAdvance();
+    // Der Router ersetzt beim Viewwechsel root.innerHTML; der gemerkte Button
+    // hängt dann nicht mehr im Dokument. Ohne diese Prüfung könnte ein noch
+    // laufender Timer nach "✕ Abbrechen" eine Runde weiterschalten oder
+    // finishRound() ein zweites Mal auslösen.
+    if (advanced || !nextBtn.isConnected) return;
+    advanced = true;
+
     r.index++;
     r.answered = false;
     if (r.index >= r.items.length) {
@@ -152,5 +186,19 @@ function answer(root: HTMLElement, btn: HTMLButtonElement): void {
     } else {
       renderQuestion(root);
     }
-  });
+  };
+
+  nextBtn.addEventListener('click', goNext);
+
+  if (isCorrect) {
+    // Wer die Erklärung doch lesen will, tippt irgendwo ins Feedback-Feld
+    // (außerhalb des Weiter-Buttons) und stoppt damit den Countdown.
+    feedback.querySelector('.feedback')!.addEventListener('click', (e) => {
+      if (!(e.target as HTMLElement).closest('#next')) {
+        clearAdvance();
+        feedback.querySelector('.fb-autobar')?.remove();
+      }
+    });
+    advanceTimer = window.setTimeout(goNext, AUTO_ADVANCE_MS);
+  }
 }
