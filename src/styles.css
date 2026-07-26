@@ -41,9 +41,11 @@
   --on-accent: #0b1020;
   --accent-wash: rgba(128, 144, 204, 0.14);
 
-  /* Semantik — entsättigt, damit Rot und Grün nicht schreien */
-  --ok: #45b87f;
-  --danger: #dd6b7a;
+  /* Semantik — entsättigt, damit nichts schreit. „Richtig" ist Pink; damit
+     es neben „falsch" nicht verschwimmt, liegt --danger bewusst im warmen
+     Rot statt im Rosé — sonst trennten die beiden nur ~25° Farbton. */
+  --ok: #e06fae;
+  --danger: #e4664f;
   --warn: #d3a04a;
 
   /* Der Ring-Track wird aus ui.ts heraus referenziert (ring()). */
@@ -113,8 +115,8 @@
 
   /* Dunkel genug, dass weiße Schrift darauf und die Farbe selbst als Text
      auf hellem Grund jeweils >= 4,5:1 erreichen. */
-  --ok: #1a7f52;
-  --danger: #c4485a;
+  --ok: #b03579;
+  --danger: #bf3f24;
   --warn: #8a6011;
 
   --ring-track: rgba(20, 26, 38, 0.12);
