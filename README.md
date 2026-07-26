@@ -39,26 +39,34 @@ npm run preview    # Build lokal testen
 ## Design
 
 Das komplette Styling liegt in `src/styles.css` und hängt an einem Token-Block
-am Dateianfang — Flächen, Schrift, Akzente, Radien, Abstände, Elevation. Ein
+am Dateianfang — Flächen, Schrift, Akzent, Radien, Abstände, Elevation. Ein
 Theme ist damit ein reiner Wertetausch, keine zweite Regelmenge:
 
-- **Dark** (Default): Mitternachts-Indigo, Aurora-Schimmer und ein feines
-  Gradnetz als Hintergrund — das Motiv, das die App im Kapitel
-  „Arbeitstechniken" selbst unterrichtet.
-- **Light**: warmes Kartenpapier, gleiche Struktur, eigene Werte im
+- **Dark** (Default): neutrales Schiefergrau.
+- **Light**: neutrales Off-White, gleiche Struktur, eigene Werte im
   `prefers-color-scheme: light`-Block.
 
 Beide Themes setzen `color-scheme`, damit native Bedienelemente (Datums- und
 Zeit-Picker, Checkboxen, Scrollbars) mitziehen.
 
-Der Signaturverlauf `--grad` (Violett → Aqua) bleibt den Fortschritts- und
-Belohnungsmomenten vorbehalten: Level-Ring, XP-Balken, Wochenbalken, Level-Up,
-Kisten-Pill. Auf gefüllten Verlaufsflächen ist `--on-grad` die passende
-Schriftfarbe — im Dark-Theme dunkel, im Light-Theme weiß, damit der Kontrast in
-beiden Richtungen ≥ 4,5:1 bleibt.
+Drei Regeln halten die Oberfläche ruhig:
+
+1. **Ein Akzent.** `--accent` trägt jede Aktion und jeden Fortschritt —
+   Primärbutton, Level-Ring, XP- und Wochenbalken, aktiver Tab, Zielnote. Es
+   gibt keine Verläufe.
+2. **Farbe bedeutet etwas.** Außer dem Akzent erscheinen nur `--ok`,
+   `--danger` und `--warn`, und nur dort, wo sie eine Aussage tragen
+   (richtig, falsch, hinter dem Plan). Alles andere ist Graustufe.
+3. **Kanten statt Schatten.** Flächen werden über `--line` und kleine Radien
+   (3–10 px) getrennt; Schatten bleiben echten Overlays vorbehalten.
+
+Alle Farbpaare, die Text tragen, sind auf ≥ 4,5:1 ausgelegt — in beiden
+Themes. Deshalb ist `--accent` im Light-Theme deutlich dunkler als im
+Dark-Theme, und `--on-accent` wechselt entsprechend.
 
 Kapitelfarben stehen als `color` in `src/data/chapters.ts` und landen per
-Inline-`--ch-color` auf Kapitelkarte, Fortschrittsring und Themen-Kachel.
+Inline-`--ch-color` auf Kapitelkarte, Fortschrittsring und Themen-Kachel. Es
+sind bewusst entsättigte Mitteltöne, damit sie auf beiden Untergründen tragen.
 
 App-Icons werden aus `public/icons/icon.svg` gerendert; die PNG-Größen
 (180/192/512 plus maskable) sind Rasterisate derselben Datei.
