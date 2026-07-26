@@ -13,7 +13,7 @@
             "Eine politische Karte",
             "Ein Stadtplan"
           ],
-          "explanation": "Physische Karten zeigen die Oberflächenformen der Erde, zum Beispiel Gebirge, Ebenen und Gewässer. Politische Karten zeigen dagegen Staaten und Grenzen.",
+          "explanation": "Physische Karten zeigen Gebirge, Ebenen und Gewässer, politische die Grenzen.",
           "difficulty": 1
         },
         {
@@ -24,18 +24,18 @@
             "Um eine topographische Karte",
             "Um eine politische Karte"
           ],
-          "explanation": "Thematische Karten konzentrieren sich auf ein bestimmtes Thema wie Niederschlag, Klima oder Bevölkerungsdichte. Die Landschaftsformen stehen dabei nicht im Mittelpunkt.",
+          "explanation": "Thematische Karten zeigen ein Thema wie Niederschlag, Klima oder Bevölkerung.",
           "difficulty": 2
         },
         {
           "text": "Welche Aussage über Kartenarten stimmt NICHT?",
           "options": [
-            "Topographische Karten zeigen ausschließlich Staatsgrenzen und Hauptstädte.",
-            "Physische Karten stellen Oberflächenformen wie Gebirge und Ebenen dar.",
-            "Thematische Karten behandeln ein bestimmtes Thema, zum Beispiel Klima oder Landwirtschaft.",
-            "Topographische Karten enthalten genaue Angaben zu Gelände, Wegen und Siedlungen."
+            "Topographische Karten zeigen nur Grenzen und Hauptstädte.",
+            "Physische Karten stellen Gebirge und Ebenen dar.",
+            "Thematische Karten behandeln ein einzelnes Thema.",
+            "Topographische Karten zeigen Gelände, Wege, Siedlungen."
           ],
-          "explanation": "Topographische Karten bilden das Gelände mit Höhenlinien, Wegen und Siedlungen sehr genau ab. Staatsgrenzen und Hauptstädte sind das Hauptthema politischer Karten.",
+          "explanation": "Topographische Karten bilden das Gelände genau ab; Grenzen zeigen politische Karten.",
           "difficulty": 2
         }
       ]
@@ -47,23 +47,23 @@
         {
           "text": "Warum kann eine flache Weltkarte die Erde nie völlig verzerrungsfrei abbilden?",
           "options": [
-            "Weil sich die gekrümmte Kugeloberfläche nicht ohne Verzerrungen in eine Ebene abwickeln lässt.",
-            "Weil die Ozeane auf Karten grundsätzlich zu klein gezeichnet werden.",
-            "Weil Satelliten immer nur eine Hälfte der Erde fotografieren können.",
-            "Weil das Gradnetz nur auf einem Globus eingezeichnet werden kann."
+            "Eine Kugeloberfläche lässt sich nicht flach abwickeln.",
+            "Die Ozeane werden auf Karten immer zu klein gezeichnet.",
+            "Satelliten fotografieren immer nur eine Erdhälfte.",
+            "Das Gradnetz gibt es nur auf einem echten Globus."
           ],
-          "explanation": "Die Erde ist annähernd eine Kugel. Überträgt man ihre Oberfläche auf eine flache Karte, entstehen zwangsläufig Verzerrungen bei Flächen, Winkeln oder Entfernungen.",
+          "explanation": "Beim Übertragen der Kugel auf die Ebene entstehen zwangsläufig Verzerrungen.",
           "difficulty": 2
         },
         {
           "text": "Auf vielen Weltkarten wirkt Grönland fast so groß wie Afrika, obwohl Afrika in Wirklichkeit etwa 14-mal größer ist. Wie lässt sich das erklären?",
           "options": [
-            "Die verwendete Kartenprojektion verzerrt die Flächen in Polnähe stark.",
-            "Grönland ist durch seine Eisbedeckung tatsächlich fast so groß wie Afrika.",
-            "Afrika wird auf Weltkarten kleiner dargestellt, um Platz für Beschriftungen zu sparen.",
-            "Der Maßstab einer Weltkarte gilt immer nur für die Südhalbkugel."
+            "Die Projektion verzerrt die Flächen in Polnähe stark.",
+            "Grönland ist mit seinem Eis wirklich so groß wie Afrika.",
+            "Afrika wird kleiner gezeichnet, um Platz zu sparen.",
+            "Der Maßstab gilt immer nur für die Südhalbkugel."
           ],
-          "explanation": "Bei vielen Projektionen, etwa der Mercator-Projektion, werden Gebiete nahe den Polen stark vergrößert dargestellt. Grönland liegt weit im Norden und erscheint deshalb viel zu groß.",
+          "explanation": "Die Mercator-Projektion vergrößert polnahe Gebiete stark – Grönland liegt weit nördlich.",
           "difficulty": 3
         }
       ]
@@ -75,23 +75,23 @@
         {
           "text": "Was bedeutet der Maßstab 1:25.000 auf einer Karte?",
           "options": [
-            "1 cm auf der Karte entspricht 25.000 cm, also 250 m in der Wirklichkeit.",
-            "1 cm auf der Karte entspricht 25.000 m in der Wirklichkeit.",
-            "25.000 cm auf der Karte entsprechen 1 cm in der Wirklichkeit.",
-            "Die Karte zeigt einen Ausschnitt von genau 25.000 Quadratmetern."
+            "1 cm auf der Karte sind 25.000 cm, also 250 m.",
+            "1 cm auf der Karte sind 25.000 m in Wirklichkeit.",
+            "25.000 cm auf der Karte sind 1 cm in Wirklichkeit.",
+            "Die Karte zeigt genau 25.000 Quadratmeter Fläche."
           ],
-          "explanation": "Der Maßstab gibt an, wie stark die Wirklichkeit verkleinert wurde: 1 cm auf der Karte sind 25.000 cm in der Natur. Das sind umgerechnet 250 m.",
+          "explanation": "1 cm auf der Karte sind 25.000 cm in der Natur, also 250 m.",
           "difficulty": 1
         },
         {
           "text": "Welche Aussage über den Kartenmaßstab ist richtig?",
           "options": [
-            "Je größer die Zahl hinter dem Doppelpunkt, desto stärker ist die Landschaft verkleinert.",
-            "Je größer die Zahl hinter dem Doppelpunkt, desto mehr Einzelheiten zeigt die Karte.",
-            "Eine Karte im Maßstab 1:1.000.000 ist detailreicher als eine im Maßstab 1:25.000.",
-            "Der Maßstab gibt an, wie groß das Kartenblatt gedruckt wird."
+            "Je größer die Zahl, desto stärker die Verkleinerung.",
+            "Je größer die Zahl, desto mehr Einzelheiten sieht man.",
+            "Die Karte 1:1.000.000 ist genauer als die 1:25.000.",
+            "Der Maßstab gibt an, wie groß das Blatt gedruckt wird."
           ],
-          "explanation": "Die Zahl hinter dem Doppelpunkt ist der Verkleinerungsfaktor. Bei 1:1.000.000 wird stärker verkleinert als bei 1:25.000, deshalb sind weniger Details erkennbar.",
+          "explanation": "Die Zahl hinter dem Doppelpunkt ist der Verkleinerungsfaktor.",
           "difficulty": 2
         }
       ]
@@ -108,7 +108,7 @@
             "5 km",
             "50 km"
           ],
-          "explanation": "1 cm auf der Karte entspricht 50.000 cm in der Wirklichkeit. 50.000 cm sind 500 m.",
+          "explanation": "1 cm entspricht 50.000 cm – und 50.000 cm sind 500 m.",
           "difficulty": 1
         },
         {
@@ -119,7 +119,7 @@
             "400 m",
             "250 m"
           ],
-          "explanation": "4 cm mal 100.000 ergibt 400.000 cm. Das sind 4.000 m, also 4 km.",
+          "explanation": "4 cm × 100.000 = 400.000 cm = 4.000 m = 4 km.",
           "difficulty": 2
         },
         {
@@ -130,7 +130,7 @@
             "200 m",
             "8 km"
           ],
-          "explanation": "8 cm mal 25.000 ergibt 200.000 cm. Das sind 2.000 m, also 2 km.",
+          "explanation": "8 cm × 25.000 = 200.000 cm = 2.000 m = 2 km.",
           "difficulty": 2
         }
       ]
@@ -147,7 +147,7 @@
             "60 cm",
             "1,5 cm"
           ],
-          "explanation": "3 km sind 300.000 cm. Geteilt durch den Verkleinerungsfaktor 50.000 ergibt das 6 cm auf der Karte.",
+          "explanation": "3 km = 300.000 cm, geteilt durch 50.000 ergibt 6 cm.",
           "difficulty": 2
         },
         {
@@ -158,7 +158,7 @@
             "1:2.000.000",
             "1:12.000"
           ],
-          "explanation": "12 km sind 1.200.000 cm. Geteilt durch 6 cm ergibt das den Verkleinerungsfaktor 200.000, also den Maßstab 1:200.000.",
+          "explanation": "12 km = 1.200.000 cm, geteilt durch 6 cm ergibt 200.000.",
           "difficulty": 3
         },
         {
@@ -169,7 +169,7 @@
             "Eine Karte im Maßstab 1:500.000",
             "Eine Karte im Maßstab 1:1.000.000"
           ],
-          "explanation": "Je kleiner die Zahl hinter dem Doppelpunkt, desto schwächer ist die Verkleinerung. Bei 1:25.000 erscheint dieselbe Strecke also am längsten und mit den meisten Details.",
+          "explanation": "Je kleiner die Zahl, desto schwächer die Verkleinerung – 1:25.000 zeigt am meisten.",
           "difficulty": 3
         }
       ]
@@ -181,12 +181,12 @@
         {
           "text": "Wozu dient die Legende einer Karte?",
           "options": [
-            "Sie erklärt die Bedeutung der Farben, Zeichen und Symbole auf der Karte.",
-            "Sie gibt an, wann und von wem die Karte gezeichnet wurde.",
-            "Sie zeigt an, in welche Richtung auf der Karte Norden liegt.",
-            "Sie listet alle Orte auf, die im Kartenausschnitt fehlen."
+            "Sie erklärt Farben, Zeichen und Symbole der Karte.",
+            "Sie gibt an, wann und von wem die Karte stammt.",
+            "Sie zeigt an, in welche Richtung Norden liegt.",
+            "Sie listet alle Orte auf, die auf der Karte fehlen."
           ],
-          "explanation": "Ohne Legende ließen sich viele Kartenzeichen nicht eindeutig verstehen. Sie ist sozusagen der Schlüssel zum Lesen der Karte.",
+          "explanation": "Die Legende ist der Schlüssel zum Lesen der Karte.",
           "difficulty": 1
         },
         {
@@ -195,9 +195,9 @@
             "In der Legende der Karte",
             "Am Maßstabsbalken der Karte",
             "Im Gradnetz der Karte",
-            "Im Ortsregister ganz hinten im Atlas"
+            "Im Ortsregister des Atlas"
           ],
-          "explanation": "Die Legende erklärt alle auf der Karte verwendeten Symbole und Farben. Das Ortsregister hilft dagegen nur beim Auffinden von Ortsnamen.",
+          "explanation": "Die Legende erklärt alle Symbole und Farben der Karte.",
           "difficulty": 1
         }
       ]
@@ -209,12 +209,12 @@
         {
           "text": "Was verbinden Höhenlinien auf einer topographischen Karte miteinander?",
           "options": [
-            "Alle Punkte, die auf gleicher Höhe über dem Meeresspiegel liegen",
-            "Alle Punkte mit gleicher durchschnittlicher Temperatur",
-            "Die höchsten Gipfel einer Gebirgskette",
-            "Alle Orte mit ungefähr gleicher Einwohnerzahl"
+            "alle Punkte auf gleicher Höhe über dem Meer",
+            "alle Punkte mit gleicher Durchschnittstemperatur",
+            "die höchsten Gipfel einer ganzen Gebirgskette",
+            "alle Orte mit ungefähr gleicher Einwohnerzahl"
           ],
-          "explanation": "Eine Höhenlinie verbindet Punkte gleicher Höhe über dem Meeresspiegel. So lässt sich das Relief einer Landschaft auf der flachen Karte darstellen.",
+          "explanation": "Eine Höhenlinie verbindet Punkte gleicher Höhe über dem Meeresspiegel.",
           "difficulty": 1
         },
         {
@@ -222,21 +222,21 @@
           "options": [
             "Der Hang ist dort sehr steil.",
             "Der Hang ist dort besonders flach.",
-            "Dort verläuft ein breites, ebenes Flusstal.",
+            "Dort liegt ein breites, ebenes Flusstal.",
             "Das Gebiet liegt unter dem Meeresspiegel."
           ],
-          "explanation": "Liegen Höhenlinien eng beieinander, wird auf kurzer Strecke viel Höhe überwunden, das Gelände ist also steil. Weit auseinanderliegende Linien bedeuten flaches Gelände.",
+          "explanation": "Enge Linien heißt viel Höhe auf kurzer Strecke, also steil.",
           "difficulty": 2
         },
         {
           "text": "Welche Aussage über Höhenlinien stimmt NICHT?",
           "options": [
-            "Höhenlinien kreuzen sich auf einer Karte regelmäßig.",
-            "Der Höhenabstand zwischen zwei benachbarten Höhenlinien ist auf einer Karte meist gleich groß.",
-            "Weit auseinanderliegende Höhenlinien zeigen flaches Gelände an.",
-            "Aus dem Verlauf der Höhenlinien lässt sich die Form eines Berges ablesen."
+            "Höhenlinien kreuzen sich auf der Karte regelmäßig.",
+            "Der Höhenabstand zweier Linien ist meist gleich groß.",
+            "Weit auseinanderliegende Linien zeigen flaches Gelände.",
+            "Aus dem Linienverlauf liest man die Form eines Berges."
           ],
-          "explanation": "Höhenlinien können sich nicht kreuzen, denn ein Punkt kann nicht gleichzeitig auf zwei verschiedenen Höhen liegen. Die übrigen Aussagen treffen zu.",
+          "explanation": "Höhenlinien können sich nicht kreuzen – ein Punkt hat nur eine Höhe.",
           "difficulty": 3
         }
       ]
@@ -253,18 +253,18 @@
             "Blau",
             "Rot"
           ],
-          "explanation": "Auf physischen Karten stehen die Farben für Höhenschichten: Grün für Tiefland, Gelb- und Brauntöne für höher gelegenes Land. Blau kennzeichnet Gewässer.",
+          "explanation": "Grün steht für Tiefland, Gelb und Braun für höheres Land, Blau für Wasser.",
           "difficulty": 1
         },
         {
           "text": "Teile der Sahara sind auf physischen Karten grün eingefärbt, obwohl dort Wüste herrscht. Wie erklärst du dir das?",
           "options": [
-            "Grün steht auf physischen Karten für tief liegendes Land, nicht für Pflanzenwuchs.",
-            "In diesen Teilen der Sahara wachsen große tropische Wälder.",
-            "Die Karte zeigt die Vegetation von vor mehreren tausend Jahren.",
-            "Die Farbe kennzeichnet dort besonders fruchtbare Böden."
+            "Grün steht für tiefes Land, nicht für Pflanzen.",
+            "In diesen Teilen der Sahara wachsen Regenwälder.",
+            "Die Karte zeigt die Vegetation vor 5000 Jahren.",
+            "Die Farbe kennzeichnet besonders fruchtbare Böden."
           ],
-          "explanation": "Die Farben physischer Karten geben Höhenschichten an, keine Vegetation. Grüne Flächen in der Sahara sind einfach Gebiete mit geringer Höhe über dem Meeresspiegel.",
+          "explanation": "Die Farben physischer Karten zeigen Höhenschichten, keine Vegetation.",
           "difficulty": 2
         }
       ]
@@ -281,29 +281,29 @@
             "Schräg vom Äquator zu den Wendekreisen",
             "Kreisförmig um den Nullmeridian herum"
           ],
-          "explanation": "Breitenkreise verlaufen parallel zum Äquator und umrunden die Erde in Ost-West-Richtung. Deshalb nennt man sie auch Parallelkreise.",
+          "explanation": "Breitenkreise laufen parallel zum Äquator, daher auch Parallelkreise.",
           "difficulty": 1
         },
         {
           "text": "Welcher Breitenkreis teilt die Erde in Nordhalbkugel und Südhalbkugel?",
           "options": [
             "Der Äquator bei 0° Breite",
-            "Der Nullmeridian",
+            "Der Nullmeridian bei 0°",
             "Der nördliche Wendekreis",
             "Der nördliche Polarkreis"
           ],
-          "explanation": "Der Äquator ist der längste Breitenkreis und liegt bei 0° geographischer Breite. Er teilt die Erde in Nord- und Südhalbkugel.",
+          "explanation": "Der Äquator liegt bei 0° Breite und ist der längste Breitenkreis.",
           "difficulty": 1
         },
         {
           "text": "Welche Aussage über die geographische Breite ist richtig?",
           "options": [
-            "Sie wird vom Äquator aus bis 90° Nord beziehungsweise 90° Süd gezählt.",
-            "Sie wird vom Nullmeridian aus bis 180° gezählt.",
-            "Alle Breitenkreise sind gleich lang.",
-            "Alle Breitenkreise treffen sich am Nord- und am Südpol."
+            "Sie zählt vom Äquator bis 90° Nord oder 90° Süd.",
+            "Sie zählt vom Nullmeridian aus bis 180° Ost.",
+            "Alle Breitenkreise sind genau gleich lang.",
+            "Alle Breitenkreise treffen sich an den Polen."
           ],
-          "explanation": "Die geographische Breite gibt den Abstand vom Äquator an und reicht von 0° bis 90° Nord oder Süd. Die Pole selbst liegen bei 90°.",
+          "explanation": "Die Breite gibt den Abstand vom Äquator an: 0° bis 90° Nord oder Süd.",
           "difficulty": 2
         }
       ]
@@ -315,34 +315,34 @@
         {
           "text": "Durch welchen Ort verläuft der Nullmeridian?",
           "options": [
-            "Durch Greenwich bei London",
-            "Durch Paris",
-            "Durch Washington",
-            "Durch Berlin"
+            "durch Greenwich bei London",
+            "durch Paris in Frankreich",
+            "durch Washington in den USA",
+            "durch Berlin in Deutschland"
           ],
-          "explanation": "Der Nullmeridian wurde international festgelegt und verläuft durch die Sternwarte von Greenwich bei London. Von ihm aus wird die geographische Länge gezählt.",
+          "explanation": "Der Nullmeridian verläuft durch die Sternwarte Greenwich bei London.",
           "difficulty": 1
         },
         {
           "text": "Wie verlaufen die Längenhalbkreise, also die Meridiane?",
           "options": [
-            "Von Pol zu Pol, und alle sind gleich lang.",
-            "Parallel zum Äquator, und sie werden zu den Polen hin kürzer.",
-            "Ringförmig um den Nord- und den Südpol herum.",
-            "Nur über die Kontinente, nicht über die Ozeane."
+            "von Pol zu Pol, und alle sind gleich lang",
+            "parallel zum Äquator, zu den Polen hin kürzer",
+            "ringförmig um Nordpol und Südpol herum",
+            "nur über die Kontinente, nicht über Ozeane"
           ],
-          "explanation": "Meridiane verbinden als Halbkreise den Nordpol mit dem Südpol und sind alle gleich lang. Breitenkreise dagegen werden zu den Polen hin immer kürzer.",
+          "explanation": "Meridiane verbinden die Pole und sind alle gleich lang.",
           "difficulty": 2
         },
         {
           "text": "Welche Aussage über das Gradnetz der Erde stimmt NICHT?",
           "options": [
-            "Die Meridiane verlaufen parallel zueinander und berühren sich nie.",
-            "Vom Nullmeridian aus wird die geographische Länge bis 180° Ost und 180° West gezählt.",
-            "Alle Meridiane treffen sich am Nordpol und am Südpol.",
-            "Breitenkreise und Meridiane bilden zusammen das Gradnetz der Erde."
+            "Meridiane verlaufen parallel und berühren sich nie.",
+            "Die Länge zählt vom Nullmeridian bis 180° Ost/West.",
+            "Alle Meridiane treffen sich am Nord- und am Südpol.",
+            "Breitenkreise und Meridiane bilden das Gradnetz."
           ],
-          "explanation": "Meridiane verlaufen nicht parallel: Sie laufen an beiden Polen zusammen. Parallel zueinander verlaufen nur die Breitenkreise.",
+          "explanation": "Meridiane laufen an den Polen zusammen; parallel sind nur die Breitenkreise.",
           "difficulty": 3
         }
       ]
@@ -354,23 +354,23 @@
         {
           "text": "Ein Ort liegt bei etwa 48° nördlicher Breite und 11° östlicher Länge. Was lässt sich daraus ablesen?",
           "options": [
-            "Der Ort liegt auf der Nordhalbkugel und östlich des Nullmeridians.",
-            "Der Ort liegt auf der Südhalbkugel und westlich des Nullmeridians.",
-            "Der Ort liegt genau auf dem Äquator.",
-            "Der Ort liegt auf der Nordhalbkugel und westlich des Nullmeridians."
+            "Nordhalbkugel, östlich des Nullmeridians",
+            "Südhalbkugel, westlich des Nullmeridians",
+            "genau auf dem Äquator, östliche Länge",
+            "Nordhalbkugel, westlich des Nullmeridians"
           ],
-          "explanation": "Nördliche Breite bedeutet Nordhalbkugel, östliche Länge bedeutet östlich des Nullmeridians. Die Angaben passen zum Beispiel ungefähr zu München.",
+          "explanation": "Nördliche Breite heißt Nordhalbkugel, östliche Länge östlich von Greenwich.",
           "difficulty": 2
         },
         {
           "text": "In welcher Reihenfolge gibt man die geographischen Koordinaten eines Ortes üblicherweise an?",
           "options": [
-            "Zuerst die geographische Breite, dann die geographische Länge",
-            "Zuerst die geographische Länge, dann die geographische Breite",
-            "Zuerst die Höhe über dem Meeresspiegel, dann die Breite",
-            "Zuerst die Entfernung zum Äquator in Kilometern, dann die Länge"
+            "zuerst die Breite, dann die Länge",
+            "zuerst die Länge, dann die Breite",
+            "zuerst die Höhe, dann die Breite",
+            "zuerst der Abstand zum Äquator in km"
           ],
-          "explanation": "Üblich ist die Reihenfolge Breite vor Länge, zum Beispiel 48° Nord, 11° Ost. So lassen sich Orte weltweit eindeutig bestimmen.",
+          "explanation": "Üblich ist Breite vor Länge, zum Beispiel 48° Nord, 11° Ost.",
           "difficulty": 2
         }
       ]
@@ -387,18 +387,18 @@
             "Westen",
             "Osten"
           ],
-          "explanation": "Die Sonne geht im Osten auf. Blickst du nach Osten, liegt Norden links, Süden rechts und Westen in deinem Rücken.",
+          "explanation": "Die Sonne geht im Osten auf – dann liegt Norden links und Süden rechts.",
           "difficulty": 2
         },
         {
           "text": "In welche Richtung zeigt das meist rot markierte Ende der Kompassnadel?",
           "options": [
-            "Nach Norden",
-            "Nach Süden",
-            "Nach Osten",
-            "Immer in die Richtung, in die man gerade läuft"
+            "immer nach Norden",
+            "immer nach Süden",
+            "immer nach Osten",
+            "in die Laufrichtung"
           ],
-          "explanation": "Die Kompassnadel richtet sich am Magnetfeld der Erde aus, das rote Ende zeigt nach Norden. Von dort aus lassen sich die übrigen Himmelsrichtungen bestimmen.",
+          "explanation": "Die Nadel richtet sich am Erdmagnetfeld aus; das rote Ende zeigt nach Norden.",
           "difficulty": 1
         },
         {
@@ -409,7 +409,7 @@
             "Nordwesten",
             "Nordosten"
           ],
-          "explanation": "Zwischen den vier Haupthimmelsrichtungen liegen die Nebenhimmelsrichtungen. Zwischen Süden und Westen liegt Südwesten.",
+          "explanation": "Zwischen den Haupthimmelsrichtungen Süden und Westen liegt Südwesten.",
           "difficulty": 1
         }
       ]
@@ -426,18 +426,18 @@
             "Beide Werte als übereinanderliegende Kurven",
             "Beide Werte als nebeneinanderstehende Säulen"
           ],
-          "explanation": "Im Klimadiagramm zeigt eine rote Kurve die Monatsmitteltemperaturen und blaue Säulen die Monatsniederschläge. So sind beide Werte auf einen Blick erfassbar.",
+          "explanation": "Rote Kurve gleich Temperatur, blaue Säulen gleich Niederschlag.",
           "difficulty": 1
         },
         {
           "text": "Welche Informationen kannst du aus einem Klimadiagramm direkt ablesen?",
           "options": [
-            "Die durchschnittlichen Monatstemperaturen und Monatsniederschläge eines Ortes",
-            "Das genaue Wetter an einem bestimmten Tag",
-            "Die Windrichtung und Windstärke im Jahresverlauf",
-            "Die Anzahl der Sonnenstunden pro Monat"
+            "Monatstemperaturen und Monatsniederschläge im Mittel",
+            "das genaue Wetter an einem bestimmten Tag im Jahr",
+            "Windrichtung und Windstärke im ganzen Jahresverlauf",
+            "die Anzahl der Sonnenstunden in jedem einzelnen Monat"
           ],
-          "explanation": "Ein Klimadiagramm zeigt langjährige Durchschnittswerte von Temperatur und Niederschlag für jeden Monat. Über das Wetter einzelner Tage sagt es nichts aus.",
+          "explanation": "Es zeigt langjährige Mittelwerte, nicht das Wetter einzelner Tage.",
           "difficulty": 1
         },
         {
@@ -448,7 +448,7 @@
             "Das Diagramm wurde fehlerhaft gezeichnet.",
             "Die Station liegt direkt am Äquator."
           ],
-          "explanation": "Auf der Südhalbkugel sind die Jahreszeiten gegenüber der Nordhalbkugel vertauscht. Dort ist im Januar Sommer und im Juli Winter.",
+          "explanation": "Auf der Südhalbkugel sind die Jahreszeiten vertauscht: Januar ist Sommer.",
           "difficulty": 3
         }
       ]
@@ -460,23 +460,23 @@
         {
           "text": "Wann gilt ein Monat im Klimadiagramm als arid, also als trocken?",
           "options": [
-            "Wenn die Niederschlagssäule unter der Temperaturkurve bleibt",
-            "Wenn die Niederschlagssäule über der Temperaturkurve liegt",
-            "Wenn weniger als 100 mm Niederschlag fallen",
-            "Wenn die Temperatur unter 0 °C sinkt"
+            "wenn die Niederschlagssäule unter der Kurve bleibt",
+            "wenn die Niederschlagssäule über der Kurve liegt",
+            "wenn weniger als 100 mm Niederschlag fallen",
+            "wenn die Temperatur unter null Grad sinkt"
           ],
-          "explanation": "Liegt der Niederschlag unter der Temperaturkurve, kann mehr Wasser verdunsten, als Niederschlag fällt. Der Monat ist dann arid.",
+          "explanation": "Säule unter der Kurve: Es verdunstet mehr, als an Regen fällt.",
           "difficulty": 2
         },
         {
           "text": "In einem Klimadiagramm liegen die Niederschlagssäulen eines Monats deutlich über der Temperaturkurve. Was bedeutet das?",
           "options": [
-            "Der Monat ist humid: Es fällt mehr Niederschlag, als verdunsten kann.",
-            "Der Monat ist arid: Die Verdunstung überwiegt den Niederschlag.",
-            "In diesem Monat fällt der Niederschlag ausschließlich als Schnee.",
+            "humid: Es fällt mehr Regen, als verdunsten kann.",
+            "arid: Die Verdunstung überwiegt den Niederschlag.",
+            "Der Niederschlag fällt dort nur noch als Schnee.",
             "In diesem Monat herrscht akute Dürregefahr."
           ],
-          "explanation": "Übersteigt der Niederschlag die mögliche Verdunstung, spricht man von einem humiden, also feuchten Monat. Das erkennt man daran, dass die Säule über der Kurve liegt.",
+          "explanation": "Säule über der Kurve heißt humid, also feucht.",
           "difficulty": 2
         },
         {
@@ -484,10 +484,10 @@
           "options": [
             "Es gibt 4 aride und 8 humide Monate.",
             "Es gibt 8 aride und 4 humide Monate.",
-            "Das ganze Jahr ist humid.",
-            "Das ganze Jahr ist arid."
+            "Das ganze Jahr über ist es humid.",
+            "Das ganze Jahr über ist es arid."
           ],
-          "explanation": "Monate mit Niederschlag unter der Temperaturkurve sind arid, Monate darüber humid. Hier sind es also 4 aride und 8 humide Monate.",
+          "explanation": "Unter der Kurve gleich arid, darüber gleich humid: also 4 aride Monate.",
           "difficulty": 3
         }
       ]
@@ -499,34 +499,34 @@
         {
           "text": "Welche Form hat der Altersaufbau eines Landes mit sehr vielen Kindern und nur wenigen alten Menschen?",
           "options": [
-            "Die Pyramidenform mit breiter Basis und schmaler Spitze",
-            "Die Urnenform mit schmaler Basis und breitem oberen Teil",
-            "Die Glockenform mit annähernd gleich starken Jahrgängen",
-            "Die Säulenform, bei der alle Altersgruppen gleich breit sind"
+            "Pyramidenform mit breiter Basis, schmaler Spitze",
+            "Urnenform mit schmaler Basis, breiter Mitte",
+            "Glockenform mit gleich starken Jahrgängen",
+            "Säulenform mit überall gleich breiten Gruppen"
           ],
-          "explanation": "Viele Kinder ergeben eine breite Basis, wenige alte Menschen eine schmale Spitze. Diese Pyramidenform ist typisch für viele Entwicklungsländer mit hohen Geburtenraten.",
+          "explanation": "Viele Kinder ergeben eine breite Basis, wenige Alte eine schmale Spitze.",
           "difficulty": 1
         },
         {
           "text": "Deutschland hat eine niedrige Geburtenrate und einen hohen Anteil älterer Menschen. Welche Form zeigt seine Bevölkerungspyramide am ehesten?",
           "options": [
-            "Die Urnenform",
-            "Die klassische Pyramidenform",
-            "Die Glockenform",
-            "Die Pagodenform"
+            "die Urnenform",
+            "die Pyramidenform",
+            "die Glockenform",
+            "die Pagodenform"
           ],
-          "explanation": "Bei der Urnenform ist die Basis schmal, weil wenige Kinder geboren werden, während die mittleren und oberen Jahrgänge stark besetzt sind. Das trifft auf Deutschland zu.",
+          "explanation": "Wenige Geburten ergeben eine schmale Basis – das ist die Urnenform.",
           "difficulty": 2
         },
         {
           "text": "Was stellt eine Bevölkerungspyramide dar?",
           "options": [
-            "Den Altersaufbau der Bevölkerung, getrennt nach Männern und Frauen",
-            "Die Verteilung der Bevölkerung auf Stadt und Land",
-            "Die Entwicklung der Einwohnerzahl über die letzten 100 Jahre",
-            "Das durchschnittliche Einkommen der verschiedenen Altersgruppen"
+            "den Altersaufbau, getrennt nach Männern und Frauen",
+            "die Verteilung der Bevölkerung auf Stadt und Land",
+            "die Einwohnerentwicklung der letzten 100 Jahre",
+            "das Durchschnittseinkommen je Altersgruppe"
           ],
-          "explanation": "Eine Bevölkerungspyramide zeigt, wie viele Menschen es in jeder Altersgruppe gibt, links meist die Männer und rechts die Frauen. Aus der Form lassen sich Rückschlüsse auf die Entwicklung eines Landes ziehen.",
+          "explanation": "Sie zeigt, wie viele Menschen es je Altersgruppe gibt – Männer links, Frauen rechts.",
           "difficulty": 1
         }
       ]
@@ -543,7 +543,7 @@
             "Mit einem Säulendiagramm",
             "Mit einem Klimadiagramm"
           ],
-          "explanation": "Ein Kreisdiagramm zeigt Anteile an einem Ganzen: Der volle Kreis entspricht 100 Prozent. Deshalb eignet es sich gut für Prozentangaben.",
+          "explanation": "Der volle Kreis entspricht 100 Prozent – ideal für Anteile.",
           "difficulty": 1
         },
         {
@@ -554,18 +554,18 @@
             "Ein Blockbild",
             "Eine Bevölkerungspyramide"
           ],
-          "explanation": "Liniendiagramme zeigen Entwicklungen und Veränderungen über einen Zeitraum besonders anschaulich. Ein Kreisdiagramm eignet sich dagegen nur für Anteile zu einem Zeitpunkt.",
+          "explanation": "Liniendiagramme zeigen Entwicklungen über einen Zeitraum am besten.",
           "difficulty": 2
         },
         {
           "text": "Wofür eignet sich ein Säulendiagramm besonders gut?",
           "options": [
-            "Um Werte verschiedener Kategorien oder Jahre direkt miteinander zu vergleichen",
-            "Um Anteile an einem Ganzen in Prozent darzustellen",
-            "Um sehr feine, kontinuierliche Veränderungen als durchgehende Kurve zu zeigen",
-            "Um die Lage von Orten im Gradnetz zu bestimmen"
+            "um Werte verschiedener Kategorien zu vergleichen",
+            "um Anteile an einem Ganzen in Prozent zu zeigen",
+            "um feine Veränderungen als Kurve darzustellen",
+            "um die Lage von Orten im Gradnetz zu bestimmen"
           ],
-          "explanation": "Bei einem Säulendiagramm lassen sich die Höhen der Säulen leicht vergleichen, zum Beispiel Niederschlagsmengen verschiedener Orte. Für Anteile nimmt man das Kreisdiagramm, für Entwicklungen das Liniendiagramm.",
+          "explanation": "Säulenhöhen lassen sich leicht vergleichen; Anteile zeigt der Kreis.",
           "difficulty": 2
         }
       ]
@@ -577,12 +577,12 @@
         {
           "text": "Wie gehst du beim Auswerten einer Tabelle sinnvoll vor?",
           "options": [
-            "Zuerst Titel, Zeilen- und Spaltenüberschriften sowie Einheiten klären, dann Werte vergleichen",
-            "Sofort den größten Wert heraussuchen und alle anderen Angaben ignorieren",
-            "Nur die letzte Zeile lesen, weil dort immer das Ergebnis steht",
-            "Alle Zahlen der Reihe nach addieren und den Mittelwert bilden"
+            "Titel, Überschriften und Einheiten klären, dann vergleichen",
+            "sofort den größten Wert suchen und den Rest ignorieren",
+            "nur die letzte Zeile lesen, dort steht das Ergebnis",
+            "alle Zahlen addieren und daraus den Mittelwert bilden"
           ],
-          "explanation": "Erst wenn Thema, Überschriften und Einheiten klar sind, lassen sich die Werte richtig einordnen. Danach kann man vergleichen, Auffälligkeiten benennen und Schlüsse ziehen.",
+          "explanation": "Erst Thema, Überschriften und Einheiten klären, dann Werte vergleichen.",
           "difficulty": 2
         },
         {
@@ -593,7 +593,7 @@
             "148.000",
             "14.800.000"
           ],
-          "explanation": "Die Angabe 'in Tausend' bedeutet, dass jeder Wert mit 1.000 multipliziert werden muss. 1.480 mal 1.000 ergibt 1.480.000 Einwohner.",
+          "explanation": "'In Tausend' heißt mal 1.000: 1.480 × 1.000 = 1.480.000.",
           "difficulty": 3
         }
       ]
@@ -605,23 +605,23 @@
         {
           "text": "Woran erkennst du eine verlässliche Quelle für ein Geografie-Referat am ehesten?",
           "options": [
-            "Der Autor oder Herausgeber ist erkennbar, die Angaben sind aktuell und in anderen Quellen bestätigbar.",
-            "Die Seite erscheint bei der Suchmaschine ganz oben in der Trefferliste.",
-            "Der Text enthält besonders viele bunte Bilder und Werbeanzeigen.",
-            "Die Seite hat sehr viele Likes in sozialen Netzwerken."
+            "Autor erkennbar, Angaben aktuell und anderswo bestätigt",
+            "Die Seite steht bei der Suchmaschine ganz oben",
+            "Der Text hat viele bunte Bilder und Werbeanzeigen",
+            "Die Seite hat sehr viele Likes in sozialen Medien"
           ],
-          "explanation": "Seriöse Quellen nennen Autor oder Herausgeber, geben das Erscheinungsdatum an und ihre Angaben lassen sich anderswo überprüfen. Platzierung in Suchmaschinen oder Likes sagen nichts über die Richtigkeit aus.",
+          "explanation": "Seriöse Quellen nennen Autor und Datum und sind überprüfbar.",
           "difficulty": 2
         },
         {
           "text": "Du findest im Internet eine überraschende Zahl für dein Referat. Was ist das sinnvollste Vorgehen?",
           "options": [
-            "Die Angabe mit mindestens einer weiteren unabhängigen Quelle vergleichen",
-            "Der ersten gefundenen Seite vertrauen, um Zeit zu sparen",
-            "Nur Quellen verwenden, die die eigene Vermutung bestätigen",
-            "Die Zahl ungeprüft übernehmen, wenn sie oft geteilt wurde"
+            "mit mindestens einer unabhängigen Quelle vergleichen",
+            "der ersten gefundenen Seite vertrauen, das spart Zeit",
+            "nur Quellen nehmen, die die eigene Vermutung stützen",
+            "die Zahl übernehmen, wenn sie oft geteilt wurde"
           ],
-          "explanation": "Wichtige Angaben sollte man immer gegenprüfen. Bestätigen mehrere unabhängige und seriöse Quellen eine Zahl, ist sie sehr wahrscheinlich zuverlässig.",
+          "explanation": "Bestätigen mehrere unabhängige Quellen eine Zahl, ist sie zuverlässig.",
           "difficulty": 1
         }
       ]
@@ -635,21 +635,21 @@
           "options": [
             "Geographisches Informationssystem",
             "Globales Internet-Suchsystem",
-            "Geologisches Institut für Satellitenbilder",
-            "Gerät zur internationalen Standortbestimmung"
+            "Geologisches Institut für Satelliten",
+            "Gerät zur globalen Standortbestimmung"
           ],
-          "explanation": "GIS steht für Geographisches Informationssystem. Damit lassen sich raumbezogene Daten digital erfassen, verwalten und als Karten darstellen.",
+          "explanation": "GIS steht für Geographisches Informationssystem.",
           "difficulty": 1
         },
         {
           "text": "Was ist das Besondere an einem Geographischen Informationssystem?",
           "options": [
-            "Es verknüpft digitale Karten mit Daten und stellt sie in kombinierbaren Ebenen (Layern) dar.",
-            "Es zeigt immer nur eine einzige, unveränderbare Karte an.",
-            "Es ersetzt alle Messungen vor Ort, sodass keine Daten mehr gesammelt werden müssen.",
+            "Es verknüpft Karten und Daten in Ebenen (Layern).",
+            "Es zeigt immer nur eine einzige, feste Karte an.",
+            "Es ersetzt jede Messung vor Ort vollständig.",
             "Es dient ausschließlich der Navigation im Auto."
           ],
-          "explanation": "In einem GIS liegen verschiedene Informationsebenen übereinander, zum Beispiel Straßen, Gewässer und Bevölkerungsdaten. Man kann sie beliebig ein- und ausblenden und miteinander verknüpfen.",
+          "explanation": "Informationsebenen liegen übereinander und lassen sich frei kombinieren.",
           "difficulty": 2
         }
       ]
@@ -661,23 +661,23 @@
         {
           "text": "Worin unterscheidet sich ein Senkrechtluftbild von einer Karte?",
           "options": [
-            "Das Luftbild zeigt die Landschaft so, wie sie ist; die Karte wählt aus, vereinfacht und erklärt mit Symbolen.",
-            "Das Luftbild ist immer genauer beschriftet als eine Karte.",
-            "Auf Luftbildern sind Höhenlinien besonders gut zu erkennen.",
-            "Eine Karte zeigt im Gegensatz zum Luftbild keine Straßen."
+            "Das Luftbild bildet ab, die Karte wählt aus und erklärt.",
+            "Das Luftbild ist stets genauer beschriftet als die Karte.",
+            "Auf Luftbildern sind Höhenlinien besonders gut sichtbar.",
+            "Eine Karte zeigt anders als das Luftbild keine Straßen."
           ],
-          "explanation": "Ein Luftbild ist ein unverändertes Abbild der Erdoberfläche, oft ohne Beschriftung. Eine Karte ist dagegen ein vereinfachtes, verkleinertes und erklärtes Modell der Wirklichkeit.",
+          "explanation": "Das Luftbild ist ein Abbild, die Karte ein vereinfachtes Modell.",
           "difficulty": 3
         },
         {
           "text": "Wofür werden Satellitenbilder in der Geographie unter anderem genutzt?",
           "options": [
-            "Um großräumige Veränderungen wie Gletscherschmelze oder Abholzung zu beobachten",
-            "Um das Wetter für einzelne Straßenzüge auf die Minute genau vorherzusagen",
-            "Um die Namen aller Dörfer der Erde automatisch zu erfassen",
-            "Um unterirdische Gesteinsschichten direkt zu fotografieren"
+            "um Gletscherschmelze und Abholzung zu beobachten",
+            "um das Wetter je Straßenzug minutengenau anzusagen",
+            "um die Namen aller Dörfer der Erde zu erfassen",
+            "um unterirdische Gesteinsschichten zu fotografieren"
           ],
-          "explanation": "Satellitenbilder erfassen große Gebiete und werden regelmäßig neu aufgenommen. So lassen sich Veränderungen der Erdoberfläche über Jahre hinweg vergleichen und dokumentieren.",
+          "explanation": "Satelliten erfassen große Gebiete regelmäßig – ideal für Veränderungen.",
           "difficulty": 2
         }
       ]
@@ -689,23 +689,23 @@
         {
           "text": "Wie bestimmt ein Navigationsgerät mit GPS vereinfacht gesagt seinen Standort?",
           "options": [
-            "Es empfängt Signale mehrerer Satelliten und berechnet daraus seine Position.",
-            "Es sendet ein Signal an den nächsten Funkturm, der den Standort zurückmeldet.",
-            "Es vergleicht Fotos der Umgebung mit gespeicherten Bildern.",
-            "Es misst wie ein Kompass die Richtung des Erdmagnetfelds."
+            "Es empfängt Signale mehrerer Satelliten.",
+            "Es fragt beim nächsten Funkturm nach.",
+            "Es vergleicht Fotos mit gespeicherten Bildern.",
+            "Es misst die Richtung des Erdmagnetfelds."
           ],
-          "explanation": "GPS-Satelliten senden ständig Zeitsignale zur Erde. Aus den Laufzeiten der Signale von mehreren Satelliten berechnet der Empfänger seine genaue Position.",
+          "explanation": "Aus den Laufzeiten mehrerer Satellitensignale ergibt sich die Position.",
           "difficulty": 1
         },
         {
           "text": "Welche Aussage über das GPS-System stimmt?",
           "options": [
-            "Die Satelliten senden Signale zur Erde; der Empfänger empfängt sie nur und sendet nichts zurück.",
-            "Der GPS-Empfänger funkt seine Position an die Satelliten zurück.",
-            "GPS funktioniert nur mit einer aktiven Internetverbindung.",
-            "GPS-Satelliten stehen unbeweglich über einem festen Punkt der Erde."
+            "Der Empfänger empfängt nur und sendet nichts zurück.",
+            "Der Empfänger funkt seine Position zum Satelliten.",
+            "GPS funktioniert nur mit aktiver Internetverbindung.",
+            "GPS-Satelliten stehen fest über einem Punkt der Erde."
           ],
-          "explanation": "GPS ist ein Einweg-System: Der Empfänger wertet die Satellitensignale nur aus. Deshalb funktioniert die Ortung auch ohne Internetverbindung, etwa beim Wandern im Gebirge.",
+          "explanation": "GPS ist ein Einweg-System – die Ortung geht daher auch ohne Internet.",
           "difficulty": 3
         }
       ]

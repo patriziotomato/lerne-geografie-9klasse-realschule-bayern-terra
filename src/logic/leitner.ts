@@ -50,6 +50,30 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+/** Positionen (0..3) der richtigen Antwort über eine ganze Runde.
+ *
+ *  Würfelt man je Frage unabhängig, klumpt es spürbar: In 31 % aller
+ *  10er-Runden kommt ein Buchstabe fünfmal oder öfter vor, in 35 % steht
+ *  dreimal derselbe hintereinander. Das ist statistisch normal, fühlt sich
+ *  aber nach „C ist immer richtig“ an. Deshalb ziehen wir aus einem Beutel
+ *  aus vollständigen A–D-Blöcken: pro vier Fragen kommt jeder Buchstabe
+ *  genau einmal dran. */
+function balancedPositions(n: number): number[] {
+  const bag: number[] = [];
+  while (bag.length < n) bag.push(...shuffle([0, 1, 2, 3]));
+  const out = bag.slice(0, n);
+
+  // An den Blockgrenzen kann derselbe Buchstabe trotzdem mehrfach in Folge
+  // auftauchen — solche Läufe hier auflösen.
+  for (let i = 2; i < out.length; i++) {
+    if (out[i] === out[i - 1] && out[i] === out[i - 2]) {
+      const j = out.findIndex((v, k) => k > i && v !== out[i]);
+      if (j > -1) [out[i], out[j]] = [out[j], out[i]];
+    }
+  }
+  return out;
+}
+
 /** Wählt für ein Konzept eine Variante, die nicht der letzten entspricht. */
 function pickVariant(concept: Concept, lastVariant: number): number {
   const n = concept.variants.length;
@@ -58,18 +82,23 @@ function pickVariant(concept: Concept, lastVariant: number): number {
   return candidates[Math.floor(Math.random() * candidates.length)];
 }
 
-function toRoundItem(chapterId: string, concept: Concept): RoundItem {
+/** correctDisplayIndex gibt vor, an welcher Anzeigeposition die richtige
+ *  Antwort landet; die drei Distraktoren werden weiterhin frei gemischt. */
+function toRoundItem(chapterId: string, concept: Concept, correctDisplayIndex: number): RoundItem {
   const p = progressOf(concept.id);
   const variantIndex = pickVariant(concept, p.lastVariant);
   const variant = concept.variants[variantIndex];
-  const optionOrder = shuffle(variant.options.map((_, i) => i));
+  const distractors = shuffle(variant.options.map((_, i) => i).slice(1));
+  const optionOrder = variant.options.map((_, i) =>
+    i === correctDisplayIndex ? 0 : distractors.pop()!,
+  );
   return {
     chapterId,
     concept,
     variantIndex,
     variant,
     optionOrder,
-    correctDisplayIndex: optionOrder.indexOf(0),
+    correctDisplayIndex,
   };
 }
 
@@ -85,13 +114,17 @@ export function pickRound(chapterId: string, count = 10): RoundItem[] {
     const p = progressOf(entry.concept.id);
     const age = p.lastSeen ? Date.now() - new Date(p.lastSeen).getTime() : Number.MAX_SAFE_INTEGER;
     // Niedrige Box dominiert; innerhalb der Box ältere zuerst; leichtes Rauschen
-    // damit Runden nicht deterministisch identisch sind.
-    const score = p.box * 1e15 - Math.min(age, 1e12) + Math.random() * 1e9;
+    // damit Runden nicht deterministisch identisch sind. Das Rauschen entspricht
+    // gut einem Tag — genug für Abwechslung innerhalb einer Lernsitzung, aber
+    // klein genug, dass über mehrere Tage wieder das Alter den Ausschlag gibt.
+    const score = p.box * 1e15 - Math.min(age, 1e12) + Math.random() * 1e8;
     return { entry, score };
   });
 
   scored.sort((a, b) => a.score - b.score);
-  return scored.slice(0, count).map(({ entry }) => toRoundItem(entry.chapterId, entry.concept));
+  const chosen = scored.slice(0, count);
+  const positions = balancedPositions(chosen.length);
+  return chosen.map(({ entry }, i) => toRoundItem(entry.chapterId, entry.concept, positions[i]));
 }
 
 /** Antwort verbuchen: Box rauf/runter, Tageslog & Zähler pflegen. */
