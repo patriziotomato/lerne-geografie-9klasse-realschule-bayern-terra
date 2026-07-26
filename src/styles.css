@@ -8,10 +8,16 @@
    Aufbau: Tokens → Basis → Komponenten. Alle Klassennamen der Views bleiben
    unverändert; das Styling hängt ausschließlich an diesen Tokens, ein
    Theme-Wechsel ist damit ein reiner Wertetausch im Token-Block.
+
+   Die Themes hängen an [data-theme] auf <html>, nicht an
+   prefers-color-scheme: nur so lässt sich das Schema in den Einstellungen
+   gegen die Geräteeinstellung setzen. 'Automatisch' wird in logic/theme.ts
+   aufgelöst, den ersten Wert setzt das Bootstrap-Skript in index.html.
    ========================================================================= */
 
 /* ==== Tokens: Dark (Default) ============================================ */
-:root {
+:root,
+:root[data-theme='dark'] {
   color-scheme: dark;
 
   /* Flächen — neutrales Schiefergrau, von „Seite" nach „ganz oben" */
@@ -84,42 +90,40 @@
 }
 
 /* ==== Tokens: Light ===================================================== */
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: light;
+:root[data-theme='light'] {
+  color-scheme: light;
 
-    --bg: #f6f7f9;
-    --bg-elev: #ffffff;
-    --surface: #ffffff;
-    --surface-2: #eef0f3;
-    --surface-3: #e2e5ea;
+  --bg: #f6f7f9;
+  --bg-elev: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #eef0f3;
+  --surface-3: #e2e5ea;
 
-    --line: rgba(20, 26, 38, 0.1);
-    --line-strong: rgba(20, 26, 38, 0.18);
+  --line: rgba(20, 26, 38, 0.1);
+  --line-strong: rgba(20, 26, 38, 0.18);
 
-    --ink: #171b23;
-    --ink-2: #59616f;
-    --ink-3: #878e9b;
+  --ink: #171b23;
+  --ink-2: #59616f;
+  --ink-3: #878e9b;
 
-    /* Tiefer als im Dark-Theme, damit weiße Schrift darauf 4,5:1 erreicht */
-    --accent: #3d4f96;
-    --on-accent: #ffffff;
-    --accent-wash: rgba(61, 79, 150, 0.09);
+  /* Tiefer als im Dark-Theme, damit weiße Schrift darauf 4,5:1 erreicht */
+  --accent: #3d4f96;
+  --on-accent: #ffffff;
+  --accent-wash: rgba(61, 79, 150, 0.09);
 
-    /* Dunkel genug, dass weiße Schrift darauf und die Farbe selbst als Text
-       auf hellem Grund jeweils >= 4,5:1 erreichen. */
-    --ok: #1a7f52;
-    --danger: #c4485a;
-    --warn: #8a6011;
+  /* Dunkel genug, dass weiße Schrift darauf und die Farbe selbst als Text
+     auf hellem Grund jeweils >= 4,5:1 erreichen. */
+  --ok: #1a7f52;
+  --danger: #c4485a;
+  --warn: #8a6011;
 
-    --ring-track: rgba(20, 26, 38, 0.12);
-    --track: rgba(20, 26, 38, 0.09);
-    --focus: #3d4f96;
+  --ring-track: rgba(20, 26, 38, 0.12);
+  --track: rgba(20, 26, 38, 0.09);
+  --focus: #3d4f96;
 
-    --e-1: 0 0 0 1px var(--line);
-    --e-2: 0 1px 2px rgba(16, 20, 28, 0.05), 0 0 0 1px var(--line);
-    --e-3: 0 6px 16px -6px rgba(16, 20, 28, 0.14), 0 0 0 1px var(--line);
-  }
+  --e-1: 0 0 0 1px var(--line);
+  --e-2: 0 1px 2px rgba(16, 20, 28, 0.05), 0 0 0 1px var(--line);
+  --e-3: 0 6px 16px -6px rgba(16, 20, 28, 0.14), 0 0 0 1px var(--line);
 }
 
 /* ==== Basis ============================================================= */
@@ -397,6 +401,42 @@ strong {
 }
 .time-row input[type='time'] {
   flex: 1;
+}
+
+/* Segment-Control (Farbschema) — eine Fläche, gleich breite Abschnitte,
+   Trennlinien statt Abstände. */
+.seg {
+  display: flex;
+  width: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.seg-opt {
+  flex: 1;
+  min-width: 0;
+  min-height: 40px;
+  padding: 8px 6px;
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 650;
+  color: var(--ink-2);
+  background: transparent;
+  border: none;
+  border-left: 1px solid var(--line);
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.seg-opt:first-child {
+  border-left: none;
+}
+.seg-opt.on {
+  color: var(--on-accent);
+  background: var(--accent);
 }
 
 .toggle-row {

@@ -96,11 +96,15 @@ export interface Stats {
   sessions: SessionLog[];
 }
 
+/** Farbschema-Wunsch. 'system' folgt der Geräteeinstellung. */
+export type ThemeChoice = 'system' | 'light' | 'dark';
+
 export interface Settings {
   remindersEnabled: boolean;
   soundEnabled: boolean;
   /** SHA-256-Hex der Eltern-PIN, null = nicht gesetzt */
   parentPinHash: string | null;
+  theme: ThemeChoice;
 }
 
 export interface AppState {

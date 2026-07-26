@@ -9,6 +9,7 @@ import { renderBadges } from './views/badges.ts';
 import { renderParents } from './views/parents.ts';
 import { renderSettings } from './views/settings.ts';
 import { scheduleWhileOpen } from './logic/reminders.ts';
+import { applyTheme, watchSystemTheme } from './logic/theme.ts';
 
 register('onboarding', renderOnboarding);
 register('home', renderHome);
@@ -18,6 +19,12 @@ register('results', renderResults);
 register('badges', renderBadges);
 register('parents', renderParents);
 register('settings', renderSettings);
+
+// Das Bootstrap-Skript in index.html hat das Schema schon gesetzt; hier wird
+// es gegen den geladenen Zustand nochmal bestätigt (und korrigiert, falls der
+// Speicher inzwischen migriert wurde).
+applyTheme();
+watchSystemTheme();
 
 startRouter(document.getElementById('app')!);
 scheduleWhileOpen();

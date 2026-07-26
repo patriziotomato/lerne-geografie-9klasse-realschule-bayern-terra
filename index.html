@@ -4,8 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="color-scheme" content="dark light" />
-    <meta name="theme-color" content="#0e1014" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e1014" />
+    <script>
+      /* Farbschema vor dem ersten Paint setzen — sonst blitzt beim Start kurz
+         das falsche Theme auf, bevor das Modul-Bundle geladen ist. Läuft
+         bewusst ohne Import; Schlüssel und Farben sind mit store.ts bzw.
+         logic/theme.ts gespiegelt. */
+      (function () {
+        var choice = 'system';
+        try {
+          var raw = localStorage.getItem('geoquest.geo9.terra.v1');
+          if (raw) {
+            var stored = JSON.parse(raw);
+            if (stored && stored.settings && stored.settings.theme) choice = stored.settings.theme;
+          }
+        } catch (e) {
+          /* Unlesbarer Speicher: Systemvorgabe ist die sichere Annahme. */
+        }
+        var light =
+          choice === 'light' ||
+          (choice !== 'dark' && window.matchMedia('(prefers-color-scheme: light)').matches);
+        document.documentElement.dataset.theme = light ? 'light' : 'dark';
+        document
+          .querySelector('meta[name="theme-color"]')
+          .setAttribute('content', light ? '#f6f7f9' : '#0e1014');
+      })();
+    </script>
     <meta name="description" content="Geo-Quest: Gamifiziertes Lernen für Geografie, 9. Klasse Realschule Bayern (Terra)" />
     <link rel="manifest" href="%BASE_URL%manifest.webmanifest" />
     <link rel="icon" href="%BASE_URL%icons/icon.svg" type="image/svg+xml" />

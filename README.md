@@ -25,6 +25,8 @@ Kapitelstruktur des Terra-Buchs (Klett). Pures TypeScript — kein Framework.
   SMS-Feature bereits erfasst (bleibt lokal).
 - **Eltern-Bereich** (optional PIN-geschützt): Lernhistorie (wann, wie lange,
   wie viele Fragen, Quote), Fortschritt pro Kapitel, teilbarer Bericht.
+- **Farbschema wählbar**: Automatisch (folgt dem Gerät), Hell oder Dunkel —
+  einstellbar unter „Mehr → Darstellung".
 - **PWA**: Installierbar auf dem Homescreen, funktioniert offline.
 
 ## Entwicklung
@@ -43,11 +45,30 @@ am Dateianfang — Flächen, Schrift, Akzent, Radien, Abstände, Elevation. Ein
 Theme ist damit ein reiner Wertetausch, keine zweite Regelmenge:
 
 - **Dark** (Default): neutrales Schiefergrau.
-- **Light**: neutrales Off-White, gleiche Struktur, eigene Werte im
-  `prefers-color-scheme: light`-Block.
+- **Light**: neutrales Off-White, gleiche Struktur, eigene Werte.
 
 Beide Themes setzen `color-scheme`, damit native Bedienelemente (Datums- und
 Zeit-Picker, Checkboxen, Scrollbars) mitziehen.
+
+### Farbschema umschalten
+
+Das Schema hängt an `[data-theme]` auf `<html>`, **nicht** an
+`prefers-color-scheme` — sonst ließe es sich in den Einstellungen nicht gegen
+die Geräteeinstellung setzen. Beteiligt sind drei Stellen:
+
+| Stelle | Aufgabe |
+|---|---|
+| `src/logic/theme.ts` | löst `'system'` gegen `matchMedia` auf, schreibt `data-theme` und die `theme-color`-Meta, reagiert auf Wechsel der Geräteeinstellung |
+| `index.html` | Bootstrap-Skript, das `data-theme` **vor dem ersten Paint** setzt — sonst blitzt beim Start das falsche Schema auf |
+| `src/styles.css` | `:root, :root[data-theme='dark']` bzw. `:root[data-theme='light']` |
+
+Die Wahl (`settings.theme`: `'system' | 'light' | 'dark'`, Vorgabe `'system'`)
+liegt im normalen `localStorage`-Zustand; Profile von vorher fallen über
+`validTheme()` auf `'system'` zurück und verhalten sich damit wie bisher.
+
+Weil das Bootstrap-Skript ohne Modul-Import auskommen muss, sind der
+Storage-Schlüssel und die beiden `--bg`-Werte dort gespiegelt. Ändert sich
+einer davon in `store.ts` oder `styles.css`, muss `index.html` mit.
 
 Drei Regeln halten die Oberfläche ruhig:
 
