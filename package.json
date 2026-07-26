@@ -6,9 +6,10 @@
   "description": "Gamifizierte Lern-App: Geografie 9. Klasse Realschule Bayern (Terra, Klett)",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "npm run check:questions && tsc --noEmit && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:questions": "node scripts/check-questions.mjs"
   },
   "devDependencies": {
     "typescript": "^5.5.4",

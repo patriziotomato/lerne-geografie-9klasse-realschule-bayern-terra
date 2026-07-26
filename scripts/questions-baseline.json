@@ -1,0 +1,980 @@
+{
+  "concepts": [
+    {
+      "id": "arbeitstechniken-c01",
+      "texts": [
+        "Welche Kartenart stellt vor allem die natürlichen Gegebenheiten der Erdoberfläche dar, also Gebirge, Tiefländer und Flüsse?",
+        "Im Atlas findest du eine Karte, die ausschließlich die Niederschlagsverteilung in Afrika zeigt. Um welche Kartenart handelt es sich?",
+        "Welche Aussage über Kartenarten stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c02",
+      "texts": [
+        "Warum kann eine flache Weltkarte die Erde nie völlig verzerrungsfrei abbilden?",
+        "Auf vielen Weltkarten wirkt Grönland fast so groß wie Afrika, obwohl Afrika in Wirklichkeit etwa 14-mal größer ist. Wie lässt sich das erklären?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c03",
+      "texts": [
+        "Was bedeutet der Maßstab 1:25.000 auf einer Karte?",
+        "Welche Aussage über den Kartenmaßstab ist richtig?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c04",
+      "texts": [
+        "Eine Karte hat den Maßstab 1:50.000. Welcher Strecke in der Wirklichkeit entspricht 1 cm auf der Karte?",
+        "Auf einer Karte im Maßstab 1:100.000 misst du zwischen zwei Orten eine Strecke von 4 cm. Wie weit sind die Orte in Wirklichkeit voneinander entfernt?",
+        "Du planst eine Wanderung mit einer Karte im Maßstab 1:25.000. Der Weg zur Hütte ist auf der Karte 8 cm lang. Wie lang ist er in Wirklichkeit?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c05",
+      "texts": [
+        "Zwei Orte liegen in Wirklichkeit 3 km auseinander. Wie lang ist diese Strecke auf einer Karte im Maßstab 1:50.000?",
+        "Ein Fluss ist in Wirklichkeit 12 km lang. Auf der Karte misst du für ihn 6 cm. Welchen Maßstab hat die Karte?",
+        "Eine 5 km lange Strecke soll auf einer Karte möglichst lang und detailliert erscheinen. Welche Karte wählst du?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c06",
+      "texts": [
+        "Wozu dient die Legende einer Karte?",
+        "Auf einer Wanderkarte entdeckst du ein Symbol, das du nicht kennst. Wo schlägst du am besten nach, um seine Bedeutung herauszufinden?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c07",
+      "texts": [
+        "Was verbinden Höhenlinien auf einer topographischen Karte miteinander?",
+        "An einem Hang liegen die Höhenlinien auf der Karte sehr dicht beieinander. Was sagt dir das über das Gelände?",
+        "Welche Aussage über Höhenlinien stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c08",
+      "texts": [
+        "Welche Farbe kennzeichnet auf physischen Karten üblicherweise das Tiefland?",
+        "Teile der Sahara sind auf physischen Karten grün eingefärbt, obwohl dort Wüste herrscht. Wie erklärst du dir das?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c09",
+      "texts": [
+        "Wie verlaufen die Breitenkreise auf dem Globus?",
+        "Welcher Breitenkreis teilt die Erde in Nordhalbkugel und Südhalbkugel?",
+        "Welche Aussage über die geographische Breite ist richtig?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c10",
+      "texts": [
+        "Durch welchen Ort verläuft der Nullmeridian?",
+        "Wie verlaufen die Längenhalbkreise, also die Meridiane?",
+        "Welche Aussage über das Gradnetz der Erde stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c11",
+      "texts": [
+        "Ein Ort liegt bei etwa 48° nördlicher Breite und 11° östlicher Länge. Was lässt sich daraus ablesen?",
+        "In welcher Reihenfolge gibt man die geographischen Koordinaten eines Ortes üblicherweise an?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c12",
+      "texts": [
+        "Du stehst am Morgen mit dem Gesicht zur aufgehenden Sonne. Welche Himmelsrichtung liegt dann links von dir?",
+        "In welche Richtung zeigt das meist rot markierte Ende der Kompassnadel?",
+        "Wie heißt die Himmelsrichtung, die genau zwischen Süden und Westen liegt?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c13",
+      "texts": [
+        "Wie werden Temperatur und Niederschlag in einem Klimadiagramm üblicherweise dargestellt?",
+        "Welche Informationen kannst du aus einem Klimadiagramm direkt ablesen?",
+        "Ein Klimadiagramm zeigt die höchsten Temperaturen im Januar und die tiefsten im Juli. Was kannst du daraus schließen?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c14",
+      "texts": [
+        "Wann gilt ein Monat im Klimadiagramm als arid, also als trocken?",
+        "In einem Klimadiagramm liegen die Niederschlagssäulen eines Monats deutlich über der Temperaturkurve. Was bedeutet das?",
+        "In einem Klimadiagramm liegt die Niederschlagssäule in 4 Monaten unter der Temperaturkurve und in 8 Monaten darüber. Wie beschreibst du das Klima korrekt?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c15",
+      "texts": [
+        "Welche Form hat der Altersaufbau eines Landes mit sehr vielen Kindern und nur wenigen alten Menschen?",
+        "Deutschland hat eine niedrige Geburtenrate und einen hohen Anteil älterer Menschen. Welche Form zeigt seine Bevölkerungspyramide am ehesten?",
+        "Was stellt eine Bevölkerungspyramide dar?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c16",
+      "texts": [
+        "Mit welchem Diagrammtyp stellst du am besten dar, wie sich ein Ganzes in Anteile aufteilt, zum Beispiel die Anteile der Wirtschaftssektoren?",
+        "Du möchtest die Entwicklung der Weltbevölkerung von 1900 bis 2020 grafisch darstellen. Welcher Diagrammtyp eignet sich dafür am besten?",
+        "Wofür eignet sich ein Säulendiagramm besonders gut?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c17",
+      "texts": [
+        "Wie gehst du beim Auswerten einer Tabelle sinnvoll vor?",
+        "In einer Statistik sind die Einwohnerzahlen mit dem Hinweis 'in Tausend' angegeben. Für eine Stadt steht dort der Wert 1.480. Wie viele Einwohner hat die Stadt?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c18",
+      "texts": [
+        "Woran erkennst du eine verlässliche Quelle für ein Geografie-Referat am ehesten?",
+        "Du findest im Internet eine überraschende Zahl für dein Referat. Was ist das sinnvollste Vorgehen?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c19",
+      "texts": [
+        "Wofür steht die Abkürzung GIS?",
+        "Was ist das Besondere an einem Geographischen Informationssystem?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c20",
+      "texts": [
+        "Worin unterscheidet sich ein Senkrechtluftbild von einer Karte?",
+        "Wofür werden Satellitenbilder in der Geographie unter anderem genutzt?"
+      ]
+    },
+    {
+      "id": "arbeitstechniken-c21",
+      "texts": [
+        "Wie bestimmt ein Navigationsgerät mit GPS vereinfacht gesagt seinen Standort?",
+        "Welche Aussage über das GPS-System stimmt?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c01",
+      "texts": [
+        "Was versteht man unter dem demographischen Wandel in Deutschland?",
+        "In einem Zeitungsartikel steht: \"Frauen bekommen in Deutschland im Schnitt deutlich weniger als zwei Kinder, gleichzeitig werden die Menschen immer älter.\" Welche Entwicklung beschreibt der Artikel?",
+        "Welche Aussage zum demographischen Wandel in Deutschland stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c02",
+      "texts": [
+        "Welcher Grund trägt dazu bei, dass in Deutschland vergleichsweise wenige Kinder geboren werden?",
+        "Warum steigt die Lebenserwartung in Deutschland seit Jahrzehnten an?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c03",
+      "texts": [
+        "Welche Folge hat die Alterung der Gesellschaft für die Rentenversicherung in Deutschland?",
+        "Ein Pflegeheim findet kaum noch Personal, gleichzeitig steigt die Zahl der pflegebedürftigen Senioren. Womit hängt diese Entwicklung zusammen?",
+        "Welche Aussage über die Folgen des demographischen Wandels stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c04",
+      "texts": [
+        "Eine Bevölkerungspyramide hat die Form eines Dreiecks mit breiter Basis. Was sagt das über die Bevölkerung aus?",
+        "Für welches Land ist eine dreieckige Bevölkerungspyramide mit breiter Basis heute typisch?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c05",
+      "texts": [
+        "Was bedeutet es, wenn eine Bevölkerungspyramide die Form einer Glocke hat?",
+        "Welche Aussage passt zu einem Land mit glockenförmigem Bevölkerungsaufbau?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c06",
+      "texts": [
+        "Der Bevölkerungsaufbau Deutschlands ähnelt einer Urne. Was bedeutet diese Form?",
+        "Ein Land zeigt im Bevölkerungsdiagramm eine schmale Basis, stark besetzte mittlere Jahrgänge und viele alte Menschen. Welche Probleme sind dort zu erwarten?",
+        "Welche Zuordnung von Diagrammform und Bevölkerungsentwicklung ist richtig?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c07",
+      "texts": [
+        "Was beschreibt das Modell des demographischen Übergangs?",
+        "In welcher Situation wächst die Bevölkerung eines Landes nach dem Modell des demographischen Übergangs am stärksten?",
+        "Welche Aussage zum Modell des demographischen Übergangs stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c08",
+      "texts": [
+        "Ein Land hat eine hohe Geburtenrate, aber eine bereits stark gesunkene Sterberate. In welcher Situation befindet es sich?",
+        "Wo im Modell des demographischen Übergangs stehen Industrieländer wie Deutschland heute?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c09",
+      "texts": [
+        "Welche Region gehört zu den am dichtesten besiedelten Ballungsräumen Deutschlands?",
+        "Warum leben in Ballungsräumen wie München oder Rhein-Main besonders viele Menschen?",
+        "Welche Aussage zur Bevölkerungsverteilung in Deutschland trifft zu?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c10",
+      "texts": [
+        "Was ist ein Gunstraum?",
+        "Warum ist die Sahara ein Ungunstraum für die Besiedlung?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c11",
+      "texts": [
+        "Wie viele Menschen leben derzeit ungefähr auf der Erde?",
+        "In welcher Weltregion wächst die Bevölkerung derzeit am schnellsten?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c12",
+      "texts": [
+        "Was bedeutet der Begriff \"Emigration\"?",
+        "Eine Familie zieht von Berlin nach München um. Wie nennt man diese Form der Wanderung?",
+        "Welche Zuordnung von Begriff und Bedeutung ist richtig?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c13",
+      "texts": [
+        "Worin unterscheidet sich ein Flüchtling von einem Arbeitsmigranten?",
+        "Was bedeutet es, in einem Land Asyl zu beantragen?",
+        "Welche der folgenden Ursachen ist eine typische Fluchtursache?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c14",
+      "texts": [
+        "Was versteht man unter Push-Faktoren?",
+        "Welcher der folgenden Gründe ist ein Push-Faktor?",
+        "Welche Aussage zu Push- und Pull-Faktoren stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c15",
+      "texts": [
+        "Was sind Pull-Faktoren?",
+        "Ein IT-Spezialist aus Indien zieht nach Deutschland, weil er hier ein gutes Gehalt und sichere Lebensverhältnisse erwartet. Welche Faktoren wirken hier vor allem?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c16",
+      "texts": [
+        "Was bedeutet der Begriff \"Brain Drain\"?",
+        "Wie können Herkunftsländer trotz der Abwanderung von Menschen von Migration profitieren?",
+        "Ein kleines Land verliert viele seiner Ärzte und Ingenieure an Industrieländer. Welche Folge hat das für dieses Land?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c17",
+      "texts": [
+        "Warum ist Deutschland auf die Zuwanderung von Fachkräften angewiesen?",
+        "Welche Chancen bietet Zuwanderung für ein Zielland wie Deutschland?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c18",
+      "texts": [
+        "Was ist für eine gelingende Integration von Zuwanderern besonders wichtig?",
+        "Eine Stadt bietet Sprachkurse an, hilft bei der Anerkennung ausländischer Berufsabschlüsse und vermittelt Praktika. Was möchte sie damit erreichen?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c19",
+      "texts": [
+        "Warum warb die Bundesrepublik Deutschland ab den 1950er-Jahren sogenannte Gastarbeiter an?",
+        "Aus welchen Ländern kamen viele Gastarbeiter nach Deutschland?",
+        "Welche Aussage zur Gastarbeiter-Geschichte Deutschlands trifft zu?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c20",
+      "texts": [
+        "Was war das Ziel der chinesischen Ein-Kind-Politik?",
+        "Welche Folgen der jahrzehntelangen Ein-Kind-Politik zeigen sich in China heute?",
+        "Warum hat China die Ein-Kind-Politik ab 2015 gelockert?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c21",
+      "texts": [
+        "Wie versucht Frankreich, die Geburtenrate hoch zu halten?",
+        "Welche familienpolitischen Maßnahmen sollen in Deutschland die Entscheidung für Kinder erleichtern?"
+      ]
+    },
+    {
+      "id": "bevoelkerung-c22",
+      "texts": [
+        "Was versteht man unter Landflucht?",
+        "Warum wachsen Großstädte in Entwicklungsländern besonders schnell?"
+      ]
+    },
+    {
+      "id": "europa-c01",
+      "texts": [
+        "Warum schlossen sich europäische Staaten nach dem Zweiten Weltkrieg enger zusammen?",
+        "Warum stellten Frankreich, die Bundesrepublik Deutschland und vier weitere Länder 1952 ausgerechnet ihre Kohle- und Stahlindustrie unter gemeinsame Aufsicht (Montanunion)?",
+        "Welche Aussage über die Anfänge der europäischen Einigung stimmt?"
+      ]
+    },
+    {
+      "id": "europa-c02",
+      "texts": [
+        "Was wurde 1957 mit den Römischen Verträgen gegründet?",
+        "Wie entwickelte sich aus der rein wirtschaftlichen Zusammenarbeit die heutige Europäische Union?"
+      ]
+    },
+    {
+      "id": "europa-c03",
+      "texts": [
+        "Wie viele Mitgliedstaaten hat die Europäische Union heute?",
+        "Was war das Besondere an der EU-Erweiterung im Jahr 2004?",
+        "Welche Aussage über die Entwicklung der EU-Mitgliedschaft stimmt?"
+      ]
+    },
+    {
+      "id": "europa-c04",
+      "texts": [
+        "Welche EU-Institution wird von den Bürgerinnen und Bürgern alle fünf Jahre direkt gewählt?",
+        "Welche Aufgaben hat das Europäische Parlament?",
+        "In welcher Stadt hat das Europäische Parlament seinen offiziellen Sitz?"
+      ]
+    },
+    {
+      "id": "europa-c05",
+      "texts": [
+        "Welche Aufgabe hat die Europäische Kommission?",
+        "Ein Mitgliedstaat hält sich nicht an gemeinsames EU-Recht. Welche Institution mit Sitz in Brüssel kann deshalb ein Verfahren gegen ihn einleiten?"
+      ]
+    },
+    {
+      "id": "europa-c06",
+      "texts": [
+        "Wer trifft sich im Rat der Europäischen Union, dem sogenannten Ministerrat?",
+        "Worin unterscheidet sich der Rat der EU vom Europäischen Rat?"
+      ]
+    },
+    {
+      "id": "europa-c07",
+      "texts": [
+        "Welche Aufgabe hat der Europäische Gerichtshof (EuGH)?",
+        "In welcher Stadt hat der Europäische Gerichtshof seinen Sitz?"
+      ]
+    },
+    {
+      "id": "europa-c08",
+      "texts": [
+        "Welche Aufgabe hat die Europäische Zentralbank (EZB) mit Sitz in Frankfurt am Main?",
+        "Die Preise im Euro-Raum steigen stark an. Welche Institution kann mit einer Erhöhung der Leitzinsen gegen diese Inflation vorgehen?"
+      ]
+    },
+    {
+      "id": "europa-c09",
+      "texts": [
+        "Welche \"vier Freiheiten\" gelten im Europäischen Binnenmarkt?",
+        "Eine Schreinerei aus Bayern verkauft ihre Möbel nach Frankreich, ohne dafür Zölle zu zahlen. Welche Freiheit des Binnenmarkts nutzt sie?",
+        "Eine spanische Krankenpflegerin darf ohne besondere Arbeitserlaubnis in München leben und arbeiten. Welche Binnenmarkt-Freiheit steckt dahinter?"
+      ]
+    },
+    {
+      "id": "europa-c10",
+      "texts": [
+        "Was versteht man unter der \"Eurozone\"?",
+        "Welche Aussage über den Euro stimmt?",
+        "Welchen Vorteil bringt der Euro für Urlauber und Unternehmen?"
+      ]
+    },
+    {
+      "id": "europa-c11",
+      "texts": [
+        "Was bedeutet das Schengener Abkommen für Reisende?",
+        "Welche Aussage über den Schengen-Raum stimmt?",
+        "Familie Huber fährt mit dem Auto von München über Österreich nach Italien in den Urlaub, ohne an einer Grenze anhalten zu müssen. Welches Abkommen macht das möglich?"
+      ]
+    },
+    {
+      "id": "europa-c12",
+      "texts": [
+        "Was versteht man unter dem \"Brexit\"?",
+        "Welche Folge hat der Brexit für den Handel zwischen der EU und Großbritannien?"
+      ]
+    },
+    {
+      "id": "europa-c13",
+      "texts": [
+        "Warum unterstützt die EU strukturschwache Regionen mit Fördergeldern?",
+        "Eine ländliche Region mit hoher Arbeitslosigkeit erhält EU-Gelder für schnelles Internet und die Ansiedlung neuer Betriebe. Woher stammt dieses Geld?"
+      ]
+    },
+    {
+      "id": "europa-c14",
+      "texts": [
+        "Woran merken Jugendliche in Deutschland im Alltag ganz direkt, dass es die EU gibt?",
+        "Was ist Erasmus+?",
+        "Welches Beispiel zeigt, wie die EU Verbraucher beim Online-Shopping schützt?"
+      ]
+    },
+    {
+      "id": "europa-c15",
+      "texts": [
+        "Was versteht man unter Globalisierung?",
+        "Welches Beispiel gehört zur kulturellen Dimension der Globalisierung?",
+        "Welche Aussage zur Globalisierung stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "europa-c16",
+      "texts": [
+        "Welche Erfindung hat den weltweiten Warentransport enorm verbilligt und gilt deshalb als ein Motor der Globalisierung?",
+        "Warum gilt das Internet als wichtiger Treiber der Globalisierung?",
+        "Welcher der folgenden Faktoren hat die Globalisierung NICHT vorangetrieben?"
+      ]
+    },
+    {
+      "id": "europa-c17",
+      "texts": [
+        "Was ist ein \"Global Player\"?",
+        "Nach welchen Überlegungen wählen Global Players ihre Produktionsstandorte aus?"
+      ]
+    },
+    {
+      "id": "europa-c18",
+      "texts": [
+        "Was versteht man unter \"harten\" Standortfaktoren?",
+        "Ein IT-Unternehmen zieht nach München, weil die Stadt ein attraktives Kultur- und Freizeitangebot bietet und Fachkräfte gern dort leben. Um welche Art von Standortfaktor handelt es sich?",
+        "Welche Aussage über Standortfaktoren stimmt?"
+      ]
+    },
+    {
+      "id": "europa-c19",
+      "texts": [
+        "Was bedeutet \"internationale Arbeitsteilung\" bei der Herstellung eines Smartphones?",
+        "Warum lassen viele Bekleidungsfirmen ihre Jeans in Ländern wie Bangladesch nähen?"
+      ]
+    },
+    {
+      "id": "europa-c20",
+      "texts": [
+        "Warum wird Deutschland als \"Exportnation\" bezeichnet?",
+        "Zwischen welchen drei großen Wirtschaftsregionen fließen die stärksten Welthandelsströme?"
+      ]
+    },
+    {
+      "id": "europa-c21",
+      "texts": [
+        "Welche Chance bietet die Globalisierung den Verbrauchern in Deutschland?",
+        "Welche Aussage beschreibt ein Risiko der Globalisierung?"
+      ]
+    },
+    {
+      "id": "europa-c22",
+      "texts": [
+        "Was ist das Ziel des fairen Handels (Fairtrade)?",
+        "Woran erkennen Kundinnen und Kunden im Supermarkt fair gehandelte Produkte wie Kaffee, Kakao oder Bananen?"
+      ]
+    },
+    {
+      "id": "landschaften-c01",
+      "texts": [
+        "In welcher Reihenfolge folgen die vier Großlandschaften Deutschlands von Norden nach Süden aufeinander?",
+        "Du fährst mit dem Rad von Flensburg nach Hannover. Welche Großlandschaft durchquerst du dabei fast die ganze Strecke?",
+        "Welche Aussage über die Großlandschaften Deutschlands trifft zu?"
+      ]
+    },
+    {
+      "id": "landschaften-c02",
+      "texts": [
+        "Welche Beschreibung passt zum Norddeutschen Tiefland?",
+        "Warum gibt es im Norddeutschen Tiefland so viele Seen, Moore und sandige Böden?"
+      ]
+    },
+    {
+      "id": "landschaften-c03",
+      "texts": [
+        "Welches der folgenden Gebirge zählt zu den deutschen Mittelgebirgen?",
+        "Welche Aussage beschreibt die deutschen Mittelgebirge zutreffend?"
+      ]
+    },
+    {
+      "id": "landschaften-c04",
+      "texts": [
+        "Wo liegt das Alpenvorland?",
+        "Woran erkennt man im Alpenvorland noch heute die Arbeit der eiszeitlichen Gletscher?"
+      ]
+    },
+    {
+      "id": "landschaften-c05",
+      "texts": [
+        "Wie sind die Alpen entstanden?",
+        "Zu welchem Gebirgstyp gehören die Alpen, weil sie durch das Zusammenschieben von Erdplatten entstanden sind?",
+        "Welche Aussage zur Entstehung der Alpen stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "landschaften-c06",
+      "texts": [
+        "Welche Talform entsteht typischerweise, wenn ein Gletscher ein Tal überformt?",
+        "Wodurch verändert ein Gletscher die Landschaft?",
+        "Ein Alpental hat einen breiten, U-förmigen Querschnitt mit steilen Flanken. Was lässt sich daraus über seine Entstehung schließen?"
+      ]
+    },
+    {
+      "id": "landschaften-c07",
+      "texts": [
+        "Was versteht man unter einer Moräne?",
+        "Was zeigt eine Endmoräne an?"
+      ]
+    },
+    {
+      "id": "landschaften-c08",
+      "texts": [
+        "Welche Abfolge nennt die Landschaftsformen der glazialen Serie in der richtigen Reihenfolge?",
+        "Was bezeichnet der Begriff „glaziale Serie“?",
+        "Wie heißt die flache Aufschüttung aus Sand und Kies, die das Schmelzwasser unmittelbar vor der Endmoräne ablagerte?"
+      ]
+    },
+    {
+      "id": "landschaften-c09",
+      "texts": [
+        "Wie sind die breiten Urstromtäler Norddeutschlands entstanden?",
+        "Warum verlaufen in Norddeutschland viele Kanäle und Flussabschnitte durch alte Urstromtäler?"
+      ]
+    },
+    {
+      "id": "landschaften-c10",
+      "texts": [
+        "Was ist ein Maar, wie es in der Vulkaneifel vorkommt?",
+        "Welche Aussage zum Vulkanismus in Deutschland trifft zu?"
+      ]
+    },
+    {
+      "id": "landschaften-c11",
+      "texts": [
+        "Was ist das Wattenmeer an der Nordseeküste?",
+        "Warum wurde das Wattenmeer zum UNESCO-Weltnaturerbe erklärt?",
+        "Welche Aussage über das Wattenmeer stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "landschaften-c12",
+      "texts": [
+        "Wodurch entstehen Ebbe und Flut?",
+        "Wie nennt man den Höhenunterschied zwischen Hochwasser und Niedrigwasser?",
+        "Wie viel Zeit vergeht an der Nordseeküste ungefähr zwischen zwei Hochwassern?"
+      ]
+    },
+    {
+      "id": "landschaften-c13",
+      "texts": [
+        "Was ist eine Förde, wie man sie an der Ostseeküste Schleswig-Holsteins findet?",
+        "Wie ist die Boddenküste Mecklenburg-Vorpommerns entstanden?"
+      ]
+    },
+    {
+      "id": "landschaften-c14",
+      "texts": [
+        "Worin unterscheiden sich Steilküste und Flachküste?",
+        "Warum weicht eine Steilküste wie die Kreideküste auf Rügen im Laufe der Zeit immer weiter zurück?"
+      ]
+    },
+    {
+      "id": "landschaften-c15",
+      "texts": [
+        "Welche der folgenden Ursachen für ein Fluss-Hochwasser ist eine natürliche Ursache?",
+        "Wodurch verschärft der Mensch die Hochwassergefahr an Flüssen?",
+        "Welche Aussage zur Entstehung von Hochwasser stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "landschaften-c16",
+      "texts": [
+        "Was ist eine Retentionsfläche?",
+        "Welche Maßnahme hilft vorbeugend gegen Fluss-Hochwasser?",
+        "Eine Gemeinde am Fluss möchte sich besser vor Hochwasser schützen. Welche Kombination von Maßnahmen ist sinnvoll?"
+      ]
+    },
+    {
+      "id": "landschaften-c17",
+      "texts": [
+        "Welche Folge hat die Begradigung eines Flusses?",
+        "Was bedeutet es, einen Fluss zu renaturieren?"
+      ]
+    },
+    {
+      "id": "landschaften-c18",
+      "texts": [
+        "Was ist eine Sturmflut?",
+        "Warum sind moderne Seedeiche an der Nordsee flach geneigt und mit Gras bewachsen?",
+        "Warum erhöht der steigende Meeresspiegel die Gefahr durch Sturmfluten?"
+      ]
+    },
+    {
+      "id": "landschaften-c19",
+      "texts": [
+        "Ab welcher Windstärke spricht man von einem Orkan?",
+        "Was unterscheidet einen Tornado von einem Orkantief?"
+      ]
+    },
+    {
+      "id": "landschaften-c20",
+      "texts": [
+        "Welche Aufgabe erfüllt der Schutzwald in den Alpen?",
+        "Unter welchen Bedingungen ist die Lawinengefahr besonders hoch?",
+        "Warum steigt die Lawinengefahr, wenn Bergwald zum Beispiel für Skipisten gerodet wird?"
+      ]
+    },
+    {
+      "id": "landschaften-c21",
+      "texts": [
+        "Was versteht man unter Bodenerosion?",
+        "Wie kann die Landwirtschaft Bodenerosion verringern?"
+      ]
+    },
+    {
+      "id": "landschaften-c22",
+      "texts": [
+        "Welcher Zusammenhang besteht zwischen dem Klimawandel und Extremwetter?",
+        "Warum kann eine wärmere Atmosphäre zu heftigerem Starkregen führen?",
+        "Ein Sommer bringt erst wochenlange Trockenheit und dann Starkregen mit Überschwemmungen. Wie passt das zum Klimawandel?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c01",
+      "texts": [
+        "Was ist ein typisches Merkmal der konventionellen Landwirtschaft?",
+        "Ein Landwirt will auf seinen Feldern möglichst hohe Erträge erzielen und setzt dafür Mineraldünger und chemische Spritzmittel ein. Welcher Wirtschaftsweise entspricht das?",
+        "Welche Aussage über die konventionelle Landwirtschaft stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c02",
+      "texts": [
+        "Worauf verzichten Betriebe der ökologischen Landwirtschaft?",
+        "Wie halten Öko-Landwirte ihre Böden fruchtbar, ohne Mineraldünger einzusetzen?",
+        "Welche Aussage beschreibt die ökologische Landwirtschaft richtig?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c03",
+      "texts": [
+        "Welcher Nachteil ist typisch für die ökologische Landwirtschaft im Vergleich zur konventionellen?",
+        "Warum kann konventionell erzeugtes Gemüse im Supermarkt meist billiger angeboten werden als Bio-Gemüse?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c04",
+      "texts": [
+        "Was versteht man unter Massentierhaltung?",
+        "Welches Problem wird häufig mit der Massentierhaltung in Verbindung gebracht?",
+        "Welche Aussage zur Massentierhaltung stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c05",
+      "texts": [
+        "Warum sind die Börden, wie die Magdeburger Börde, besonders gute Ackerbaugebiete?",
+        "Welche Feldfrüchte werden in der Magdeburger Börde wegen der fruchtbaren Böden vor allem angebaut?",
+        "Woraus ist der fruchtbare Lössboden der Börden entstanden?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c06",
+      "texts": [
+        "Warum ist das Alpenvorland ein Zentrum der Milchviehhaltung?",
+        "Ein Betrieb im bayerischen Alpenvorland nutzt seine Flächen fast nur als Wiesen und Weiden. Welche Erklärung passt dazu?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c07",
+      "texts": [
+        "Wofür ist die Hallertau in Bayern bekannt?",
+        "Was versteht man unter Sonderkulturen wie dem Hopfen in der Hallertau?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c08",
+      "texts": [
+        "Warum eignet sich die Region am Bodensee besonders gut für den Obstanbau?",
+        "Weinreben und Obstbäume stellen ähnliche Ansprüche an ihre Standorte. Welche Bedingungen sind das?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c09",
+      "texts": [
+        "Was versteht man unter dem Strukturwandel in der Landwirtschaft?",
+        "Was bedeutet der Ausdruck 'Wachse oder weiche' im Zusammenhang mit dem Höfesterben?",
+        "Welche Aussage zum Strukturwandel in der deutschen Landwirtschaft stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c10",
+      "texts": [
+        "Was versteht man unter Precision Farming (Präzisionslandwirtschaft)?",
+        "Welchen Vorteil bietet die zunehmende Technisierung der Landwirtschaft?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c11",
+      "texts": [
+        "Warum erhalten Landwirte in der EU Subventionen aus der Gemeinsamen Agrarpolitik (GAP)?",
+        "Wonach richtet sich die Höhe der wichtigsten EU-Direktzahlungen an einen landwirtschaftlichen Betrieb vor allem?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c12",
+      "texts": [
+        "Wie gelangt Nitrat in vielen Agrarregionen ins Grundwasser?",
+        "Warum ist zu viel Nitrat im Grundwasser ein Problem?",
+        "In welchen Regionen Deutschlands ist das Grundwasser besonders stark mit Nitrat belastet?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c13",
+      "texts": [
+        "Was ist eine Monokultur?",
+        "Welche Folge kann der großflächige Einsatz von Pestiziden haben?",
+        "Welcher weitere Nachteil ist typisch für Monokulturen?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c14",
+      "texts": [
+        "Wie viel des weltweit genutzten Süßwassers verbraucht die Landwirtschaft ungefähr?",
+        "Welches Problem kann bei falscher Bewässerung in trockenen Regionen entstehen?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c15",
+      "texts": [
+        "Was versteht man unter 'virtuellem Wasser'?",
+        "Wie viel Wasser steckt ungefähr in einem Kilogramm Rindfleisch, wenn man das virtuelle Wasser mitrechnet?",
+        "Warum importiert Deutschland mit Lebensmitteln wie Tomaten aus Südspanien auch 'virtuelles Wasser'?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c16",
+      "texts": [
+        "Warum sind in deutschen Supermärkten das ganze Jahr über frische Erdbeeren oder Trauben erhältlich?",
+        "Welche Aussage über globale Lieferketten bei Lebensmitteln stimmt?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c17",
+      "texts": [
+        "Warum verbraucht die Erzeugung von Fleisch deutlich mehr Fläche als der Anbau pflanzlicher Lebensmittel?",
+        "Was versteht man unter 'Veredelungsverlusten' bei der Fleischproduktion?",
+        "Welche Aussage zum Zusammenhang von Fleischkonsum und Welternährung stimmt?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c18",
+      "texts": [
+        "Wie können Verbraucher den ökologischen Fußabdruck ihrer Ernährung verringern?",
+        "Warum kann ein Apfel aus der Region im Frühjahr eine schlechtere Klimabilanz haben als ein Apfel aus Neuseeland?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c19",
+      "texts": [
+        "Was garantiert das EU-Bio-Siegel (grünes Blatt aus Sternen) auf einem Lebensmittel?",
+        "Welche Aussage über Bio- und Gütesiegel stimmt?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c20",
+      "texts": [
+        "Warum hungern weltweit Millionen Menschen, obwohl insgesamt genug Nahrung für alle produziert wird?",
+        "Welche Ursachen können Hungerkrisen auslösen oder verschärfen?",
+        "Welche Aussage zur Welternährung stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "landwirtschaft-c21",
+      "texts": [
+        "Wo entsteht in Deutschland der größte Teil der Lebensmittelabfälle?",
+        "Was bedeutet das Mindesthaltbarkeitsdatum (MHD) auf Lebensmitteln?",
+        "Wie können Verbraucher Lebensmittelverschwendung verringern?"
+      ]
+    },
+    {
+      "id": "staedte-c01",
+      "texts": [
+        "Welche Merkmale sind typisch für eine Stadt?",
+        "Die Bewohner der umliegenden Dörfer fahren zum Einkaufen, zum Facharzt und ins Kino in die nächstgelegene Stadt. Welche Aufgabe der Stadt zeigt sich daran?",
+        "Welche Aussage über Städte stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "staedte-c02",
+      "texts": [
+        "Woran erkennt man in vielen deutschen Städten noch heute den mittelalterlichen Stadtkern?",
+        "Welche Rolle spielte der Marktplatz in der mittelalterlichen Stadt?",
+        "Warum war die mittelalterliche Stadt von einer Mauer umgeben?"
+      ]
+    },
+    {
+      "id": "staedte-c03",
+      "texts": [
+        "Wie veränderten sich viele deutsche Städte während der Industrialisierung im 19. Jahrhundert?",
+        "Wie wohnten viele Arbeiterfamilien in den schnell wachsenden Industriestädten des 19. Jahrhunderts?",
+        "Warum entstanden die Arbeiterviertel des 19. Jahrhunderts meist direkt neben den Fabriken?"
+      ]
+    },
+    {
+      "id": "staedte-c04",
+      "texts": [
+        "Was prägte die Entwicklung vieler deutscher Städte in den Jahrzehnten nach dem Zweiten Weltkrieg?",
+        "Was ist mit dem Leitbild der „autogerechten Stadt“ der Nachkriegszeit gemeint?"
+      ]
+    },
+    {
+      "id": "staedte-c05",
+      "texts": [
+        "Was findet man typischerweise in der City, dem Geschäftszentrum einer Großstadt?",
+        "Warum wohnen im Geschäftszentrum einer Großstadt nur wenige Menschen?",
+        "Welche Aussage über die City einer Großstadt stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "staedte-c06",
+      "texts": [
+        "Was bedeutet es, dass eine Stadt „funktional gegliedert“ ist?",
+        "Warum liegen Gewerbe- und Industriegebiete meist am Stadtrand in der Nähe großer Verkehrsachsen?",
+        "Eine Familie sucht am Wochenende Erholung im Grünen, ohne die Stadt zu verlassen. Welcher Bereich der Stadt erfüllt diese Aufgabe?"
+      ]
+    },
+    {
+      "id": "staedte-c07",
+      "texts": [
+        "Welche Einrichtungen hat Berlin, weil es die Hauptstadt Deutschlands ist?",
+        "Wie profitiert Berlin wirtschaftlich von seiner Rolle als Hauptstadt?"
+      ]
+    },
+    {
+      "id": "staedte-c08",
+      "texts": [
+        "Was geschah im Jahr 1961 in Berlin?",
+        "Welche Folgen hatte die jahrzehntelange Teilung für die Stadtentwicklung Berlins?",
+        "Warum hat Berlin bis heute zwei große Zentrumsbereiche, etwa um den Kurfürstendamm im Westen und um den Alexanderplatz im Osten?"
+      ]
+    },
+    {
+      "id": "staedte-c09",
+      "texts": [
+        "Warum sind die Mieten in Berlin seit etwa 2010 stark gestiegen?",
+        "Welche Folgen hat der angespannte Wohnungsmarkt für viele Berliner Haushalte?"
+      ]
+    },
+    {
+      "id": "staedte-c10",
+      "texts": [
+        "Welche Wirtschaftszweige machen München zu einem der wichtigsten Wirtschaftsstandorte Deutschlands?",
+        "Warum siedeln sich viele Hightech-Unternehmen gerade in München an?",
+        "Welche Aussage beschreibt die wirtschaftliche Lage Münchens zutreffend?"
+      ]
+    },
+    {
+      "id": "staedte-c11",
+      "texts": [
+        "Welche Folge hat der anhaltende Zuzug nach München?",
+        "Warum weichen viele Beschäftigte mit Arbeitsplatz in München ins Umland aus, und was folgt daraus?",
+        "Welche Aussage über die Folgen des Münchner Wachstums stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "staedte-c12",
+      "texts": [
+        "Was versteht man unter Suburbanisierung?",
+        "Eine Familie zieht aus der Großstadt in eine Neubausiedlung in einer Umlandgemeinde, die Eltern arbeiten aber weiter in der Stadt. Wie nennt man diesen Vorgang?",
+        "Welche Folgen hat die Suburbanisierung für Kernstadt und Umland?"
+      ]
+    },
+    {
+      "id": "staedte-c13",
+      "texts": [
+        "Was bezeichnet der Begriff Reurbanisierung?",
+        "Warum entscheiden sich heute wieder viele Menschen für das Wohnen in der Innenstadt statt im Umland?"
+      ]
+    },
+    {
+      "id": "staedte-c14",
+      "texts": [
+        "Was versteht man unter Gentrifizierung?",
+        "In welcher Reihenfolge läuft die Gentrifizierung eines Viertels typischerweise ab?",
+        "Wer leidet am ehesten unter der Gentrifizierung eines Viertels?"
+      ]
+    },
+    {
+      "id": "staedte-c15",
+      "texts": [
+        "Was bedeutet soziale Segregation in einer Stadt?",
+        "In einer Großstadt konzentrieren sich einkommensschwache Haushalte zunehmend in wenigen Vierteln mit günstigen Mieten. Wie nennt man diese Entwicklung, und warum gilt sie als problematisch?"
+      ]
+    },
+    {
+      "id": "staedte-c16",
+      "texts": [
+        "Was versteht man unter Verstädterung?",
+        "Welche Aussage über die weltweite Verstädterung stimmt?"
+      ]
+    },
+    {
+      "id": "staedte-c17",
+      "texts": [
+        "Ab wann spricht man von einer Megastadt?",
+        "Welche der folgenden Städte sind Megastädte?",
+        "Mit welchen Problemen kämpfen viele schnell wachsende Megastädte in Entwicklungs- und Schwellenländern?"
+      ]
+    },
+    {
+      "id": "staedte-c18",
+      "texts": [
+        "In einer Sommernacht misst man in der Innenstadt 24 °C, im Umland dagegen nur 18 °C. Wie nennt man dieses Phänomen?",
+        "Warum ist es in dicht bebauten Innenstädten meist wärmer als im Umland?",
+        "Welche Aussage zum Stadtklima stimmt NICHT?"
+      ]
+    },
+    {
+      "id": "staedte-c19",
+      "texts": [
+        "Was ist eine Frischluftschneise?",
+        "Warum sollen Grünzüge wie das Isartal in München oder große Parks in Berlin möglichst nicht bebaut werden?"
+      ]
+    },
+    {
+      "id": "staedte-c20",
+      "texts": [
+        "Was ist das Ziel der Verkehrswende in Städten?",
+        "Welche Maßnahmen fördern die Verkehrswende in einer Großstadt?"
+      ]
+    },
+    {
+      "id": "staedte-c21",
+      "texts": [
+        "Was versteht man unter Nachverdichtung in der Stadtentwicklung?",
+        "Warum setzen Städte wie München auf Nachverdichtung, und welchen Nachteil kann sie haben?"
+      ]
+    },
+    {
+      "id": "staedte-c22",
+      "texts": [
+        "Was ist mit dem Begriff Smart City gemeint?",
+        "Welches Beispiel passt zu einer Smart City?"
+      ]
+    }
+  ]
+}
