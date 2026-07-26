@@ -8,34 +8,34 @@
         {
           "text": "Welche Merkmale sind typisch für eine Stadt?",
           "options": [
-            "Dichte Bebauung, viele Einwohner auf engem Raum und ein großes Angebot an Geschäften und Arbeitsplätzen.",
-            "Lockere Bebauung mit vielen Einzelhöfen und überwiegend landwirtschaftlicher Nutzung.",
-            "Wenige Einwohner, die fast alle in der Landwirtschaft arbeiten.",
-            "Große zusammenhängende Wald- und Wiesenflächen zwischen den einzelnen Häusern."
+            "dichte Bebauung, viele Geschäfte und Arbeitsplätze",
+            "lockere Bebauung mit Einzelhöfen und Ackerflächen",
+            "wenige Einwohner, fast alle in der Landwirtschaft",
+            "große Wald- und Wiesenflächen zwischen den Häusern"
           ],
-          "explanation": "Städte zeichnen sich durch eine hohe Einwohner- und Bebauungsdichte sowie ein vielfältiges Angebot an Arbeitsplätzen, Geschäften und Dienstleistungen aus.",
+          "explanation": "Hohe Einwohnerdichte und ein vielfältiges Angebot an Arbeit und Geschäften.",
           "difficulty": 1
         },
         {
           "text": "Die Bewohner der umliegenden Dörfer fahren zum Einkaufen, zum Facharzt und ins Kino in die nächstgelegene Stadt. Welche Aufgabe der Stadt zeigt sich daran?",
           "options": [
-            "Die Stadt versorgt als zentraler Ort auch das Umland mit Waren und Dienstleistungen.",
-            "Die Stadt versucht, den Dörfern gezielt ihre Einwohner abzuwerben.",
-            "Die Stadt lagert ihre Aufgaben in die umliegenden Dörfer aus.",
-            "Die Stadt dient dem Umland vor allem als Naherholungsgebiet."
+            "Sie versorgt als zentraler Ort auch das Umland.",
+            "Sie wirbt den Dörfern gezielt ihre Einwohner ab.",
+            "Sie lagert Aufgaben in die Nachbardörfer aus.",
+            "Sie dient dem Umland als Naherholungsgebiet."
           ],
-          "explanation": "Städte sind zentrale Orte: Sie stellen Einrichtungen wie Fachärzte, Schulen und Kinos bereit, die auch von den Bewohnern des Umlands genutzt werden.",
+          "explanation": "Städte sind zentrale Orte: Ihre Einrichtungen nutzt auch das Umland.",
           "difficulty": 1
         },
         {
           "text": "Welche Aussage über Städte stimmt NICHT?",
           "options": [
-            "In Städten arbeiten die meisten Menschen in der Land- und Forstwirtschaft.",
+            "In Städten arbeiten die meisten in der Landwirtschaft.",
             "Städte haben eine hohe Einwohner- und Bebauungsdichte.",
-            "Städte bieten viele Arbeitsplätze in Industrie und Dienstleistungen.",
-            "Städte stellen Einrichtungen wie Krankenhäuser und Theater auch für das Umland bereit."
+            "Städte bieten Arbeit in Industrie und Dienstleistung.",
+            "Städte stellen Krankenhäuser fürs Umland bereit."
           ],
-          "explanation": "Landwirtschaft spielt in Städten kaum eine Rolle; die meisten Menschen arbeiten dort in Industrie und vor allem im Dienstleistungsbereich.",
+          "explanation": "In Städten arbeiten die meisten Menschen im Dienstleistungsbereich.",
           "difficulty": 2
         }
       ]
@@ -47,34 +47,34 @@
         {
           "text": "Woran erkennt man in vielen deutschen Städten noch heute den mittelalterlichen Stadtkern?",
           "options": [
-            "An engen, verwinkelten Gassen, einem zentralen Marktplatz und Resten der Stadtmauer.",
-            "An breiten, schnurgeraden Ausfallstraßen und großen Parkhäusern.",
-            "An Hochhäusern aus Glas und Stahl rund um den Hauptbahnhof.",
-            "An weitläufigen Einfamilienhaussiedlungen mit großen Gärten."
+            "an engen Gassen, Marktplatz und Mauerresten",
+            "an geraden Ausfallstraßen und großen Parkhäusern",
+            "an Hochhäusern aus Glas und Stahl am Bahnhof",
+            "an weitläufigen Siedlungen mit großen Gärten"
           ],
-          "explanation": "Mittelalterliche Stadtkerne erkennt man an engen Gassen, dem zentralen Marktplatz mit Kirche und Rathaus sowie an Resten der alten Stadtmauer.",
+          "explanation": "Enge Gassen, zentraler Marktplatz mit Kirche und Rathaus, Reste der Stadtmauer.",
           "difficulty": 1
         },
         {
           "text": "Welche Rolle spielte der Marktplatz in der mittelalterlichen Stadt?",
           "options": [
-            "Er war das Zentrum des städtischen Lebens, an dem gehandelt wurde und meist Rathaus und Kirche standen.",
-            "Er diente ausschließlich als Übungsplatz für die Stadtwache.",
-            "Er lag immer außerhalb der Stadtmauer, damit fremde Händler die Stadt nicht betreten mussten.",
-            "Er war eine reine Grünfläche zur Erholung der Stadtbewohner."
+            "Handelszentrum mit Rathaus und Kirche daran",
+            "reiner Übungsplatz für die städtische Wache",
+            "Platz außerhalb der Mauer für fremde Händler",
+            "reine Grünfläche zur Erholung der Bewohner"
           ],
-          "explanation": "Der Marktplatz war Handels- und Lebensmittelpunkt der mittelalterlichen Stadt; an ihm standen meist Rathaus und Hauptkirche.",
+          "explanation": "Der Marktplatz war Handels- und Lebensmittelpunkt der Stadt.",
           "difficulty": 1
         },
         {
           "text": "Warum war die mittelalterliche Stadt von einer Mauer umgeben?",
           "options": [
-            "Die Mauer schützte die Bewohner vor Angreifern und markierte die Grenze des Stadtgebiets.",
-            "Die Mauer sollte die Stadt vor Hochwasser der umliegenden Flüsse schützen.",
-            "Die Mauer trennte die Wohnbereiche der Handwerker von denen der Kaufleute.",
-            "Die Mauer hielt den Lärm der Handelswege von der Stadt fern."
+            "Sie schützte vor Angreifern und markierte die Grenze.",
+            "Sie sollte die Stadt vor Flusshochwasser schützen.",
+            "Sie trennte Handwerker- und Kaufmannsviertel.",
+            "Sie hielt den Lärm der Handelswege von der Stadt fern."
           ],
-          "explanation": "Die Stadtmauer diente dem Schutz vor Angriffen und legte zugleich fest, wo die Stadt endete.",
+          "explanation": "Schutz vor Angriffen – und zugleich die Festlegung, wo die Stadt endet.",
           "difficulty": 2
         }
       ]
@@ -86,34 +86,34 @@
         {
           "text": "Wie veränderten sich viele deutsche Städte während der Industrialisierung im 19. Jahrhundert?",
           "options": [
-            "Es entstanden Fabriken, und die Städte wuchsen durch zuziehende Arbeitskräfte sehr schnell.",
-            "Die Städte schrumpften, weil die Menschen aufs Land zurückkehrten.",
-            "Die Stadtmauern wurden verstärkt, um Zuwanderer fernzuhalten.",
-            "Die Innenstädte wurden zu reinen Erholungsgebieten umgebaut."
+            "Fabriken entstanden, die Städte wuchsen rasant.",
+            "Die Städte schrumpften, alle kehrten aufs Land zurück.",
+            "Die Stadtmauern wurden gegen Zuwanderer verstärkt.",
+            "Die Innenstädte wurden reine Erholungsgebiete."
           ],
-          "explanation": "Mit den Fabriken kamen viele Arbeitskräfte vom Land in die Städte, sodass die Industriestädte im 19. Jahrhundert rasant wuchsen.",
+          "explanation": "Mit den Fabriken kamen Arbeitskräfte vom Land – die Städte wuchsen rasant.",
           "difficulty": 1
         },
         {
           "text": "Wie wohnten viele Arbeiterfamilien in den schnell wachsenden Industriestädten des 19. Jahrhunderts?",
           "options": [
-            "Beengt in einfachen Mietskasernen mit dunklen Hinterhöfen in der Nähe der Fabriken.",
-            "In geräumigen Stadtvillen mit eigenen Gärten am Stadtrand.",
-            "In modernen Hochhaussiedlungen mit Aufzügen und Zentralheizung.",
-            "Auf Bauernhöfen im Umland, von wo sie täglich mit der Bahn pendelten."
+            "beengt in Mietskasernen mit dunklen Hinterhöfen",
+            "geräumig in eigenen Stadtvillen mit großem Garten",
+            "modern im Hochhaus mit Aufzug und Heizung",
+            "auf Bauernhöfen im Umland, mit Bahn zur Arbeit"
           ],
-          "explanation": "Für die vielen Arbeiter wurden schnell und billig Mietskasernen errichtet, in denen die Familien auf engem Raum und oft in Hinterhöfen lebten.",
+          "explanation": "Billig gebaute Mietskasernen, viele Menschen auf engem Raum, oft im Hinterhof.",
           "difficulty": 2
         },
         {
           "text": "Warum entstanden die Arbeiterviertel des 19. Jahrhunderts meist direkt neben den Fabriken?",
           "options": [
-            "Die Arbeiter mussten ihre Arbeitsplätze zu Fuß erreichen können, weil es kaum öffentliche Verkehrsmittel gab.",
-            "Die Grundstücke in Fabriknähe waren die teuersten und damit angesehensten der Stadt.",
-            "Die Stadtverwaltung wies den Arbeitern ihre Wohnungen per Gesetz zu.",
-            "In Fabriknähe war die Luft sauberer als in den übrigen Stadtvierteln."
+            "Die Arbeiter mussten zu Fuß zur Fabrik kommen.",
+            "Grundstücke dort waren die teuersten der Stadt.",
+            "Die Verwaltung wies die Wohnungen per Gesetz zu.",
+            "In Fabriknähe war die Luft am allerbesten."
           ],
-          "explanation": "Ohne Busse und Bahnen mussten die Arbeiter in Fußnähe zur Fabrik wohnen, daher entstanden die Arbeiterviertel direkt neben den Werken.",
+          "explanation": "Ohne Busse und Bahnen musste man in Fußnähe zur Fabrik wohnen.",
           "difficulty": 3
         }
       ]
@@ -125,23 +125,23 @@
         {
           "text": "Was prägte die Entwicklung vieler deutscher Städte in den Jahrzehnten nach dem Zweiten Weltkrieg?",
           "options": [
-            "Der Wiederaufbau der zerstörten Innenstädte und später der Bau großer Wohnsiedlungen am Stadtrand.",
-            "Der vollständige Rückbau aller Straßen zugunsten von Straßenbahnen.",
-            "Die Errichtung neuer Stadtmauern rund um die historischen Stadtkerne.",
-            "Die Umwandlung der Innenstädte in reine Industriegebiete."
+            "Wiederaufbau, später Großsiedlungen am Rand",
+            "vollständiger Rückbau aller Straßen für Trams",
+            "neue Stadtmauern rund um die alten Stadtkerne",
+            "Umbau der Innenstädte zu reinen Industriegebieten"
           ],
-          "explanation": "Nach den Kriegszerstörungen wurden die Innenstädte wieder aufgebaut; später entstanden am Stadtrand große Wohnsiedlungen für die wachsende Bevölkerung.",
+          "explanation": "Erst Wiederaufbau der zerstörten Innenstädte, später Großsiedlungen am Stadtrand.",
           "difficulty": 2
         },
         {
           "text": "Was ist mit dem Leitbild der „autogerechten Stadt“ der Nachkriegszeit gemeint?",
           "options": [
-            "Die Städte wurden mit breiten Straßen und vielen Parkplätzen vor allem auf den Autoverkehr ausgerichtet.",
-            "Die Innenstädte wurden komplett für Autos gesperrt und in Fußgängerzonen umgewandelt.",
-            "Beim Wiederaufbau wurden zuerst Radwege und Busspuren angelegt, Straßen erst viel später.",
-            "Neue Wohngebiete durften nur noch entstehen, wenn sie autofrei geplant waren."
+            "Planung vor allem für das Auto: Straßen, Parkplätze",
+            "Komplette Sperrung der Innenstädte für alle Autos",
+            "Zuerst Radwege und Busspuren, Straßen viel später",
+            "Neue Wohngebiete durften nur autofrei entstehen"
           ],
-          "explanation": "In der Nachkriegszeit plante man Städte vor allem für das Auto: mit breiten Straßen, großen Kreuzungen und vielen Parkplätzen.",
+          "explanation": "Breite Straßen, große Kreuzungen, viele Parkplätze – geplant für das Auto.",
           "difficulty": 3
         }
       ]
@@ -153,34 +153,34 @@
         {
           "text": "Was findet man typischerweise in der City, dem Geschäftszentrum einer Großstadt?",
           "options": [
-            "Kaufhäuser, Banken, Büros und Verwaltungen, aber nur wenige Wohnungen.",
-            "Vor allem Bauernhöfe und landwirtschaftliche Lagerhallen.",
-            "Hauptsächlich Einfamilienhäuser mit großen Gärten.",
-            "Überwiegend Fabrikhallen und Logistikzentren."
+            "Kaufhäuser, Banken und Büros, kaum Wohnungen",
+            "vor allem Bauernhöfe und große Lagerhallen",
+            "hauptsächlich Einfamilienhäuser mit Gärten",
+            "überwiegend Fabrikhallen und Logistikzentren"
           ],
-          "explanation": "Die City ist das Geschäftszentrum: Hier konzentrieren sich Handel, Banken, Büros und Dienstleistungen, Wohnungen gibt es dagegen nur wenige.",
+          "explanation": "Handel, Banken, Büros, Dienstleistungen – Wohnungen gibt es kaum.",
           "difficulty": 1
         },
         {
           "text": "Warum wohnen im Geschäftszentrum einer Großstadt nur wenige Menschen?",
           "options": [
-            "Weil die Bodenpreise und Mieten dort so hoch sind, dass sich vor allem Geschäfte und Büros die Flächen leisten können.",
-            "Weil die City zu laut ist und deshalb grundsätzlich niemand dort wohnen möchte.",
-            "Weil Wohnungen in der City per Gesetz nur an Geschäftsleute vermietet werden dürfen.",
-            "Weil die meisten Gebäude in der City zu alt für eine Wohnnutzung sind."
+            "Die Bodenpreise sind zu hoch für Wohnungen.",
+            "Die City ist so laut, dass dort niemand wohnen will.",
+            "Wohnungen dürfen dort nur an Firmen gehen.",
+            "Fast alle Gebäude sind zu alt zum Wohnen."
           ],
-          "explanation": "Wegen der sehr hohen Bodenpreise können meist nur Geschäfte, Banken und Büros die Flächen in der City bezahlen; Wohnen lohnt sich dort kaum.",
+          "explanation": "Nur Geschäfte, Banken und Büros können die Flächen dort bezahlen.",
           "difficulty": 2
         },
         {
           "text": "Welche Aussage über die City einer Großstadt stimmt NICHT?",
           "options": [
-            "In der City wohnen besonders viele Familien, weil die Mieten dort niedrig sind.",
-            "In der City sind die Bodenpreise am höchsten.",
-            "Abends wirkt die City oft wie ausgestorben, weil kaum jemand dort wohnt.",
-            "In der City konzentrieren sich Einzelhandel, Büros und Dienstleistungen."
+            "In der City wohnen viele Familien sehr günstig.",
+            "In der City sind die Bodenpreise am allerhöchsten.",
+            "Abends wirkt die City oft wie ausgestorben.",
+            "In der City sammeln sich Handel und Büros."
           ],
-          "explanation": "Gerade weil Bodenpreise und Mieten in der City besonders hoch sind, wohnen dort nur wenige Menschen – die Aussage ist daher falsch.",
+          "explanation": "Wegen der hohen Mieten wohnen in der City gerade nur wenige Menschen.",
           "difficulty": 2
         }
       ]
@@ -192,34 +192,34 @@
         {
           "text": "Was bedeutet es, dass eine Stadt „funktional gegliedert“ ist?",
           "options": [
-            "Verschiedene Stadtbereiche erfüllen unterschiedliche Aufgaben, zum Beispiel Wohnen, Arbeiten oder Erholung.",
-            "Alle Stadtteile sind gleich aufgebaut und erfüllen dieselben Aufgaben.",
-            "Die Stadt ist in gleich große, quadratische Verwaltungsbezirke eingeteilt.",
-            "Jeder Stadtteil hat eine eigene, unabhängige Stadtverwaltung."
+            "Stadtteile haben verschiedene Aufgaben.",
+            "Alle Stadtteile sind völlig gleich aufgebaut.",
+            "Die Stadt hat gleich große Quadrat-Bezirke.",
+            "Jeder Stadtteil hat eine eigene Verwaltung."
           ],
-          "explanation": "Funktionale Gliederung bedeutet, dass Stadtbereiche unterschiedliche Aufgaben übernehmen: Es gibt Geschäftszentren, Wohnviertel, Gewerbegebiete und Erholungsflächen.",
+          "explanation": "Wohnen, Arbeiten, Einkaufen und Erholung verteilen sich auf eigene Bereiche.",
           "difficulty": 1
         },
         {
           "text": "Warum liegen Gewerbe- und Industriegebiete meist am Stadtrand in der Nähe großer Verkehrsachsen?",
           "options": [
-            "Dort sind die Flächen günstiger, und Lastwagen erreichen die Betriebe, ohne durch Wohngebiete zu fahren.",
+            "Flächen sind billiger, Lkw meiden Wohngebiete.",
             "Dort wohnen die meisten Kunden der Betriebe.",
-            "Am Stadtrand sind die Grundstückspreise am höchsten, was für die Firmen ein Statussymbol ist.",
-            "Nur am Stadtrand dürfen Gebäude höher als zwei Stockwerke gebaut werden."
+            "Am Stadtrand sind die Grundstücke am teuersten.",
+            "Nur dort darf höher als zwei Stockwerke gebaut werden."
           ],
-          "explanation": "Am Stadtrand sind Flächen günstiger, und über Autobahnen und Ringstraßen ist der Lieferverkehr möglich, ohne Wohngebiete zu belasten.",
+          "explanation": "Günstige Flächen und Autobahnanschluss – ohne Belastung der Wohngebiete.",
           "difficulty": 2
         },
         {
           "text": "Eine Familie sucht am Wochenende Erholung im Grünen, ohne die Stadt zu verlassen. Welcher Bereich der Stadt erfüllt diese Aufgabe?",
           "options": [
-            "Naherholungsgebiete wie große Parks, Stadtwälder oder Flussufer.",
-            "Das Gewerbegebiet mit seinen großen Parkplätzen.",
-            "Die Fußgängerzone im Geschäftszentrum.",
-            "Das Messegelände am Autobahnkreuz."
+            "Parks, Stadtwälder und Flussufer",
+            "das Gewerbegebiet am Stadtrand",
+            "die Fußgängerzone im Zentrum",
+            "das Messegelände an der Autobahn"
           ],
-          "explanation": "Parks, Stadtwälder und Flussufer sind Naherholungsgebiete – sie übernehmen die Funktion Erholung innerhalb der Stadt.",
+          "explanation": "Parks, Stadtwälder und Flussufer sind die Naherholungsgebiete der Stadt.",
           "difficulty": 1
         }
       ]
@@ -231,23 +231,23 @@
         {
           "text": "Welche Einrichtungen hat Berlin, weil es die Hauptstadt Deutschlands ist?",
           "options": [
-            "Den Sitz von Bundestag und Bundesregierung sowie zahlreiche Botschaften anderer Staaten.",
-            "Den Sitz des Europäischen Parlaments und des Europäischen Gerichtshofs.",
-            "Das Hauptquartier der Vereinten Nationen.",
-            "Die Sitze aller 16 Landesregierungen Deutschlands."
+            "Bundestag, Bundesregierung und Botschaften",
+            "Europäisches Parlament und der Gerichtshof",
+            "das Hauptquartier der Vereinten Nationen",
+            "die Sitze aller 16 Landesregierungen"
           ],
-          "explanation": "Als Hauptstadt ist Berlin Sitz von Bundestag und Bundesregierung; außerdem unterhalten fast alle Staaten dort ihre Botschaften.",
+          "explanation": "Sitz von Bundestag und Bundesregierung – dazu fast alle Botschaften.",
           "difficulty": 1
         },
         {
           "text": "Wie profitiert Berlin wirtschaftlich von seiner Rolle als Hauptstadt?",
           "options": [
-            "Regierung, Verbände, Medien und viele Besucher schaffen Arbeitsplätze und zusätzliche Nachfrage.",
-            "Die Hauptstadt darf als einzige deutsche Stadt Steuern auf Exporte erheben.",
-            "Alle deutschen Großunternehmen sind verpflichtet, ihren Sitz in Berlin zu haben.",
-            "Berlin erhält als Hauptstadt sämtliche Steuereinnahmen des Bundes."
+            "Regierung, Medien und Besucher schaffen Arbeit.",
+            "Berlin darf als einzige Stadt Exportsteuern erheben.",
+            "Alle Großunternehmen müssen ihren Sitz dort haben.",
+            "Berlin bekommt sämtliche Steuereinnahmen des Bundes."
           ],
-          "explanation": "Politik, Verbände, Medien und der Besucherstrom, den die Hauptstadtrolle anzieht, schaffen in Berlin viele Arbeitsplätze und Einnahmen.",
+          "explanation": "Politik, Verbände, Medien und der Besucherstrom schaffen viele Arbeitsplätze.",
           "difficulty": 2
         }
       ]
@@ -259,34 +259,34 @@
         {
           "text": "Was geschah im Jahr 1961 in Berlin?",
           "options": [
-            "Die DDR ließ die Berliner Mauer bauen und trennte damit West-Berlin von Ost-Berlin.",
+            "Die DDR ließ die Berliner Mauer bauen.",
             "West-Berlin trat offiziell der DDR bei.",
-            "Die Siegermächte übergaben ganz Berlin an die Bundesrepublik.",
-            "Ost- und West-Berlin wurden wieder zu einer Stadt vereinigt."
+            "Berlin ging ganz an die Bundesrepublik.",
+            "Ost und West wurden wieder vereinigt."
           ],
-          "explanation": "Am 13. August 1961 begann die DDR mit dem Bau der Mauer, die West-Berlin bis 1989 vom Ostteil der Stadt und vom Umland abriegelte.",
+          "explanation": "Am 13. August 1961 begann der Mauerbau; er trennte die Stadt bis 1989.",
           "difficulty": 1
         },
         {
           "text": "Welche Folgen hatte die jahrzehntelange Teilung für die Stadtentwicklung Berlins?",
           "options": [
-            "Beide Stadthälften entwickelten eigene Zentren, und viele Straßen- und Bahnverbindungen wurden unterbrochen.",
-            "Die Stadt wuchs in beiden Hälften völlig gleich weiter, als hätte es keine Grenze gegeben.",
-            "Die gesamte Bevölkerung zog in den Ostteil, während der Westteil leer stand.",
-            "Entlang der Mauer entstanden die teuersten Wohnviertel der Stadt."
+            "zwei eigene Zentren, unterbrochene Verbindungen",
+            "die Stadt wuchs in beiden Hälften völlig gleich",
+            "alle zogen in den Osten, der Westen stand leer",
+            "an der Mauer entstanden die teuersten Viertel"
           ],
-          "explanation": "Durch die Mauer wurden Straßen sowie S- und U-Bahn-Linien gekappt, und beide Stadthälften bauten eigene Zentren und Infrastrukturen auf.",
+          "explanation": "Straßen und Bahnlinien wurden gekappt; jede Hälfte baute ein eigenes Zentrum.",
           "difficulty": 2
         },
         {
           "text": "Warum hat Berlin bis heute zwei große Zentrumsbereiche, etwa um den Kurfürstendamm im Westen und um den Alexanderplatz im Osten?",
           "options": [
-            "Während der Teilung entwickelten West- und Ost-Berlin jeweils ein eigenes Stadtzentrum.",
-            "Die Stadtplaner bauten nach 1990 absichtlich ein zweites Zentrum, um die Besucher besser zu verteilen.",
-            "Ein breiter Fluss trennte schon immer zwei gleichberechtigte Stadtkerne voneinander.",
-            "Zwei rivalisierende Königshäuser gründeten im Mittelalter je eine eigene Stadt."
+            "Beide Stadthälften bauten je ein eigenes Zentrum.",
+            "Nach 1990 baute man absichtlich ein zweites Zentrum.",
+            "Ein breiter Fluss trennte immer schon zwei Stadtkerne.",
+            "Zwei Königshäuser gründeten je eine eigene Stadt."
           ],
-          "explanation": "West-Berlin entwickelte sein Zentrum rund um den Kurfürstendamm, Ost-Berlin rund um den Alexanderplatz – beide Zentren bestehen bis heute nebeneinander.",
+          "explanation": "West-Berlin am Kurfürstendamm, Ost-Berlin am Alexanderplatz – beide blieben.",
           "difficulty": 3
         }
       ]
@@ -298,23 +298,23 @@
         {
           "text": "Warum sind die Mieten in Berlin seit etwa 2010 stark gestiegen?",
           "options": [
-            "Viele Menschen zogen neu nach Berlin, aber es wurden lange Zeit zu wenige Wohnungen gebaut.",
-            "Die Einwohnerzahl Berlins ist stark gesunken, wodurch Vermieter höhere Mieten verlangen mussten.",
-            "Fast alle Wohnungen wurden abgerissen, um Platz für Regierungsgebäude zu schaffen.",
-            "Ein Gesetz schreibt seit 2010 jährliche Mieterhöhungen von zehn Prozent vor."
+            "Viele zogen zu, es wurde zu wenig gebaut.",
+            "Die Einwohnerzahl sank, deshalb stiegen die Mieten.",
+            "Fast alle Wohnungen wichen Regierungsgebäuden.",
+            "Ein Gesetz schreibt zehn Prozent Erhöhung pro Jahr vor."
           ],
-          "explanation": "Berlin wächst seit Jahren durch Zuzug; weil der Wohnungsbau nicht mithielt, wurden Wohnungen knapp und die Mieten stiegen deutlich.",
+          "explanation": "Berlin wächst durch Zuzug, der Wohnungsbau hielt jahrelang nicht mit.",
           "difficulty": 2
         },
         {
           "text": "Welche Folgen hat der angespannte Wohnungsmarkt für viele Berliner Haushalte?",
           "options": [
-            "Haushalte mit geringem Einkommen finden kaum noch bezahlbare Wohnungen und weichen oft an den Stadtrand aus.",
-            "Wohnungssuchende können unter vielen leerstehenden Wohnungen frei wählen.",
-            "Die Mieten sinken in den Innenstadtvierteln besonders stark.",
-            "Junge Familien ziehen bevorzugt in die teuersten Viertel, weil dort die meisten Wohnungen frei sind."
+            "Wer wenig verdient, muss an den Stadtrand ziehen.",
+            "Man kann unter vielen leeren Wohnungen frei wählen.",
+            "Die Mieten sinken in der Innenstadt besonders stark.",
+            "Familien ziehen in die teuersten Viertel, dort ist Platz."
           ],
-          "explanation": "Bei Wohnungsmangel steigen die Mieten; besonders Haushalte mit wenig Einkommen finden dann in der Innenstadt kaum noch bezahlbaren Wohnraum.",
+          "explanation": "Bei Wohnungsmangel finden gerade einkommensschwache Haushalte kaum etwas.",
           "difficulty": 3
         }
       ]
@@ -326,34 +326,34 @@
         {
           "text": "Welche Wirtschaftszweige machen München zu einem der wichtigsten Wirtschaftsstandorte Deutschlands?",
           "options": [
-            "Fahrzeugbau, Elektrotechnik, IT, Versicherungen und Medien.",
-            "Steinkohlebergbau und Stahlerzeugung.",
-            "Werftindustrie und Fischverarbeitung.",
-            "Fast ausschließlich Land- und Forstwirtschaft."
+            "Fahrzeugbau, IT, Versicherungen, Medien",
+            "Steinkohlebergbau und Stahlerzeugung",
+            "Werftindustrie und Fischverarbeitung",
+            "fast ausschließlich die Landwirtschaft"
           ],
-          "explanation": "München ist Standort großer Unternehmen aus Fahrzeugbau, Elektrotechnik, IT, Versicherungswirtschaft und Medien.",
+          "explanation": "Große Firmen aus Fahrzeugbau, Elektrotechnik, IT, Versicherung und Medien.",
           "difficulty": 1
         },
         {
           "text": "Warum siedeln sich viele Hightech-Unternehmen gerade in München an?",
           "options": [
-            "Die Stadt bietet Universitäten, viele Fachkräfte, einen großen Flughafen und die Nähe zu anderen innovativen Firmen.",
-            "Die Gewerbeflächen in München sind die günstigsten in ganz Deutschland.",
-            "Unternehmen zahlen in München grundsätzlich keine Steuern.",
-            "In München konkurrieren kaum andere Firmen um Personal, sodass Fachkräfte leicht zu finden sind."
+            "Universitäten, Fachkräfte, Flughafen, andere Firmen",
+            "Die Gewerbeflächen sind die günstigsten in Deutschland",
+            "Unternehmen zahlen in München grundsätzlich keine Steuern",
+            "Kaum andere Firmen suchen dort Personal, das hilft sehr"
           ],
-          "explanation": "Universitäten, viele gut ausgebildete Fachkräfte, der internationale Flughafen und der Austausch mit anderen Firmen machen München für Hightech-Unternehmen attraktiv.",
+          "explanation": "Hochschulen, Fachkräfte, internationaler Flughafen und Austausch mit Firmen.",
           "difficulty": 2
         },
         {
           "text": "Welche Aussage beschreibt die wirtschaftliche Lage Münchens zutreffend?",
           "options": [
-            "München hat viele Arbeitsplätze bei Hightech-Firmen, Versicherungen und Dienstleistern und eine sehr niedrige Arbeitslosigkeit.",
-            "München ist vor allem vom Niedergang der Schwerindustrie geprägt und verliert Arbeitsplätze.",
-            "In München gibt es fast nur Arbeitsplätze im Tourismus.",
-            "Münchens Betriebe finden mühelos Personal, weil es mehr Arbeitskräfte als offene Stellen gibt."
+            "viele Hightech-Jobs, sehr geringe Arbeitslosigkeit",
+            "geprägt vom Niedergang der Schwerindustrie",
+            "fast nur Arbeitsplätze im Tourismus vorhanden",
+            "mehr Arbeitskräfte als offene Stellen im Angebot"
           ],
-          "explanation": "München gehört mit vielen Hightech- und Dienstleistungsarbeitsplätzen und geringer Arbeitslosigkeit zu den wirtschaftsstärksten Städten Deutschlands.",
+          "explanation": "München zählt zu den wirtschaftsstärksten Städten Deutschlands.",
           "difficulty": 1
         }
       ]
@@ -365,34 +365,34 @@
         {
           "text": "Welche Folge hat der anhaltende Zuzug nach München?",
           "options": [
-            "Wohnraum ist knapp, und die Mieten gehören zu den höchsten in ganz Deutschland.",
-            "Viele Wohnungen stehen leer, weil zu viele neue gebaut wurden.",
-            "Die Mieten sinken, weil sich immer mehr Menschen die Kosten teilen.",
+            "Wohnraum ist knapp, die Mieten sind sehr hoch.",
+            "Viele Wohnungen stehen leer, es wurde zu viel gebaut.",
+            "Die Mieten sinken, weil sich mehr Leute teilen.",
             "Die Stadt hat inzwischen mehr Einwohner als Berlin."
           ],
-          "explanation": "Weil ständig mehr Menschen nach München ziehen, als Wohnungen gebaut werden, ist Wohnraum knapp und München zählt zu den teuersten Mietstädten Deutschlands.",
+          "explanation": "Es ziehen mehr Menschen zu, als Wohnungen gebaut werden.",
           "difficulty": 1
         },
         {
           "text": "Warum weichen viele Beschäftigte mit Arbeitsplatz in München ins Umland aus, und was folgt daraus?",
           "options": [
-            "Wohnen ist im Umland günstiger, dadurch pendeln täglich Hunderttausende in die Stadt und belasten Straßen und Bahnen.",
-            "Im Umland gibt es mehr Arbeitsplätze als in der Stadt, deshalb pendeln nur sehr wenige Menschen.",
-            "Die Umlandgemeinden verbieten Neubauten, deshalb ziehen alle zurück in die Stadt.",
-            "Die Unternehmen verlegen ihre Büros ins Umland, sodass kaum noch jemand nach München hineinpendelt."
+            "Umland ist billiger – dafür pendeln Hunderttausende.",
+            "Im Umland gibt es mehr Stellen, deshalb pendelt kaum wer.",
+            "Umlandgemeinden verbieten Neubau, alle ziehen zurück.",
+            "Die Firmen ziehen mit ins Umland, niemand pendelt mehr."
           ],
-          "explanation": "Viele Beschäftigte können sich das Wohnen in der Stadt nicht leisten und ziehen ins Umland – die täglichen Pendlerströme überlasten Straßen und Bahnen.",
+          "explanation": "Wohnen in der Stadt ist zu teuer; die Pendlerströme überlasten Straßen und Bahnen.",
           "difficulty": 2
         },
         {
           "text": "Welche Aussage über die Folgen des Münchner Wachstums stimmt NICHT?",
           "options": [
-            "Durch den starken Zuzug stehen in München besonders viele Wohnungen dauerhaft leer.",
+            "Durch den Zuzug stehen viele Wohnungen dauerhaft leer.",
             "Unbebaute Flächen im Stadtgebiet werden immer knapper.",
-            "Viele Haushalte geben einen großen Teil ihres Einkommens für die Miete aus.",
-            "Täglich pendeln sehr viele Beschäftigte aus dem Umland nach München."
+            "Viele Haushalte geben sehr viel Geld für die Miete aus.",
+            "Täglich pendeln sehr viele Beschäftigte in die Stadt."
           ],
-          "explanation": "Leerstand ist gerade nicht das Problem: Wegen der riesigen Nachfrage sind Wohnungen in München extrem knapp und teuer.",
+          "explanation": "Leerstand ist nicht das Problem – Wohnungen sind extrem knapp und teuer.",
           "difficulty": 3
         }
       ]
@@ -404,34 +404,34 @@
         {
           "text": "Was versteht man unter Suburbanisierung?",
           "options": [
-            "Die Abwanderung von Stadtbewohnern und Betrieben aus der Kernstadt in das Umland.",
-            "Den Umzug von Landbewohnern in die Innenstadt.",
-            "Den Ausbau von U-Bahn-Linien unter der Innenstadt.",
-            "Die Umwandlung von Dörfern in Naturschutzgebiete."
+            "Abwanderung aus der Kernstadt ins Umland",
+            "Umzug von Landbewohnern in die Innenstadt",
+            "Ausbau von U-Bahn-Linien unter der Innenstadt",
+            "Umwandlung von Dörfern in Naturschutzgebiete"
           ],
-          "explanation": "Suburbanisierung ist die Verlagerung von Einwohnern und Betrieben aus der Kernstadt in die Gemeinden des Umlands.",
+          "explanation": "Einwohner und Betriebe verlagern sich aus der Kernstadt ins Umland.",
           "difficulty": 1
         },
         {
           "text": "Eine Familie zieht aus der Großstadt in eine Neubausiedlung in einer Umlandgemeinde, die Eltern arbeiten aber weiter in der Stadt. Wie nennt man diesen Vorgang?",
           "options": [
-            "Suburbanisierung.",
-            "Reurbanisierung.",
-            "Gentrifizierung.",
-            "Segregation."
+            "Suburbanisierung",
+            "Reurbanisierung",
+            "Gentrifizierung",
+            "Segregation"
           ],
-          "explanation": "Der Umzug aus der Kernstadt ins Umland bei gleichzeitigem Arbeiten in der Stadt ist ein typisches Beispiel für Suburbanisierung.",
+          "explanation": "Wohnen im Umland, arbeiten in der Stadt – das ist Suburbanisierung.",
           "difficulty": 1
         },
         {
           "text": "Welche Folgen hat die Suburbanisierung für Kernstadt und Umland?",
           "options": [
-            "Die Kernstadt verliert Einwohner und Steuereinnahmen, im Umland werden Flächen bebaut und der Pendlerverkehr wächst.",
-            "Die Kernstadt gewinnt Einwohner, während das Umland nahezu menschenleer wird.",
-            "Der Verkehr zwischen Stadt und Umland nimmt deutlich ab.",
-            "Im Umland sinkt der Flächenverbrauch, weil dort weniger gebaut wird."
+            "Stadt verliert Steuern, im Umland wächst der Verkehr.",
+            "Die Kernstadt gewinnt, das Umland wird menschenleer.",
+            "Der Verkehr zwischen Stadt und Umland nimmt stark ab.",
+            "Im Umland sinkt der Flächenverbrauch deutlich."
           ],
-          "explanation": "Die Kernstadt verliert Bewohner und damit Steuereinnahmen, während im Umland Flächen versiegelt werden und immer mehr Menschen pendeln müssen.",
+          "explanation": "Die Stadt verliert Einwohner und Steuern, im Umland wächst der Flächenverbrauch.",
           "difficulty": 3
         }
       ]
@@ -443,23 +443,23 @@
         {
           "text": "Was bezeichnet der Begriff Reurbanisierung?",
           "options": [
-            "Menschen ziehen wieder verstärkt in die Kernstadt, deren Einwohnerzahl dadurch steigt.",
-            "Die Erneuerung alter Fabrikgebäude im Umland der Stadt.",
-            "Den Rückbau von Wohnhäusern in der Innenstadt.",
-            "Die Verlagerung von Büros aus der Stadt ins Ausland."
+            "Rückkehr in die Kernstadt, sie wächst wieder.",
+            "Erneuerung alter Fabriken im Umland der Stadt.",
+            "Rückbau von Wohnhäusern in der Innenstadt.",
+            "Verlagerung von Büros aus der Stadt ins Ausland."
           ],
-          "explanation": "Reurbanisierung bedeutet, dass die Kernstadt wieder an Einwohnern gewinnt, weil Menschen zurück in die Stadt ziehen.",
+          "explanation": "Die Kernstadt gewinnt wieder Einwohner, weil Menschen zurückziehen.",
           "difficulty": 2
         },
         {
           "text": "Warum entscheiden sich heute wieder viele Menschen für das Wohnen in der Innenstadt statt im Umland?",
           "options": [
-            "Sie schätzen kurze Wege zu Arbeit, Einkauf, Kultur und Freizeitangeboten.",
-            "Die Mieten in den Innenstädten sind fast überall niedriger als auf dem Land.",
-            "Im Umland gibt es keine Schulen und Kindergärten mehr.",
-            "In der Innenstadt sind Grundstücke für Einfamilienhäuser besonders groß und günstig."
+            "kurze Wege zu Arbeit, Einkauf und Freizeit",
+            "die Mieten sind dort niedriger als auf dem Land",
+            "im Umland gibt es keine Schulen mehr",
+            "Grundstücke sind in der City groß und billig"
           ],
-          "explanation": "Kurze Wege zu Arbeit, Einkaufsmöglichkeiten und Freizeitangeboten machen das Leben in der Innenstadt für viele Menschen wieder attraktiv.",
+          "explanation": "Kurze Wege zu Arbeit, Einkauf und Kultur machen die Innenstadt attraktiv.",
           "difficulty": 2
         }
       ]
@@ -471,34 +471,34 @@
         {
           "text": "Was versteht man unter Gentrifizierung?",
           "options": [
-            "Die Aufwertung eines Stadtviertels, in deren Folge die Mieten steigen und alteingesessene Bewohner verdrängt werden.",
-            "Den geplanten Abriss ganzer Stadtviertel für neue Gewerbegebiete.",
-            "Die Begrünung von Innenhöfen und Dächern in dicht bebauten Vierteln.",
-            "Den Zuzug von Landbevölkerung in günstige Neubaugebiete am Stadtrand."
+            "Aufwertung, steigende Mieten, Verdrängung",
+            "geplanter Abriss ganzer Viertel für Gewerbe",
+            "Begrünung von Innenhöfen und von Dächern",
+            "Zuzug aufs Land in günstige Neubaugebiete"
           ],
-          "explanation": "Bei der Gentrifizierung wird ein Viertel aufgewertet, etwa durch Sanierungen; steigende Mieten verdrängen dann die alteingesessene Bevölkerung.",
+          "explanation": "Ein Viertel wird aufgewertet, die Mieten steigen, Alteingesessene ziehen weg.",
           "difficulty": 2
         },
         {
           "text": "In welcher Reihenfolge läuft die Gentrifizierung eines Viertels typischerweise ab?",
           "options": [
-            "Erst ziehen Studierende und Künstler in das günstige Viertel, dann werden Häuser saniert, schließlich ziehen Besserverdienende zu und die Mieten steigen.",
-            "Erst steigen die Mieten stark, dann ziehen einkommensschwache Haushalte neu hinzu, zuletzt verfallen die Gebäude.",
-            "Erst werden alle Gebäude abgerissen, dann entstehen Sozialwohnungen, zuletzt sinken die Mieten dauerhaft.",
-            "Erst ziehen Großunternehmen ihre Büros ab, dann sinken die Mieten, zuletzt steht das Viertel leer."
+            "Studierende, Sanierung, Zuzug, steigende Mieten",
+            "Mieten steigen, Ärmere ziehen zu, Häuser verfallen",
+            "Abriss, Sozialwohnungen, dauerhaft sinkende Mieten",
+            "Büros ziehen ab, Mieten sinken, Viertel steht leer"
           ],
-          "explanation": "Typisch ist die Abfolge: Pioniere wie Studierende und Künstler machen das Viertel beliebt, danach folgen Sanierungen, zahlungskräftige Zuzügler und steigende Mieten.",
+          "explanation": "Erst Pioniere wie Studierende, dann Sanierung, dann zahlungskräftiger Zuzug.",
           "difficulty": 3
         },
         {
           "text": "Wer leidet am ehesten unter der Gentrifizierung eines Viertels?",
           "options": [
-            "Langjährige Mieterinnen und Mieter mit geringem Einkommen, die sich die steigenden Mieten nicht mehr leisten können.",
-            "Eigentümer sanierter Altbauwohnungen, deren Immobilien an Wert verlieren.",
-            "Neu zuziehende Besserverdienende, die keine Wohnungen finden.",
-            "Bauunternehmen, die keine Aufträge mehr für Sanierungen erhalten."
+            "langjährige Mieter mit geringem Einkommen",
+            "Eigentümer sanierter, teurer Altbauwohnungen",
+            "neu zuziehende, gut verdienende Haushalte",
+            "Baufirmen ohne Aufträge für Sanierungen"
           ],
-          "explanation": "Verlierer der Gentrifizierung sind vor allem einkommensschwache Altmieter, die die gestiegenen Mieten nicht mehr zahlen können und wegziehen müssen.",
+          "explanation": "Altmieter mit wenig Einkommen können die neuen Mieten nicht mehr zahlen.",
           "difficulty": 2
         }
       ]
@@ -510,23 +510,23 @@
         {
           "text": "Was bedeutet soziale Segregation in einer Stadt?",
           "options": [
-            "Verschiedene Bevölkerungsgruppen wohnen räumlich getrennt voneinander in unterschiedlichen Vierteln.",
-            "Alle Bevölkerungsgruppen verteilen sich völlig gleichmäßig über das Stadtgebiet.",
-            "Die Stadtverwaltung teilt die Stadt in gleich große Wahlbezirke ein.",
-            "Jugendliche und Senioren nutzen unterschiedliche Freizeiteinrichtungen."
+            "Bevölkerungsgruppen wohnen räumlich getrennt.",
+            "Alle Gruppen verteilen sich völlig gleichmäßig.",
+            "Die Stadt wird in gleich große Wahlbezirke geteilt.",
+            "Jung und Alt nutzen andere Freizeiteinrichtungen."
           ],
-          "explanation": "Segregation bezeichnet die räumliche Trennung von Bevölkerungsgruppen, etwa nach Einkommen oder Herkunft, auf verschiedene Stadtviertel.",
+          "explanation": "Gruppen leben nach Einkommen oder Herkunft getrennt in eigenen Vierteln.",
           "difficulty": 2
         },
         {
           "text": "In einer Großstadt konzentrieren sich einkommensschwache Haushalte zunehmend in wenigen Vierteln mit günstigen Mieten. Wie nennt man diese Entwicklung, und warum gilt sie als problematisch?",
           "options": [
-            "Soziale Segregation – sie kann dazu führen, dass sich Nachteile etwa bei Schulen und Zukunftschancen in einzelnen Vierteln verstärken.",
-            "Reurbanisierung – sie führt dazu, dass die Innenstadt zu voll wird.",
-            "Suburbanisierung – sie sorgt für zu viel Verkehr im Umland.",
-            "Nachverdichtung – sie lässt zu wenig Platz für Grünflächen."
+            "Segregation – Nachteile verstärken sich gegenseitig.",
+            "Reurbanisierung – die Innenstadt wird dadurch zu voll.",
+            "Suburbanisierung – im Umland entsteht zu viel Verkehr.",
+            "Nachverdichtung – es bleibt zu wenig Platz für Grün."
           ],
-          "explanation": "Konzentrieren sich benachteiligte Haushalte in wenigen Vierteln, spricht man von sozialer Segregation; Nachteile können sich dort gegenseitig verstärken.",
+          "explanation": "Ballen sich benachteiligte Haushalte, leiden auch Schulen und Zukunftschancen.",
           "difficulty": 3
         }
       ]
@@ -538,23 +538,23 @@
         {
           "text": "Was versteht man unter Verstädterung?",
           "options": [
-            "Der Anteil der Stadtbevölkerung an der Gesamtbevölkerung nimmt zu, und die Städte dehnen sich aus.",
-            "Die Umwandlung von Innenstädten in Fußgängerzonen.",
-            "Den Rückgang der Einwohnerzahlen in großen Städten.",
-            "Die Eingemeindung von Stadtvierteln in Nachbarstädte."
+            "Der Anteil der Stadtbevölkerung nimmt zu.",
+            "Innenstädte werden zu Fußgängerzonen umgebaut.",
+            "Die Einwohnerzahl großer Städte geht zurück.",
+            "Stadtviertel werden nach nebenan eingemeindet."
           ],
-          "explanation": "Verstädterung beschreibt den wachsenden Anteil der Menschen, die in Städten leben, und die Ausdehnung städtischer Flächen.",
+          "explanation": "Immer mehr Menschen leben in Städten, und die Städte dehnen sich aus.",
           "difficulty": 1
         },
         {
           "text": "Welche Aussage über die weltweite Verstädterung stimmt?",
           "options": [
-            "Mehr als die Hälfte der Weltbevölkerung lebt inzwischen in Städten, besonders schnell wachsen Städte in Asien und Afrika.",
-            "Der Anteil der Stadtbewohner sinkt weltweit seit Jahrzehnten.",
-            "Verstädterung findet heute nur noch in Europa und Nordamerika statt.",
+            "Über die Hälfte der Menschheit lebt in Städten.",
+            "Der Anteil der Stadtbewohner sinkt seit Jahrzehnten.",
+            "Verstädterung gibt es nur in Europa und Nordamerika.",
             "In Afrika gibt es bis heute keine Millionenstädte."
           ],
-          "explanation": "Seit einigen Jahren lebt erstmals mehr als die Hälfte der Menschheit in Städten; am schnellsten wachsen Städte in Entwicklungs- und Schwellenländern Asiens und Afrikas.",
+          "explanation": "Am schnellsten wachsen die Städte in Asien und Afrika.",
           "difficulty": 2
         }
       ]
@@ -566,34 +566,34 @@
         {
           "text": "Ab wann spricht man von einer Megastadt?",
           "options": [
-            "Ab mehr als zehn Millionen Einwohnern.",
-            "Ab mehr als einer Million Einwohnern.",
-            "Ab mehr als 100 000 Einwohnern.",
-            "Sobald eine Stadt Hauptstadt eines Landes ist."
+            "ab zehn Millionen Einwohnern",
+            "ab einer Million Einwohnern",
+            "ab 100.000 Einwohnern",
+            "sobald sie Hauptstadt ist"
           ],
-          "explanation": "Als Megastädte bezeichnet man Städte beziehungsweise Ballungsräume mit mehr als zehn Millionen Einwohnern.",
+          "explanation": "Megastädte haben mehr als zehn Millionen Einwohner.",
           "difficulty": 1
         },
         {
           "text": "Welche der folgenden Städte sind Megastädte?",
           "options": [
-            "Tokio, Delhi und São Paulo.",
-            "München, Hamburg und Köln.",
-            "Berlin, Madrid und Rom.",
-            "Wien, Zürich und Amsterdam."
+            "Tokio, Delhi und São Paulo",
+            "München, Hamburg und Köln",
+            "Berlin, Madrid und Rom",
+            "Wien, Zürich und Amsterdam"
           ],
-          "explanation": "Tokio, Delhi und São Paulo haben jeweils weit über zehn Millionen Einwohner; deutsche und die meisten europäischen Städte liegen deutlich darunter.",
+          "explanation": "Diese drei liegen weit über zehn Millionen; europäische Städte darunter.",
           "difficulty": 1
         },
         {
           "text": "Mit welchen Problemen kämpfen viele schnell wachsende Megastädte in Entwicklungs- und Schwellenländern?",
           "options": [
-            "Wohnungsnot mit informellen Siedlungen, überlastetem Verkehr und starker Umweltverschmutzung, weil die Infrastruktur mit dem Wachstum nicht Schritt hält.",
-            "Massenhafter Leerstand, weil ständig mehr Wohnungen gebaut werden als benötigt.",
-            "Sinkende Einwohnerzahlen, weil fast alle Bewohner aufs Land zurückziehen.",
-            "Zu geringe Nachfrage nach Bussen und Bahnen, sodass viele Linien stillgelegt werden."
+            "Wohnungsnot, Verkehrschaos, Umweltverschmutzung",
+            "massenhafter Leerstand durch zu viele Neubauten",
+            "sinkende Einwohnerzahlen durch Rückzug aufs Land",
+            "zu wenig Nachfrage nach Bussen und nach Bahnen"
           ],
-          "explanation": "Viele Megastädte des globalen Südens wachsen so schnell, dass Wohnungsbau, Verkehr sowie Ver- und Entsorgung nicht mithalten – es entstehen unter anderem informelle Siedlungen.",
+          "explanation": "Die Infrastruktur hält mit dem Wachstum nicht mit – es entstehen Elendsviertel.",
           "difficulty": 3
         }
       ]
@@ -605,34 +605,34 @@
         {
           "text": "In einer Sommernacht misst man in der Innenstadt 24 °C, im Umland dagegen nur 18 °C. Wie nennt man dieses Phänomen?",
           "options": [
-            "Städtische Wärmeinsel.",
-            "Treibhauseffekt.",
-            "Föhneffekt.",
-            "Inversionswetterlage."
+            "städtische Wärmeinsel",
+            "Treibhauseffekt",
+            "Föhneffekt",
+            "Inversionswetterlage"
           ],
-          "explanation": "Dass es in der dicht bebauten Stadt – besonders nachts – deutlich wärmer ist als im Umland, nennt man den Wärmeinsel-Effekt.",
+          "explanation": "In der dicht bebauten Stadt ist es besonders nachts deutlich wärmer.",
           "difficulty": 1
         },
         {
           "text": "Warum ist es in dicht bebauten Innenstädten meist wärmer als im Umland?",
           "options": [
-            "Asphalt und Gebäude speichern Wärme, Pflanzen fehlen für kühlende Verdunstung, und Verkehr, Industrie und Heizungen geben zusätzliche Wärme ab.",
-            "Die Sonne scheint über Städten grundsätzlich länger als über dem Umland.",
-            "Städte liegen immer in geschützten Tälern, in denen sich warme Luft staut.",
-            "Das dichte U-Bahn-Netz heizt den Boden der ganzen Stadt auf."
+            "Asphalt speichert Wärme, Pflanzen zum Kühlen fehlen.",
+            "Die Sonne scheint über Städten grundsätzlich länger.",
+            "Städte liegen immer in Tälern, dort staut sich Warmluft.",
+            "Das U-Bahn-Netz heizt den Boden der ganzen Stadt auf."
           ],
-          "explanation": "Versiegelte Flächen und Gebäude speichern tagsüber Wärme und geben sie nachts ab; zusätzlich heizen Abwärme und fehlende Verdunstung die Stadt auf.",
+          "explanation": "Versiegelte Flächen speichern Wärme; dazu kommt Abwärme aus Verkehr und Heizung.",
           "difficulty": 2
         },
         {
           "text": "Welche Aussage zum Stadtklima stimmt NICHT?",
           "options": [
-            "Nachts kühlen dicht bebaute Innenstädte schneller ab als das freie Umland.",
-            "Versiegelte Flächen speichern tagsüber viel Wärme.",
-            "In Städten ist es im Durchschnitt wärmer als im unbebauten Umland.",
-            "Fehlende Vegetation verringert die kühlende Verdunstung in der Stadt."
+            "Innenstädte kühlen nachts schneller ab als das Umland.",
+            "Versiegelte Flächen speichern tagsüber sehr viel Wärme.",
+            "In Städten ist es im Schnitt wärmer als im Umland.",
+            "Fehlende Pflanzen verringern die kühlende Verdunstung."
           ],
-          "explanation": "Es ist genau umgekehrt: Die gespeicherte Wärme wird nachts nur langsam abgegeben, deshalb kühlen Innenstädte langsamer ab als das Umland.",
+          "explanation": "Umgekehrt: Die gespeicherte Wärme geht nur langsam weg, die Stadt kühlt träge ab.",
           "difficulty": 2
         }
       ]
@@ -644,23 +644,23 @@
         {
           "text": "Was ist eine Frischluftschneise?",
           "options": [
-            "Ein von Bebauung freigehaltener Korridor, durch den kühle, frische Luft aus dem Umland in die Stadt strömen kann.",
-            "Ein begrünter Innenhof, der ein einzelnes Gebäude kühlt.",
-            "Eine Fußgängerzone, in der keine Autoabgase entstehen.",
-            "Ein unterirdischer Kanal, der Regenwasser aus der Stadt leitet."
+            "unbebauter Korridor für kühle Luft aus dem Umland",
+            "ein begrünter Innenhof, der ein Gebäude kühlen soll",
+            "eine Fußgängerzone ganz ohne Abgase von Autos",
+            "ein Kanal, der Regenwasser aus der Stadt ableitet"
           ],
-          "explanation": "Frischluftschneisen sind unbebaute Korridore, etwa Flusstäler oder Grünzüge, über die kühle und frische Luft aus dem Umland in die Stadt gelangt.",
+          "explanation": "Flusstäler oder Grünzüge lassen kühle Luft aus dem Umland in die Stadt strömen.",
           "difficulty": 2
         },
         {
           "text": "Warum sollen Grünzüge wie das Isartal in München oder große Parks in Berlin möglichst nicht bebaut werden?",
           "options": [
-            "Sie kühlen die Stadt, führen frische Luft zu und dienen zugleich der Naherholung.",
-            "Sie sind als Bauland zu teuer, weil der Untergrund dort besonders felsig ist.",
-            "Auf ihnen sollen später Autobahnen durch die Innenstadt entstehen.",
-            "Sie werden als Reserveflächen für neue Gewerbegebiete freigehalten."
+            "Sie kühlen, bringen frische Luft und dienen der Erholung.",
+            "Sie sind als Bauland zu teuer, der Untergrund ist felsig.",
+            "Auf ihnen sollen später Stadtautobahnen entstehen.",
+            "Sie sind Reserveflächen für neue Gewerbegebiete."
           ],
-          "explanation": "Solche Grünzüge wirken wie eine Klimaanlage der Stadt: Sie führen kühle, frische Luft zu und bieten zugleich Platz für Sport und Erholung.",
+          "explanation": "Grünzüge wirken wie die Klimaanlage der Stadt – und bieten Platz für Sport.",
           "difficulty": 3
         }
       ]
@@ -672,23 +672,23 @@
         {
           "text": "Was ist das Ziel der Verkehrswende in Städten?",
           "options": [
-            "Mehr Menschen sollen mit Bus, Bahn, Fahrrad oder zu Fuß unterwegs sein statt mit dem eigenen Auto.",
-            "Alle Ampeln sollen abgeschafft werden, damit der Autoverkehr schneller fließt.",
-            "Der öffentliche Nahverkehr soll eingestellt und durch mehr Fahrspuren ersetzt werden.",
-            "Die Innenstädte sollen mehr Parkhäuser erhalten, damit mehr Autos hineinfahren können."
+            "mehr Bus, Bahn, Rad und zu Fuß statt Auto",
+            "alle Ampeln weg, damit Autos schneller fahren",
+            "Nahverkehr einstellen und Fahrspuren bauen",
+            "mehr Parkhäuser für mehr Autos in der City"
           ],
-          "explanation": "Die Verkehrswende will den Anteil von Bus, Bahn, Rad- und Fußverkehr erhöhen, um Stau, Abgase und Flächenverbrauch durch Autos zu verringern.",
+          "explanation": "Weniger Autoverkehr bedeutet weniger Stau, Abgase und Flächenverbrauch.",
           "difficulty": 1
         },
         {
           "text": "Welche Maßnahmen fördern die Verkehrswende in einer Großstadt?",
           "options": [
-            "Ausbau von U-Bahn-, Tram- und Buslinien, sichere Radwege und attraktive Fußwege.",
-            "Senkung der Parkgebühren und Bau zusätzlicher Stadtautobahnen.",
-            "Stilllegung von S-Bahn-Linien zugunsten breiterer Straßen.",
-            "Erhöhung der Ticketpreise, damit weniger Menschen Bus und Bahn nutzen."
+            "mehr Bahnlinien, sichere Radwege, gute Fußwege",
+            "billigeres Parken und neue Stadtautobahnen bauen",
+            "S-Bahn-Linien stilllegen und Straßen verbreitern",
+            "Ticketpreise erhöhen, damit weniger Bahn fahren"
           ],
-          "explanation": "Ein dichter öffentlicher Nahverkehr und sichere Rad- und Fußwege machen es den Menschen leichter, auf das eigene Auto zu verzichten.",
+          "explanation": "Dichter Nahverkehr und sichere Rad- und Fußwege ersetzen das eigene Auto.",
           "difficulty": 2
         }
       ]
@@ -700,23 +700,23 @@
         {
           "text": "Was versteht man unter Nachverdichtung in der Stadtentwicklung?",
           "options": [
-            "Neue Wohnungen entstehen innerhalb der Stadt, etwa durch Bebauung von Baulücken oder Aufstockung von Gebäuden.",
-            "Neue Wohngebiete werden ausschließlich auf Wiesen und Feldern am Stadtrand ausgewiesen.",
-            "Die Einwohnerdichte wird gesenkt, indem Wohnhäuser abgerissen werden.",
-            "Straßen werden verbreitert, damit der Verkehr dichter fließen kann."
+            "Bauen in Baulücken und Aufstocken von Häusern",
+            "neue Wohngebiete nur auf Wiesen am Stadtrand",
+            "Abriss von Wohnhäusern, um Dichte zu senken",
+            "Verbreiterung der Straßen für dichteren Verkehr"
           ],
-          "explanation": "Nachverdichtung schafft Wohnraum innerhalb der bestehenden Stadt, etwa durch das Schließen von Baulücken oder das Aufstocken von Häusern.",
+          "explanation": "Neuer Wohnraum entsteht innerhalb der bestehenden Stadt statt auf freiem Feld.",
           "difficulty": 2
         },
         {
           "text": "Warum setzen Städte wie München auf Nachverdichtung, und welchen Nachteil kann sie haben?",
           "options": [
-            "Sie schafft Wohnraum, ohne neue Flächen am Stadtrand zu verbrauchen – allerdings können dabei Grünflächen und Freiräume in den Vierteln verloren gehen.",
-            "Sie senkt die Bodenpreise in der Innenstadt, führt aber zu Leerstand am Stadtrand.",
-            "Sie verringert die Einwohnerzahl der Stadt, wodurch Schulen schließen müssen.",
-            "Sie verhindert jeglichen Neubau, sodass die Mieten automatisch sinken."
+            "spart Fläche am Rand, kostet aber Grün im Viertel",
+            "senkt die Bodenpreise, führt aber zu Leerstand",
+            "verringert die Einwohnerzahl, Schulen schließen",
+            "verhindert Neubau, dadurch sinken die Mieten"
           ],
-          "explanation": "Nachverdichtung spart Flächen am Stadtrand, kann aber Grün- und Freiflächen in den Wohnvierteln verringern – darüber wird in vielen Städten gestritten.",
+          "explanation": "Kein neuer Flächenverbrauch am Stadtrand – dafür weniger Freiraum im Viertel.",
           "difficulty": 3
         }
       ]
@@ -728,23 +728,23 @@
         {
           "text": "Was ist mit dem Begriff Smart City gemeint?",
           "options": [
-            "Eine Stadt, die digitale Technik und Daten nutzt, um zum Beispiel Verkehr, Energieversorgung und Verwaltung effizienter zu steuern.",
-            "Eine Stadt, die nur von jungen, gut ausgebildeten Menschen bewohnt wird.",
-            "Eine Stadt, in der ausschließlich Hightech-Unternehmen angesiedelt sind.",
-            "Eine besonders kleine Stadt mit weniger als 10 000 Einwohnern."
+            "Stadt, die Verkehr und Energie digital steuert",
+            "Stadt nur für junge, gut ausgebildete Menschen",
+            "Stadt, in der es nur Hightech-Unternehmen gibt",
+            "sehr kleine Stadt mit unter 10.000 Einwohnern"
           ],
-          "explanation": "Eine Smart City setzt digitale Technik und Daten ein, um städtische Abläufe wie Verkehr, Energieversorgung und Verwaltung effizienter zu machen.",
+          "explanation": "Digitale Technik und Daten machen Verkehr, Energie und Verwaltung effizienter.",
           "difficulty": 2
         },
         {
           "text": "Welches Beispiel passt zu einer Smart City?",
           "options": [
-            "Sensoren melden freie Parkplätze in Echtzeit an eine App, und Ampeln passen sich dem Verkehrsaufkommen an.",
-            "Alle Ampeln werden abgebaut, und der Verkehr regelt sich von selbst.",
-            "Die Stadtverwaltung schafft Computer ab und arbeitet nur noch mit Papierakten.",
-            "Die Straßenbeleuchtung bleibt die ganze Nacht in allen Straßen voll eingeschaltet."
+            "Sensoren melden freie Parkplätze an eine App.",
+            "Alle Ampeln weg, der Verkehr regelt sich selbst.",
+            "Die Verwaltung arbeitet nur noch mit Papierakten.",
+            "Die Straßenbeleuchtung brennt die ganze Nacht voll."
           ],
-          "explanation": "Vernetzte Sensoren und intelligente Ampelschaltungen sind typische Smart-City-Anwendungen, die den Verkehr flüssiger machen und Energie sparen.",
+          "explanation": "Vernetzte Sensoren und mitdenkende Ampeln sind typische Smart-City-Anwendungen.",
           "difficulty": 1
         }
       ]
