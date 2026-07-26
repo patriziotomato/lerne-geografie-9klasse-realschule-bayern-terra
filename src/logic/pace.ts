@@ -2,6 +2,8 @@ import { state, todayKey } from '../store.ts';
 import { maxPoints, totalPoints } from './leitner.ts';
 
 export interface PaceInfo {
+  /** Ist überhaupt ein Lernziel-Datum gesetzt? */
+  hasDeadline: boolean;
   /** Kalendertage bis zur Deadline, heute mitgezählt (min. 0) */
   daysLeft: number;
   /** Noch offene Lernpunkte (Box-Stufen) bis alles gemeistert ist */
@@ -32,15 +34,17 @@ export function pace(): PaceInfo {
   }
 
   const effectiveDays = Math.max(1, daysLeft);
-  const dailyTarget = Math.max(1, Math.ceil(remaining / effectiveDays));
   const done = remaining <= 0;
+  // Ohne Deadline gibt es kein Pensum — sanftes Standardziel: 1 Runde ≈ 8 Punkte.
+  const dailyTarget = done ? 0 : deadline ? Math.max(1, Math.ceil(remaining / effectiveDays)) : 8;
 
   return {
+    hasDeadline: !!deadline,
     daysLeft,
     remainingPoints: remaining,
-    dailyTarget: done ? 0 : dailyTarget,
+    dailyTarget,
     todayPoints: today,
-    onTrack: done || today >= (done ? 0 : dailyTarget),
+    onTrack: done || today >= dailyTarget,
     done,
     overdue,
   };
@@ -53,6 +57,7 @@ function todayLogPoints(): number {
 
 /** Formatiert die Restzeit menschenlesbar ("noch 12 Tage") */
 export function daysLeftLabel(p: PaceInfo): string {
+  if (!p.hasDeadline) return 'Kein Ziel-Datum gesetzt';
   if (p.overdue) return 'Deadline vorbei';
   if (p.daysLeft === 0) return 'Heute ist der letzte Tag!';
   if (p.daysLeft === 1) return 'Noch 1 Tag';
