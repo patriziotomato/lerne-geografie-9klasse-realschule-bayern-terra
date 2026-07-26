@@ -1,0 +1,742 @@
+{
+  "chapterId": "bevoelkerung",
+  "concepts": [
+    {
+      "id": "bevoelkerung-c01",
+      "topic": "Demographischer Wandel in Deutschland",
+      "variants": [
+        {
+          "text": "Was versteht man unter dem demographischen Wandel in Deutschland?",
+          "options": [
+            "Die Bevölkerung wird im Durchschnitt immer älter, weil wenige Kinder geboren werden und die Menschen länger leben.",
+            "Die Bevölkerung wächst stark, weil immer mehr Kinder geboren werden.",
+            "Immer mehr Menschen ziehen vom Land in die großen Städte.",
+            "Die Zahl der Erwerbstätigen steigt, weil die Lebenserwartung sinkt."
+          ],
+          "explanation": "Der demographische Wandel beschreibt die Veränderung des Altersaufbaus: Niedrige Geburtenzahlen und steigende Lebenserwartung lassen die Gesellschaft altern.",
+          "difficulty": 1
+        },
+        {
+          "text": "In einem Zeitungsartikel steht: \"Frauen bekommen in Deutschland im Schnitt deutlich weniger als zwei Kinder, gleichzeitig werden die Menschen immer älter.\" Welche Entwicklung beschreibt der Artikel?",
+          "options": [
+            "Den demographischen Wandel, durch den die Gesellschaft altert.",
+            "Eine Verjüngung der Gesellschaft durch steigende Geburtenzahlen.",
+            "Eine Bevölkerungsexplosion wie in vielen Entwicklungsländern.",
+            "Eine starke Auswanderungswelle junger Familien ins Ausland."
+          ],
+          "explanation": "Wenige Geburten bei gleichzeitig steigender Lebenserwartung sind die beiden Kennzeichen des demographischen Wandels in Deutschland.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zum demographischen Wandel in Deutschland stimmt NICHT?",
+          "options": [
+            "Die Geburtenrate liegt in Deutschland deutlich über zwei Kindern pro Frau.",
+            "Die Lebenserwartung ist in den letzten Jahrzehnten deutlich gestiegen.",
+            "Der Anteil älterer Menschen an der Bevölkerung nimmt zu.",
+            "Ohne Zuwanderung würde die Bevölkerung Deutschlands langfristig schrumpfen."
+          ],
+          "explanation": "Die Geburtenrate liegt in Deutschland seit Jahrzehnten unter zwei Kindern pro Frau und damit unter dem Wert, der für eine gleichbleibende Bevölkerung nötig wäre.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c02",
+      "topic": "Ursachen des demographischen Wandels",
+      "variants": [
+        {
+          "text": "Welcher Grund trägt dazu bei, dass in Deutschland vergleichsweise wenige Kinder geboren werden?",
+          "options": [
+            "Beruf und Familie sind oft schwer zu vereinbaren, viele entscheiden sich spät oder gegen Kinder.",
+            "Junge Menschen heiraten heute viel früher als früher und bekommen deshalb weniger Kinder.",
+            "Die hohe Kindersterblichkeit hält viele Familien von weiteren Kindern ab.",
+            "Der Staat zahlt in Deutschland keinerlei finanzielle Unterstützung für Familien."
+          ],
+          "explanation": "Lange Ausbildungszeiten, berufliche Ziele und die schwierige Vereinbarkeit von Beruf und Familie führen dazu, dass Kinder später oder gar nicht geboren werden.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum steigt die Lebenserwartung in Deutschland seit Jahrzehnten an?",
+          "options": [
+            "Gute medizinische Versorgung, bessere Ernährung und Hygiene lassen die Menschen älter werden.",
+            "Weil immer mehr junge Zuwanderer nach Deutschland kommen.",
+            "Weil die Geburtenrate sinkt und dadurch jeder Einzelne automatisch länger lebt.",
+            "Weil die Menschen früher in Rente gehen und dadurch gesünder bleiben."
+          ],
+          "explanation": "Fortschritte in Medizin, Ernährung, Hygiene und Arbeitsbedingungen sind die Hauptgründe für die steigende Lebenserwartung.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c03",
+      "topic": "Folgen der Alterung für Rente, Pflege und Arbeitsmarkt",
+      "variants": [
+        {
+          "text": "Welche Folge hat die Alterung der Gesellschaft für die Rentenversicherung in Deutschland?",
+          "options": [
+            "Immer weniger Beitragszahler müssen für immer mehr Rentnerinnen und Rentner aufkommen.",
+            "Die Renten steigen automatisch, weil ältere Menschen höhere Beiträge einzahlen.",
+            "Die Rentenkassen füllen sich, weil weniger Kinder versorgt werden müssen.",
+            "Junge Menschen müssen künftig gar keine Rentenbeiträge mehr zahlen."
+          ],
+          "explanation": "In Deutschland zahlen die Erwerbstätigen die Renten der älteren Generation. Werden es weniger Junge und mehr Alte, gerät dieses System unter Druck.",
+          "difficulty": 1
+        },
+        {
+          "text": "Ein Pflegeheim findet kaum noch Personal, gleichzeitig steigt die Zahl der pflegebedürftigen Senioren. Womit hängt diese Entwicklung zusammen?",
+          "options": [
+            "Mit dem demographischen Wandel: Es gibt mehr alte Menschen, aber weniger junge Arbeitskräfte.",
+            "Mit einer Bevölkerungsexplosion in Deutschland.",
+            "Mit einer sinkenden Lebenserwartung, durch die mehr Menschen Pflege brauchen.",
+            "Mit stark steigenden Geburtenzahlen, die das Personal in den Kitas binden."
+          ],
+          "explanation": "Die Alterung der Gesellschaft erhöht den Pflegebedarf, während gleichzeitig weniger junge Menschen als Arbeitskräfte nachrücken.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage über die Folgen des demographischen Wandels stimmt NICHT?",
+          "options": [
+            "Der Arbeitsmarkt profitiert, weil durch die Alterung mehr junge Fachkräfte nachrücken.",
+            "Auf eine Rentnerin oder einen Rentner kommen immer weniger Erwerbstätige.",
+            "Der Bedarf an Pflegekräften wird in Zukunft weiter steigen.",
+            "In vielen Branchen fehlen schon heute Fachkräfte."
+          ],
+          "explanation": "Durch die Alterung rücken gerade weniger junge Fachkräfte nach – das verschärft den Fachkräftemangel, statt ihn zu lösen.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c04",
+      "topic": "Pyramidenform des Bevölkerungsaufbaus",
+      "variants": [
+        {
+          "text": "Eine Bevölkerungspyramide hat die Form eines Dreiecks mit breiter Basis. Was sagt das über die Bevölkerung aus?",
+          "options": [
+            "Es gibt viele Kinder und Jugendliche und wenige alte Menschen – die Bevölkerung wächst.",
+            "Es gibt viele alte und wenige junge Menschen – die Bevölkerung schrumpft.",
+            "Alle Altersgruppen sind ungefähr gleich stark besetzt – die Bevölkerung stagniert.",
+            "Es wandern besonders viele Menschen mittleren Alters aus dem Land ab."
+          ],
+          "explanation": "Die breite Basis steht für starke junge Jahrgänge: Es werden viele Kinder geboren, die Bevölkerung nimmt zu.",
+          "difficulty": 1
+        },
+        {
+          "text": "Für welches Land ist eine dreieckige Bevölkerungspyramide mit breiter Basis heute typisch?",
+          "options": [
+            "Für ein Entwicklungsland mit hoher Geburtenrate, zum Beispiel Niger.",
+            "Für ein alterndes Industrieland wie Deutschland.",
+            "Für Japan mit seiner besonders hohen Lebenserwartung.",
+            "Für ein Land mit stark schrumpfender Bevölkerung wie Bulgarien."
+          ],
+          "explanation": "Die Dreiecksform mit breiter Basis findet man in Ländern mit vielen Geburten, wie sie vor allem in Afrika südlich der Sahara vorkommen.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c05",
+      "topic": "Glockenform des Bevölkerungsaufbaus",
+      "variants": [
+        {
+          "text": "Was bedeutet es, wenn eine Bevölkerungspyramide die Form einer Glocke hat?",
+          "options": [
+            "Geburten und Sterbefälle halten sich ungefähr die Waage – die Bevölkerungszahl bleibt etwa gleich.",
+            "Die Bevölkerung wächst sehr schnell, weil es besonders viele Geburten gibt.",
+            "Die Bevölkerung schrumpft stark, weil die jungen Jahrgänge fast fehlen.",
+            "Das Land nimmt besonders viele Zuwanderer im Rentenalter auf."
+          ],
+          "explanation": "Bei der Glockenform sind junge und mittlere Jahrgänge ähnlich stark besetzt – die Bevölkerung stagniert oder wächst nur leicht.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Aussage passt zu einem Land mit glockenförmigem Bevölkerungsaufbau?",
+          "options": [
+            "Die Bevölkerungszahl verändert sich kaum, weil jüngere und mittlere Jahrgänge ähnlich stark besetzt sind.",
+            "Die Basis ist deutlich breiter als die Spitze, das Land steht am Anfang des demographischen Übergangs.",
+            "Die jungen Jahrgänge sind viel schwächer besetzt als die mittleren, das Land altert stark.",
+            "Die Bevölkerung verdoppelt sich etwa alle 25 Jahre."
+          ],
+          "explanation": "Die Glockenform zeigt eine stagnierende Bevölkerung: Nachwachsende Jahrgänge sind etwa so stark wie die Elterngeneration.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c06",
+      "topic": "Urnenform des Bevölkerungsaufbaus",
+      "variants": [
+        {
+          "text": "Der Bevölkerungsaufbau Deutschlands ähnelt einer Urne. Was bedeutet diese Form?",
+          "options": [
+            "Die jungen Jahrgänge sind schwach besetzt – die Bevölkerung altert und schrumpft langfristig.",
+            "Die Bevölkerung wächst schnell, weil viele Kinder geboren werden.",
+            "Geburten und Sterbefälle halten sich genau die Waage.",
+            "Die mittleren Jahrgänge fehlen, weil viele Erwerbstätige auswandern."
+          ],
+          "explanation": "Bei der Urnenform ist die Basis schmaler als die mittleren Jahrgänge: Es rücken weniger Kinder nach, die Gesellschaft altert.",
+          "difficulty": 1
+        },
+        {
+          "text": "Ein Land zeigt im Bevölkerungsdiagramm eine schmale Basis, stark besetzte mittlere Jahrgänge und viele alte Menschen. Welche Probleme sind dort zu erwarten?",
+          "options": [
+            "Fachkräftemangel sowie steigende Kosten für Rente und Pflege.",
+            "Zu wenige Schulplätze für die vielen nachrückenden Kinder.",
+            "Eine Bevölkerungsexplosion mit rasch wachsenden Städten.",
+            "Hohe Jugendarbeitslosigkeit wegen zu vieler Berufseinsteiger."
+          ],
+          "explanation": "Diese Urnenform bedeutet: Viele Menschen erreichen das Rentenalter, während wenige junge nachrücken – typische Folgen sind Fachkräftemangel und steigende Sozialkosten.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Zuordnung von Diagrammform und Bevölkerungsentwicklung ist richtig?",
+          "options": [
+            "Urne – alternde, langfristig schrumpfende Bevölkerung.",
+            "Urne – schnell wachsende, junge Bevölkerung.",
+            "Dreieck – alternde, schrumpfende Bevölkerung.",
+            "Glocke – stark wachsende Bevölkerung."
+          ],
+          "explanation": "Die Urnenform steht für eine alternde und schrumpfende Bevölkerung, das Dreieck für Wachstum und die Glocke für Stagnation.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c07",
+      "topic": "Modell des demographischen Übergangs",
+      "variants": [
+        {
+          "text": "Was beschreibt das Modell des demographischen Übergangs?",
+          "options": [
+            "Wie sich Geburten- und Sterberate eines Landes im Laufe seiner Entwicklung von hohen zu niedrigen Werten verändern.",
+            "Wie Menschen von einem Land in ein anderes auswandern.",
+            "Wie sich die Bevölkerung eines Landes auf Stadt und Land verteilt.",
+            "Wie sich das Durchschnittsalter der Mütter beim ersten Kind verändert."
+          ],
+          "explanation": "Das Modell zeigt in mehreren Phasen, wie zuerst die Sterberate und später die Geburtenrate sinkt und wie sich dadurch das Bevölkerungswachstum verändert.",
+          "difficulty": 1
+        },
+        {
+          "text": "In welcher Situation wächst die Bevölkerung eines Landes nach dem Modell des demographischen Übergangs am stärksten?",
+          "options": [
+            "Wenn die Sterberate schon stark gesunken ist, die Geburtenrate aber noch hoch bleibt.",
+            "Wenn Geburten- und Sterberate beide sehr hoch sind.",
+            "Wenn Geburten- und Sterberate beide sehr niedrig sind.",
+            "Wenn die Geburtenrate unter die Sterberate fällt."
+          ],
+          "explanation": "Sinkt die Sterberate durch bessere Medizin und Hygiene, während weiterhin viele Kinder geboren werden, entsteht ein großer Geburtenüberschuss – die Bevölkerung wächst rasant.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zum Modell des demographischen Übergangs stimmt NICHT?",
+          "options": [
+            "Zuerst sinkt die Geburtenrate, erst viel später die Sterberate.",
+            "Am Anfang sind Geburten- und Sterberate hoch, die Bevölkerung wächst kaum.",
+            "Die Sterberate sinkt vor allem durch bessere Medizin, Ernährung und Hygiene.",
+            "Am Ende des Übergangs sind Geburten- und Sterberate niedrig."
+          ],
+          "explanation": "Es ist genau umgekehrt: Zuerst sinkt die Sterberate, die Geburtenrate geht erst mit Verzögerung zurück – dazwischen wächst die Bevölkerung stark.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c08",
+      "topic": "Länder im demographischen Übergang einordnen",
+      "variants": [
+        {
+          "text": "Ein Land hat eine hohe Geburtenrate, aber eine bereits stark gesunkene Sterberate. In welcher Situation befindet es sich?",
+          "options": [
+            "Es steckt mitten im demographischen Übergang – seine Bevölkerung wächst schnell.",
+            "Es hat den demographischen Übergang abgeschlossen – seine Bevölkerung stagniert.",
+            "Es steht ganz am Anfang des Übergangs – seine Bevölkerung wächst kaum.",
+            "Seine Bevölkerung schrumpft, weil die Sterberate über der Geburtenrate liegt."
+          ],
+          "explanation": "Hohe Geburtenrate bei niedriger Sterberate bedeutet einen großen Geburtenüberschuss – typisch für Länder mitten im demographischen Übergang.",
+          "difficulty": 2
+        },
+        {
+          "text": "Wo im Modell des demographischen Übergangs stehen Industrieländer wie Deutschland heute?",
+          "options": [
+            "In der letzten Phase: Geburten- und Sterberate sind niedrig, die Bevölkerung wächst ohne Zuwanderung kaum oder schrumpft.",
+            "In der ersten Phase mit hohen Geburten- und Sterberaten.",
+            "In der Phase des stärksten Bevölkerungswachstums.",
+            "Außerhalb des Modells, weil es nur für Entwicklungsländer gilt."
+          ],
+          "explanation": "Industrieländer haben den Übergang durchlaufen: Beide Raten sind niedrig, teilweise liegt die Sterberate sogar über der Geburtenrate.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c09",
+      "topic": "Bevölkerungsverteilung in Deutschland",
+      "variants": [
+        {
+          "text": "Welche Region gehört zu den am dichtesten besiedelten Ballungsräumen Deutschlands?",
+          "options": [
+            "Das Ruhrgebiet.",
+            "Die Mecklenburgische Seenplatte.",
+            "Der Bayerische Wald.",
+            "Die Lüneburger Heide."
+          ],
+          "explanation": "Das Ruhrgebiet ist mit seinen eng zusammengewachsenen Großstädten einer der größten Ballungsräume Deutschlands, die anderen Regionen sind dünn besiedelt.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum leben in Ballungsräumen wie München oder Rhein-Main besonders viele Menschen?",
+          "options": [
+            "Dort gibt es viele Arbeitsplätze, gute Verkehrsanbindungen und ein großes Angebot an Bildung und Freizeit.",
+            "Dort sind die Mieten besonders günstig.",
+            "Dort ist das Klima deutlich wärmer als im Rest Deutschlands.",
+            "Dort gibt es besonders viel freie Fläche für neue Einfamilienhäuser."
+          ],
+          "explanation": "Ballungsräume ziehen Menschen vor allem durch Arbeitsplätze, Infrastruktur sowie Bildungs- und Freizeitangebote an – die Mieten sind dort gerade besonders hoch.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zur Bevölkerungsverteilung in Deutschland trifft zu?",
+          "options": [
+            "Die Bevölkerung ist ungleich verteilt: Dichten Ballungsräumen stehen dünn besiedelte ländliche Regionen gegenüber.",
+            "Die Bevölkerung verteilt sich fast gleichmäßig über das ganze Land.",
+            "Der Nordosten Deutschlands ist am dichtesten besiedelt.",
+            "In den Alpen leben mehr Menschen als im Ruhrgebiet."
+          ],
+          "explanation": "Verdichtungsräume wie Rhein-Ruhr, Rhein-Main oder München stehen dünn besiedelten Räumen etwa in Mecklenburg-Vorpommern oder im Bayerischen Wald gegenüber.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c10",
+      "topic": "Gunst- und Ungunsträume",
+      "variants": [
+        {
+          "text": "Was ist ein Gunstraum?",
+          "options": [
+            "Ein Gebiet mit günstigen natürlichen Bedingungen wie fruchtbaren Böden, mildem Klima und ausreichend Wasser, in dem viele Menschen leben können.",
+            "Ein Gebiet, in dem der Staat besonders niedrige Steuern verlangt.",
+            "Ein Naturschutzgebiet, in dem niemand siedeln darf.",
+            "Ein Gebiet mit extremer Trockenheit, in dem nur wenige Menschen leben."
+          ],
+          "explanation": "Gunsträume bieten von Natur aus gute Lebensbedingungen – deshalb sind zum Beispiel fruchtbare Flusstäler und Küstenebenen oft dicht besiedelt.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum ist die Sahara ein Ungunstraum für die Besiedlung?",
+          "options": [
+            "Extreme Trockenheit und Hitze machen Landwirtschaft und Wasserversorgung fast unmöglich.",
+            "Weil es dort zu kalt für den Anbau von Nahrungsmitteln ist.",
+            "Weil häufige Überschwemmungen die Siedlungen bedrohen.",
+            "Weil das Gebiet zu dicht bewaldet ist."
+          ],
+          "explanation": "In der Wüste fehlt es an Wasser und nutzbaren Böden – deshalb leben dort nur wenige Menschen, meist in Oasen.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c11",
+      "topic": "Wachstum der Weltbevölkerung",
+      "variants": [
+        {
+          "text": "Wie viele Menschen leben derzeit ungefähr auf der Erde?",
+          "options": [
+            "Rund acht Milliarden.",
+            "Rund 800 Millionen.",
+            "Rund achtzig Millionen.",
+            "Rund achtzig Milliarden."
+          ],
+          "explanation": "Die Weltbevölkerung hat im Jahr 2022 die Marke von acht Milliarden Menschen überschritten und wächst weiter.",
+          "difficulty": 1
+        },
+        {
+          "text": "In welcher Weltregion wächst die Bevölkerung derzeit am schnellsten?",
+          "options": [
+            "In Afrika südlich der Sahara.",
+            "In Westeuropa.",
+            "In Ostasien, vor allem in Japan.",
+            "In Nordamerika."
+          ],
+          "explanation": "In vielen Ländern südlich der Sahara sind die Geburtenraten noch sehr hoch, während sie in Europa, Ostasien und Nordamerika niedrig sind.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c12",
+      "topic": "Migrationsbegriffe",
+      "variants": [
+        {
+          "text": "Was bedeutet der Begriff \"Emigration\"?",
+          "options": [
+            "Die Auswanderung aus dem eigenen Land in ein anderes Land.",
+            "Die Einwanderung in ein fremdes Land.",
+            "Der Umzug innerhalb des eigenen Landes.",
+            "Die Rückkehr in das Herkunftsland."
+          ],
+          "explanation": "Emigration bedeutet Auswanderung – aus Sicht des Ziellandes spricht man dagegen von Immigration, also Einwanderung.",
+          "difficulty": 1
+        },
+        {
+          "text": "Eine Familie zieht von Berlin nach München um. Wie nennt man diese Form der Wanderung?",
+          "options": [
+            "Binnenmigration.",
+            "Emigration.",
+            "Immigration.",
+            "Fluchtmigration."
+          ],
+          "explanation": "Binnenmigration ist die Wanderung innerhalb eines Landes – hier wird keine Staatsgrenze überschritten.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Zuordnung von Begriff und Bedeutung ist richtig?",
+          "options": [
+            "Immigration – Einwanderung in ein Land.",
+            "Immigration – Auswanderung aus einem Land.",
+            "Emigration – Umzug innerhalb eines Landes.",
+            "Binnenmigration – Flucht über Staatsgrenzen hinweg."
+          ],
+          "explanation": "Immigration bezeichnet die Einwanderung, Emigration die Auswanderung und Binnenmigration die Wanderung innerhalb eines Landes.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c13",
+      "topic": "Flucht, Asyl und Arbeitsmigration",
+      "variants": [
+        {
+          "text": "Worin unterscheidet sich ein Flüchtling von einem Arbeitsmigranten?",
+          "options": [
+            "Ein Flüchtling verlässt seine Heimat gezwungenermaßen, etwa wegen Krieg oder Verfolgung; ein Arbeitsmigrant wandert freiwillig für einen Arbeitsplatz aus.",
+            "Ein Flüchtling wandert immer freiwillig aus, ein Arbeitsmigrant wird dazu gezwungen.",
+            "Ein Flüchtling bleibt im eigenen Land, ein Arbeitsmigrant überschreitet Staatsgrenzen.",
+            "Es gibt keinen Unterschied, beide Begriffe bedeuten dasselbe."
+          ],
+          "explanation": "Entscheidend ist die Freiwilligkeit: Flüchtlinge müssen ihre Heimat verlassen, Arbeitsmigranten entscheiden sich freiwillig für die Wanderung.",
+          "difficulty": 1
+        },
+        {
+          "text": "Was bedeutet es, in einem Land Asyl zu beantragen?",
+          "options": [
+            "Um staatlichen Schutz zu bitten, weil man im Heimatland verfolgt wird.",
+            "Eine Arbeitserlaubnis für ein anderes Land zu beantragen.",
+            "Die Staatsbürgerschaft des Ziellandes anzunehmen.",
+            "Eine Aufenthaltsgenehmigung für ein Auslandsstudium zu erhalten."
+          ],
+          "explanation": "Asyl ist der Schutz, den ein Staat verfolgten Menschen gewährt – in Deutschland ist das Asylrecht sogar im Grundgesetz verankert.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche der folgenden Ursachen ist eine typische Fluchtursache?",
+          "options": [
+            "Bürgerkrieg und politische Verfolgung im Heimatland.",
+            "Der Wunsch nach einem besser bezahlten Arbeitsplatz im Ausland.",
+            "Ein Studienplatz an einer ausländischen Universität.",
+            "Der Umzug zum Ehepartner in ein anderes Land."
+          ],
+          "explanation": "Von Flucht spricht man, wenn Menschen ihre Heimat wegen Gefahren wie Krieg, Verfolgung oder Naturkatastrophen verlassen müssen – nicht bei freiwilliger Wanderung.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c14",
+      "topic": "Push-Faktoren",
+      "variants": [
+        {
+          "text": "Was versteht man unter Push-Faktoren?",
+          "options": [
+            "Gründe, die Menschen aus ihrer Heimat wegdrängen, zum Beispiel Armut, Krieg oder Dürre.",
+            "Gründe, die Menschen in ein Zielland anziehen, zum Beispiel Arbeitsplätze.",
+            "Gesetze, mit denen ein Staat Einwanderung fördert.",
+            "Maßnahmen eines Staates, um die Geburtenrate zu erhöhen."
+          ],
+          "explanation": "Push-Faktoren (englisch to push = drücken) sind abstoßende Bedingungen im Herkunftsland, die Menschen zum Auswandern bewegen.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welcher der folgenden Gründe ist ein Push-Faktor?",
+          "options": [
+            "Anhaltende Dürre zerstört die Ernten im Heimatland.",
+            "Hohe Löhne im Zielland.",
+            "Gute Schulen und Universitäten im Zielland.",
+            "Politische Stabilität und Sicherheit im Zielland."
+          ],
+          "explanation": "Push-Faktoren wirken im Herkunftsland: Die Dürre verschlechtert dort die Lebensbedingungen und drängt Menschen zur Abwanderung.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zu Push- und Pull-Faktoren stimmt NICHT?",
+          "options": [
+            "Push-Faktoren machen das Zielland für Zuwanderer attraktiv.",
+            "Push-Faktoren wirken im Herkunftsland, Pull-Faktoren im Zielland.",
+            "Bei einer Wanderung wirken oft Push- und Pull-Faktoren zusammen.",
+            "Krieg im Heimatland ist ein typischer Push-Faktor."
+          ],
+          "explanation": "Attraktive Bedingungen im Zielland sind Pull-Faktoren – Push-Faktoren sind dagegen die abstoßenden Bedingungen im Herkunftsland.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c15",
+      "topic": "Pull-Faktoren",
+      "variants": [
+        {
+          "text": "Was sind Pull-Faktoren?",
+          "options": [
+            "Anziehende Bedingungen im Zielland, etwa Arbeitsplätze, Sicherheit oder gute Bildungschancen.",
+            "Abstoßende Bedingungen im Herkunftsland wie Armut oder Krieg.",
+            "Verträge zwischen Staaten über die Anwerbung von Arbeitskräften.",
+            "Hindernisse, die eine Wanderung erschweren, etwa hohe Reisekosten."
+          ],
+          "explanation": "Pull-Faktoren (englisch to pull = ziehen) sind die Vorteile eines Ziellandes, die Menschen anziehen.",
+          "difficulty": 1
+        },
+        {
+          "text": "Ein IT-Spezialist aus Indien zieht nach Deutschland, weil er hier ein gutes Gehalt und sichere Lebensverhältnisse erwartet. Welche Faktoren wirken hier vor allem?",
+          "options": [
+            "Pull-Faktoren des Ziellandes Deutschland.",
+            "Push-Faktoren des Ziellandes Deutschland.",
+            "Push-Faktoren, weil er Indien wegen Verfolgung verlassen muss.",
+            "Keine Migrationsfaktoren, weil er freiwillig umzieht."
+          ],
+          "explanation": "Gehalt und Sicherheit sind anziehende Bedingungen des Ziellandes – also klassische Pull-Faktoren.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c16",
+      "topic": "Folgen der Migration für Herkunftsländer",
+      "variants": [
+        {
+          "text": "Was bedeutet der Begriff \"Brain Drain\"?",
+          "options": [
+            "Die Abwanderung gut ausgebildeter Fachkräfte aus einem Land, dem dadurch Wissen und Können verloren gehen.",
+            "Den Zustrom hoch qualifizierter Fachkräfte in ein Land.",
+            "Geldüberweisungen von Migranten an ihre Familien in der Heimat.",
+            "Den Rückgang der Geburtenrate in Industrieländern."
+          ],
+          "explanation": "Brain Drain (wörtlich: Abfluss von Gehirnen) beschreibt den Verlust von Fachkräften wie Ärzten oder Ingenieuren durch Abwanderung.",
+          "difficulty": 1
+        },
+        {
+          "text": "Wie können Herkunftsländer trotz der Abwanderung von Menschen von Migration profitieren?",
+          "options": [
+            "Migranten überweisen Geld an ihre Familien – diese Rücküberweisungen stärken die Wirtschaft der Heimat.",
+            "Durch die Abwanderung steigen die Löhne im Herkunftsland automatisch auf das Niveau des Ziellandes.",
+            "Das Zielland übernimmt die Staatsschulden des Herkunftslandes.",
+            "Die abgewanderten Fachkräfte zahlen weiterhin volle Steuern im Herkunftsland."
+          ],
+          "explanation": "Rücküberweisungen sind für viele Herkunftsländer eine wichtige Einnahmequelle, mit der Familien Nahrung, Bildung oder Wohnraum bezahlen.",
+          "difficulty": 2
+        },
+        {
+          "text": "Ein kleines Land verliert viele seiner Ärzte und Ingenieure an Industrieländer. Welche Folge hat das für dieses Land?",
+          "options": [
+            "Es fehlen Fachkräfte in Krankenhäusern und Betrieben, die Ausbildungskosten gehen verloren – ein typischer Brain Drain.",
+            "Die medizinische Versorgung verbessert sich, weil weniger Menschen behandelt werden müssen.",
+            "Es entsteht ein Brain Gain, weil sofort neue Fachkräfte aus dem Ausland nachrücken.",
+            "Die Rücküberweisungen gleichen den Verlust der Fachkräfte immer vollständig aus."
+          ],
+          "explanation": "Wandern gut Ausgebildete ab, fehlen sie im Herkunftsland – die Kosten ihrer Ausbildung hat das Land getragen, den Nutzen haben andere Staaten.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c17",
+      "topic": "Zuwanderung und Fachkräftemangel im Zielland",
+      "variants": [
+        {
+          "text": "Warum ist Deutschland auf die Zuwanderung von Fachkräften angewiesen?",
+          "options": [
+            "Weil durch den demographischen Wandel viele Arbeitskräfte in Rente gehen und zu wenige junge nachrücken.",
+            "Weil die Bevölkerung Deutschlands zu schnell wächst und mehr Betriebe gebraucht werden.",
+            "Weil die Arbeitslosigkeit in Deutschland die höchste in Europa ist.",
+            "Weil fast alle jungen Deutschen auswandern und keine Ausbildung mehr beginnen."
+          ],
+          "explanation": "Wenn geburtenstarke Jahrgänge in Rente gehen und geburtenschwache nachrücken, fehlen Arbeitskräfte – Zuwanderung kann diese Lücke verkleinern.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Chancen bietet Zuwanderung für ein Zielland wie Deutschland?",
+          "options": [
+            "Zuwanderer können offene Stellen besetzen, Beiträge in die Sozialversicherungen zahlen und die Gesellschaft verjüngen.",
+            "Zuwanderung senkt automatisch die Mieten in den Großstädten.",
+            "Zuwanderer heben die Geburtenrate sofort auf über zwei Kinder pro Frau.",
+            "Durch Zuwanderung sinkt der Bedarf an Wohnraum und Infrastruktur."
+          ],
+          "explanation": "Zuwanderer sind im Schnitt jünger als die einheimische Bevölkerung, arbeiten in offenen Stellen und zahlen in Renten- und Krankenkassen ein.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c18",
+      "topic": "Integration von Zuwanderern",
+      "variants": [
+        {
+          "text": "Was ist für eine gelingende Integration von Zuwanderern besonders wichtig?",
+          "options": [
+            "Das Erlernen der Sprache sowie der Zugang zu Bildung und Arbeit.",
+            "Dass Zuwanderer möglichst unter sich bleiben und wenig Kontakt zur übrigen Bevölkerung haben.",
+            "Dass Zuwanderer ihre Herkunftskultur vollständig aufgeben.",
+            "Dass Zuwanderer nur in eigenen Stadtvierteln wohnen."
+          ],
+          "explanation": "Sprache, Bildung und Arbeit gelten als Schlüssel zur Integration, weil sie die Teilhabe am gesellschaftlichen Leben ermöglichen.",
+          "difficulty": 1
+        },
+        {
+          "text": "Eine Stadt bietet Sprachkurse an, hilft bei der Anerkennung ausländischer Berufsabschlüsse und vermittelt Praktika. Was möchte sie damit erreichen?",
+          "options": [
+            "Die Integration der Zuwanderer in Gesellschaft und Arbeitsmarkt fördern.",
+            "Die Zuwanderer zur schnellen Rückkehr in ihre Heimat bewegen.",
+            "Die Binnenmigration in andere Bundesländer lenken.",
+            "Den Brain Drain in die Herkunftsländer verstärken."
+          ],
+          "explanation": "Sprachkurse, anerkannte Abschlüsse und Praktika erleichtern den Einstieg in Arbeit und Alltag – genau das ist Integrationsarbeit.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c19",
+      "topic": "Gastarbeiter-Geschichte Deutschlands",
+      "variants": [
+        {
+          "text": "Warum warb die Bundesrepublik Deutschland ab den 1950er-Jahren sogenannte Gastarbeiter an?",
+          "options": [
+            "Wegen des Wirtschaftswunders fehlten Arbeitskräfte, vor allem in Industrie und Bergbau.",
+            "Weil die deutsche Bevölkerung damals stark schrumpfte.",
+            "Um die hohe Arbeitslosigkeit in Deutschland zu bekämpfen.",
+            "Weil ein internationales Gesetz alle europäischen Staaten dazu verpflichtete."
+          ],
+          "explanation": "In der Zeit des Wirtschaftswunders wuchs die Wirtschaft so schnell, dass die einheimischen Arbeitskräfte nicht ausreichten – deshalb schloss die Bundesrepublik Anwerbeabkommen mit anderen Ländern.",
+          "difficulty": 1
+        },
+        {
+          "text": "Aus welchen Ländern kamen viele Gastarbeiter nach Deutschland?",
+          "options": [
+            "Aus Italien, Spanien, Griechenland und der Türkei.",
+            "Aus den USA, Kanada und Australien.",
+            "Aus Schweden, Norwegen und Finnland.",
+            "Aus Japan, China und Südkorea."
+          ],
+          "explanation": "Die Bundesrepublik schloss Anwerbeabkommen unter anderem mit Italien (1955), Spanien, Griechenland und der Türkei (1961).",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zur Gastarbeiter-Geschichte Deutschlands trifft zu?",
+          "options": [
+            "Viele Gastarbeiter blieben dauerhaft in Deutschland und holten ihre Familien nach – anders als ursprünglich geplant.",
+            "Fast alle Gastarbeiter kehrten nach wenigen Jahren in ihre Heimat zurück.",
+            "Die staatliche Anwerbung von Gastarbeitern läuft bis heute unverändert weiter.",
+            "Gastarbeiter durften ausschließlich in der Landwirtschaft arbeiten."
+          ],
+          "explanation": "Geplant war ein vorübergehender Aufenthalt, doch viele blieben und holten ihre Familien nach – 1973 wurde die Anwerbung gestoppt.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c20",
+      "topic": "Ein-Kind-Politik in China",
+      "variants": [
+        {
+          "text": "Was war das Ziel der chinesischen Ein-Kind-Politik?",
+          "options": [
+            "Das starke Bevölkerungswachstum zu bremsen, indem Paare in der Regel nur ein Kind bekommen durften.",
+            "Die Geburtenrate zu erhöhen, um die Alterung der Gesellschaft zu stoppen.",
+            "Die Zuwanderung aus dem Ausland zu begrenzen.",
+            "Die Landflucht in die chinesischen Großstädte zu stoppen."
+          ],
+          "explanation": "Ab etwa 1980 begrenzte China die Kinderzahl pro Familie, um das rasante Bevölkerungswachstum einzudämmen.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Folgen der jahrzehntelangen Ein-Kind-Politik zeigen sich in China heute?",
+          "options": [
+            "Die Gesellschaft altert schnell, Arbeitskräfte fehlen und es gibt einen Männerüberschuss.",
+            "China hat heute die jüngste Bevölkerung der Welt.",
+            "Die Bevölkerung Chinas wächst schneller als je zuvor.",
+            "Die Geburtenrate stieg nach dem Ende der Politik sofort wieder stark an."
+          ],
+          "explanation": "Die niedrige Geburtenzahl führte zu schneller Alterung und Arbeitskräftemangel; weil Söhne oft bevorzugt wurden, entstand zudem ein Männerüberschuss.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum hat China die Ein-Kind-Politik ab 2015 gelockert?",
+          "options": [
+            "Weil die Gesellschaft zu altern begann und künftig Arbeitskräfte fehlen.",
+            "Weil die Vereinten Nationen China dazu verpflichteten.",
+            "Weil die Bevölkerung Chinas immer noch viel zu schnell wuchs.",
+            "Weil zu viele Ausländer nach China einwanderten."
+          ],
+          "explanation": "China erkannte, dass die strenge Geburtenkontrolle zu Überalterung und Arbeitskräftemangel führt, und erlaubt seither wieder mehr Kinder pro Familie.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c21",
+      "topic": "Familienpolitik in Frankreich und Deutschland",
+      "variants": [
+        {
+          "text": "Wie versucht Frankreich, die Geburtenrate hoch zu halten?",
+          "options": [
+            "Mit umfassender Kinderbetreuung und finanzieller Unterstützung, damit sich Beruf und Familie gut vereinbaren lassen.",
+            "Mit einer gesetzlichen Obergrenze von zwei Kindern pro Familie.",
+            "Mit einem Verbot der Berufstätigkeit von Müttern kleiner Kinder.",
+            "Mit höheren Steuern für Familien mit mehreren Kindern."
+          ],
+          "explanation": "Frankreich setzt seit Langem auf Ganztagsbetreuung und finanzielle Anreize für Familien – die Geburtenrate liegt dort meist höher als in Deutschland.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche familienpolitischen Maßnahmen sollen in Deutschland die Entscheidung für Kinder erleichtern?",
+          "options": [
+            "Elterngeld, Kindergeld und der Ausbau von Kita-Plätzen.",
+            "Eine gesetzlich vorgeschriebene Mindestkinderzahl für Ehepaare.",
+            "Die Kürzung des Kindergelds ab dem zweiten Kind.",
+            "Die Streichung von Betreuungsangeboten für Kleinkinder."
+          ],
+          "explanation": "Deutschland unterstützt Familien finanziell mit Eltern- und Kindergeld und baut die Kinderbetreuung aus, um Beruf und Familie besser vereinbar zu machen.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c22",
+      "topic": "Landflucht und Urbanisierung in Entwicklungsländern",
+      "variants": [
+        {
+          "text": "Was versteht man unter Landflucht?",
+          "options": [
+            "Die Abwanderung vieler Menschen aus ländlichen Regionen in die Städte.",
+            "Die Flucht aus einem Land wegen Krieg oder Verfolgung.",
+            "Den Umzug von Stadtbewohnern aufs Land.",
+            "Die Auswanderung von Landwirten in ein anderes Land."
+          ],
+          "explanation": "Landflucht ist eine Form der Binnenmigration: Menschen verlassen das Land in Richtung Stadt, meist in der Hoffnung auf Arbeit und bessere Lebensbedingungen.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum wachsen Großstädte in Entwicklungsländern besonders schnell?",
+          "options": [
+            "Viele Menschen ziehen vom Land in die Stadt, weil sie dort auf Arbeit und ein besseres Leben hoffen.",
+            "Weil die Geburtenrate auf dem Land stark gesunken ist.",
+            "Weil die Städte allen Zuwanderern kostenlose Wohnungen bereitstellen.",
+            "Weil die Regierungen die Landbevölkerung zwangsweise in die Städte umsiedeln."
+          ],
+          "explanation": "Landflucht und hohe Geburtenzahlen lassen die Städte in Entwicklungsländern rasant wachsen – oft schneller, als Wohnraum und Infrastruktur entstehen können.",
+          "difficulty": 2
+        }
+      ]
+    }
+  ]
+}

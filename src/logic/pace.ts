@@ -1,0 +1,60 @@
+import { state, todayKey } from '../store.ts';
+import { maxPoints, totalPoints } from './leitner.ts';
+
+export interface PaceInfo {
+  /** Kalendertage bis zur Deadline, heute mitgezählt (min. 0) */
+  daysLeft: number;
+  /** Noch offene Lernpunkte (Box-Stufen) bis alles gemeistert ist */
+  remainingPoints: number;
+  /** Nötige Lernpunkte pro Tag, um rechtzeitig fertig zu werden */
+  dailyTarget: number;
+  /** Heute bereits gesammelte Lernpunkte */
+  todayPoints: number;
+  onTrack: boolean;
+  /** Alles gelernt? */
+  done: boolean;
+  /** Deadline schon vorbei? */
+  overdue: boolean;
+}
+
+export function pace(): PaceInfo {
+  const deadline = state.profile?.deadline;
+  const remaining = maxPoints() - totalPoints();
+  const today = todayLogPoints();
+
+  let daysLeft = 1;
+  let overdue = false;
+  if (deadline) {
+    const end = new Date(deadline + 'T23:59:59');
+    const ms = end.getTime() - Date.now();
+    overdue = ms < 0;
+    daysLeft = Math.max(0, Math.ceil(ms / 86400000));
+  }
+
+  const effectiveDays = Math.max(1, daysLeft);
+  const dailyTarget = Math.max(1, Math.ceil(remaining / effectiveDays));
+  const done = remaining <= 0;
+
+  return {
+    daysLeft,
+    remainingPoints: remaining,
+    dailyTarget: done ? 0 : dailyTarget,
+    todayPoints: today,
+    onTrack: done || today >= (done ? 0 : dailyTarget),
+    done,
+    overdue,
+  };
+}
+
+function todayLogPoints(): number {
+  const log = state.stats.history.find((h) => h.date === todayKey());
+  return Math.max(0, log?.points ?? 0);
+}
+
+/** Formatiert die Restzeit menschenlesbar ("noch 12 Tage") */
+export function daysLeftLabel(p: PaceInfo): string {
+  if (p.overdue) return 'Deadline vorbei';
+  if (p.daysLeft === 0) return 'Heute ist der letzte Tag!';
+  if (p.daysLeft === 1) return 'Noch 1 Tag';
+  return `Noch ${p.daysLeft} Tage`;
+}

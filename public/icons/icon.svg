@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="globe" cx="0.35" cy="0.3" r="1">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="0.55" stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#0e7a46"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <circle cx="256" cy="250" r="150" fill="url(#globe)"/>
+  <path d="M256 100a150 150 0 0 1 0 300 150 150 0 0 1 0-300zm0 26c-25 34-40 77-40 124s15 90 40 124c25-34 40-77 40-124s-15-90-40-124zm-105 62a150 150 0 0 0-14 62h68c2-42 13-81 31-113-35 8-66 26-85 51zm210 0c-19-25-50-43-85-51 18 32 29 71 31 113h68a150 150 0 0 0-14-62zM137 276a150 150 0 0 0 14 62c19 25 50 43 85 51-18-32-29-71-31-113h-68zm238 0h-68c-2 42-13 81-31 113 35-8 66-26 85-51a150 150 0 0 0 14-62z"
+    fill="#0b3b22" opacity="0.55"/>
+  <circle cx="256" cy="250" r="150" fill="none" stroke="#083b2a" stroke-width="10" opacity="0.35"/>
+  <text x="256" y="452" font-family="system-ui, sans-serif" font-size="86" font-weight="800" text-anchor="middle" fill="#ffffff">GEO</text>
+</svg>
