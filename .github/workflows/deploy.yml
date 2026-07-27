@@ -3,6 +3,11 @@ name: Deploy zu GitHub Pages
 on:
   push:
     branches: [main]
+  # Derselbe Build läuft schon am Pull Request. Ohne das ist der Deploy-Build der
+  # erste automatisierte Build einer Änderung — ein Fehler darin wäre dann direkt
+  # ein fehlgeschlagenes Live-Deployment statt eines roten Checks am PR.
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -11,7 +16,10 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  # Gruppe pro Ref: Ein PR-Build darf niemals ein laufendes Deployment von main
+  # abbrechen. Zwei Pushes auf main teilen sich weiterhin eine Gruppe, dort bleibt
+  # es also beim gewollten "der neuere gewinnt".
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -24,17 +32,25 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      # Mit derselben Umgebung wie das Deployment gebaut (inkl. base-Pfad), damit
+      # der Check am PR wirklich das prüft, was später live geht.
       - run: npm run build
         env:
           GITHUB_PAGES: 'true'
-      - uses: actions/configure-pages@v5
+
+      # Ab hier nur noch Deployment-Vorbereitung: Ein Pull Request soll weder die
+      # Pages-Einstellungen des Repos anfassen noch ein Artefakt hochladen.
+      - if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
         with:
           enablement: true
-      - uses: actions/upload-pages-artifact@v3
+      - if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist
   deploy:
     needs: build
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

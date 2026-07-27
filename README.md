@@ -182,6 +182,14 @@ Pages (`.github/workflows/deploy.yml`). Falls das erste Deployment fehlschlägt:
 in den Repo-Einstellungen unter **Settings → Pages** als Source „GitHub Actions"
 wählen.
 
+Derselbe Build läuft schon am Pull Request — mit derselben Umgebung
+(`GITHUB_PAGES=true`), aber ohne die Deployment-Schritte: `configure-pages`,
+der Artefakt-Upload und der `deploy`-Job sind an `github.event_name !=
+'pull_request'` gehängt. Ein Fehler fällt damit als roter Check am PR auf und
+nicht erst als fehlgeschlagenes Live-Deployment. Die Concurrency-Gruppe hängt
+deshalb am Ref (`pages-${{ github.ref }}`) statt global an `pages`: Sonst
+könnte ein PR-Build ein laufendes Deployment von `main` abbrechen.
+
 ### Welcher Stand ist live?
 
 Jeder Build bekommt einen Stempel aus Commit und Build-Zeit. `vite.config.ts`
