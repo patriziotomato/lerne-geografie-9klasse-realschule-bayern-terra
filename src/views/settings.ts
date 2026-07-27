@@ -1,5 +1,6 @@
 import { bottomNav } from '../router.ts';
 import { esc, sha256Hex } from '../ui.ts';
+import { versionLine } from '../version.ts';
 import { gradePicker, bindGradePicker } from './gradePicker.ts';
 import { state, save, resetAll, exportJson } from '../store.ts';
 import { downloadIcs } from '../logic/ics.ts';
@@ -128,6 +129,9 @@ export function renderSettings(root: HTMLElement): void {
     </section>
 
     <p class="muted small center">Geo-Quest · Geografie 9 · Realschule Bayern (Terra)<br>Inhalte orientiert am LehrplanPLUS</p>
+    <p class="muted tiny center">
+      <button type="button" class="version-line" id="set-version">${esc(versionLine())}</button>
+    </p>
     ${bottomNav('settings')}`;
 
   bind(root);
@@ -256,5 +260,21 @@ function bind(root: HTMLElement): void {
 
   root.querySelector('#set-reset')!.addEventListener('click', () => {
     if (confirm('Wirklich ALLE Daten (Fortschritt, XP, Badges) löschen?')) resetAll();
+  });
+
+  // Antippen kopiert den Build-Stempel — damit muss man ihn für eine
+  // Fehlermeldung nicht vom Handy abtippen.
+  root.querySelector('#set-version')!.addEventListener('click', async (e) => {
+    const btn = e.currentTarget as HTMLButtonElement;
+    try {
+      await navigator.clipboard.writeText(versionLine());
+      btn.textContent = 'Version kopiert ✓';
+      setTimeout(() => {
+        btn.textContent = versionLine();
+      }, 1600);
+    } catch {
+      // Zwischenablage verweigert (ältere Browser, kein HTTPS) — der Text
+      // bleibt sichtbar und lässt sich normal markieren.
+    }
   });
 }
