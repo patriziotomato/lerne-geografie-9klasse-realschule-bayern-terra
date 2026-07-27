@@ -198,8 +198,8 @@ nimmt den Hash aus `GITHUB_SHA` (in der Action gesetzt) oder lokal aus
 
 | Ort | Wofür |
 |---|---|
-| Fußzeile unter „Mehr" (Einstellungen) | für Menschen — antippen kopiert den Stempel für Fehlermeldungen |
-| `<meta name="app-version\|app-commit\|app-build-time">` im `<head>` | maschinenlesbar, auch ohne Profil (ohne Profil zeigt der Router nur das Onboarding) |
+| Fußzeile unter „Mehr" (Einstellungen) | für Menschen — antippen kopiert den Stempel für Fehlermeldungen, darunter der Link auf die Release-Notes |
+| `<meta name="app-version\|app-release\|app-release-ahead\|app-commit\|app-build-time">` im `<head>` | maschinenlesbar, auch ohne Profil (ohne Profil zeigt der Router nur das Onboarding) |
 
 Den ausgelieferten Stand prüfen, ohne die App zu öffnen:
 
@@ -221,6 +221,47 @@ Jeder Deploy räumt so den alten Cache weg — **die Version in `sw.js` muss nic
 mehr von Hand gebumpt werden.** Gelesen wird nur aus dem Cache des eigenen
 Builds (nicht über das globale `caches.match()`), damit während des Wechsels
 keine veraltete Datei aus dem Cache des Vorgängers zurückkommt.
+
+### Releases
+
+Die Fußzeile zeigt die Version des **GitHub-Releases**, zu dem der laufende Build
+gehört, nicht die Nummer aus `package.json`: Nach einem Versions-Bump steht dort
+schon die nächste Nummer, veröffentlicht ist aber noch die alte. Was in der App
+steht, soll sich auf GitHub wiederfinden lassen — darunter verlinkt sie die
+Release-Notes.
+
+`vite.config.ts` fragt dafür `git describe --tags --long --match 'v*'` und
+zerlegt das Ergebnis in Tag und Abstand:
+
+| In der App | Bedeutung |
+|---|---|
+| `Version 1.1.0` | genau der Stand von Release `v1.1.0` |
+| `Version 1.1.0 +3` | Vorschau-Build von `main`, 3 Commits nach `v1.1.0` |
+| `Version 1.0.0` (ohne Link) | noch kein Release vorhanden — Nummer aus `package.json` |
+
+Ein neues Release anlegen:
+
+```bash
+npm version 1.1.0          # bumpt package.json, committet, setzt den Tag v1.1.0
+git push origin v1.1.0     # ➊ Tag zuerst → Release wird angelegt
+git push origin main       # ➋ dann main  → Deploy sieht den Tag und stempelt ihn ein
+```
+
+**Die Reihenfolge ist wichtig.** `release.yml` legt beim Tag-Push das Release mit
+automatisch erzeugten Notizen an (`gh release create --generate-notes`, gespeist
+aus den gemergten Pull Requests). Deployt wird weiterhin nur bei einem Push auf
+`main` — läuft der zuerst, existiert der Tag noch nicht und die frisch deployte
+App zeigt `1.0.0 +4` statt `1.1.0`. Passiert das doch, genügt ein manueller Lauf
+von „Deploy zu GitHub Pages" (**Actions → Run workflow**); der Stand ist
+derselbe, nur der Stempel wird neu gesetzt.
+
+`release.yml` bricht ab, wenn der Tag nicht zur Version in `package.json` passt.
+Ein falscher Tag lässt sich löschen — ein falsches Release haben andere schon
+gesehen.
+
+Damit `git describe` in der Action überhaupt etwas findet, checkt `deploy.yml`
+mit `fetch-depth: 0` und `fetch-tags: true` aus. Mit dem Standard (flacher Klon
+ohne Tags) fiele die App still auf `package.json` zurück.
 
 ## Roadmap
 

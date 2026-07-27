@@ -1,6 +1,6 @@
 import { bottomNav } from '../router.ts';
 import { esc, sha256Hex } from '../ui.ts';
-import { versionLine } from '../version.ts';
+import { versionLine, releaseName, APP_RELEASE_URL } from '../version.ts';
 import { gradePicker, bindGradePicker } from './gradePicker.ts';
 import { state, save, resetAll, exportJson } from '../store.ts';
 import { downloadIcs } from '../logic/ics.ts';
@@ -131,6 +131,11 @@ export function renderSettings(root: HTMLElement): void {
     <p class="muted small center">Geo-Quest · Geografie 9 · Realschule Bayern (Terra)<br>Inhalte orientiert am LehrplanPLUS</p>
     <p class="muted tiny center">
       <button type="button" class="version-line" id="set-version">${esc(versionLine())}</button>
+      ${
+        // Nur mit Release: ohne Tag zeigt die Nummer auf keine GitHub-Seite und
+        // der Link liefe ins Leere.
+        APP_RELEASE_URL ? `<br><a class="version-release" href="${esc(APP_RELEASE_URL)}" target="_blank" rel="noopener noreferrer">Was ist neu in ${esc(releaseName())} ↗</a>` : ''
+      }
     </p>
     ${bottomNav('settings')}`;
 
