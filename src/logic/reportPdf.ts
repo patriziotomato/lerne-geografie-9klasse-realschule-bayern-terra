@@ -2,6 +2,7 @@ import { createPdf, PAGE_H, PAGE_W, type Pdf } from './pdf.ts';
 import { chapterById } from '../data/chapters.ts';
 import { daysLeftLabel } from './pace.ts';
 import {
+  coverageLabel,
   fmtDay,
   fmtStamp,
   quotePercent,
@@ -175,7 +176,7 @@ function status(pdf: Pdf, flow: Flow, data: ReportData): void {
     { size: 10.5, font: 'bold' },
   );
   flow.y += 14;
-  for (const note of data.grade.notes) {
+  for (const note of [...data.grade.notes, `${coverageLabel(data.grade)}.`]) {
     paragraph(pdf, flow, note, { size: 9, gray: INK_2 });
   }
 }

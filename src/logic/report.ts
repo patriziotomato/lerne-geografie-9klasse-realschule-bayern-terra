@@ -52,6 +52,10 @@ export interface ReportGrade {
   target: number | null;
   /** Geschätzte Note zum Stichtag; null = zu wenig Daten */
   current: number | null;
+  /** Wie viele Inhalte des Lernplans schon mindestens einmal abgefragt wurden.
+   *  Steht bewusst neben der Note: Die Abdeckung fließt zu einem Fünftel in die
+   *  Schätzung ein, ist also kein Nebensatz, sondern erklärt einen Teil davon. */
+  coverage: { seen: number; total: number };
   /** Fertig formulierte Zusätze („Bis zur Note 3 sind es ca. 4 Fragerunden").
    *  Bewusst Text statt Zahlen: Die Sätze entstehen aus einer Simulation, die
    *  den ganzen Lernstand braucht — auf dem Elterngerät liegt der nicht vor. */
@@ -153,11 +157,13 @@ export function buildReport(): ReportData {
  *  Eltern-Bereich nennt die Note ungeschönt — auch eine 6. */
 function buildGrade(): ReportGrade {
   const v = gradeVerdict();
-  if (v.kind === 'no-target') return { target: null, current: null, notes: [] };
+  const cov = { seen: v.coverage.seen, total: v.coverage.total };
+  if (v.kind === 'no-target') return { target: null, current: null, coverage: cov, notes: [] };
   if (v.kind === 'no-data') {
     return {
       target: v.target,
       current: null,
+      coverage: cov,
       notes: [
         `Für eine Einschätzung sind noch zu wenige Inhalte abgefragt worden. Zielnote: ${v.target} (${gradeLabel(v.target)}).`,
       ],
@@ -186,7 +192,13 @@ function buildGrade(): ReportGrade {
     `Zielnote: ${v.target} (${gradeLabel(v.target)}). Die Schätzung beschreibt den Lernstand zum Zeitpunkt des Berichts, nicht das Ergebnis am Prüfungstag.`,
   ];
   if (distances.length > 0) notes.push(`${distances.join(' · ')}.`);
-  return { target: v.target, current: v.current, notes };
+  return { target: v.target, current: v.current, coverage: cov, notes };
+}
+
+/** „Themen mindestens einmal abgefragt: 74 von 106" — einmal formuliert für
+ *  Eltern-Bereich, Eltern-Link und PDF. */
+export function coverageLabel(g: ReportGrade): string {
+  return `Themen mindestens einmal abgefragt: ${g.coverage.seen} von ${g.coverage.total}`;
 }
 
 function lastDays(n: number): ReportDay[] {

@@ -2,6 +2,7 @@ import { esc, fmtDate, fmtTime } from '../ui.ts';
 import { chapterById } from '../data/chapters.ts';
 import { daysLeftLabel } from '../logic/pace.ts';
 import {
+  coverageLabel,
   fmtDay,
   quotePercent,
   statusLabel,
@@ -74,7 +75,11 @@ function gradeCard(data: ReportData, live: boolean): string {
   const g = data.grade;
   if (g.target === null) return '';
 
-  const notes = g.notes.map((n) => `<span class="muted small">${esc(n)}</span>`).join('<br>');
+  // Die Abdeckung steht in beiden Zweigen: Sie fließt zu einem Fünftel in die
+  // Schätzung ein, ist also kein Nebensatz, sondern erklärt einen Teil der Note.
+  const notes = [...g.notes, `${coverageLabel(g)}.`]
+    .map((n) => `<span class="muted small">${esc(n)}</span>`)
+    .join('<br>');
 
   if (g.current === null) {
     return card(

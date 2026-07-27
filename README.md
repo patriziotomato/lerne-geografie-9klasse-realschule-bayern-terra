@@ -34,6 +34,11 @@ Kapitelstruktur des Terra-Buchs (Klett). Pures TypeScript — kein Framework.
   jeder ungelernte Inhalt mit 0), wird bewusst keine Note genannt, sondern nur der
   Weg dorthin. Eine erstmals erreichte Note gibt Konfetti und eine
   Benachrichtigung. Der Eltern-Bereich zeigt weiterhin den ungeschönten Stand.
+- **Breite zählt mit**: In die Notenschätzung geht zu vier Fünfteln der Lernstand
+  ein und zu einem Fünftel die Themenabdeckung — wie viel vom Lernplan überhaupt
+  schon einmal dran war. Jedes Thema einmal angeschaut zählt damit besser als
+  wenige Themen immer wieder, und die Karte sagt auch, wie viele Themen noch
+  offen sind. Details und Herleitung stehen in `src/logic/grade.ts`.
 - **Lernzeiten & Erinnerungen**: Feste Lernzeiten (z. B. 14:30 & 20:30),
   Benachrichtigungen bei geöffneter App, Motivations-Nudges und Kalender-Export
   (.ics) für zuverlässige System-Erinnerungen. Handynummer wird fürs spätere
@@ -243,6 +248,46 @@ Bei jedem Push auf `main` baut GitHub Actions die App und deployt sie auf GitHub
 Pages (`.github/workflows/deploy.yml`). Falls das erste Deployment fehlschlägt:
 in den Repo-Einstellungen unter **Settings → Pages** als Source „GitHub Actions"
 wählen.
+
+Derselbe Build läuft schon am Pull Request — mit derselben Umgebung
+(`GITHUB_PAGES=true`), aber ohne die Deployment-Schritte: `configure-pages`,
+der Artefakt-Upload und der `deploy`-Job sind an `github.event_name !=
+'pull_request'` gehängt. Ein Fehler fällt damit als roter Check am PR auf und
+nicht erst als fehlgeschlagenes Live-Deployment. Die Concurrency-Gruppe hängt
+deshalb am Ref (`pages-${{ github.ref }}`) statt global an `pages`: Sonst
+könnte ein PR-Build ein laufendes Deployment von `main` abbrechen.
+
+### Welcher Stand ist live?
+
+Jeder Build bekommt einen Stempel aus Commit und Build-Zeit. `vite.config.ts`
+nimmt den Hash aus `GITHUB_SHA` (in der Action gesetzt) oder lokal aus
+`git rev-parse HEAD` und setzt ihn an zwei Stellen ein:
+
+| Ort | Wofür |
+|---|---|
+| Fußzeile unter „Mehr" (Einstellungen) | für Menschen — antippen kopiert den Stempel für Fehlermeldungen |
+| `<meta name="app-version\|app-commit\|app-build-time">` im `<head>` | maschinenlesbar, auch ohne Profil (ohne Profil zeigt der Router nur das Onboarding) |
+
+Den ausgelieferten Stand prüfen, ohne die App zu öffnen:
+
+```bash
+curl -s https://patriziotomato.github.io/lerne-geografie-9klasse-realschule-bayern-terra/ \
+  | grep app-commit
+```
+
+Zeigt das noch den vorherigen Commit, ist der Deploy nicht durch (oder das CDN
+liefert noch die alte Antwort) — der Actions-Run allein sagt das nicht.
+
+Die Werte stecken im gehashten JS-Bundle, nicht in einer eigenen Datei unter
+`public/`: Alles Ungehashte liefert der Service Worker cache-first aus, die App
+würde damit den vorigen Deploy als aktuell melden.
+
+Aus demselben Grund hängt der Cache-Name des Service Workers am Commit. `main.ts`
+registriert ihn als `sw.js?v=<hash>`, `public/sw.js` liest den Wert daraus.
+Jeder Deploy räumt so den alten Cache weg — **die Version in `sw.js` muss nicht
+mehr von Hand gebumpt werden.** Gelesen wird nur aus dem Cache des eigenen
+Builds (nicht über das globale `caches.match()`), damit während des Wechsels
+keine veraltete Datei aus dem Cache des Vorgängers zurückkommt.
 
 ## Roadmap
 

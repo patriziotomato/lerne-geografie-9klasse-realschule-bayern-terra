@@ -13,6 +13,7 @@ import { renderTopics } from './views/topics.ts';
 import { renderMerkliste } from './views/merkliste.ts';
 import { scheduleWhileOpen } from './logic/reminders.ts';
 import { applyTheme, watchSystemTheme } from './logic/theme.ts';
+import { APP_COMMIT } from './version.ts';
 
 register('onboarding', renderOnboarding);
 register('home', renderHome);
@@ -39,10 +40,15 @@ document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible') scheduleWhileOpen();
 });
 
-// PWA: Service Worker registrieren (nur im Build sinnvoll, schadet im Dev nicht)
+// PWA: Service Worker registrieren (nur im Build sinnvoll, schadet im Dev nicht).
+// Der Commit hängt als ?v= an der Script-URL: sw.js liest ihn als Cache-Namen,
+// wodurch jeder Deploy den alten Cache aufräumt. Ohne das könnten die
+// ungehashten Dateien (Manifest, Icons) beliebig lange veralten, weil sie
+// cache-first ausgeliefert werden. Der Scope leitet sich aus dem Pfad ab und
+// bleibt von der Query unberührt — es bleibt also dieselbe Registrierung.
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {
+    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js?v=${APP_COMMIT}`).catch(() => {
       // Ohne SW funktioniert die App trotzdem — nur nicht offline.
     });
   });
