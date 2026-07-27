@@ -19,11 +19,29 @@ const BOX_SCORE = [0.15, 0.4, 0.62, 0.82, 0.96];
 /** Nie gesehene Inhalte zählen null — was man nie gelesen hat, kann man nicht. */
 const UNSEEN_SCORE = 0;
 
+/** Box-Stand eines nie abgefragten Inhalts. Muss von Box 0 unterscheidbar bleiben:
+ *  Box 0 heißt „zuletzt falsch beantwortet", nicht „noch nie gesehen". */
+const UNSEEN_BOX = -1;
+
+/** Anteil der Schätzung, der an der Themenabdeckung hängt statt am Lernstand.
+ *
+ *  Der reine Box-Durchschnitt belohnt Tiefe: Der halbe Stoff gemeistert ergibt 0,48,
+ *  der ganze Stoff einmal richtig beantwortet nur 0,40 — obwohl das Zweite viermal
+ *  weniger Antworten kostet und in einer Prüfung, die quer über alle Themen fragt,
+ *  klar besser trägt. Ein nie gesehenes Thema ist außerdem kein „halb gekonnt",
+ *  sondern ein sicherer Ausfall.
+ *
+ *  Deshalb zählt ein Fünftel der Schätzung schlicht, wie viel vom Lernplan überhaupt
+ *  schon einmal dran war. Ab 0,14 kippt der Vergleich oben; 0,2 macht ihn als
+ *  Notensprung sichtbar (4 statt 5), lässt aber den Lernstand dominieren — alles
+ *  einmal gesehen und nichts davon gekonnt bleibt eine 5.
+ *
+ *  Die Obergrenze muss über der Schwelle für Note 1 liegen, sonst wäre eine 1
+ *  unerreichbar: alles gemeistert ergibt 0,8 · 0,96 + 0,2 = 0,968. */
+const COVERAGE_WEIGHT = 0.2;
+
 /** Unter so vielen gesehenen Inhalten ist jede Schätzung Kaffeesatz. */
 const MIN_SEEN = 10;
-
-/** Bis zu diesem Anteil gesehener Inhalte gilt man als „am Anfang". */
-const EARLY_COVERAGE = 0.25;
 
 /** Schlechteste Note, die in der Lern-Ansicht überhaupt ausgesprochen wird.
  *  Eine 6 ist keine Nachricht, sondern Frust: Weil ungelernte Inhalte mit 0 zählen,
@@ -62,24 +80,75 @@ export function percentForGrade(grade: number): number {
   return GRADE_THRESHOLDS[grade - 1] ?? 0;
 }
 
-function scoreOf(conceptId: string): number {
-  const p = state.progress[conceptId];
-  if (!p || p.lastSeen === null) return UNSEEN_SCORE;
-  return BOX_SCORE[Math.min(MAX_BOX, Math.max(0, p.box))];
+function boxScore(box: number): number {
+  if (box === UNSEEN_BOX) return UNSEEN_SCORE;
+  return BOX_SCORE[Math.min(MAX_BOX, Math.max(0, box))];
+}
+
+/** Box-Stände des Lernplans als einfaches Array — gemeinsame Grundlage von
+ *  Schätzung und Simulation. UNSEEN_BOX für alles, was noch nie dran war. */
+function boxSnapshot(): number[] {
+  return plannedConcepts().map((e) => {
+    const p = state.progress[e.concept.id];
+    if (!p || p.lastSeen === null) return UNSEEN_BOX;
+    return Math.min(MAX_BOX, Math.max(0, p.box));
+  });
+}
+
+/** Lernstand (Tiefe) und Themenabdeckung (Breite) zur geschätzten Prüfungsleistung
+ *  (0..1) zusammensetzen. Die einzige Stelle, an der die Formel steht:
+ *  conceptsNeededFor() und roundsNeededFor() rechnen mit derselben, sonst
+ *  widerspräche die genannte Restdistanz der angezeigten Note. */
+function blend(scoreSum: number, seen: number, total: number): number {
+  if (total === 0) return 0;
+  return (1 - COVERAGE_WEIGHT) * (scoreSum / total) + COVERAGE_WEIGHT * (seen / total);
+}
+
+function scoreSumOf(boxes: number[]): number {
+  return boxes.reduce((s, box) => s + boxScore(box), 0);
+}
+
+function seenCountOf(boxes: number[]): number {
+  return boxes.reduce((n, box) => n + (box === UNSEEN_BOX ? 0 : 1), 0);
 }
 
 /** Geschätzte Prüfungsleistung (0..1) über den ganzen Lernplan — noch nicht
- *  gelernte Inhalte drücken die Schätzung bewusst. */
+ *  gelernte Inhalte drücken die Schätzung bewusst doppelt: über den Lernstand 0
+ *  und über die fehlende Abdeckung. */
 export function estimatedPercent(): number {
-  const concepts = plannedConcepts();
-  if (concepts.length === 0) return 0;
-  const sum = concepts.reduce((s, e) => s + scoreOf(e.concept.id), 0);
-  return sum / concepts.length;
+  const boxes = boxSnapshot();
+  return blend(scoreSumOf(boxes), seenCountOf(boxes), boxes.length);
 }
 
 /** Anzahl der Inhalte im Lernplan, die schon mindestens einmal drankamen */
 export function seenConcepts(): number {
   return plannedConcepts().filter((e) => state.progress[e.concept.id]?.lastSeen != null).length;
+}
+
+/** Themenabdeckung des Lernplans. Fließt mit COVERAGE_WEIGHT in die Schätzung ein,
+ *  deshalb liegt die Aufbereitung hier und nicht in den Views. */
+export interface Coverage {
+  /** Inhalte, die schon mindestens einmal abgefragt wurden */
+  seen: number;
+  /** Inhalte, die noch nie dran waren */
+  unseen: number;
+  total: number;
+  /** seen / total (0..1) */
+  ratio: number;
+  /** true = jeder Inhalt des Lernplans war mindestens einmal dran */
+  complete: boolean;
+}
+
+export function coverage(): Coverage {
+  const total = plannedConcepts().length;
+  const seen = seenConcepts();
+  return {
+    seen,
+    unseen: total - seen,
+    total,
+    ratio: total === 0 ? 0 : seen / total,
+    complete: total > 0 && seen >= total,
+  };
 }
 
 /** Geschätzte Note — null, solange zu wenig beantwortet wurde. */
@@ -90,41 +159,33 @@ export function estimatedGrade(): number | null {
 
 /** Wie viele Inhalte müssen noch gemeistert werden, damit die Note steht?
  *  Gemeistert springt jeder Inhalt auf denselben Wert — den größten Sprung machen also
- *  die schwächsten. Aufsteigend sortiert ergibt das die kleinstmögliche Anzahl, und es
- *  ist zugleich die Reihenfolge, in der pickRound() den Stoff tatsächlich abfragt
- *  (niedrigste Box zuerst). */
+ *  die schwächsten, und noch nie gesehene bringen zusätzlich Abdeckung mit. Sie liegen
+ *  bei Score 0 ohnehin vorn, aufsteigend sortiert steht damit weiterhin der jeweils
+ *  größte Sprung zuerst. Das ergibt die kleinstmögliche Anzahl, und es ist zugleich die
+ *  Reihenfolge, in der pickRound() den Stoff tatsächlich abfragt (niedrigste Box
+ *  zuerst, ungesehene wegen ihres unendlichen Alters davor). */
 export function conceptsNeededFor(grade: number): number {
-  const concepts = plannedConcepts();
-  if (concepts.length === 0) return 0;
-  const scores = concepts.map((e) => scoreOf(e.concept.id));
-  const target = percentForGrade(grade) * concepts.length;
-  let sum = scores.reduce((s, v) => s + v, 0);
-  if (sum >= target) return 0;
+  const boxes = boxSnapshot();
+  if (boxes.length === 0) return 0;
 
-  const open = scores.filter((score) => score < BOX_SCORE[MAX_BOX]).sort((a, b) => a - b);
+  const target = percentForGrade(grade);
+  let sum = scoreSumOf(boxes);
+  let seen = seenCountOf(boxes);
+  if (blend(sum, seen, boxes.length) >= target) return 0;
+
+  const open = boxes
+    .map((_, i) => i)
+    .filter((i) => boxes[i] < MAX_BOX)
+    .sort((a, b) => boxScore(boxes[a]) - boxScore(boxes[b]));
 
   let needed = 0;
-  for (const score of open) {
-    if (sum >= target) break;
-    sum += BOX_SCORE[MAX_BOX] - score;
+  for (const i of open) {
+    sum += BOX_SCORE[MAX_BOX] - boxScore(boxes[i]);
+    if (boxes[i] === UNSEEN_BOX) seen++;
     needed++;
+    if (blend(sum, seen, boxes.length) >= target) break;
   }
   return needed;
-}
-
-/** Box-Stände des Lernplans als einfaches Array — Simulationsgrundlage. */
-const UNSEEN_BOX = -1;
-
-function boxScore(box: number): number {
-  return box === UNSEEN_BOX ? UNSEEN_SCORE : BOX_SCORE[box];
-}
-
-function boxSnapshot(): number[] {
-  return plannedConcepts().map((e) => {
-    const p = state.progress[e.concept.id];
-    if (!p || p.lastSeen === null) return UNSEEN_BOX;
-    return Math.min(MAX_BOX, Math.max(0, p.box));
-  });
 }
 
 /** Bisher gemessene Trefferquote im Lernplan; ohne Daten eine wohlwollende Annahme. */
@@ -147,7 +208,8 @@ export function observedAccuracy(): number {
  *  gemeistert sein müssen, eine Runde hebt aber zehn Inhalte nur um je eine Box.
  *  Deshalb wird Runde für Runde simuliert — in derselben Reihenfolge, in der
  *  pickRound() den Stoff wirklich abfragt (schwächste zuerst), mit der Box-Mechanik
- *  von applyAnswer().
+ *  von applyAnswer(). Mitgezählt wird auch die Abdeckung: Ein Inhalt, der in der Runde
+ *  drankommt, ist danach gesehen — auch wenn die Antwort falsch war.
  *
  *  `accuracy` = 1 ist der Bestfall. Die falschen Antworten treffen absichtlich das
  *  obere Ende der Auswahl: Lägen sie auf den schwächsten Inhalten, blieben genau die
@@ -162,13 +224,14 @@ export function roundsNeededFor(grade: number, accuracy = 1): number | null {
   const boxes = boxSnapshot();
   if (boxes.length === 0) return null;
 
-  const target = percentForGrade(grade) * boxes.length;
+  const target = percentForGrade(grade);
   const clamped = Math.min(1, Math.max(MIN_ASSUMED_ACCURACY, accuracy));
   const rightPerRound = Math.round(clamped * ROUND_SIZE);
-  let sum = boxes.reduce((s, box) => s + boxScore(box), 0);
+  let sum = scoreSumOf(boxes);
+  let seen = seenCountOf(boxes);
 
   for (let round = 0; round <= MAX_SIM_ROUNDS; round++) {
-    if (sum >= target) return round;
+    if (blend(sum, seen, boxes.length) >= target) return round;
 
     const picked = boxes
       .map((_, i) => i)
@@ -177,10 +240,13 @@ export function roundsNeededFor(grade: number, accuracy = 1): number | null {
 
     picked.forEach((i, rank) => {
       // Eine falsche Antwort auf einen ungesehenen Inhalt lässt ihn in Box 0 zurück —
-      // gesehen ist er trotzdem, der Score steigt also von 0 auf BOX_SCORE[0].
-      const box = boxes[i] === UNSEEN_BOX ? 0 : boxes[i];
+      // gesehen ist er trotzdem, der Score steigt also von 0 auf BOX_SCORE[0] und die
+      // Abdeckung um eins.
+      const wasUnseen = boxes[i] === UNSEEN_BOX;
+      const box = wasUnseen ? 0 : boxes[i];
       const next = rank < rightPerRound ? Math.min(MAX_BOX, box + 1) : Math.max(0, box - 1);
       sum += boxScore(next) - boxScore(boxes[i]);
+      if (wasUnseen) seen++;
       boxes[i] = next;
     });
   }
@@ -226,7 +292,7 @@ function milestoneFor(current: number | null): Milestone | null {
   return { grade, rounds: roundEstimate(grade) };
 }
 
-export type GradeVerdict =
+type GradeStatus =
   /** Es wurde noch keine Zielnote festgelegt */
   | { kind: 'no-target' }
   /** Zu wenig beantwortet für eine seriöse Schätzung */
@@ -234,21 +300,28 @@ export type GradeVerdict =
   /** Stand rechnerisch noch bei einer 6. Die Lern-Ansicht nennt die Note nicht und
    *  zeigt nur den Weg dorthin; der Eltern-Bereich führt `current` sachlich mit. */
   | { kind: 'warmup'; target: number; current: number; next: Milestone }
-  /** Aktueller Stand schlechter als das Ziel; early = erst ein kleiner Teil gesehen */
+  /** Aktueller Stand schlechter als das Ziel */
   | {
       kind: 'behind';
       target: number;
       current: number;
       needed: number;
-      early: boolean;
       next: Milestone | null;
       targetRounds: RoundEstimate | null;
     }
   | { kind: 'on-target'; target: number; current: number }
   | { kind: 'ahead'; target: number; current: number };
 
+/** Anzeige-Zustand der Notenkarte. Die Abdeckung hängt an jedem Fall, weil sie in
+ *  jeden Fall einrechnet — deshalb steht sie neben der Union statt in ihr. */
+export type GradeVerdict = GradeStatus & { coverage: Coverage };
+
 /** Fertiger Anzeige-Zustand für die Views — dort bleibt keine Rechenlogik. */
 export function gradeVerdict(): GradeVerdict {
+  return { ...gradeStatus(), coverage: coverage() };
+}
+
+function gradeStatus(): GradeStatus {
   const target = state.profile?.targetGrade ?? null;
   if (target === null) return { kind: 'no-target' };
 
@@ -269,13 +342,15 @@ export function gradeVerdict(): GradeVerdict {
   if (current < target) return { kind: 'ahead', target, current };
   if (current === target) return { kind: 'on-target', target, current };
 
-  const planSize = plannedConcepts().length;
+  // Kein „steht noch am Anfang"-Flag mehr: Wer erst ein Viertel des Lernplans gesehen
+  // hat, kommt rechnerisch über 24 % nicht hinaus und landet damit zwingend im
+  // warmup-Zweig — die Bedingung war nie erfüllbar. Die Abdeckung an GradeVerdict
+  // sagt dasselbe, nur mit Zahl und in jedem Zweig.
   return {
     kind: 'behind',
     target,
     current,
     needed: conceptsNeededFor(target),
-    early: planSize === 0 || seenConcepts() / planSize < EARLY_COVERAGE,
     next: milestoneFor(current),
     targetRounds: roundEstimate(target),
   };

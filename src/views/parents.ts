@@ -158,12 +158,17 @@ function parentGradeCard(v: GradeVerdict): string {
       <div>${body}</div>
     </section>`;
 
+  // Die Abdeckung steht in beiden Zweigen: Sie fließt zu einem Fünftel in die Schätzung
+  // ein, ist also kein Nebensatz, sondern erklärt einen Teil der genannten Note.
+  const cov = `Themen mindestens einmal abgefragt: ${v.coverage.seen} von ${v.coverage.total}`;
+
   if (v.kind === 'no-data') {
     return card(
       'unknown',
       '🔍',
       `<strong>Noch keine Noten-Einschätzung</strong><br>
-       <span class="muted small">Dafür sind noch zu wenige Inhalte abgefragt worden. Zielnote: ${v.target} (${gradeLabel(v.target)}).</span>`,
+       <span class="muted small">Dafür sind noch zu wenige Inhalte abgefragt worden. Zielnote: ${v.target} (${gradeLabel(v.target)}).</span><br>
+       <span class="muted small">${cov}.</span>`,
     );
   }
 
@@ -196,7 +201,8 @@ function parentGradeCard(v: GradeVerdict): string {
     mod,
     emoji,
     `<strong>Stand heute: Note <span class="grade-num">${v.current}</span></strong><br>
-     <span class="muted small">Zielnote: ${v.target} (${gradeLabel(v.target)}). Die Schätzung beschreibt den Lernstand von jetzt, nicht das Ergebnis am Prüfungstag.</span>${todo}`,
+     <span class="muted small">Zielnote: ${v.target} (${gradeLabel(v.target)}). Die Schätzung beschreibt den Lernstand von jetzt, nicht das Ergebnis am Prüfungstag.</span>${todo}
+     <br><span class="muted small">${cov}.</span>`,
   );
 }
 
@@ -215,6 +221,7 @@ function buildReport(): string {
       : v.kind === 'no-data'
         ? [`Noten-Einschätzung: noch zu wenig Daten · Zielnote ${v.target}`]
         : [`Noten-Einschätzung: Stand ${v.current} · Zielnote ${v.target}`]),
+    `Themen mindestens einmal abgefragt: ${v.coverage.seen}/${v.coverage.total}`,
     `Inhalte gelernt: ${totalLearned()}/${plannedConceptCount()}`,
     `Lernzeit gesamt: ${totalMinutes} min in ${s.sessions.length} Einheiten`,
     `Streak: ${s.streak} Tage (Rekord: ${s.bestStreak})`,
