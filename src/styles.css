@@ -241,6 +241,17 @@ strong {
 .center {
   text-align: center;
 }
+/* Der Build-Stempel in der Fußzeile ist antippbar (kopiert sich selbst), soll
+   aber wie Text aussehen — ein .btn wäre für eine Fußnote ein zu großer Kasten. */
+.version-line {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
 /* War ein Verlauf — jetzt schlicht der Akzent. */
 .grad {
   color: var(--accent);

@@ -177,6 +177,38 @@ Pages (`.github/workflows/deploy.yml`). Falls das erste Deployment fehlschlägt:
 in den Repo-Einstellungen unter **Settings → Pages** als Source „GitHub Actions"
 wählen.
 
+### Welcher Stand ist live?
+
+Jeder Build bekommt einen Stempel aus Commit und Build-Zeit. `vite.config.ts`
+nimmt den Hash aus `GITHUB_SHA` (in der Action gesetzt) oder lokal aus
+`git rev-parse HEAD` und setzt ihn an zwei Stellen ein:
+
+| Ort | Wofür |
+|---|---|
+| Fußzeile unter „Mehr" (Einstellungen) | für Menschen — antippen kopiert den Stempel für Fehlermeldungen |
+| `<meta name="app-version\|app-commit\|app-build-time">` im `<head>` | maschinenlesbar, auch ohne Profil (ohne Profil zeigt der Router nur das Onboarding) |
+
+Den ausgelieferten Stand prüfen, ohne die App zu öffnen:
+
+```bash
+curl -s https://patriziotomato.github.io/lerne-geografie-9klasse-realschule-bayern-terra/ \
+  | grep app-commit
+```
+
+Zeigt das noch den vorherigen Commit, ist der Deploy nicht durch (oder das CDN
+liefert noch die alte Antwort) — der Actions-Run allein sagt das nicht.
+
+Die Werte stecken im gehashten JS-Bundle, nicht in einer eigenen Datei unter
+`public/`: Alles Ungehashte liefert der Service Worker cache-first aus, die App
+würde damit den vorigen Deploy als aktuell melden.
+
+Aus demselben Grund hängt der Cache-Name des Service Workers am Commit. `main.ts`
+registriert ihn als `sw.js?v=<hash>`, `public/sw.js` liest den Wert daraus.
+Jeder Deploy räumt so den alten Cache weg — **die Version in `sw.js` muss nicht
+mehr von Hand gebumpt werden.** Gelesen wird nur aus dem Cache des eigenen
+Builds (nicht über das globale `caches.match()`), damit während des Wechsels
+keine veraltete Datei aus dem Cache des Vorgängers zurückkommt.
+
 ## Roadmap
 
 - SMS-Erinnerungen über kleinen Server (z. B. Cloudflare Workers + Twilio)
