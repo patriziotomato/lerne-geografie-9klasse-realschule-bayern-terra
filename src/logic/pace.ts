@@ -55,8 +55,11 @@ function todayLogPoints(): number {
   return Math.max(0, log?.points ?? 0);
 }
 
-/** Formatiert die Restzeit menschenlesbar ("noch 12 Tage") */
-export function daysLeftLabel(p: PaceInfo): string {
+/** Formatiert die Restzeit menschenlesbar ("noch 12 Tage").
+ *  Nimmt bewusst nur die drei Felder, die es wirklich liest: So kann auch der
+ *  Lernbericht (logic/report.ts) dieselbe Formulierung nutzen, ohne eine
+ *  vollständige PaceInfo mit sich herumzutragen. */
+export function daysLeftLabel(p: Pick<PaceInfo, 'hasDeadline' | 'overdue' | 'daysLeft'>): string {
   if (!p.hasDeadline) return 'Kein Ziel-Datum gesetzt';
   if (p.overdue) return 'Deadline vorbei';
   if (p.daysLeft === 0) return 'Heute ist der letzte Tag!';
