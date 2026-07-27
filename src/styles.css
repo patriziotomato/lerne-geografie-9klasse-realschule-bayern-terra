@@ -129,6 +129,18 @@
 }
 
 /* ==== Basis ============================================================= */
+
+/* Geräte-Sicherheitsabstände als Tokens. In der iOS-Standalone-App beginnt die
+   WebView wegen viewport-fit=cover und der durchsichtigen Statusleiste
+   (apple-mobile-web-app-status-bar-style in index.html) hinter Notch bzw.
+   Dynamic Island und läuft unten unter den Home-Indikator. Als Variable statt
+   inline, damit Layouts die Werte einrechnen können und sie sich zum Testen
+   überschreiben lassen. Im Browser und am Desktop sind beide 0. */
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
 *,
 *::before,
 *::after {
@@ -157,10 +169,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Der obere Abstand addiert den Sicherheitsbereich zum normalen Rand: sonst
+   startet die erste Überschrift jeder View auf iPhones mit Notch direkt unter
+   der Uhrzeit. Unten hält der Platz die Bottom-Nav frei. */
 #app {
   max-width: 480px;
   margin: 0 auto;
-  padding: var(--s-4) var(--s-4) calc(92px + env(safe-area-inset-bottom));
+  padding: calc(var(--s-4) + var(--safe-top)) var(--s-4) calc(92px + var(--safe-bottom));
   min-height: 100dvh;
 }
 
@@ -1319,7 +1334,7 @@ strong {
   display: flex;
   max-width: 480px;
   margin: 0 auto;
-  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: var(--safe-bottom);
   background: var(--bg-elev);
   border-top: 1px solid var(--line);
   z-index: 50;
