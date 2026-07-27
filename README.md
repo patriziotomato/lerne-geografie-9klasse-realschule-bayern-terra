@@ -44,7 +44,11 @@ Kapitelstruktur des Terra-Buchs (Klett). Pures TypeScript — kein Framework.
   (.ics) für zuverlässige System-Erinnerungen. Handynummer wird fürs spätere
   SMS-Feature bereits erfasst (bleibt lokal).
 - **Eltern-Bereich** (optional PIN-geschützt): Lernhistorie (wann, wie lange,
-  wie viele Fragen, Quote), Fortschritt pro Kapitel, teilbarer Bericht.
+  wie viele Fragen, Quote), Fortschritt pro Kapitel.
+- **Lernbericht als PDF oder Eltern-Link**: Der Bericht geht als fertige Datei
+  oder als Link raus, den Eltern selbst öffnen — nicht mehr als Fließtext, der
+  sich im Messenger vor dem Absenden überschreiben ließ. Siehe
+  [Der Lernbericht](#der-lernbericht).
 - **Farbschema wählbar**: Automatisch (folgt dem Gerät), Hell oder Dunkel —
   einstellbar unter „Mehr → Darstellung".
 - **PWA**: Installierbar auf dem Homescreen, funktioniert offline.
@@ -117,6 +121,69 @@ Themen-Kachel waren der größte Posten im Farbhaushalt.
 
 App-Icons werden aus `public/icons/icon.svg` gerendert; die PNG-Größen
 (180/192/512 plus maskable) sind Rasterisate derselben Datei.
+
+## Der Lernbericht
+
+Der Eltern-Bereich gibt den Lernstand auf zwei Wegen heraus — beide erzeugen
+etwas Fertiges, keinen editierbaren Text:
+
+| Weg | Was passiert |
+|---|---|
+| **📄 PDF** | Wird auf dem Gerät gerendert (`logic/pdf.ts` + `logic/reportPdf.ts`, ohne Bibliothek) und über den Teilen-Dialog bzw. als Download weitergegeben. |
+| **🔗 Eltern-Link** | Der komplette Bericht steckt verschlüsselt im URL-Fragment. Eltern öffnen ihn und sehen dieselbe Ansicht wie die App — ohne App, ohne Konto, ohne abzutippen. |
+
+Alles hängt an einem einzigen Datentyp: `ReportData` in `logic/report.ts`.
+`buildReport()` zieht die Momentaufnahme aus dem Zustand, und **derselbe**
+Renderer (`views/reportBody.ts`) bedient danach den Eltern-Bereich und die
+Link-Ansicht. Zwei Renderer wären zwei Wahrheiten — und ausgerechnet der Link,
+den niemand mehr gegenprüfen kann, würde still veralten.
+
+Der Bericht rechnet bewusst **nichts nach**: „noch 62 Tage" gilt für den
+Erstellungszeitpunkt. Würde das Elterngerät den Wert beim Öffnen neu berechnen,
+stünden frische neben alten Zahlen im selben Dokument.
+
+### Was der Link schützt — und was nicht
+
+Die App liegt auf GitHub Pages und hat keinen Server. Der Bericht entsteht
+deshalb immer auf dem Gerät, auf dem gelernt wird. Daraus folgt eine Grenze, die
+keine clientseitige Lösung verschieben kann: **Absolute Echtheit ist nicht
+beweisbar.** Was der Link (`logic/parentLink.ts`) leistet:
+
+- ✅ **Manipulationen fallen auf.** Der Bericht liegt AES-GCM-verschlüsselt im
+  Fragment, der Schlüssel kommt per PBKDF2 aus einem 8-stelligen Zufallscode am
+  Tokenanfang. Ein verändertes Token *scheitert* am GCM-Tag, statt still andere
+  Zahlen zu zeigen.
+- ✅ **Nichts wird hochgeladen.** URL-Fragmente gehen nie an einen Server — kein
+  Log, kein Referer. Die Lerndaten erreichen nur, wer den Link bekommt.
+- ✅ **Die Hürde steigt.** Wer schönen will, muss PBKDF2 + AES-GCM nachbauen
+  statt JSON in der Adresszeile zu ändern.
+- ❌ **Vertraulich ist der Link nicht.** Der Code reist mit; wer ihn hat, sieht
+  den Bericht. Er schützt gegen zufälliges Finden, nicht gegen Weiterleiten.
+- ❌ **Live ist er nicht.** Er ist eine Momentaufnahme und altert.
+
+Prüfbar bleibt vor allem der **Stichtag**. Deshalb steht er in PDF und
+Link-Ansicht ganz oben, die Ansicht warnt ab zwei Tagen Alter, und ein
+Erstellungsdatum in der Zukunft wird ausdrücklich angesprochen. Der Weg mit der
+größten Sicherheit steht in beiden Ansichten dabei: den Eltern-Bereich direkt
+auf dem Lerngerät öffnen.
+
+### Technische Eckdaten
+
+- **Route** `#/bericht/<token>` — steht in `router.ts` in `OPEN_ROUTES` und
+  überspringt damit die Onboarding-Weiterleitung. Auf dem Elterngerät gibt es
+  kein Profil; ohne diese Ausnahme landete der Link in der App-Einrichtung.
+- **Token** = 8 Zeichen Code + base64url(`[version][salt 16][iv 12][ciphertext+tag]`).
+  Die Version geht als AAD in die Verschlüsselung ein.
+- **Kompression** ist nicht optional gedacht: 20 Lerneinheiten sind ~2,8 kB JSON.
+  Mit `deflate-raw` wird der Link ~1270 statt ~3930 Zeichen lang. Fehlt
+  `CompressionStream`, funktioniert er ungepackt weiter; kann umgekehrt ein altes
+  Elterngerät nicht entpacken, sagt die Ansicht genau das — und nicht
+  „beschädigt".
+- **PDF**: A4, Graustufen, Helvetica in WinAnsi. Die PDF-Standardschriften können
+  keine Emojis, Kapitel kommen deshalb aus `Chapter.short` statt `emoji + short`.
+  Dateinamen werden nach ASCII transliteriert (Groß → Gross): Chrome verwirft ein
+  `download`-Attribut mit Nicht-ASCII **komplett** und legt die Datei als
+  „download" ab — bei deutschen Vornamen also fast immer.
 
 ## Inhalte bearbeiten
 
@@ -266,6 +333,12 @@ ohne Tags) fiele die App still auf `package.json` zurück.
 ## Roadmap
 
 - SMS-Erinnerungen über kleinen Server (z. B. Cloudflare Workers + Twilio)
-- Eltern-Fernzugriff (Konto/Sync statt nur lokalem Gerät)
+- **Eltern-Fernzugriff live** (Cloudflare Worker + KV): Der Eltern-Link ist heute
+  eine Momentaufnahme, die das Kind verschicken muss. Mit einem kleinen Server
+  bekämen Eltern *einen* dauerhaften Link, der immer den letzten Stand zeigt —
+  samt „zuletzt synchronisiert vor X". Die Naht dafür liegt schon: Transportiert
+  wird genau das `ReportData` aus `logic/report.ts`, `views/reportBody.ts` und
+  der PDF-Export bleiben unverändert. Zu klären wäre dann, dass der Lernstand
+  den Gerätespeicher verlässt.
 - Native App-Wrapper (Capacitor)
 - Weitere Fächer/Klassenstufen als App-Serie

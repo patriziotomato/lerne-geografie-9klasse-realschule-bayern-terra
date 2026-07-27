@@ -20,17 +20,28 @@ function parse(): { path: string; param?: string } {
   return { path: path || 'home', param };
 }
 
+/** Ansichten, die kein Profil voraussetzen.
+ *
+ *  Der Eltern-Link wird auf einem fremden Gerät geöffnet — dort gibt es kein
+ *  Profil, und die Weiterleitung ins Onboarding würde den Bericht schlucken und
+ *  stattdessen die Einrichtung der Lern-App anbieten. Umgekehrt darf ein
+ *  vorhandenes Profil den Bericht auch nicht auf die Startseite umlenken: Wer
+ *  den Link auf dem Lerngerät antippt, will den Bericht sehen. */
+const OPEN_ROUTES = new Set(['bericht']);
+
 function render(): void {
   const { path, param } = parse();
 
-  // Ohne Profil immer zuerst das Onboarding.
-  if (!state.profile && path !== 'onboarding') {
-    location.hash = '#/onboarding';
-    return;
-  }
-  if (state.profile && path === 'onboarding') {
-    location.hash = '#/home';
-    return;
+  if (!OPEN_ROUTES.has(path)) {
+    // Ohne Profil immer zuerst das Onboarding.
+    if (!state.profile && path !== 'onboarding') {
+      location.hash = '#/onboarding';
+      return;
+    }
+    if (state.profile && path === 'onboarding') {
+      location.hash = '#/home';
+      return;
+    }
   }
 
   const view = routes.get(path) ?? routes.get('home')!;

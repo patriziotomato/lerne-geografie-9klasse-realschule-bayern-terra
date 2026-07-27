@@ -1346,6 +1346,48 @@ strong {
   border-top: 1px solid var(--line);
 }
 
+/* ==== Eltern-Link (Nur-Lese-Ansicht eines geteilten Berichts) ============
+   Der Stichtag ist die wichtigste Angabe des Berichts — er ist das Einzige,
+   was ohne die App überprüfbar ist. Deshalb bekommt er die Akzentkante, die
+   sonst den Status-Karten vorbehalten ist. */
+.stamp-card {
+  border-left: 3px solid var(--accent);
+  padding-left: calc(var(--s-4) - 3px);
+}
+.stamp-label {
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+.stamp-value {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 2px 0 4px;
+}
+
+/* Der Link ist lang und soll trotzdem als Ganzes sichtbar auswählbar sein. */
+#link-value {
+  font-size: var(--text-xs);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.link-actions {
+  display: flex;
+  gap: var(--s-2);
+  margin-bottom: var(--s-2);
+}
+.link-actions .btn {
+  flex: 1;
+  margin: 0;
+}
+
+/* Ohne Bottom-Nav braucht die Berichts-Ansicht das Polster darunter nicht. */
+#app.view-bericht {
+  padding-bottom: calc(var(--s-6) + var(--safe-bottom));
+}
+
 /* ==== Bottom-Nav ======================================================== */
 .bottom-nav {
   position: fixed;
