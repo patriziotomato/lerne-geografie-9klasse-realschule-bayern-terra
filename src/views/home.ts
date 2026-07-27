@@ -2,7 +2,7 @@ import { state, save, todayKey } from '../store.ts';
 import { bottomNav } from '../router.ts';
 import { esc, ring } from '../ui.ts';
 import { gradePicker, bindGradePicker } from './gradePicker.ts';
-import { gradeVerdict, roundsLabel, type GradeVerdict } from '../logic/grade.ts';
+import { gradeVerdict, roundsLabel, type Coverage, type GradeVerdict } from '../logic/grade.ts';
 import { levelProgress } from '../logic/gamification.ts';
 import { pace, daysLeftLabel } from '../logic/pace.ts';
 import {
@@ -132,6 +132,15 @@ function gradeAskCard(): string {
     </section>`;
 }
 
+/** Ein Satz zur Themenabdeckung. Sie zählt in der Schätzung mit, also muss auch
+ *  dranstehen, was sie gerade wert ist: Solange Themen offen sind, bringt jedes
+ *  einmal Anschauen mehr als eine weitere Wiederholung — danach dreht sich das um. */
+function coverageLine(c: Coverage): string {
+  if (c.complete) return ' Alle Themen waren schon mindestens einmal dran — jetzt zählt Wiederholen.';
+  const what = c.unseen === 1 ? '<strong>1 Thema</strong>' : `<strong>${c.unseen} Themen</strong>`;
+  return ` Noch nie dran: ${what} — die einmal anzuschauen bringt am schnellsten etwas.`;
+}
+
 /** „Du hast bisher für eine 4 gelernt, du willst aber eine 2." */
 function gradeCard(v: GradeVerdict): string {
   if (v.kind === 'no-target') return '';
@@ -156,7 +165,7 @@ function gradeCard(v: GradeVerdict): string {
          rounds
            ? `Noch <strong>${roundsLabel(rounds)}</strong>, dann reicht dein Lernstand für eine <span class="grade-num">${v.next.grade}</span>.`
            : 'Jede Runde bringt dich näher ran.'
-       } Dein Ziel: <span class="grade-num">${v.target}</span>.</span>`,
+       }${coverageLine(v.coverage)} Dein Ziel: <span class="grade-num">${v.target}</span>.</span>`,
     );
   }
 
@@ -177,8 +186,6 @@ function gradeCard(v: GradeVerdict): string {
        <span class="muted small">Dein Lernstand reicht gerade für dein Ziel. Halte ihn mit kurzen Runden — sonst rutscht er wieder ab.</span>`,
     );
   }
-
-  const early = v.early ? ' Du stehst aber noch ganz am Anfang — das geht jetzt schnell nach oben.' : '';
 
   // Erst die kleine, erreichbare Zahl (nächstbessere Note), das Ziel nachgestellt.
   // Fällt die nächstbessere Note mit der Zielnote zusammen, bleibt es bei einem Satz.
@@ -203,7 +210,7 @@ function gradeCard(v: GradeVerdict): string {
     'behind',
     '📈',
     `<strong>Du hast bisher schätzungsweise für eine <span class="grade-num">${v.current}</span> gelernt — du willst aber eine <span class="grade-num">${v.target}</span>.</strong><br>
-     <span class="muted small">Das ist der Stand, wenn die Prüfung heute wäre.${todo}${early}</span>`,
+     <span class="muted small">Das ist der Stand, wenn die Prüfung heute wäre.${todo}${coverageLine(v.coverage)}</span>`,
   );
 }
 

@@ -34,6 +34,11 @@ Kapitelstruktur des Terra-Buchs (Klett). Pures TypeScript — kein Framework.
   jeder ungelernte Inhalt mit 0), wird bewusst keine Note genannt, sondern nur der
   Weg dorthin. Eine erstmals erreichte Note gibt Konfetti und eine
   Benachrichtigung. Der Eltern-Bereich zeigt weiterhin den ungeschönten Stand.
+- **Breite zählt mit**: In die Notenschätzung geht zu vier Fünfteln der Lernstand
+  ein und zu einem Fünftel die Themenabdeckung — wie viel vom Lernplan überhaupt
+  schon einmal dran war. Jedes Thema einmal angeschaut zählt damit besser als
+  wenige Themen immer wieder, und die Karte sagt auch, wie viele Themen noch
+  offen sind. Details und Herleitung stehen in `src/logic/grade.ts`.
 - **Lernzeiten & Erinnerungen**: Feste Lernzeiten (z. B. 14:30 & 20:30),
   Benachrichtigungen bei geöffneter App, Motivations-Nudges und Kalender-Export
   (.ics) für zuverlässige System-Erinnerungen. Handynummer wird fürs spätere
