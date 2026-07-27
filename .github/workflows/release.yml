@@ -1,0 +1,40 @@
+name: Release anlegen
+
+# Ein gepushter v-Tag ist die Freigabe: Daraus entsteht das GitHub-Release mit
+# Notizen aus den gemergten Pull Requests.
+#
+# Deployt wird hier bewusst nichts. Pages hängt weiter allein an `main`
+# (deploy.yml) — ein zweiter Deploy-Pfad über einen Tag-Ref bräuchte eine
+# passende Branch-Policy an der github-pages-Environment und wäre ein stiller
+# Fehlerfall genau im Release-Moment. Die Reihenfolge in README.md (erst Tag,
+# dann main) sorgt dafür, dass der Deploy von main den Tag schon sieht.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Die App zeigt den Tag als ihre Version an — läuft er gegen package.json
+      # auseinander, meldet sie einen Stand, den es so nie gab. Lieber hier
+      # abbrechen: Ein falscher Tag lässt sich löschen, ein falsches Release
+      # haben andere schon gesehen.
+      - name: Tag gegen package.json prüfen
+        run: |
+          erwartet="v$(node -p "require('./package.json').version")"
+          if [ "$erwartet" != "$GITHUB_REF_NAME" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME passt nicht zu package.json ($erwartet)."
+            exit 1
+          fi
+
+      - name: Release veröffentlichen
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes

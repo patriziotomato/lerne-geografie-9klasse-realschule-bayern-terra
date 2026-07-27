@@ -26,7 +26,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Volle Historie samt Tags: vite.config.ts liest den Release-Stand über
+      # `git describe`. Mit dem Standard (fetch-depth 1, ohne Tags) findet das
+      # keinen Tag und die App zeigt statt des Releases die Nummer aus
+      # package.json.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
       - uses: actions/setup-node@v4
         with:
           node-version: 20

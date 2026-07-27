@@ -251,6 +251,16 @@ strong {
   font: inherit;
   cursor: pointer;
 }
+/* Link auf die Release-Notes. Als einziger Ausreißer unterstrichen: In einer
+   Fußzeile, in der die Zeile darüber schon tippbar ist, wäre er sonst nicht als
+   Link zu erkennen. */
+.version-release {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
 /* War ein Verlauf — jetzt schlicht der Akzent. */
 .grad {
