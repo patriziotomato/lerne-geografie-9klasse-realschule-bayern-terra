@@ -4,6 +4,10 @@
     {
       "id": "landschaften-c01",
       "topic": "Großlandschaften Deutschlands",
+      "source": {
+        "lesson": "Landschaft und Naturrisiken",
+        "page": 4
+      },
       "variants": [
         {
           "text": "In welcher Reihenfolge folgen die vier Großlandschaften Deutschlands von Norden nach Süden aufeinander?",
@@ -41,85 +45,290 @@
       ]
     },
     {
-      "id": "landschaften-c02",
-      "topic": "Norddeutsches Tiefland",
+      "id": "landschaften-c23",
+      "topic": "Schalenbau der Erde",
+      "source": {
+        "lesson": "Schalenbau der Erde",
+        "page": 6
+      },
       "variants": [
         {
-          "text": "Welche Beschreibung passt zum Norddeutschen Tiefland?",
+          "text": "Wie ist die Erde von außen nach innen aufgebaut?",
           "options": [
-            "flach, viele Seen, Moore und Heiden",
-            "hohe Gipfel mit Gletschern und Felswänden",
-            "bewaldete Bergländer, 500 bis 1500 m hoch",
-            "hügeliges Hochland mit Schotterflächen"
+            "Erdkruste, Erdmantel, Erdkern",
+            "Erdkern, Erdmantel, Erdkruste",
+            "Erdmantel, Erdkruste, Erdkern",
+            "Erdkruste, Erdkern, Erdmantel"
           ],
-          "explanation": "Meist unter 200 m hoch, reich an Seen, Mooren und Heideflächen.",
+          "explanation": "Von außen nach innen: dünne Kruste, dicker Mantel, ganz innen der Kern.",
           "difficulty": 1
         },
         {
-          "text": "Warum gibt es im Norddeutschen Tiefland so viele Seen, Moore und sandige Böden?",
+          "text": "Welche Schicht der Erde ist im Verhältnis am dünnsten?",
           "options": [
-            "Eiszeitliche Gletscher formten die Landschaft.",
-            "Vulkane verteilten dort Asche und Lava.",
-            "Ein Hochgebirge wurde völlig abgetragen.",
-            "Das Meer gab das Gebiet erst spät frei."
+            "die Erdkruste, nur wenige Kilometer dick",
+            "der Erdmantel, er reicht fast 2900 km tief",
+            "der äußere Erdkern aus flüssigem Eisen",
+            "der innere Erdkern, fest und sehr heiß"
           ],
-          "explanation": "In den Eiszeiten hinterließen Gletscher aus Skandinavien Seen, Moore und Sand.",
+          "explanation": "Die Kruste ist wie die Schale eines Apfels — gegen den Rest hauchdünn.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum ist der Erdmantel für die Plattentektonik wichtig?",
+          "options": [
+            "Sein zähflüssiges Gestein bewegt sich langsam.",
+            "Er besteht durchgehend aus festem Eisen.",
+            "Er kühlt die Erdkruste von unten dauerhaft ab.",
+            "Er ist die dünnste Schicht der Erdkugel."
+          ],
+          "explanation": "Im Mantel strömt heißes Gestein sehr langsam — das schiebt die Platten.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landschaften-c24",
+      "topic": "Ozeanische und kontinentale Erdkruste",
+      "source": {
+        "lesson": "Schalenbau der Erde",
+        "page": 6
+      },
+      "variants": [
+        {
+          "text": "Worin unterscheiden sich ozeanische und kontinentale Erdkruste?",
+          "options": [
+            "Die ozeanische ist dünner und schwerer.",
+            "Die ozeanische ist dicker und leichter.",
+            "Die kontinentale ist dünner und schwerer.",
+            "Beide sind gleich dick und gleich schwer."
+          ],
+          "explanation": "Ozeanische Kruste ist nur rund 7 km dick, dafür dichter als kontinentale.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was passiert, wenn ozeanische auf kontinentale Kruste trifft?",
+          "options": [
+            "Die schwerere ozeanische taucht ab.",
+            "Die leichtere kontinentale taucht ab.",
+            "Beide schieben sich gleich weit hoch.",
+            "Die Platten bleiben unbewegt liegen."
+          ],
+          "explanation": "Weil sie dichter ist, wird die ozeanische Platte in die Tiefe gezogen.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landschaften-c25",
+      "topic": "Kontinentaldrift und Pangäa",
+      "source": {
+        "lesson": "Die Erde – ein Riesenpuzzle",
+        "page": 8
+      },
+      "variants": [
+        {
+          "text": "Wie hieß der Urkontinent, aus dem die heutigen Kontinente hervorgingen?",
+          "options": [
+            "Pangäa",
+            "Eurasia",
+            "Laurentia",
+            "Gondwana"
+          ],
+          "explanation": "Vor rund 250 Millionen Jahren lagen alle Kontinente als Pangäa zusammen.",
+          "difficulty": 1
+        },
+        {
+          "text": "Wer stellte die Idee der Kontinentaldrift auf?",
+          "options": [
+            "Alfred Wegener, 1912",
+            "Alexander von Humboldt",
+            "Charles Darwin, 1859",
+            "Carl Ritter, um 1850"
+          ],
+          "explanation": "Wegener erkannte, dass die Kontinente früher zusammenhingen.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum wurde Wegeners Idee zunächst abgelehnt?",
+          "options": [
+            "Er konnte den Antrieb nicht erklären.",
+            "Seine Karten waren nachweislich gefälscht.",
+            "Er hatte keinerlei Fossilien als Belege.",
+            "Die Umrisse passten überhaupt nicht."
+          ],
+          "explanation": "Die Passform überzeugte, aber keiner wusste, welche Kraft Kontinente schiebt.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landschaften-c26",
+      "topic": "Belege für die Kontinentaldrift",
+      "source": {
+        "lesson": "Die Erde – ein Riesenpuzzle",
+        "page": 8
+      },
+      "variants": [
+        {
+          "text": "Welcher Fund belegt, dass Afrika und Südamerika zusammenhingen?",
+          "options": [
+            "gleiche Fossilien auf beiden Seiten",
+            "gleiche Sprachen auf beiden Seiten",
+            "gleiche Vulkane auf beiden Seiten",
+            "gleiches Klima auf beiden Seiten"
+          ],
+          "explanation": "Dieselben versteinerten Tiere und Pflanzen liegen beiderseits des Atlantiks.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was fällt an den Küsten von Afrika und Südamerika auf?",
+          "options": [
+            "Sie passen wie Puzzleteile zusammen.",
+            "Sie verlaufen beide schnurgerade.",
+            "Sie liegen auf demselben Längengrad.",
+            "Sie sind beide von Eis überzogen."
+          ],
+          "explanation": "Die Umrisse greifen ineinander — genau das brachte Wegener auf seine Idee.",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "landschaften-c27",
+      "topic": "Arten von Plattengrenzen",
+      "source": {
+        "lesson": "Erdplatten in Bewegung",
+        "page": 10
+      },
+      "variants": [
+        {
+          "text": "Welche drei Arten von Plattengrenzen unterscheidet man?",
+          "options": [
+            "auseinander, aufeinander, aneinander vorbei",
+            "waagrecht, senkrecht und schräg zueinander",
+            "nach oben, nach unten und seitlich zur Seite",
+            "warm, kalt und gemischt an der Nahtstelle"
+          ],
+          "explanation": "Platten driften auseinander, stoßen zusammen oder gleiten aneinander vorbei.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was entsteht dort, wo zwei Platten auseinanderdriften?",
+          "options": [
+            "neue ozeanische Kruste am Rücken",
+            "ein Hochgebirge aus gefaltetem Gestein",
+            "ein Tiefseegraben mit heißen Quellen",
+            "eine Verwerfung mit Seitenversatz"
+          ],
+          "explanation": "Magma steigt auf und erstarrt — der Meeresboden wächst am Rücken nach.",
+          "difficulty": 2
+        },
+        {
+          "text": "Wodurch entstand das Himalaya-Gebirge?",
+          "options": [
+            "Zwei kontinentale Platten stießen zusammen.",
+            "Eine Platte tauchte unter den Ozean ab.",
+            "Zwei Platten drifteten weit voneinander weg.",
+            "Gletscher hobelten das Gestein nach oben."
+          ],
+          "explanation": "Indien schob sich gegen Eurasien — beide Platten sind leicht, also türmt es auf.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landschaften-c28",
+      "topic": "Erdbeben an Plattengrenzen",
+      "source": {
+        "lesson": "Erdplatten in Bewegung",
+        "page": 10
+      },
+      "variants": [
+        {
+          "text": "Wo treten die meisten Erdbeben auf?",
+          "options": [
+            "an den Grenzen der Erdplatten",
+            "in der Mitte großer Kontinente",
+            "unter mächtigen Eisschilden",
+            "in weiten flachen Tiefebenen"
+          ],
+          "explanation": "Wo Platten aneinander haken und ruckartig abrutschen, bebt die Erde.",
+          "difficulty": 1
+        },
+        {
+          "text": "Was ist das Epizentrum eines Erdbebens?",
+          "options": [
+            "der Punkt an der Oberfläche über dem Herd",
+            "der Punkt tief im Erdinneren, wo es bricht",
+            "der Ort mit den stärksten Nachbeben danach",
+            "die Stelle, an der der Tsunami entsteht"
+          ],
+          "explanation": "Der Herd liegt in der Tiefe, das Epizentrum senkrecht darüber an der Oberfläche.",
           "difficulty": 2
         }
       ]
     },
     {
-      "id": "landschaften-c03",
-      "topic": "Mittelgebirge",
+      "id": "landschaften-c29",
+      "topic": "Vulkanismus und Plattentektonik",
+      "source": {
+        "lesson": "Erdplatten in Bewegung",
+        "page": 10
+      },
       "variants": [
         {
-          "text": "Welches der folgenden Gebirge zählt zu den deutschen Mittelgebirgen?",
+          "text": "Warum liegen rund um den Pazifik so viele Vulkane?",
           "options": [
-            "der Harz",
-            "die Alpen",
-            "die Pyrenäen",
-            "die Karpaten"
+            "Dort taucht Kruste ab und schmilzt.",
+            "Dort ist die Erdkruste besonders dick.",
+            "Dort driften sämtliche Platten auseinander.",
+            "Dort ist der Erdmantel ungewöhnlich kühl."
           ],
-          "explanation": "Der Harz ist ein Mittelgebirge; die Alpen sind ein Hochgebirge.",
-          "difficulty": 1
+          "explanation": "Im Pazifischen Feuerring wird Kruste subduziert — das Magma steigt als Vulkan auf.",
+          "difficulty": 2
         },
         {
-          "text": "Welche Aussage beschreibt die deutschen Mittelgebirge zutreffend?",
+          "text": "Wie entsteht ein Vulkan über einem Hotspot wie auf Hawaii?",
           "options": [
-            "alte, abgetragene Gebirge mit runden Kuppen",
-            "junge Faltengebirge, die sich noch heben",
-            "Aufschüttungen aus eiszeitlichen Moränen",
-            "Flachland, überall unter 200 Metern Höhe"
+            "Magma steigt mitten in einer Platte auf.",
+            "Zwei Platten stoßen frontal zusammen.",
+            "Eine Platte taucht unter eine andere ab.",
+            "Die Erdkruste reißt an einer Naht auf."
           ],
-          "explanation": "Erdgeschichtlich alt: Verwitterung hat sie abgerundet, meist unter 1500 m.",
-          "difficulty": 2
+          "explanation": "Ein Hotspot sitzt fest im Mantel — die Platte wandert langsam darüber hinweg.",
+          "difficulty": 3
         }
       ]
     },
     {
-      "id": "landschaften-c04",
-      "topic": "Alpenvorland",
+      "id": "landschaften-c30",
+      "topic": "Ein Thema selbstständig bearbeiten",
+      "source": {
+        "lesson": "Ein Thema selbstständig bearbeiten und andere informieren",
+        "page": 12
+      },
       "variants": [
         {
-          "text": "Wo liegt das Alpenvorland?",
+          "text": "Was gehört an den Anfang, wenn du ein Thema selbst bearbeitest?",
           "options": [
-            "im Süden, zwischen Donau und Alpen",
-            "im Norden, zwischen Nordsee und Harz",
-            "in der Mitte, zwischen Harz und Rhön",
-            "im Westen, entlang des Oberrheins"
+            "eine klare Frage, die du beantworten willst",
+            "das fertige Plakat für die Präsentation",
+            "die Bewertung durch deine Mitschülerinnen",
+            "eine Liste mit sämtlichen Fachbegriffen"
           ],
-          "explanation": "Hügelige Landschaft zwischen der Donau und dem Nordrand der Alpen.",
+          "explanation": "Ohne Leitfrage sammelt man planlos Material — die Frage steuert die Recherche.",
           "difficulty": 1
         },
         {
-          "text": "Woran erkennt man im Alpenvorland noch heute die Arbeit der eiszeitlichen Gletscher?",
+          "text": "Woran erkennst du eine zuverlässige Quelle?",
           "options": [
-            "an Moränenhügeln und Seen wie dem Chiemsee",
-            "an Vulkankegeln mit runden Kraterseen",
-            "an Rinnen, die das Meer ausgespült hat",
-            "an Wanderdünen, die der Wind aufschüttet"
+            "Verfasser, Datum und Herkunft sind klar.",
+            "Sie steht ganz oben in der Trefferliste.",
+            "Sie ist besonders kurz und leicht lesbar.",
+            "Sie bestätigt genau deine eigene Meinung."
           ],
-          "explanation": "Alpengletscher hinterließen Moränenhügel und schürften Becken wie den Chiemsee aus.",
+          "explanation": "Wer etwas schreibt, wann und warum — das entscheidet über die Verlässlichkeit.",
           "difficulty": 2
         }
       ]
@@ -127,6 +336,10 @@
     {
       "id": "landschaften-c05",
       "topic": "Entstehung der Alpen (Plattentektonik)",
+      "source": {
+        "lesson": "Gefaltet und gehoben – die Alpen",
+        "page": 14
+      },
       "variants": [
         {
           "text": "Wie sind die Alpen entstanden?",
@@ -164,8 +377,44 @@
       ]
     },
     {
+      "id": "landschaften-c04",
+      "topic": "Alpenvorland",
+      "source": {
+        "lesson": "Von Gletschern geformt – das Alpenvorland",
+        "page": 16
+      },
+      "variants": [
+        {
+          "text": "Wo liegt das Alpenvorland?",
+          "options": [
+            "im Süden, zwischen Donau und Alpen",
+            "im Norden, zwischen Nordsee und Harz",
+            "in der Mitte, zwischen Harz und Rhön",
+            "im Westen, entlang des Oberrheins"
+          ],
+          "explanation": "Hügelige Landschaft zwischen der Donau und dem Nordrand der Alpen.",
+          "difficulty": 1
+        },
+        {
+          "text": "Woran erkennt man im Alpenvorland noch heute die Arbeit der eiszeitlichen Gletscher?",
+          "options": [
+            "an Moränenhügeln und Seen wie dem Chiemsee",
+            "an Vulkankegeln mit runden Kraterseen",
+            "an Rinnen, die das Meer ausgespült hat",
+            "an Wanderdünen, die der Wind aufschüttet"
+          ],
+          "explanation": "Alpengletscher hinterließen Moränenhügel und schürften Becken wie den Chiemsee aus.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
       "id": "landschaften-c06",
       "topic": "Gletscher als Landschaftsformer",
+      "source": {
+        "lesson": "Von Gletschern geformt – das Alpenvorland",
+        "page": 16
+      },
       "variants": [
         {
           "text": "Welche Talform entsteht typischerweise, wenn ein Gletscher ein Tal überformt?",
@@ -205,6 +454,10 @@
     {
       "id": "landschaften-c07",
       "topic": "Moränen",
+      "source": {
+        "lesson": "Von Gletschern geformt – das Alpenvorland",
+        "page": 16
+      },
       "variants": [
         {
           "text": "Was versteht man unter einer Moräne?",
@@ -233,6 +486,10 @@
     {
       "id": "landschaften-c08",
       "topic": "Glaziale Serie",
+      "source": {
+        "lesson": "Von Gletschern geformt – das Alpenvorland",
+        "page": 16
+      },
       "variants": [
         {
           "text": "Welche Abfolge nennt die Landschaftsformen der glazialen Serie in der richtigen Reihenfolge?",
@@ -270,8 +527,76 @@
       ]
     },
     {
+      "id": "landschaften-c03",
+      "topic": "Mittelgebirge",
+      "source": {
+        "lesson": "Gedrückt, gefaltet, gebrochen, geglättet – die Mittelgebirge",
+        "page": 18
+      },
+      "variants": [
+        {
+          "text": "Welches der folgenden Gebirge zählt zu den deutschen Mittelgebirgen?",
+          "options": [
+            "der Harz",
+            "die Alpen",
+            "die Pyrenäen",
+            "die Karpaten"
+          ],
+          "explanation": "Der Harz ist ein Mittelgebirge; die Alpen sind ein Hochgebirge.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Aussage beschreibt die deutschen Mittelgebirge zutreffend?",
+          "options": [
+            "alte, abgetragene Gebirge mit runden Kuppen",
+            "junge Faltengebirge, die sich noch heben",
+            "Aufschüttungen aus eiszeitlichen Moränen",
+            "Flachland, überall unter 200 Metern Höhe"
+          ],
+          "explanation": "Erdgeschichtlich alt: Verwitterung hat sie abgerundet, meist unter 1500 m.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landschaften-c02",
+      "topic": "Norddeutsches Tiefland",
+      "source": {
+        "lesson": "Mehr als nur flaches Land – das Norddeutsche Tiefland",
+        "page": 20
+      },
+      "variants": [
+        {
+          "text": "Welche Beschreibung passt zum Norddeutschen Tiefland?",
+          "options": [
+            "flach, viele Seen, Moore und Heiden",
+            "hohe Gipfel mit Gletschern und Felswänden",
+            "bewaldete Bergländer, 500 bis 1500 m hoch",
+            "hügeliges Hochland mit Schotterflächen"
+          ],
+          "explanation": "Meist unter 200 m hoch, reich an Seen, Mooren und Heideflächen.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum gibt es im Norddeutschen Tiefland so viele Seen, Moore und sandige Böden?",
+          "options": [
+            "Eiszeitliche Gletscher formten die Landschaft.",
+            "Vulkane verteilten dort Asche und Lava.",
+            "Ein Hochgebirge wurde völlig abgetragen.",
+            "Das Meer gab das Gebiet erst spät frei."
+          ],
+          "explanation": "In den Eiszeiten hinterließen Gletscher aus Skandinavien Seen, Moore und Sand.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
       "id": "landschaften-c09",
       "topic": "Urstromtäler",
+      "source": {
+        "lesson": "Mehr als nur flaches Land – das Norddeutsche Tiefland",
+        "page": 20
+      },
       "variants": [
         {
           "text": "Wie sind die breiten Urstromtäler Norddeutschlands entstanden?",
@@ -298,248 +623,12 @@
       ]
     },
     {
-      "id": "landschaften-c10",
-      "topic": "Vulkanismus in der Eifel (Maare)",
-      "variants": [
-        {
-          "text": "Was ist ein Maar, wie es in der Vulkaneifel vorkommt?",
-          "options": [
-            "ein runder Krater, wo Magma auf Grundwasser traf",
-            "ein Seebecken, das ein eiszeitlicher Gletscher schuf",
-            "der Einschlagskrater eines großen Meteoriten",
-            "ein Stausee in einem alten Steinbruch"
-          ],
-          "explanation": "Magma traf auf Grundwasser; die Dampfexplosion riss runde, heute oft gefüllte Krater.",
-          "difficulty": 1
-        },
-        {
-          "text": "Welche Aussage zum Vulkanismus in Deutschland trifft zu?",
-          "options": [
-            "Die Eifel war bis vor rund 13.000 Jahren aktiv.",
-            "In Deutschland gab es nie Vulkanausbrüche.",
-            "Alle deutschen Mittelgebirge sind aktive Vulkane.",
-            "Vulkanismus gab es nur in den deutschen Alpen."
-          ],
-          "explanation": "Der letzte große Ausbruch am Laacher See liegt erst rund 13.000 Jahre zurück.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "landschaften-c11",
-      "topic": "Wattenmeer",
-      "variants": [
-        {
-          "text": "Was ist das Wattenmeer an der Nordseeküste?",
-          "options": [
-            "flacher Küstensaum, der bei Ebbe trockenfällt",
-            "ein tiefes Meeresbecken direkt vor der Küste",
-            "ein Süßwassersee hinter den Deichen",
-            "eine felsige Steilküste mit hohen Klippen"
-          ],
-          "explanation": "Bei Ebbe läuft man über den Meeresboden, bei Flut steht er unter Wasser.",
-          "difficulty": 1
-        },
-        {
-          "text": "Warum wurde das Wattenmeer zum UNESCO-Weltnaturerbe erklärt?",
-          "options": [
-            "Es ist Kinderstube für Fische und Rast für Zugvögel.",
-            "Dort wird besonders viel Erdöl und Erdgas gefördert.",
-            "Es ist die tiefste Stelle der gesamten Nordsee.",
-            "Dort wachsen die nördlichsten Korallenriffe der Welt."
-          ],
-          "explanation": "Der nährstoffreiche Boden ernährt Würmer und Muscheln – Nahrung für Fische und Vögel.",
-          "difficulty": 2
-        },
-        {
-          "text": "Welche Aussage über das Wattenmeer stimmt NICHT?",
-          "options": [
-            "Das Watt steht dauerhaft mehrere Meter unter Wasser.",
-            "Priele führen auch bei Ebbe Wasser durch das Watt.",
-            "Im Wattboden leben zahlreiche Würmer und Muscheln.",
-            "Das Watt liegt zwischen Festland und den Inseln davor."
-          ],
-          "explanation": "Das Watt fällt bei Ebbe trocken – genau dieser Wechsel macht es besonders.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "landschaften-c12",
-      "topic": "Gezeiten",
-      "variants": [
-        {
-          "text": "Wodurch entstehen Ebbe und Flut?",
-          "options": [
-            "durch die Anziehungskraft des Mondes",
-            "durch Winde, die das Wasser wegdrücken",
-            "durch die Erwärmung des Wassers am Tag",
-            "durch unterseeische Vulkanausbrüche"
-          ],
-          "explanation": "Der Mond zieht das Meerwasser an; mit der Erddrehung entsteht der Gezeitenwechsel.",
-          "difficulty": 1
-        },
-        {
-          "text": "Wie nennt man den Höhenunterschied zwischen Hochwasser und Niedrigwasser?",
-          "options": [
-            "Tidenhub",
-            "Sturmflut",
-            "Brandung",
-            "Pegelstand"
-          ],
-          "explanation": "Der Tidenhub gibt an, um wie viele Meter der Wasserstand steigt und fällt.",
-          "difficulty": 1
-        },
-        {
-          "text": "Wie viel Zeit vergeht an der Nordseeküste ungefähr zwischen zwei Hochwassern?",
-          "options": [
-            "rund 12,5 Stunden",
-            "genau 24 Stunden",
-            "etwa 6 Stunden",
-            "ungefähr 2 Stunden"
-          ],
-          "explanation": "Rund 12 Stunden 25 Minuten – deshalb verschieben sich die Gezeiten täglich.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "landschaften-c13",
-      "topic": "Ostseeküste: Förden und Bodden",
-      "variants": [
-        {
-          "text": "Was ist eine Förde, wie man sie an der Ostseeküste Schleswig-Holsteins findet?",
-          "options": [
-            "eine schmale Bucht, von Gletscherzungen geformt",
-            "ein Delta aus Sand und Schlick eines Flusses",
-            "eine runde Bucht aus einem Vulkanausbruch",
-            "ein künstlich gebaggerter Schifffahrtskanal"
-          ],
-          "explanation": "Gletscherzungen schürften schmale Becken aus, die das Meer später flutete.",
-          "difficulty": 2
-        },
-        {
-          "text": "Wie ist die Boddenküste Mecklenburg-Vorpommerns entstanden?",
-          "options": [
-            "Das steigende Meer überflutete die Moränen.",
-            "Flüsse schnitten Mündungstrichter ein.",
-            "Korallen bauten Riffe, dahinter lagen Lagunen.",
-            "Bei Erdbeben sanken Küstenschollen ab."
-          ],
-          "explanation": "Nach der Eiszeit stieg der Meeresspiegel; Sand schnürte die Buchten später ab.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "landschaften-c14",
-      "topic": "Steilküste und Flachküste",
-      "variants": [
-        {
-          "text": "Worin unterscheiden sich Steilküste und Flachküste?",
-          "options": [
-            "Die Steilküste bricht am Kliff ab, die Flachküste nicht.",
-            "Die Flachküste hat ein Kliff, die Steilküste nur Sand.",
-            "Steilküsten gibt es nur an der Nordsee, Flachküsten nicht.",
-            "Die Steilküste besteht aus Dünen, die Flachküste aus Fels."
-          ],
-          "explanation": "Kennzeichen der Steilküste ist das Kliff; die Flachküste steigt allmählich an.",
-          "difficulty": 1
-        },
-        {
-          "text": "Warum weicht eine Steilküste wie die Kreideküste auf Rügen im Laufe der Zeit immer weiter zurück?",
-          "options": [
-            "Die Brandung unterspült den Fuß des Kliffs.",
-            "Der Meeresspiegel sinkt und legt Felsen frei.",
-            "Der Wind allein schleift die Felswand ab.",
-            "Flüsse spülen die Küste vom Land her weg."
-          ],
-          "explanation": "Wellen höhlen den Kliffuß aus, bis ganze Gesteinspakete abstürzen.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "landschaften-c15",
-      "topic": "Ursachen von Fluss-Hochwasser",
-      "variants": [
-        {
-          "text": "Welche der folgenden Ursachen für ein Fluss-Hochwasser ist eine natürliche Ursache?",
-          "options": [
-            "Starkregen zusammen mit Schneeschmelze",
-            "Versiegelung durch Straßen und Gebäude",
-            "die Begradigung von Flussläufen",
-            "Bebauung natürlicher Überschwemmungsflächen"
-          ],
-          "explanation": "Starkregen und Schneeschmelze sind natürlich, Versiegelung und Bebauung nicht.",
-          "difficulty": 1
-        },
-        {
-          "text": "Wodurch verschärft der Mensch die Hochwassergefahr an Flüssen?",
-          "options": [
-            "durch Versiegelung, Begradigung und Bebauung der Auen",
-            "durch Deichrückverlegung, die dem Fluss Raum gibt",
-            "durch Rückhaltebecken im Oberlauf des Flusses",
-            "durch das Pflanzen von Auwäldern an den Ufern"
-          ],
-          "explanation": "Regen versickert nicht mehr und läuft schneller zusammen – die Welle wird höher.",
-          "difficulty": 2
-        },
-        {
-          "text": "Welche Aussage zur Entstehung von Hochwasser stimmt NICHT?",
-          "options": [
-            "Auf versiegelten Flächen versickert Regen sehr gut.",
-            "Gefrorener Boden kann kaum noch Wasser aufnehmen.",
-            "Schneeschmelze plus Dauerregen erhöht die Gefahr stark.",
-            "In begradigten Flüssen fließt das Wasser schneller ab."
-          ],
-          "explanation": "Asphalt und Beton lassen kein Wasser durch – der Regen fließt oberirdisch ab.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "landschaften-c16",
-      "topic": "Hochwasserschutz und Retentionsflächen",
-      "variants": [
-        {
-          "text": "Was ist eine Retentionsfläche?",
-          "options": [
-            "eine Fläche, die bei Hochwasser fluten darf",
-            "eine Betonfläche, die Wasser schnell ableitet",
-            "ein Staudamm, der vor allem Strom erzeugt",
-            "ein Gebiet, in dem Trinkwasser gefördert wird"
-          ],
-          "explanation": "Auen und Polder nehmen Wasser auf und senken den Scheitel der Hochwasserwelle.",
-          "difficulty": 1
-        },
-        {
-          "text": "Welche Maßnahme hilft vorbeugend gegen Fluss-Hochwasser?",
-          "options": [
-            "dem Fluss Raum geben, etwa per Deichrückverlegung",
-            "alle Flussufer betonieren, damit nichts wegspült",
-            "den Fluss begradigen, damit er schneller abfließt",
-            "die Auwälder abholzen, damit nichts den Fluss bremst"
-          ],
-          "explanation": "Darf der Fluss ausufern, verteilt sich das Wasser und die Welle wird gebremst.",
-          "difficulty": 2
-        },
-        {
-          "text": "Eine Gemeinde am Fluss möchte sich besser vor Hochwasser schützen. Welche Kombination von Maßnahmen ist sinnvoll?",
-          "options": [
-            "Polder anlegen, früh warnen, gefährdete Lagen meiden",
-            "die Auen bebauen und den Fluss zusätzlich begradigen",
-            "die Ufervegetation entfernen für schnelleren Abfluss",
-            "Regenwasser aus Neubauten direkt in den Fluss leiten"
-          ],
-          "explanation": "Wirksamer Schutz kombiniert Rückhalt, Bauvorsorge und rechtzeitige Warnung.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
       "id": "landschaften-c17",
       "topic": "Flussbegradigung und Renaturierung",
+      "source": {
+        "lesson": "Wie der Mensch die Landschaft verändert",
+        "page": 22
+      },
       "variants": [
         {
           "text": "Welche Folge hat die Begradigung eines Flusses?",
@@ -566,114 +655,12 @@
       ]
     },
     {
-      "id": "landschaften-c18",
-      "topic": "Sturmfluten und Deiche",
-      "variants": [
-        {
-          "text": "Was ist eine Sturmflut?",
-          "options": [
-            "hoher Wasserstand, weil Wind das Wasser aufstaut",
-            "eine einzelne, besonders große Welle auf hoher See",
-            "ein Flusshochwasser nach tagelangem Starkregen",
-            "eine schnelle Strömung, die bei Ebbe auftritt"
-          ],
-          "explanation": "Auflandiger Sturm staut das Wasser weit über das normale Hochwasser auf.",
-          "difficulty": 1
-        },
-        {
-          "text": "Warum sind moderne Seedeiche an der Nordsee flach geneigt und mit Gras bewachsen?",
-          "options": [
-            "Die flache Grasböschung lässt Wellen auslaufen.",
-            "Flache Deiche brauchen weniger Material und Platz.",
-            "Das Gras saugt überschwappendes Meerwasser auf.",
-            "Die Wellen sollen ungebremst über den Deich laufen."
-          ],
-          "explanation": "An der flachen Böschung verlieren Wellen ihre Energie; die Grasnarbe hält.",
-          "difficulty": 2
-        },
-        {
-          "text": "Warum erhöht der steigende Meeresspiegel die Gefahr durch Sturmfluten?",
-          "options": [
-            "Jede Sturmflut startet von einem höheren Niveau.",
-            "Der Wind lässt bei höherem Meeresspiegel nach.",
-            "Die Gezeiten setzen bei hohem Meeresspiegel aus.",
-            "Salzwasser steigt grundsätzlich höher als Süßwasser."
-          ],
-          "explanation": "Je höher der Meeresspiegel, desto höher läuft jede Sturmflut auf.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "landschaften-c19",
-      "topic": "Orkane und Tornados",
-      "variants": [
-        {
-          "text": "Ab welcher Windstärke spricht man von einem Orkan?",
-          "options": [
-            "ab Windstärke 12, also ab etwa 118 km/h",
-            "ab Windstärke 8, also ab etwa 62 km/h",
-            "ab Windstärke 6, also ab etwa 39 km/h",
-            "ab Windstärke 10, also ab etwa 89 km/h"
-          ],
-          "explanation": "Orkan ist Stufe 12 der Beaufort-Skala und beginnt bei rund 118 km/h.",
-          "difficulty": 2
-        },
-        {
-          "text": "Was unterscheidet einen Tornado von einem Orkantief?",
-          "options": [
-            "Der Tornado ist kleinräumig, das Orkantief großräumig.",
-            "Tornados entstehen nur über dem Meer, Orkane über Land.",
-            "Tornados dauern Tage, Orkane nur wenige Sekunden.",
-            "In Deutschland treten grundsätzlich keine Tornados auf."
-          ],
-          "explanation": "Ein Tornado misst wenige hundert Meter, ein Orkantief ganze Länder.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "landschaften-c20",
-      "topic": "Lawinen und Schutzwald",
-      "variants": [
-        {
-          "text": "Welche Aufgabe erfüllt der Schutzwald in den Alpen?",
-          "options": [
-            "Er hält den Schnee am Hang und bremst Lawinen.",
-            "Er lenkt Lawinen in unbewohnte Nachbartäler.",
-            "Er dient vor allem als Windschutz für Skipisten.",
-            "Er beschattet Gletscher, damit sie langsamer tauen."
-          ],
-          "explanation": "Die Stämme stützen die Schneedecke und schützen Dörfer und Straßen im Tal.",
-          "difficulty": 1
-        },
-        {
-          "text": "Unter welchen Bedingungen ist die Lawinengefahr besonders hoch?",
-          "options": [
-            "nach viel Neuschnee mit Wind an steilen Hängen",
-            "bei langem Dauerfrost ganz ohne Neuschnee",
-            "an flachen, dicht bewaldeten Berghängen",
-            "im Hochsommer nach mehreren trockenen Wochen"
-          ],
-          "explanation": "Neuschnee, Windverfrachtung und steile, kahle Hänge; Tauwetter verschärft es.",
-          "difficulty": 2
-        },
-        {
-          "text": "Warum steigt die Lawinengefahr, wenn Bergwald zum Beispiel für Skipisten gerodet wird?",
-          "options": [
-            "Ohne Bäume wird der Schnee am Hang nicht gehalten.",
-            "Auf gerodeten Flächen fällt grundsätzlich mehr Schnee.",
-            "Die zurückbleibenden Baumstümpfe lösen Lawinen aus.",
-            "Skipisten erwärmen den Boden und schmelzen den Schnee."
-          ],
-          "explanation": "Der Wald ist natürlicher Lawinenschutz; fehlt er, braucht es Stahlverbauungen.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
       "id": "landschaften-c21",
       "topic": "Bodenerosion",
+      "source": {
+        "lesson": "Wie der Mensch die Landschaft verändert",
+        "page": 22
+      },
       "variants": [
         {
           "text": "Was versteht man unter Bodenerosion?",
@@ -700,40 +687,140 @@
       ]
     },
     {
-      "id": "landschaften-c22",
-      "topic": "Klimawandel und Extremwetter",
+      "id": "landschaften-c31",
+      "topic": "Eingriffe des Menschen in die Landschaft",
+      "source": {
+        "lesson": "Wie der Mensch die Landschaft verändert",
+        "page": 22
+      },
       "variants": [
         {
-          "text": "Welcher Zusammenhang besteht zwischen dem Klimawandel und Extremwetter?",
+          "text": "Wie verändert der Braunkohletagebau die Landschaft?",
           "options": [
-            "Hitze, Dürre und Starkregen werden wahrscheinlicher.",
-            "Nur die Durchschnittstemperatur ändert sich, sonst nichts.",
-            "Extremwetter wird seltener, weil sich das Wetter ausgleicht.",
-            "Betroffen sind nur die Pole, nicht das Wetter bei uns."
+            "Er trägt ganze Landstriche komplett ab.",
+            "Er lässt neue Mittelgebirge entstehen.",
+            "Er verändert den Boden, nicht das Relief.",
+            "Er hebt die Landschaft um einige Meter an."
           ],
-          "explanation": "Ein wärmeres Klima verschiebt die Wetterextreme – auch in Deutschland.",
+          "explanation": "Für die Kohle werden Dörfer umgesiedelt und Hunderte Meter Erde abgebaggert.",
           "difficulty": 1
         },
         {
-          "text": "Warum kann eine wärmere Atmosphäre zu heftigerem Starkregen führen?",
+          "text": "Was bedeutet „Flächenverbrauch“ in Deutschland?",
           "options": [
-            "Wärmere Luft nimmt mehr Wasserdampf auf.",
-            "Warme Luft ist schwerer und presst Wasser aus.",
-            "Bei Wärme hängen die Wolken tiefer als sonst.",
-            "Warme Luft speichert weniger Wasserdampf."
+            "Täglich wird Boden bebaut und versiegelt.",
+            "Täglich geht Boden durch Erosion verloren.",
+            "Täglich wird mehr Fläche wieder entsiegelt.",
+            "Täglich wächst die Waldfläche des Landes."
           ],
-          "explanation": "Je Grad Erwärmung fasst Luft mehr Wasserdampf – Reserve für Starkregen.",
+          "explanation": "Straßen, Häuser und Gewerbe fressen Fläche — versiegelt versickert kein Regen mehr.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landschaften-c32",
+      "topic": "Gefährdete Wälder",
+      "source": {
+        "lesson": "Gefährdete Wälder",
+        "page": 24
+      },
+      "variants": [
+        {
+          "text": "Was setzt dem deutschen Wald zurzeit am stärksten zu?",
+          "options": [
+            "Trockenheit, Hitze und Borkenkäfer",
+            "zu viel Regen und dauernde Nässe",
+            "zu strenge Winter mit hartem Frost",
+            "zu wenig Licht durch dichten Nebel"
+          ],
+          "explanation": "Trockene Sommer schwächen die Bäume — geschwächte Fichten holt der Borkenkäfer.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum ist die Fichte besonders anfällig für Trockenheit?",
+          "options": [
+            "Ihre Wurzeln sind flach und finden kein Wasser.",
+            "Ihre Wurzeln reichen sehr tief in den Boden.",
+            "Sie wächst ausschließlich auf nassen Böden.",
+            "Sie verliert im Winter sämtliche Nadeln."
+          ],
+          "explanation": "Als Flachwurzler kommt sie in Trockenzeiten nicht an tieferes Wasser heran.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landschaften-c33",
+      "topic": "Waldumbau zum Mischwald",
+      "source": {
+        "lesson": "Gefährdete Wälder",
+        "page": 24
+      },
+      "variants": [
+        {
+          "text": "Was versteht man unter Waldumbau?",
+          "options": [
+            "Umbau zu Mischwald aus mehreren Arten",
+            "Umbau zu Reinbestand aus einer Baumart",
+            "Abholzung und Umwandlung in Ackerland",
+            "Einzäunung des Waldes gegen Wildverbiss"
+          ],
+          "explanation": "Mischwälder aus Buche, Eiche und Tanne sind stabiler als reine Fichtenforste.",
           "difficulty": 2
         },
         {
-          "text": "Ein Sommer bringt erst wochenlange Trockenheit und dann Starkregen mit Überschwemmungen. Wie passt das zum Klimawandel?",
+          "text": "Warum ist ein Mischwald widerstandsfähiger?",
           "options": [
-            "Beides passt: Dürre und Starkregen werden häufiger.",
-            "Es widerlegt den Klimawandel, weil es ja weiter regnet.",
-            "Dürre und Starkregen treten nie im selben Jahr auf.",
-            "Der Klimawandel wirkt sich nur im Winter aus."
+            "Fällt eine Art aus, bleiben andere übrig.",
+            "Alle Bäume wachsen dort deutlich schneller.",
+            "Er kommt gänzlich ohne Niederschlag aus.",
+            "Schädlinge können sich dort nicht halten."
           ],
-          "explanation": "Der Klimawandel verstärkt Gegensätze: Trockenphasen und Starkregen im Wechsel.",
+          "explanation": "Vielfalt verteilt das Risiko — ein Schädling vernichtet nicht den ganzen Bestand.",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "landschaften-c34",
+      "topic": "Gletscherschwund in den Alpen",
+      "source": {
+        "lesson": "Gletscher – ewiges Eis?",
+        "page": 26
+      },
+      "variants": [
+        {
+          "text": "Wie verändern sich die Alpengletscher zurzeit?",
+          "options": [
+            "Sie schmelzen und werden immer kleiner.",
+            "Sie wachsen jedes Jahr ein Stück weiter.",
+            "Sie bleiben seit Jahrzehnten unverändert.",
+            "Sie wandern rasch talwärts nach unten."
+          ],
+          "explanation": "Seit 1850 hat der Alpenraum den Großteil seiner Gletscherfläche verloren.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Folge hat der Gletscherschwund für das Hochgebirge?",
+          "options": [
+            "Hänge werden instabil, Permafrost taut.",
+            "Die Berge werden dadurch merklich höher.",
+            "Die Flüsse führen im Sommer mehr Wasser.",
+            "Der Wintertourismus nimmt dadurch stark zu."
+          ],
+          "explanation": "Auftauender Permafrost löst den Fels — Steinschlag und Bergstürze nehmen zu.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum sind Gletscher auch für die Wasserversorgung wichtig?",
+          "options": [
+            "Sie geben im heißen Sommer Schmelzwasser ab.",
+            "Sie halten Wasser dauerhaft im Eis gebunden.",
+            "Sie leiten Regen direkt ins Grundwasser weiter.",
+            "Sie verhindern, dass Flüsse im Winter frieren."
+          ],
+          "explanation": "Schmelzwasser speist die Flüsse gerade dann, wenn es am wenigsten regnet.",
           "difficulty": 3
         }
       ]

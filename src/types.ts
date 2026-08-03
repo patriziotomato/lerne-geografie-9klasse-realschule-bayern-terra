@@ -11,11 +11,21 @@ export interface Variant {
   difficulty: number;
 }
 
+/** Fundstelle im Schulbuch. Jedes Konzept gehört zu genau einer Buchseite —
+ *  so lässt sich zu jeder Frage nachschlagen, wo der Stoff steht. */
+export interface Source {
+  /** Überschrift des Unterkapitels, wie sie im Buch steht */
+  lesson: string;
+  /** Seite, auf der das Unterkapitel beginnt */
+  page: number;
+}
+
 /** Ein Lernkonzept (= prüfbarer Inhalt) mit mehreren Formulierungs-Varianten.
  *  Gemeistert wird das Konzept, nicht die einzelne Frage. */
 export interface Concept {
   id: string;
   topic: string;
+  source: Source;
   variants: Variant[];
 }
 
@@ -30,6 +40,8 @@ export interface Chapter {
   short: string;
   emoji: string;
   description: string;
+  /** Entsprechendes Kapitel im Schulbuch */
+  book: { chapter: number; from: number; to: number };
   /** Belohnung in der Schatzkiste bei 100 % Mastery */
   chestBadge: { emoji: string; name: string };
 }

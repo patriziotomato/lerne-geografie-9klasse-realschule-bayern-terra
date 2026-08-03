@@ -2,8 +2,44 @@
   "chapterId": "landwirtschaft",
   "concepts": [
     {
+      "id": "landwirtschaft-c16",
+      "topic": "Globale Nahrungsmittelproduktion und Lieferketten",
+      "source": {
+        "lesson": "Globalisierte Landwirtschaft",
+        "page": 54
+      },
+      "variants": [
+        {
+          "text": "Warum sind in deutschen Supermärkten das ganze Jahr über frische Erdbeeren oder Trauben erhältlich?",
+          "options": [
+            "Sie werden außerhalb der Saison importiert.",
+            "Deutsche Erdbeeren reifen auch im Winter.",
+            "Erdbeeren lassen sich jahrelang lagern.",
+            "Sie wachsen hier in kalten Gewächshäusern."
+          ],
+          "explanation": "Globale Lieferketten holen Obst aus Ländern, in denen gerade Erntezeit ist.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Aussage über globale Lieferketten bei Lebensmitteln stimmt?",
+          "options": [
+            "Lange Transporte verursachen mehr Treibhausgase.",
+            "Importware ist stets klimafreundlicher als heimische.",
+            "Transportkosten spielen für den Preis keine Rolle.",
+            "Flugware verursacht weniger Emissionen als Schiffe."
+          ],
+          "explanation": "Je länger der Weg und je aufwendiger das Verkehrsmittel, desto mehr Emissionen.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
       "id": "landwirtschaft-c01",
       "topic": "Konventionelle Landwirtschaft",
+      "source": {
+        "lesson": "Globalisierte Landwirtschaft",
+        "page": 54
+      },
       "variants": [
         {
           "text": "Was ist ein typisches Merkmal der konventionellen Landwirtschaft?",
@@ -43,6 +79,10 @@
     {
       "id": "landwirtschaft-c02",
       "topic": "Ökologische Landwirtschaft",
+      "source": {
+        "lesson": "Globalisierte Landwirtschaft",
+        "page": 54
+      },
       "variants": [
         {
           "text": "Worauf verzichten Betriebe der ökologischen Landwirtschaft?",
@@ -82,6 +122,10 @@
     {
       "id": "landwirtschaft-c03",
       "topic": "Vor- und Nachteile öko vs. konventionell",
+      "source": {
+        "lesson": "Globalisierte Landwirtschaft",
+        "page": 54
+      },
       "variants": [
         {
           "text": "Welcher Nachteil ist typisch für die ökologische Landwirtschaft im Vergleich zur konventionellen?",
@@ -110,6 +154,10 @@
     {
       "id": "landwirtschaft-c04",
       "topic": "Massentierhaltung und Tierwohl",
+      "source": {
+        "lesson": "Globalisierte Landwirtschaft",
+        "page": 54
+      },
       "variants": [
         {
           "text": "Was versteht man unter Massentierhaltung?",
@@ -147,265 +195,12 @@
       ]
     },
     {
-      "id": "landwirtschaft-c05",
-      "topic": "Börden und Lössböden",
-      "variants": [
-        {
-          "text": "Warum sind die Börden, wie die Magdeburger Börde, besonders gute Ackerbaugebiete?",
-          "options": [
-            "Lössböden speichern Wasser und Nährstoffe gut.",
-            "Dort wurden besonders viele Moore trockengelegt.",
-            "Die sandigen Böden sind leicht zu bearbeiten.",
-            "Es fallen über 2000 mm Niederschlag im Jahr."
-          ],
-          "explanation": "Löss ist ein feiner Boden, der Wasser und Nährstoffe hervorragend hält.",
-          "difficulty": 1
-        },
-        {
-          "text": "Welche Feldfrüchte werden in der Magdeburger Börde wegen der fruchtbaren Böden vor allem angebaut?",
-          "options": [
-            "Weizen und Zuckerrüben, sie brauchen viel Nährstoff",
-            "Roggen und Kartoffeln, sie gedeihen auf armem Boden",
-            "Wein und Hopfen, sie benötigen vor allem viel Wärme",
-            "Reis und Soja, sie benötigen sehr viel Wasser"
-          ],
-          "explanation": "Anspruchsvolle Kulturen wie Weizen und Zuckerrüben lieben Lössböden.",
-          "difficulty": 2
-        },
-        {
-          "text": "Woraus ist der fruchtbare Lössboden der Börden entstanden?",
-          "options": [
-            "aus feinem Staub, den der Wind eiszeitlich ablud",
-            "aus erkalteter Lava früherer großer Vulkanausbrüche",
-            "aus Sand, den Flüsse vor kurzem anschwemmten",
-            "aus Ablagerungen tropischer Urzeit-Meere"
-          ],
-          "explanation": "Löss ist feines, vom Wind in den Eiszeiten abgelagertes Sediment.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "landwirtschaft-c06",
-      "topic": "Milchwirtschaft im Alpenvorland",
-      "variants": [
-        {
-          "text": "Warum ist das Alpenvorland ein Zentrum der Milchviehhaltung?",
-          "options": [
-            "Das feucht-kühle Klima schafft ideales Grünland.",
-            "Schwarzerdeböden bieten besten Boden für Mais.",
-            "Milchkühe brauchen die kühle Höhenluft dort.",
-            "Ackerbau ist im Alpenvorland gesetzlich verboten."
-          ],
-          "explanation": "Viel Regen und kühles Klima lassen Gras wachsen – ideal für Milchkühe.",
-          "difficulty": 1
-        },
-        {
-          "text": "Ein Betrieb im bayerischen Alpenvorland nutzt seine Flächen fast nur als Wiesen und Weiden. Welche Erklärung passt dazu?",
-          "options": [
-            "Viel Regen und kurze Sommer begünstigen Gras.",
-            "Die Böden sind für Getreide viel zu nährstoffreich.",
-            "Wiesen bringen pro Hektar das meiste Geld ein.",
-            "Auf Grünland gelten keine EU-Vorschriften."
-          ],
-          "explanation": "Wo es viel regnet und die Sommer kurz sind, wächst Gras zuverlässiger als Getreide.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "landwirtschaft-c07",
-      "topic": "Sonderkultur Hopfen in der Hallertau",
-      "variants": [
-        {
-          "text": "Wofür ist die Hallertau in Bayern bekannt?",
-          "options": [
-            "größtes Hopfenanbaugebiet der Welt",
-            "größtes Weinanbaugebiet Deutschlands",
-            "größtes Spargelanbaugebiet Deutschlands",
-            "wichtigstes Tabakanbaugebiet Europas"
-          ],
-          "explanation": "Zwischen Ingolstadt und Landshut liegt das größte Hopfengebiet der Welt.",
-          "difficulty": 1
-        },
-        {
-          "text": "Was versteht man unter Sonderkulturen wie dem Hopfen in der Hallertau?",
-          "options": [
-            "viel Arbeit, aber hohe Erlöse auf kleiner Fläche",
-            "Pflanzen, die wild wachsen und nur geerntet werden",
-            "Getreide, das auf riesigen Flächen angebaut wird",
-            "Futterpflanzen, die nur für die Tiere gedacht sind"
-          ],
-          "explanation": "Hopfen, Wein und Obst sind arbeitsintensiv, bringen aber viel pro Hektar.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "landwirtschaft-c08",
-      "topic": "Obst- und Weinbau in Gunsträumen",
-      "variants": [
-        {
-          "text": "Warum eignet sich die Region am Bodensee besonders gut für den Obstanbau?",
-          "options": [
-            "Der See speichert Wärme und mildert das Klima.",
-            "Der Salzgehalt des Sees düngt die Böden ringsum.",
-            "Das raue Gebirgsklima härtet die Obstbäume ab.",
-            "Der See sorgt für lange, sehr kalte Winter."
-          ],
-          "explanation": "Das Seewasser wirkt als Wärmespeicher und schützt die Blüte vor Spätfrost.",
-          "difficulty": 1
-        },
-        {
-          "text": "Weinreben und Obstbäume stellen ähnliche Ansprüche an ihre Standorte. Welche Bedingungen sind das?",
-          "options": [
-            "viel Sonne, Wärme und Schutz vor starkem Frost",
-            "kühle, schattige Nordhänge mit langem Frost",
-            "staunasse Böden in regelmäßig überfluteten Tälern",
-            "Hochlagen über 1500 m mit kühlen Sommern"
-          ],
-          "explanation": "Beide sind wärmeliebend und brauchen sonnige, frostgeschützte Lagen.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "landwirtschaft-c09",
-      "topic": "Strukturwandel und Höfesterben",
-      "variants": [
-        {
-          "text": "Was versteht man unter dem Strukturwandel in der Landwirtschaft?",
-          "options": [
-            "weniger Betriebe, die dafür immer größer werden",
-            "immer mehr Städter gründen kleine Bauernhöfe",
-            "die Felder werden in kleine Parzellen geteilt",
-            "Rückkehr zur Handarbeit statt zum Maschineneinsatz"
-          ],
-          "explanation": "Viele kleine Höfe geben auf, die übrigen Betriebe wachsen – das Höfesterben.",
-          "difficulty": 1
-        },
-        {
-          "text": "Was bedeutet der Ausdruck 'Wachse oder weiche' im Zusammenhang mit dem Höfesterben?",
-          "options": [
-            "Wer sich nicht vergrößert, muss meist aufgeben.",
-            "Jedes Jahr muss ein Teil der Fläche brachliegen.",
-            "Nur Öko-Betriebe dürfen weiter produzieren.",
-            "Junge Landwirte müssen den Elternhof verlassen."
-          ],
-          "explanation": "Sinkende Preise und hohe Kosten lohnen sich oft nur noch für große Betriebe.",
-          "difficulty": 2
-        },
-        {
-          "text": "Welche Aussage zum Strukturwandel in der deutschen Landwirtschaft stimmt NICHT?",
-          "options": [
-            "Die Betriebe sind im Schnitt deutlich kleiner geworden.",
-            "Viele Familienbetriebe gaben aus Kostengründen auf.",
-            "Immer weniger Menschen arbeiten in der Landwirtschaft.",
-            "Moderne Maschinen ersetzen heute viele Arbeitskräfte."
-          ],
-          "explanation": "Umgekehrt: Die Betriebe wurden größer, weil sie freie Flächen übernehmen.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "landwirtschaft-c10",
-      "topic": "Technisierung und Precision Farming",
-      "variants": [
-        {
-          "text": "Was versteht man unter Precision Farming (Präzisionslandwirtschaft)?",
-          "options": [
-            "GPS und Sensoren dosieren Dünger punktgenau.",
-            "Die Felder werden nur noch per Hand gepflügt.",
-            "Anbau in exakt vermessenen Stadt-Gewächshäusern.",
-            "Züchtung besonders kleiner, platzsparender Pflanzen."
-          ],
-          "explanation": "GPS und Sensoren steuern die Maschinen: jede Teilfläche bekommt genau ihren Bedarf.",
-          "difficulty": 2
-        },
-        {
-          "text": "Welchen Vorteil bietet die zunehmende Technisierung der Landwirtschaft?",
-          "options": [
-            "Große Flächen brauchen nur wenige Arbeitskräfte.",
-            "Moderne Maschinen sind für kleine Höfe günstig.",
-            "Die Zahl der Arbeitsplätze auf den Höfen steigt.",
-            "Maschinen verhindern jede Bodenverdichtung."
-          ],
-          "explanation": "Ein Mähdrescher erledigt die Arbeit vieler Menschen.",
-          "difficulty": 1
-        }
-      ]
-    },
-    {
-      "id": "landwirtschaft-c11",
-      "topic": "EU-Agrarpolitik und Subventionen",
-      "variants": [
-        {
-          "text": "Warum erhalten Landwirte in der EU Subventionen aus der Gemeinsamen Agrarpolitik (GAP)?",
-          "options": [
-            "um Einkommen und Nahrungsversorgung zu sichern",
-            "um die Lebensmittelpreise künstlich zu erhöhen",
-            "um kleine Höfe gezielt zum Aufgeben zu bringen",
-            "um Lebensmittel-Importe aus Übersee zu bezahlen"
-          ],
-          "explanation": "Die GAP sichert das Einkommen der Landwirte und Europas Versorgung.",
-          "difficulty": 2
-        },
-        {
-          "text": "Wonach richtet sich die Höhe der wichtigsten EU-Direktzahlungen an einen landwirtschaftlichen Betrieb vor allem?",
-          "options": [
-            "nach der Größe der bewirtschafteten Fläche",
-            "nach der Menge der verkauften Produkte",
-            "nach dem Gewinn des Betriebs im Vorjahr",
-            "nach der Zahl der Beschäftigten auf dem Hof"
-          ],
-          "explanation": "Direktzahlungen gibt es pro Hektar – große Betriebe erhalten daher mehr.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "landwirtschaft-c12",
-      "topic": "Nitrat im Grundwasser",
-      "variants": [
-        {
-          "text": "Wie gelangt Nitrat in vielen Agrarregionen ins Grundwasser?",
-          "options": [
-            "Überschüssige Gülle sickert in den Boden.",
-            "Abgase der Traktoren setzen sich auf Feldern ab.",
-            "Beim Bewässern wird Wasser versprüht.",
-            "Gesteine im Untergrund zerfallen natürlich."
-          ],
-          "explanation": "Was die Pflanzen nicht aufnehmen, sickert als Nitrat ins Grundwasser.",
-          "difficulty": 1
-        },
-        {
-          "text": "Warum ist zu viel Nitrat im Grundwasser ein Problem?",
-          "options": [
-            "Trinkwasser muss teuer aufbereitet werden.",
-            "Nitrat lässt das Grundwasser schneller verdunsten.",
-            "Nitrat färbt das Trinkwasser dunkel und trüb.",
-            "Nitrat greift die Wasserleitungen an."
-          ],
-          "explanation": "Über 50 mg pro Liter wird die Trinkwasseraufbereitung teuer; Säuglinge sind gefährdet.",
-          "difficulty": 2
-        },
-        {
-          "text": "In welchen Regionen Deutschlands ist das Grundwasser besonders stark mit Nitrat belastet?",
-          "options": [
-            "in Regionen mit intensiver Tierhaltung",
-            "in dicht bebauten großen Innenstädten",
-            "in ausgedehnten alten Waldgebieten",
-            "im Hochgebirge über der Baumgrenze"
-          ],
-          "explanation": "Viele Tiere heißt viel Gülle – und damit hohe Nitratwerte im Grundwasser.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
       "id": "landwirtschaft-c13",
       "topic": "Monokulturen, Pestizide und Artensterben",
+      "source": {
+        "lesson": "Die „Vermaisung“ der Landschaft",
+        "page": 56
+      },
       "variants": [
         {
           "text": "Was ist eine Monokultur?",
@@ -443,8 +238,130 @@
       ]
     },
     {
+      "id": "landwirtschaft-c22",
+      "topic": "Die „Vermaisung“ der Landschaft",
+      "source": {
+        "lesson": "Die „Vermaisung“ der Landschaft",
+        "page": 56
+      },
+      "variants": [
+        {
+          "text": "Was bedeutet die „Vermaisung“ der Landschaft?",
+          "options": [
+            "Immer größere Flächen tragen nur noch Mais.",
+            "Immer mehr Flächen bleiben ganz unbestellt.",
+            "Immer mehr Bauern bauen gar keinen Mais an.",
+            "Immer mehr Mais wird im Ausland gekauft."
+          ],
+          "explanation": "Ganze Landstriche sehen im Sommer gleich aus — Maisfeld an Maisfeld.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum wird in Bayern so viel Mais angebaut?",
+          "options": [
+            "Er liefert Futter und Substrat für Biogas.",
+            "Er braucht als einzige Pflanze keinen Dünger.",
+            "Er wächst auch auf sehr nassen Böden gut.",
+            "Er wird fast nur zu Popcorn verarbeitet."
+          ],
+          "explanation": "Mais bringt hohe Erträge — als Tierfutter und als Rohstoff für Biogasanlagen.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welchen Nachteil hat großflächiger Maisanbau?",
+          "options": [
+            "Der Boden erodiert, Arten verschwinden.",
+            "Der Boden wird dauerhaft fruchtbarer.",
+            "Die Artenvielfalt am Acker nimmt stark zu.",
+            "Mais braucht viel weniger Fläche als Weizen."
+          ],
+          "explanation": "Zwischen den weiten Maisreihen liegt der Boden lange offen — Regen trägt ihn ab.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c23",
+      "topic": "Biogas und Energiepflanzen",
+      "source": {
+        "lesson": "Die „Vermaisung“ der Landschaft",
+        "page": 56
+      },
+      "variants": [
+        {
+          "text": "Wozu dient Mais in einer Biogasanlage?",
+          "options": [
+            "Er wird vergoren und liefert so Strom.",
+            "Er wird direkt im Kraftwerk verbrannt.",
+            "Er wird zu Benzin für Autos verarbeitet.",
+            "Er dient nur als Streu für die Tierställe."
+          ],
+          "explanation": "Bakterien vergären den Mais zu Methan, ein Motor macht daraus Strom und Wärme.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was kritisieren Fachleute am Anbau von Energiepflanzen?",
+          "options": [
+            "Sie belegen Flächen, die Nahrung tragen könnten.",
+            "Sie liefern überhaupt keine nutzbare Energie.",
+            "Sie wachsen nur in tropischen Ländern gut.",
+            "Sie lassen sich auf Äckern gar nicht anbauen."
+          ],
+          "explanation": "Der Streit heißt „Teller oder Tank“: Acker für Lebensmittel oder für Energie?",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c12",
+      "topic": "Nitrat im Grundwasser",
+      "source": {
+        "lesson": "Unser Essen hinterlässt Spuren",
+        "page": 58
+      },
+      "variants": [
+        {
+          "text": "Wie gelangt Nitrat in vielen Agrarregionen ins Grundwasser?",
+          "options": [
+            "Überschüssige Gülle sickert in den Boden.",
+            "Abgase der Traktoren setzen sich auf Feldern ab.",
+            "Beim Bewässern wird Wasser versprüht.",
+            "Gesteine im Untergrund zerfallen natürlich."
+          ],
+          "explanation": "Was die Pflanzen nicht aufnehmen, sickert als Nitrat ins Grundwasser.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum ist zu viel Nitrat im Grundwasser ein Problem?",
+          "options": [
+            "Trinkwasser muss teuer aufbereitet werden.",
+            "Nitrat lässt das Grundwasser schneller verdunsten.",
+            "Nitrat färbt das Trinkwasser dunkel und trüb.",
+            "Nitrat greift die Wasserleitungen an."
+          ],
+          "explanation": "Über 50 mg pro Liter wird die Trinkwasseraufbereitung teuer; Säuglinge sind gefährdet.",
+          "difficulty": 2
+        },
+        {
+          "text": "In welchen Regionen Deutschlands ist das Grundwasser besonders stark mit Nitrat belastet?",
+          "options": [
+            "in Regionen mit intensiver Tierhaltung",
+            "in dicht bebauten großen Innenstädten",
+            "in ausgedehnten alten Waldgebieten",
+            "im Hochgebirge über der Baumgrenze"
+          ],
+          "explanation": "Viele Tiere heißt viel Gülle – und damit hohe Nitratwerte im Grundwasser.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
       "id": "landwirtschaft-c14",
       "topic": "Bewässerungslandwirtschaft und Wasserverbrauch",
+      "source": {
+        "lesson": "Unser Essen hinterlässt Spuren",
+        "page": 58
+      },
       "variants": [
         {
           "text": "Wie viel des weltweit genutzten Süßwassers verbraucht die Landwirtschaft ungefähr?",
@@ -473,6 +390,10 @@
     {
       "id": "landwirtschaft-c15",
       "topic": "Virtuelles Wasser",
+      "source": {
+        "lesson": "Unser Essen hinterlässt Spuren",
+        "page": 58
+      },
       "variants": [
         {
           "text": "Was versteht man unter 'virtuellem Wasser'?",
@@ -510,36 +431,12 @@
       ]
     },
     {
-      "id": "landwirtschaft-c16",
-      "topic": "Globale Nahrungsmittelproduktion und Lieferketten",
-      "variants": [
-        {
-          "text": "Warum sind in deutschen Supermärkten das ganze Jahr über frische Erdbeeren oder Trauben erhältlich?",
-          "options": [
-            "Sie werden außerhalb der Saison importiert.",
-            "Deutsche Erdbeeren reifen auch im Winter.",
-            "Erdbeeren lassen sich jahrelang lagern.",
-            "Sie wachsen hier in kalten Gewächshäusern."
-          ],
-          "explanation": "Globale Lieferketten holen Obst aus Ländern, in denen gerade Erntezeit ist.",
-          "difficulty": 1
-        },
-        {
-          "text": "Welche Aussage über globale Lieferketten bei Lebensmitteln stimmt?",
-          "options": [
-            "Lange Transporte verursachen mehr Treibhausgase.",
-            "Importware ist stets klimafreundlicher als heimische.",
-            "Transportkosten spielen für den Preis keine Rolle.",
-            "Flugware verursacht weniger Emissionen als Schiffe."
-          ],
-          "explanation": "Je länger der Weg und je aufwendiger das Verkehrsmittel, desto mehr Emissionen.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
       "id": "landwirtschaft-c17",
       "topic": "Fleischkonsum und Flächenverbrauch",
+      "source": {
+        "lesson": "Unser Essen hinterlässt Spuren",
+        "page": 58
+      },
       "variants": [
         {
           "text": "Warum verbraucht die Erzeugung von Fleisch deutlich mehr Fläche als der Anbau pflanzlicher Lebensmittel?",
@@ -579,6 +476,10 @@
     {
       "id": "landwirtschaft-c18",
       "topic": "Ökologischer Fußabdruck der Ernährung",
+      "source": {
+        "lesson": "Unser Essen hinterlässt Spuren",
+        "page": 58
+      },
       "variants": [
         {
           "text": "Wie können Verbraucher den ökologischen Fußabdruck ihrer Ernährung verringern?",
@@ -605,36 +506,119 @@
       ]
     },
     {
-      "id": "landwirtschaft-c19",
-      "topic": "Bio-Siegel und Gütesiegel",
+      "id": "landwirtschaft-c09",
+      "topic": "Strukturwandel und Höfesterben",
+      "source": {
+        "lesson": "Agrarpolitik und Aufgaben für die Zukunft",
+        "page": 60
+      },
       "variants": [
         {
-          "text": "Was garantiert das EU-Bio-Siegel (grünes Blatt aus Sternen) auf einem Lebensmittel?",
+          "text": "Was versteht man unter dem Strukturwandel in der Landwirtschaft?",
           "options": [
-            "Erzeugung nach den Regeln des Ökolandbaus",
-            "Herkunft aus der Region des Einkaufenden",
-            "Verzicht auf alle tierischen Bestandteile",
-            "Herstellung in Handarbeit ohne Maschinen"
+            "weniger Betriebe, die dafür immer größer werden",
+            "immer mehr Städter gründen kleine Bauernhöfe",
+            "die Felder werden in kleine Parzellen geteilt",
+            "Rückkehr zur Handarbeit statt zum Maschineneinsatz"
           ],
-          "explanation": "Es steht für kontrolliert ökologischen Landbau – nicht für Region oder vegan.",
+          "explanation": "Viele kleine Höfe geben auf, die übrigen Betriebe wachsen – das Höfesterben.",
           "difficulty": 1
         },
         {
-          "text": "Welche Aussage über Bio- und Gütesiegel stimmt?",
+          "text": "Was bedeutet der Ausdruck 'Wachse oder weiche' im Zusammenhang mit dem Höfesterben?",
           "options": [
-            "Bioland und Demeter sind teils strenger als die EU.",
-            "Alle Siegel kommen vom Staat und bedeuten dasselbe.",
-            "Ein Bio-Siegel garantiert Herkunft aus Deutschland.",
-            "Ware ohne Siegel darf in der EU nicht verkauft werden."
+            "Wer sich nicht vergrößert, muss meist aufgeben.",
+            "Jedes Jahr muss ein Teil der Fläche brachliegen.",
+            "Nur Öko-Betriebe dürfen weiter produzieren.",
+            "Junge Landwirte müssen den Elternhof verlassen."
           ],
-          "explanation": "Die Anbauverbände fordern bei Tierhaltung und Düngung oft mehr als die EU.",
+          "explanation": "Sinkende Preise und hohe Kosten lohnen sich oft nur noch für große Betriebe.",
           "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zum Strukturwandel in der deutschen Landwirtschaft stimmt NICHT?",
+          "options": [
+            "Die Betriebe sind im Schnitt deutlich kleiner geworden.",
+            "Viele Familienbetriebe gaben aus Kostengründen auf.",
+            "Immer weniger Menschen arbeiten in der Landwirtschaft.",
+            "Moderne Maschinen ersetzen heute viele Arbeitskräfte."
+          ],
+          "explanation": "Umgekehrt: Die Betriebe wurden größer, weil sie freie Flächen übernehmen.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c10",
+      "topic": "Technisierung und Precision Farming",
+      "source": {
+        "lesson": "Agrarpolitik und Aufgaben für die Zukunft",
+        "page": 60
+      },
+      "variants": [
+        {
+          "text": "Was versteht man unter Precision Farming (Präzisionslandwirtschaft)?",
+          "options": [
+            "GPS und Sensoren dosieren Dünger punktgenau.",
+            "Die Felder werden nur noch per Hand gepflügt.",
+            "Anbau in exakt vermessenen Stadt-Gewächshäusern.",
+            "Züchtung besonders kleiner, platzsparender Pflanzen."
+          ],
+          "explanation": "GPS und Sensoren steuern die Maschinen: jede Teilfläche bekommt genau ihren Bedarf.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welchen Vorteil bietet die zunehmende Technisierung der Landwirtschaft?",
+          "options": [
+            "Große Flächen brauchen nur wenige Arbeitskräfte.",
+            "Moderne Maschinen sind für kleine Höfe günstig.",
+            "Die Zahl der Arbeitsplätze auf den Höfen steigt.",
+            "Maschinen verhindern jede Bodenverdichtung."
+          ],
+          "explanation": "Ein Mähdrescher erledigt die Arbeit vieler Menschen.",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c11",
+      "topic": "EU-Agrarpolitik und Subventionen",
+      "source": {
+        "lesson": "Agrarpolitik und Aufgaben für die Zukunft",
+        "page": 60
+      },
+      "variants": [
+        {
+          "text": "Warum erhalten Landwirte in der EU Subventionen aus der Gemeinsamen Agrarpolitik (GAP)?",
+          "options": [
+            "um Einkommen und Nahrungsversorgung zu sichern",
+            "um die Lebensmittelpreise künstlich zu erhöhen",
+            "um kleine Höfe gezielt zum Aufgeben zu bringen",
+            "um Lebensmittel-Importe aus Übersee zu bezahlen"
+          ],
+          "explanation": "Die GAP sichert das Einkommen der Landwirte und Europas Versorgung.",
+          "difficulty": 2
+        },
+        {
+          "text": "Wonach richtet sich die Höhe der wichtigsten EU-Direktzahlungen an einen landwirtschaftlichen Betrieb vor allem?",
+          "options": [
+            "nach der Größe der bewirtschafteten Fläche",
+            "nach der Menge der verkauften Produkte",
+            "nach dem Gewinn des Betriebs im Vorjahr",
+            "nach der Zahl der Beschäftigten auf dem Hof"
+          ],
+          "explanation": "Direktzahlungen gibt es pro Hektar – große Betriebe erhalten daher mehr.",
+          "difficulty": 3
         }
       ]
     },
     {
       "id": "landwirtschaft-c20",
       "topic": "Welternährung und Hunger",
+      "source": {
+        "lesson": "Zwischen Hunger und Überfluss",
+        "page": 62
+      },
       "variants": [
         {
           "text": "Warum hungern weltweit Millionen Menschen, obwohl insgesamt genug Nahrung für alle produziert wird?",
@@ -674,6 +658,10 @@
     {
       "id": "landwirtschaft-c21",
       "topic": "Lebensmittelverschwendung",
+      "source": {
+        "lesson": "Zwischen Hunger und Überfluss",
+        "page": 62
+      },
       "variants": [
         {
           "text": "Wo entsteht in Deutschland der größte Teil der Lebensmittelabfälle?",
@@ -707,6 +695,209 @@
           ],
           "explanation": "Geplant einkaufen, Reste verwerten und prüfen statt wegwerfen spart viel.",
           "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c26",
+      "topic": "Zwischen Hunger und Überfluss",
+      "source": {
+        "lesson": "Zwischen Hunger und Überfluss",
+        "page": 62
+      },
+      "variants": [
+        {
+          "text": "Was beschreibt der Gegensatz von Hunger und Überfluss?",
+          "options": [
+            "Manche hungern, andere werfen Essen weg.",
+            "Überall auf der Welt gibt es zu wenig Essen.",
+            "Überall auf der Welt gibt es genug zu essen.",
+            "Hunger gibt es nur nach Naturkatastrophen."
+          ],
+          "explanation": "Auf derselben Erde gibt es Unterernährung und massenhaft weggeworfene Ware.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum hungern Menschen, obwohl genug Nahrung erzeugt wird?",
+          "options": [
+            "Sie ist ungleich verteilt und oft zu teuer.",
+            "Weltweit wird viel zu wenig Getreide geerntet.",
+            "Die Böden sind überall völlig ausgelaugt.",
+            "Es fehlt weltweit an genügend Ackerfläche."
+          ],
+          "explanation": "Rechnerisch reicht die Welternte für alle — Armut und Kriege sperren den Zugang.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c24",
+      "topic": "Grüne Gentechnik: Möglichkeiten",
+      "source": {
+        "lesson": "Grüne Gentechnik – Hoffnung und Zweifel",
+        "page": 64
+      },
+      "variants": [
+        {
+          "text": "Was versteht man unter grüner Gentechnik?",
+          "options": [
+            "das gezielte Verändern von Pflanzen-Erbgut",
+            "das Züchten über viele Generationen hinweg",
+            "den völligen Verzicht auf Pflanzenschutzmittel",
+            "den Anbau von Pflanzen ohne jeden Kunstdünger"
+          ],
+          "explanation": "Im Labor werden einzelne Gene eingefügt — anders als bei klassischer Züchtung.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welchen Vorteil versprechen sich Befürworter der Gentechnik?",
+          "options": [
+            "höhere Erträge und weniger Spritzmittel",
+            "einen sofort deutlich besseren Geschmack",
+            "eine völlig kostenlose Aussaat für Bauern",
+            "den vollständigen Verzicht auf Bewässerung"
+          ],
+          "explanation": "Resistente Sorten sollen Schädlingen und Trockenheit besser standhalten.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c25",
+      "topic": "Grüne Gentechnik: Zweifel",
+      "source": {
+        "lesson": "Grüne Gentechnik – Hoffnung und Zweifel",
+        "page": 64
+      },
+      "variants": [
+        {
+          "text": "Was befürchten Kritiker der grünen Gentechnik?",
+          "options": [
+            "unabsehbare Folgen für Natur und Gesundheit",
+            "eine deutlich zu geringe Ernte je Hektar",
+            "dass die Pflanzen viel langsamer wachsen",
+            "dass gar keine Forschung mehr stattfindet"
+          ],
+          "explanation": "Einmal freigesetzte Gene lassen sich aus der Natur nicht zurückholen.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum geraten Bauern durch Gentechnik-Saatgut in Abhängigkeit?",
+          "options": [
+            "Sie müssen Saatgut jedes Jahr neu kaufen.",
+            "Sie dürfen ihre Ernte nicht mehr verkaufen.",
+            "Sie brauchen dafür eine staatliche Erlaubnis.",
+            "Sie müssen ihre Felder jährlich neu pachten."
+          ],
+          "explanation": "Das Saatgut ist patentiert — Nachbau aus der eigenen Ernte ist untersagt.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c19",
+      "topic": "Bio-Siegel und Gütesiegel",
+      "source": {
+        "lesson": "Verantwortung für die „Eine Welt“",
+        "page": 66
+      },
+      "variants": [
+        {
+          "text": "Was garantiert das EU-Bio-Siegel (grünes Blatt aus Sternen) auf einem Lebensmittel?",
+          "options": [
+            "Erzeugung nach den Regeln des Ökolandbaus",
+            "Herkunft aus der Region des Einkaufenden",
+            "Verzicht auf alle tierischen Bestandteile",
+            "Herstellung in Handarbeit ohne Maschinen"
+          ],
+          "explanation": "Es steht für kontrolliert ökologischen Landbau – nicht für Region oder vegan.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Aussage über Bio- und Gütesiegel stimmt?",
+          "options": [
+            "Bioland und Demeter sind teils strenger als die EU.",
+            "Alle Siegel kommen vom Staat und bedeuten dasselbe.",
+            "Ein Bio-Siegel garantiert Herkunft aus Deutschland.",
+            "Ware ohne Siegel darf in der EU nicht verkauft werden."
+          ],
+          "explanation": "Die Anbauverbände fordern bei Tierhaltung und Düngung oft mehr als die EU.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c27",
+      "topic": "Verantwortung für die „Eine Welt“",
+      "source": {
+        "lesson": "Verantwortung für die „Eine Welt“",
+        "page": 66
+      },
+      "variants": [
+        {
+          "text": "Was meint der Gedanke der „Einen Welt“?",
+          "options": [
+            "Unser Konsum wirkt sich weltweit aus.",
+            "Jedes Land versorgt sich allein selbst.",
+            "Alle Länder haben denselben Wohlstand.",
+            "Der Handel zwischen Ländern soll enden."
+          ],
+          "explanation": "Was hier im Einkaufswagen landet, entscheidet über Arbeit und Umwelt anderswo.",
+          "difficulty": 2
+        },
+        {
+          "text": "Wie kannst du beim Einkauf Verantwortung übernehmen?",
+          "options": [
+            "regional, saisonal und fair einkaufen",
+            "möglichst weit gereiste Ware kaufen",
+            "grundsätzlich die billigste Ware nehmen",
+            "nur abgepackte Lebensmittel einkaufen"
+          ],
+          "explanation": "Kurze Wege sparen CO₂, faire Preise sichern den Erzeugern ein Auskommen.",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "landwirtschaft-c28",
+      "topic": "Urban Farming",
+      "source": {
+        "lesson": "Urban Farming",
+        "page": 68
+      },
+      "variants": [
+        {
+          "text": "Was ist Urban Farming?",
+          "options": [
+            "Lebensmittelanbau mitten in der Stadt",
+            "Ackerbau nur auf dem flachen Land",
+            "Viehhaltung in sehr großen Ställen",
+            "Gartenbau ausschließlich unter Glas"
+          ],
+          "explanation": "Gemüse wächst auf Dächern, Brachen und in Hinterhöfen statt auf dem Acker.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welchen Vorteil hat Urban Farming?",
+          "options": [
+            "kurze Wege zwischen Ernte und Teller",
+            "deutlich größere Flächen als auf Feldern",
+            "den vollständigen Verzicht auf Wasser",
+            "erheblich niedrigere Preise als im Handel"
+          ],
+          "explanation": "Was im Viertel wächst, muss nicht gekühlt um die halbe Welt transportiert werden.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was ist eine typische Form des Urban Farming?",
+          "options": [
+            "Dachgärten und vertikale Gewächshäuser",
+            "riesige Monokulturen weit vor der Stadt",
+            "Wanderweidewirtschaft in den Bergen",
+            "Fischfang in den Meeren vor der Küste"
+          ],
+          "explanation": "In der Stadt ist Fläche knapp — deshalb wird in die Höhe und aufs Dach gebaut.",
+          "difficulty": 3
         }
       ]
     }

@@ -4,6 +4,10 @@
     {
       "id": "europa-c01",
       "topic": "Friedensidee und Montanunion",
+      "source": {
+        "lesson": "Europa wächst zusammen",
+        "page": 120
+      },
       "variants": [
         {
           "text": "Warum schlossen sich europäische Staaten nach dem Zweiten Weltkrieg enger zusammen?",
@@ -43,6 +47,10 @@
     {
       "id": "europa-c02",
       "topic": "Von der EWG zur Europäischen Union",
+      "source": {
+        "lesson": "Europa wächst zusammen",
+        "page": 120
+      },
       "variants": [
         {
           "text": "Was wurde 1957 mit den Römischen Verträgen gegründet?",
@@ -71,6 +79,10 @@
     {
       "id": "europa-c03",
       "topic": "EU-Erweiterungen und Mitglieder heute",
+      "source": {
+        "lesson": "Europa wächst zusammen",
+        "page": 120
+      },
       "variants": [
         {
           "text": "Wie viele Mitgliedstaaten hat die Europäische Union heute?",
@@ -110,6 +122,10 @@
     {
       "id": "europa-c04",
       "topic": "Europäisches Parlament",
+      "source": {
+        "lesson": "Europa wächst zusammen",
+        "page": 120
+      },
       "variants": [
         {
           "text": "Welche EU-Institution wird von den Bürgerinnen und Bürgern alle fünf Jahre direkt gewählt?",
@@ -147,120 +163,12 @@
       ]
     },
     {
-      "id": "europa-c05",
-      "topic": "Europäische Kommission",
-      "variants": [
-        {
-          "text": "Welche Aufgabe hat die Europäische Kommission?",
-          "options": [
-            "Sie schlägt Gesetze vor und wacht über die Verträge.",
-            "Sie wählt die Abgeordneten des Europäischen Parlaments.",
-            "Sie druckt die Euro-Scheine und setzt die Leitzinsen fest.",
-            "Sie spricht als Gericht Urteile über die Mitgliedstaaten."
-          ],
-          "explanation": "Vorschlagsrecht für Gesetze – deshalb heißt sie Hüterin der Verträge.",
-          "difficulty": 1
-        },
-        {
-          "text": "Ein Mitgliedstaat hält sich nicht an gemeinsames EU-Recht. Welche Institution mit Sitz in Brüssel kann deshalb ein Verfahren gegen ihn einleiten?",
-          "options": [
-            "Die Europäische Kommission",
-            "Die Europäische Zentralbank",
-            "Das Europäische Parlament",
-            "Der Europarat"
-          ],
-          "explanation": "Sie kann Vertragsverletzungsverfahren einleiten; der Europarat gehört nicht zur EU.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "europa-c06",
-      "topic": "Rat der Europäischen Union",
-      "variants": [
-        {
-          "text": "Wer trifft sich im Rat der Europäischen Union, dem sogenannten Ministerrat?",
-          "options": [
-            "die Fachminister der Mitgliedstaaten",
-            "direkt gewählte Abgeordnete aller Länder",
-            "die obersten Richter der Mitgliedstaaten",
-            "die Bürgermeister der Hauptstädte Europas"
-          ],
-          "explanation": "Je nach Thema treffen sich zum Beispiel die Agrar- oder Umweltminister.",
-          "difficulty": 2
-        },
-        {
-          "text": "Worin unterscheidet sich der Rat der EU vom Europäischen Rat?",
-          "options": [
-            "Minister machen Gesetze, Chefs geben die Leitlinien vor.",
-            "Der Rat der EU besteht aus Richtern, nicht aus Ministern.",
-            "Beide Bezeichnungen stehen für genau dieselbe Institution.",
-            "Der Europäische Rat beschließt alle Gesetze ganz allein."
-          ],
-          "explanation": "Ministerrat = Gesetzgebung, Europäischer Rat = Gipfel der Regierungschefs.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "europa-c07",
-      "topic": "Europäischer Gerichtshof",
-      "variants": [
-        {
-          "text": "Welche Aufgabe hat der Europäische Gerichtshof (EuGH)?",
-          "options": [
-            "Er wacht über die einheitliche Anwendung des EU-Rechts.",
-            "Er schlägt neue Gesetze für die Europäische Union vor.",
-            "Er verwaltet den EU-Haushalt und verteilt die Fördergelder.",
-            "Er entscheidet über die Aufnahme neuer EU-Mitglieder."
-          ],
-          "explanation": "Das oberste Gericht der EU entscheidet auch in Streitfällen.",
-          "difficulty": 1
-        },
-        {
-          "text": "In welcher Stadt hat der Europäische Gerichtshof seinen Sitz?",
-          "options": [
-            "Luxemburg",
-            "Straßburg",
-            "Brüssel",
-            "Den Haag"
-          ],
-          "explanation": "In Den Haag sitzt dagegen der Internationale Gerichtshof der UNO.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "europa-c08",
-      "topic": "Europäische Zentralbank",
-      "variants": [
-        {
-          "text": "Welche Aufgabe hat die Europäische Zentralbank (EZB) mit Sitz in Frankfurt am Main?",
-          "options": [
-            "Sie sorgt mit den Leitzinsen für stabile Preise.",
-            "Sie beschließt die Gesetze der Europäischen Union.",
-            "Sie verteilt Fördergelder an schwache Regionen.",
-            "Sie legt die Haushalte der Mitgliedsländer fest."
-          ],
-          "explanation": "Hauptziel ist Preisstabilität; die Zinsen steuern die Kosten für Kredite.",
-          "difficulty": 1
-        },
-        {
-          "text": "Die Preise im Euro-Raum steigen stark an. Welche Institution kann mit einer Erhöhung der Leitzinsen gegen diese Inflation vorgehen?",
-          "options": [
-            "die Zentralbank in Frankfurt",
-            "die Kommission in Brüssel",
-            "das Parlament in Straßburg",
-            "der Gerichtshof in Luxemburg"
-          ],
-          "explanation": "Höhere Zinsen verteuern Kredite, es wird weniger ausgegeben, Preise sinken.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
       "id": "europa-c09",
       "topic": "Binnenmarkt und die vier Freiheiten",
+      "source": {
+        "lesson": "Europa in unserem Alltag",
+        "page": 122
+      },
       "variants": [
         {
           "text": "Welche \"vier Freiheiten\" gelten im Europäischen Binnenmarkt?",
@@ -300,6 +208,10 @@
     {
       "id": "europa-c10",
       "topic": "Euro und Eurozone",
+      "source": {
+        "lesson": "Europa in unserem Alltag",
+        "page": 122
+      },
       "variants": [
         {
           "text": "Was versteht man unter der \"Eurozone\"?",
@@ -339,6 +251,10 @@
     {
       "id": "europa-c11",
       "topic": "Schengen-Raum",
+      "source": {
+        "lesson": "Europa in unserem Alltag",
+        "page": 122
+      },
       "variants": [
         {
           "text": "Was bedeutet das Schengener Abkommen für Reisende?",
@@ -376,64 +292,12 @@
       ]
     },
     {
-      "id": "europa-c12",
-      "topic": "Brexit",
-      "variants": [
-        {
-          "text": "Was versteht man unter dem \"Brexit\"?",
-          "options": [
-            "den Austritt Großbritanniens aus der EU",
-            "den Beitritt Großbritanniens zur Eurozone",
-            "ein Handelsabkommen mit den USA",
-            "den Ausschluss aus dem Schengen-Raum"
-          ],
-          "explanation": "Aus \"Britain\" und \"Exit\": 2016 Volksabstimmung, Anfang 2020 der Austritt.",
-          "difficulty": 1
-        },
-        {
-          "text": "Welche Folge hat der Brexit für den Handel zwischen der EU und Großbritannien?",
-          "options": [
-            "Zoll und Kontrollen machen den Handel aufwendiger.",
-            "Der Handel läuft völlig unverändert weiter wie zuvor.",
-            "Großbritannien darf gar nichts mehr in die EU liefern.",
-            "Britische Waren wurden in der EU automatisch billiger."
-          ],
-          "explanation": "Ohne Binnenmarkt braucht es wieder Zollpapiere – das kostet Zeit und Geld.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "europa-c13",
-      "topic": "EU-Regionalförderung",
-      "variants": [
-        {
-          "text": "Warum unterstützt die EU strukturschwache Regionen mit Fördergeldern?",
-          "options": [
-            "Die Unterschiede zwischen Regionen sollen kleiner werden.",
-            "Möglichst viele Menschen sollen in die Hauptstädte ziehen.",
-            "Regionen mit den höchsten Steuerzahlungen werden belohnt.",
-            "Damit wird ausschließlich der Bau von Flughäfen bezahlt."
-          ],
-          "explanation": "Ärmere Gebiete sollen aufholen, damit alle ähnliche Chancen haben.",
-          "difficulty": 2
-        },
-        {
-          "text": "Eine ländliche Region mit hoher Arbeitslosigkeit erhält EU-Gelder für schnelles Internet und die Ansiedlung neuer Betriebe. Woher stammt dieses Geld?",
-          "options": [
-            "aus den EU-Strukturfonds, etwa dem EFRE",
-            "aus den Zinseinnahmen der Zentralbank",
-            "aus einem Fonds nur mit deutschem Geld",
-            "aus dem Verteidigungshaushalt der NATO"
-          ],
-          "explanation": "Der EFRE finanziert Infrastruktur, Betriebe und Bildung in schwachen Regionen.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
       "id": "europa-c14",
       "topic": "Die EU im Alltag",
+      "source": {
+        "lesson": "Europa in unserem Alltag",
+        "page": 122
+      },
       "variants": [
         {
           "text": "Woran merken Jugendliche in Deutschland im Alltag ganz direkt, dass es die EU gibt?",
@@ -473,6 +337,10 @@
     {
       "id": "europa-c15",
       "topic": "Globalisierung: Definition und Dimensionen",
+      "source": {
+        "lesson": "Von Bayern in die Welt: adidas",
+        "page": 124
+      },
       "variants": [
         {
           "text": "Was versteht man unter Globalisierung?",
@@ -512,6 +380,10 @@
     {
       "id": "europa-c16",
       "topic": "Treiber der Globalisierung",
+      "source": {
+        "lesson": "Von Bayern in die Welt: adidas",
+        "page": 124
+      },
       "variants": [
         {
           "text": "Welche Erfindung hat den weltweiten Warentransport enorm verbilligt und gilt deshalb als ein Motor der Globalisierung?",
@@ -551,6 +423,10 @@
     {
       "id": "europa-c17",
       "topic": "Global Players",
+      "source": {
+        "lesson": "Von Bayern in die Welt: adidas",
+        "page": 124
+      },
       "variants": [
         {
           "text": "Was ist ein \"Global Player\"?",
@@ -579,6 +455,10 @@
     {
       "id": "europa-c18",
       "topic": "Harte und weiche Standortfaktoren",
+      "source": {
+        "lesson": "Von Bayern in die Welt: adidas",
+        "page": 124
+      },
       "variants": [
         {
           "text": "Was versteht man unter \"harten\" Standortfaktoren?",
@@ -618,6 +498,10 @@
     {
       "id": "europa-c19",
       "topic": "Internationale Arbeitsteilung und Produktionsverlagerung",
+      "source": {
+        "lesson": "Von Bayern in die Welt: adidas",
+        "page": 124
+      },
       "variants": [
         {
           "text": "Was bedeutet \"internationale Arbeitsteilung\" bei der Herstellung eines Smartphones?",
@@ -646,6 +530,10 @@
     {
       "id": "europa-c20",
       "topic": "Deutschland im Welthandel",
+      "source": {
+        "lesson": "Von Bayern in die Welt: adidas",
+        "page": 124
+      },
       "variants": [
         {
           "text": "Warum wird Deutschland als \"Exportnation\" bezeichnet?",
@@ -674,6 +562,10 @@
     {
       "id": "europa-c21",
       "topic": "Chancen und Risiken der Globalisierung",
+      "source": {
+        "lesson": "Von Bayern in die Welt: adidas",
+        "page": 124
+      },
       "variants": [
         {
           "text": "Welche Chance bietet die Globalisierung den Verbrauchern in Deutschland?",
@@ -702,6 +594,10 @@
     {
       "id": "europa-c22",
       "topic": "Fairer Handel (Fairtrade)",
+      "source": {
+        "lesson": "Von Bayern in die Welt: adidas",
+        "page": 124
+      },
       "variants": [
         {
           "text": "Was ist das Ziel des fairen Handels (Fairtrade)?",
@@ -724,6 +620,273 @@
           ],
           "explanation": "Das Siegel bestätigt die Standards; die Ware ist meist etwas teurer.",
           "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c23",
+      "topic": "Von Bayern in die Welt: adidas",
+      "source": {
+        "lesson": "Von Bayern in die Welt: adidas",
+        "page": 124
+      },
+      "variants": [
+        {
+          "text": "Wo hat adidas seinen Hauptsitz?",
+          "options": [
+            "in Herzogenaurach in Bayern",
+            "in Nürnberg in Mittelfranken",
+            "in Stuttgart in Württemberg",
+            "in Portland in den USA"
+          ],
+          "explanation": "Adolf Dassler gründete das Unternehmen 1949 in seiner fränkischen Heimatstadt.",
+          "difficulty": 1
+        },
+        {
+          "text": "Was macht adidas zu einem Global Player?",
+          "options": [
+            "Es produziert und verkauft weltweit.",
+            "Es verkauft nur innerhalb von Bayern.",
+            "Es beschäftigt weniger als 100 Leute.",
+            "Es stellt alles selbst in Franken her."
+          ],
+          "explanation": "Ein Global Player ist auf allen Kontinenten tätig — Beschaffung, Werbung, Verkauf.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c24",
+      "topic": "adidas: weltweite Produktion",
+      "source": {
+        "lesson": "Von Bayern in die Welt: adidas",
+        "page": 124
+      },
+      "variants": [
+        {
+          "text": "Wo lässt adidas den Großteil seiner Schuhe fertigen?",
+          "options": [
+            "in asiatischen Ländern wie Vietnam",
+            "ausschließlich in Bayern und Sachsen",
+            "vor allem in den USA und in Kanada",
+            "hauptsächlich in Australien und Japan"
+          ],
+          "explanation": "Genäht wird überwiegend in Vietnam, Indonesien und China — nicht in Franken.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum wird in Asien statt in Franken produziert?",
+          "options": [
+            "Die Löhne sind dort deutlich niedriger.",
+            "Die Rohstoffe kommen alle nur von dort.",
+            "In Deutschland fehlen dafür die Maschinen.",
+            "Die Nachfrage besteht ausschließlich dort."
+          ],
+          "explanation": "Schuhe zu nähen ist Handarbeit — der Lohn macht den größten Kostenblock aus.",
+          "difficulty": 3
+        },
+        {
+          "text": "Was bleibt bei einem Global Player wie adidas am Standort Bayern?",
+          "options": [
+            "Entwicklung, Design und Verwaltung",
+            "die gesamte Herstellung der Schuhe",
+            "das Nähen und Zuschneiden der Ware",
+            "die Gewinnung sämtlicher Rohstoffe"
+          ],
+          "explanation": "Die gut bezahlten Aufgaben bleiben, die Fertigung wandert dorthin, wo es billig ist.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c12",
+      "topic": "Brexit",
+      "source": {
+        "lesson": "Neue Grenzen entstehen",
+        "page": 126
+      },
+      "variants": [
+        {
+          "text": "Was versteht man unter dem \"Brexit\"?",
+          "options": [
+            "den Austritt Großbritanniens aus der EU",
+            "den Beitritt Großbritanniens zur Eurozone",
+            "ein Handelsabkommen mit den USA",
+            "den Ausschluss aus dem Schengen-Raum"
+          ],
+          "explanation": "Aus \"Britain\" und \"Exit\": 2016 Volksabstimmung, Anfang 2020 der Austritt.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Folge hat der Brexit für den Handel zwischen der EU und Großbritannien?",
+          "options": [
+            "Zoll und Kontrollen machen den Handel aufwendiger.",
+            "Der Handel läuft völlig unverändert weiter wie zuvor.",
+            "Großbritannien darf gar nichts mehr in die EU liefern.",
+            "Britische Waren wurden in der EU automatisch billiger."
+          ],
+          "explanation": "Ohne Binnenmarkt braucht es wieder Zollpapiere – das kostet Zeit und Geld.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c25",
+      "topic": "Neue Grenzen entstehen",
+      "source": {
+        "lesson": "Neue Grenzen entstehen",
+        "page": 126
+      },
+      "variants": [
+        {
+          "text": "Was geschah mit den Grenzen innerhalb der EU?",
+          "options": [
+            "Sie wurden für Menschen und Waren offen.",
+            "Sie wurden strenger als jemals zuvor.",
+            "Sie wurden allesamt neu vermessen.",
+            "Sie verschwanden von allen Landkarten."
+          ],
+          "explanation": "Im Schengen-Raum entfallen die Kontrollen — die Grenze bleibt, der Halt entfällt.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum entstehen trotz offener Binnengrenzen neue Grenzen?",
+          "options": [
+            "Die EU-Außengrenze wird schärfer bewacht.",
+            "Alle Binnengrenzen wurden wieder aufgebaut.",
+            "Jedes Land führt eine eigene Währung ein.",
+            "Die EU hat sich in zwei Teile gespalten."
+          ],
+          "explanation": "Je offener es innen zugeht, desto stärker wird die gemeinsame Außengrenze gesichert.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c26",
+      "topic": "Grenzen weltweit",
+      "source": {
+        "lesson": "Neue Grenzen entstehen",
+        "page": 126
+      },
+      "variants": [
+        {
+          "text": "Was beobachtet man weltweit an Staatsgrenzen?",
+          "options": [
+            "Es entstehen wieder mehr Zäune und Mauern.",
+            "Alle Staaten öffnen ihre Grenzen völlig.",
+            "Grenzen verlieren überall ihre Bedeutung.",
+            "Es gibt weltweit immer weniger Staaten."
+          ],
+          "explanation": "Seit 1990 ist die Zahl der befestigten Grenzanlagen deutlich gestiegen.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Grenze wurde durch den Brexit wieder zum Problem?",
+          "options": [
+            "die zwischen Irland und Nordirland",
+            "die zwischen Spanien und Portugal",
+            "die zwischen Schweden und Norwegen",
+            "die zwischen Belgien und Frankreich"
+          ],
+          "explanation": "Nordirland gehört zum Vereinigten Königreich, Irland blieb in der EU.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "europa-c13",
+      "topic": "EU-Regionalförderung",
+      "source": {
+        "lesson": "Lohnt es sich, EU-Mitglied zu sein?",
+        "page": 128
+      },
+      "variants": [
+        {
+          "text": "Warum unterstützt die EU strukturschwache Regionen mit Fördergeldern?",
+          "options": [
+            "Die Unterschiede zwischen Regionen sollen kleiner werden.",
+            "Möglichst viele Menschen sollen in die Hauptstädte ziehen.",
+            "Regionen mit den höchsten Steuerzahlungen werden belohnt.",
+            "Damit wird ausschließlich der Bau von Flughäfen bezahlt."
+          ],
+          "explanation": "Ärmere Gebiete sollen aufholen, damit alle ähnliche Chancen haben.",
+          "difficulty": 2
+        },
+        {
+          "text": "Eine ländliche Region mit hoher Arbeitslosigkeit erhält EU-Gelder für schnelles Internet und die Ansiedlung neuer Betriebe. Woher stammt dieses Geld?",
+          "options": [
+            "aus den EU-Strukturfonds, etwa dem EFRE",
+            "aus den Zinseinnahmen der Zentralbank",
+            "aus einem Fonds nur mit deutschem Geld",
+            "aus dem Verteidigungshaushalt der NATO"
+          ],
+          "explanation": "Der EFRE finanziert Infrastruktur, Betriebe und Bildung in schwachen Regionen.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c27",
+      "topic": "Lohnt es sich, EU-Mitglied zu sein?",
+      "source": {
+        "lesson": "Lohnt es sich, EU-Mitglied zu sein?",
+        "page": 128
+      },
+      "variants": [
+        {
+          "text": "Welchen Vorteil bringt die EU-Mitgliedschaft?",
+          "options": [
+            "freier Handel und offene Grenzen",
+            "eine eigene Währung je Region",
+            "volle Freiheit bei allen Gesetzen",
+            "niedrigere Steuern für alle Bürger"
+          ],
+          "explanation": "Ohne Zölle und Grenzkontrollen wird der Handel einfacher und billiger.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was kritisieren Gegner an der EU?",
+          "options": [
+            "zu viele Vorschriften aus Brüssel",
+            "zu wenig Handel zwischen Ländern",
+            "zu geringe Reisefreiheit im Raum",
+            "zu niedrige Beiträge der Staaten"
+          ],
+          "explanation": "Kritisiert wird, dass nationale Parlamente an Einfluss verlieren.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "europa-c28",
+      "topic": "Nettozahler und Nettoempfänger",
+      "source": {
+        "lesson": "Lohnt es sich, EU-Mitglied zu sein?",
+        "page": 128
+      },
+      "variants": [
+        {
+          "text": "Was ist ein Nettozahler in der EU?",
+          "options": [
+            "ein Land, das mehr einzahlt als erhält",
+            "ein Land, das mehr erhält als einzahlt",
+            "ein Land, das gar keine Beiträge zahlt",
+            "ein Land, das überhaupt kein Geld erhält"
+          ],
+          "explanation": "Deutschland zahlt seit Jahren deutlich mehr in den EU-Haushalt ein, als zurückfließt.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum zahlt Deutschland mehr ein, als es zurückbekommt?",
+          "options": [
+            "Reichere Länder tragen einen größeren Teil.",
+            "Deutschland hat die meisten Einwohner der EU.",
+            "Deutschland ist erst seit Kurzem Mitglied.",
+            "Deutschland nutzt den Binnenmarkt gar nicht."
+          ],
+          "explanation": "Wirtschaftsstarke Staaten finanzieren die Förderung ärmerer Regionen mit.",
+          "difficulty": 3
         }
       ]
     }

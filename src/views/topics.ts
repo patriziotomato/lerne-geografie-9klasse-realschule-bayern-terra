@@ -1,6 +1,6 @@
 import { bottomNav } from '../router.ts';
 import { esc } from '../ui.ts';
-import { CHAPTERS, chapterById } from '../data/chapters.ts';
+import { CHAPTERS, chapterById, bookRef } from '../data/chapters.ts';
 import { conceptsOf } from '../data/content.ts';
 import {
   MAX_BOX,
@@ -30,7 +30,7 @@ function renderOverview(root: HTMLElement): void {
   root.innerHTML = `
     <header class="page-head">
       <h1>🗂️ Themenkatalog</h1>
-      <p class="muted">Hauptthemen mit ⭐ ganz abwählen — oder einzelne Unterthemen ausnehmen, die im Unterricht noch nicht dran waren.</p>
+      <p class="muted">Die Hauptthemen sind die Kapitel des Schulbuchs. Mit ⭐ ganz abwählen — oder einzelne Unterthemen ausnehmen, die im Unterricht noch nicht dran waren.</p>
     </header>
 
     ${CHAPTERS.map((ch) => {
@@ -43,6 +43,7 @@ function renderOverview(root: HTMLElement): void {
         <div class="topic-row">
           <div class="topic-row-main">
             <strong>${ch.emoji} ${esc(ch.title)}</strong><br>
+            <span class="muted small">${bookRef(ch)}</span><br>
             <span class="muted small">${planned} von ${all.length} Unterthemen im Lernplan${todo > 0 ? ` · ${todo} auf der Merkliste` : ''}</span>
           </div>
           <div class="topic-row-actions">
@@ -75,7 +76,7 @@ function renderChapterDetail(root: HTMLElement, chapterId: string): void {
     <header class="page-head">
       <a class="btn ghost small" href="#/topics">← Themenkatalog</a>
       <h1>${ch.emoji} ${esc(ch.title)}</h1>
-      <p class="muted">${planned} von ${all.length} Unterthemen im Lernplan</p>
+      <p class="muted">${bookRef(ch)} · ${planned} von ${all.length} Unterthemen im Lernplan</p>
     </header>
 
     <section class="card">
@@ -93,6 +94,7 @@ function renderChapterDetail(root: HTMLElement, chapterId: string): void {
         <div class="topic-row">
           <div class="topic-row-main">
             <div>${esc(c.topic)}</div>
+            <span class="muted small">S.&nbsp;${c.source.page} · ${esc(c.source.lesson)}</span><br>
             <span class="muted small">Box ${box}/${MAX_BOX}${pill ? ' ' : ''}</span>${pill}
           </div>
           <div class="topic-row-actions">

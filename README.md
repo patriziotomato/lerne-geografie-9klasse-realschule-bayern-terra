@@ -1,8 +1,28 @@
 # 🌍 Geo-Quest — Geografie 9. Klasse (Realschule Bayern, Terra)
 
 Gamifizierte Lern-App als mobile-first PWA: Multiple-Choice-Training für Geografie,
-9. Jahrgangsstufe Realschule Bayern, thematisch orientiert am LehrplanPLUS und an der
-Kapitelstruktur des Terra-Buchs (Klett). Pures TypeScript — kein Framework.
+9. Jahrgangsstufe Realschule Bayern. Kapitel, Reihenfolge und Seitenzahlen folgen dem
+Inhaltsverzeichnis des im Unterricht verwendeten Terra-Bands. Pures TypeScript — kein Framework.
+
+## Woher die Fragen kommen
+
+**Alle Fragen, Antwortoptionen und Erklärungen in diesem Repo sind eigens für die App
+formuliert.** Es wurde kein Text aus dem Schulbuch übernommen, kopiert, umgeschrieben
+oder eingescannt, und es wurden keine Fragen aus fremden Sammlungen importiert.
+
+Aus dem Buch stammt ausschließlich die **Gliederung**: Kapitelüberschriften,
+Reihenfolge und Seitenzahlen aus dem Inhaltsverzeichnis. Sie dienen als Raster,
+damit sich jede Frage einer Doppelseite zuordnen lässt — dafür trägt jedes Konzept
+in `src/data/questions/*.json` ein `source`-Feld mit Unterkapitel und Seite.
+
+Was daraus folgt:
+
+- **Fachlich ungeprüft.** Die Fragen entstanden aus dem Themenzuschnitt des
+  Inhaltsverzeichnisses, nicht aus dem Buchtext. Wo das Buch anders gewichtet oder
+  andere Zahlen nennt, gilt das Buch. Abweichungen bitte in der JSON korrigieren.
+- **Kein Verlagsprodukt.** Diese App steht in keiner Verbindung zum Ernst Klett Verlag.
+  „TERRA" ist eine Marke des Verlags und wird hier ausschließlich beschreibend genannt,
+  um zu sagen, an welchem Lehrwerk sich die Gliederung orientiert.
 
 ## Features
 
@@ -187,6 +207,28 @@ auf dem Lerngerät öffnen.
 
 ## Inhalte bearbeiten
 
+### Kapitel-Mapping
+
+Ein App-Kapitel entspricht genau einem Buchkapitel. Die IDs sind bewusst nicht
+durchnummeriert — sie sind der Schlüssel der Kapitelauswahl im Profil, eine
+Umbenennung würde sie zurücksetzen. Führend ist der Titel, nicht die ID:
+
+| Buch | Kapitel | Seiten | ID |
+|---|---|---|---|
+| 1 | Landschaft und Naturrisiken | 4–29 | `landschaften` |
+| 2 | Klima und Klimawandel | 30–51 | `klima` |
+| 3 | Landwirtschaft – ein Blick über den Tellerrand | 52–71 | `landwirtschaft` |
+| 4 | Städtische Siedlungs- und Lebensräume | 72–89 | `staedte` |
+| 5 | Bevölkerung und Migration | 90–117 | `bevoelkerung` |
+| 6 | Grenzen im Wandel | 118–131 | `europa` |
+
+Kapitel 7 (Arbeitsanhang) und 8 (Haack-Kartenteil) sind Nachschlageteile und
+haben keine Fragen. Die Methodenseiten (TERRA METHODE) stehen im Buch verteilt in
+den Kapiteln und sind dort auch als Konzept einsortiert — etwa „Ein Mystery lösen"
+auf S. 42 in Kapitel 2.
+
+### Dateiformat
+
 Die Fragen liegen als editierbare JSON-Dateien in `src/data/questions/*.json`:
 
 ```jsonc
@@ -196,6 +238,8 @@ Die Fragen liegen als editierbare JSON-Dateien in `src/data/questions/*.json`:
     {
       "id": "landschaften-c01",
       "topic": "Großlandschaften Deutschlands",
+      // Fundstelle im Buch — Überschrift des Unterkapitels und Anfangsseite
+      "source": { "lesson": "Landschaft und Naturrisiken", "page": 4 },
       "variants": [
         {
           "text": "Fragetext …?",
@@ -225,6 +269,8 @@ Verstoß blockt also den Deploy):
 | längste = richtig | über den Gesamtbestand max. 30 % |
 | Konzept-IDs & Fragetexte | müssen zu `scripts/questions-baseline.json` passen |
 | `topic` | nicht leer und projektweit eindeutig |
+| `source` | `lesson` nicht leer, `page` eine echte Seitenzahl |
+| Reihenfolge | Konzepte je Datei nach `source.page` aufsteigend |
 
 Die Spreizungsregel ist die wichtigste: Waren die vier Optionen unterschiedlich
 lang, war die richtige Antwort in 74 % der Fälle einfach die längste — man kam
@@ -241,6 +287,55 @@ ergänzt oder Fragetexte geändert, die Baseline neu erzeugen mit
 ist genau ein Unterthema, deshalb muss `topic` eindeutig sein. Der gespeicherte
 Schlüssel für Ausnahmen und Merkliste ist die Konzept-ID — der `topic`-Text lässt
 sich also jederzeit umformulieren, ohne dass jemand seine Auswahl verliert.
+
+`source` ist die Fundstelle im Buch. Sie steht im Themenkatalog an jedem Unterthema
+und nach einer falschen Antwort im Feedback („📖 Nachlesen: S. 78 · …“) — damit man
+den Stoff direkt aufschlagen kann. **Eine neue Frage braucht eine Seite im Buch.**
+Fällt keine ein, gehört die Frage vermutlich nicht in diesen Band: Genau so ist
+früher ein ganzes Kapitel „Geo-Arbeitstechniken“ entstanden, das im Buch nirgends
+vorkam, während Kapitel 2 (Klima und Klimawandel) komplett fehlte.
+
+Da die Konzept-IDs den Lernstand tragen, behalten sie beim Verschieben zwischen
+Kapiteln ihren alten Präfix — `bevoelkerung-c09` liegt deshalb in `staedte.json`
+(im Buch steht „Die Bevölkerung eines Landes – ungleich verteilt“ auf S. 74 in
+Kapitel 4). Die ID ist ein Schlüssel, kein Ablageort.
+
+### Was mit bestehenden Installationen passiert
+
+Wird der Inhaltsbestand umgebaut, sitzt auf den Geräten noch der alte
+`localStorage`. Erhalten bleiben:
+
+- **der Leitner-Lernstand jedes Konzepts, das es weiter gibt** — die Box hängt an
+  der ID, nicht an Datei oder Kapitel,
+- **XP, Level, Streak, Bestserie, Historie und Sitzungen** — sie zählen Antworten,
+  keine Inhalte,
+- **Badges und geöffnete Kapitel-Kisten** — einmal verdient, bleibt verdient, auch
+  wenn ein Kapitel danach neue Unterthemen bekommt.
+
+Der Lernstand entfallener Konzepte bleibt liegen und stört nicht: Gelesen wird
+`state.progress` ausschließlich per Lookup über `ALL_CONCEPTS`, unbekannte
+Schlüssel tauchen also in keinem Zähler und keinem Nenner auf. Dasselbe gilt für
+`topics.excluded`, `topics.todo` und `stats.openedChests`. Kommt ein Thema je
+zurück, ist sein Lernstand noch da — deshalb wird bewusst nicht aufgeräumt.
+
+Zwei Dinge werden aktiv migriert (`migrateChapters()` und der `version < 6`-Zweig
+in `src/store.ts`):
+
+- **Kapitelauswahl im Profil.** Entfallene IDs fliegen raus. Wer „Alle Inhalte“
+  gewählt hatte, bekommt neue Kapitel dazu — sonst fiele stillschweigend ein
+  ganzes Buchkapitel aus dem Lernplan. Wer bewusst nur einzelne Kapitel gewählt
+  hatte, behält seine Auswahl unangetastet.
+- **`stats.bestGrade`** wird einmalig auf `null` gesetzt. Es wird nirgends
+  angezeigt und dient nur als Sperre gegen wiederholtes Feiern desselben
+  Notensprungs. Eine Bestnote vom alten Bestand würde sonst jede Feier auf dem
+  Weg zurück verschlucken, obwohl sich fast die Hälfte der Inhalte geändert hat.
+
+Was sich zwangsläufig verschlechtert, ist die **Notenschätzung**: Neue Konzepte
+starten in Box 0. Nach dieser Umstellung fällt ein zuvor komplett gelernter Stand
+von 100 % auf 57 % (81 von 142 Konzepten). Das ist kein verlorener Fortschritt,
+sondern neuer Stoff — die App weist auf der Startseite selbst darauf hin
+(„Noch nie dran: 61 Themen“). Was im Unterricht noch nicht dran war, lässt sich
+im Themenkatalog ausnehmen oder gleich als ganzes Kapitel abwählen.
 
 ## Deployment (GitHub Pages)
 

@@ -1092,6 +1092,15 @@ strong {
   margin-bottom: var(--s-3);
 }
 
+/* Fundstelle im Schulbuch — nur nach einer falschen Antwort, deshalb
+   zurückgenommener als die Erklärung darüber. */
+.fb-source {
+  color: var(--ink-3);
+  line-height: 1.4;
+  font-size: var(--text-sm);
+  margin-bottom: var(--s-3);
+}
+
 /* Ablaufender Balken für „Auto-Weiter" nach einer richtigen Antwort. */
 .fb-autobar {
   height: 2px;
