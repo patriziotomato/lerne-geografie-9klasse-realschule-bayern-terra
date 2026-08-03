@@ -140,6 +140,36 @@ for (const { file, data } of chapters) {
   }
 }
 
+// --------------------------------------------------- Buchbezug (S5/S6) -----
+
+// Jedes Konzept gehört zu genau einer Seite des Schulbuchs. Ohne diese Prüfung
+// wäre nach der nächsten Ergänzung wieder unklar, ob eine Frage überhaupt im
+// Buch steht — genau der Zustand, den die Umstellung auf die Buchstruktur
+// beseitigt hat.
+for (const { file, data } of chapters) {
+  let lastPage = 0;
+  for (const concept of data.concepts ?? []) {
+    const src = concept.source;
+    if (!src || typeof src !== 'object') {
+      fail(file, concept.id, 'S5', 'source fehlt — Buchkapitel und Seite angeben.');
+      continue;
+    }
+    if (!String(src.lesson ?? '').trim()) {
+      fail(file, concept.id, 'S5', 'source.lesson fehlt (Überschrift des Unterkapitels).');
+    }
+    if (!Number.isInteger(src.page) || src.page < 1) {
+      fail(file, concept.id, 'S5', `source.page "${src.page}" ist keine Seitenzahl.`);
+      continue;
+    }
+    // S6: Die Reihenfolge in der Datei ist die Reihenfolge im Buch. Wer ein
+    // Konzept einfügt, soll es an die richtige Stelle setzen statt hinten anzuhängen.
+    if (src.page < lastPage) {
+      fail(file, concept.id, 'S6', `Seite ${src.page} steht nach Seite ${lastPage} — nach Seitenzahl sortieren.`);
+    }
+    lastPage = src.page;
+  }
+}
+
 // ---------------------------------------------------- Struktur & Längen -----
 
 for (const { file, variant, label } of all) {

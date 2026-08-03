@@ -2,209 +2,44 @@
   "chapterId": "bevoelkerung",
   "concepts": [
     {
-      "id": "bevoelkerung-c01",
-      "topic": "Demographischer Wandel in Deutschland",
+      "id": "bevoelkerung-c11",
+      "topic": "Wachstum der Weltbevölkerung",
+      "source": {
+        "lesson": "Immer mehr Menschen",
+        "page": 92
+      },
       "variants": [
         {
-          "text": "Was versteht man unter dem demographischen Wandel in Deutschland?",
+          "text": "Wie viele Menschen leben derzeit ungefähr auf der Erde?",
           "options": [
-            "wenige Geburten, hohe Lebenserwartung – alle altern",
-            "starkes Wachstum, weil viel mehr Kinder geboren werden",
-            "immer mehr Menschen ziehen vom Land in die Großstädte",
-            "mehr Erwerbstätige, weil die Lebenserwartung sinkt"
+            "rund acht Milliarden",
+            "rund 800 Millionen",
+            "rund 80 Millionen",
+            "rund 80 Milliarden"
           ],
-          "explanation": "Wenige Geburten und steigende Lebenserwartung lassen die Gesellschaft altern.",
+          "explanation": "2022 wurde die Marke von acht Milliarden überschritten.",
           "difficulty": 1
         },
         {
-          "text": "In einem Zeitungsartikel steht: \"Frauen bekommen in Deutschland im Schnitt deutlich weniger als zwei Kinder, gleichzeitig werden die Menschen immer älter.\" Welche Entwicklung beschreibt der Artikel?",
+          "text": "In welcher Weltregion wächst die Bevölkerung derzeit am schnellsten?",
           "options": [
-            "den demographischen Wandel",
-            "eine Verjüngung der Gesellschaft",
-            "eine Bevölkerungsexplosion",
-            "eine Auswanderungswelle"
+            "in Afrika südlich der Sahara",
+            "in Westeuropa",
+            "in Ostasien, vor allem Japan",
+            "in Nordamerika"
           ],
-          "explanation": "Wenige Geburten plus hohe Lebenserwartung – die zwei Kennzeichen des Wandels.",
+          "explanation": "Dort sind die Geburtenraten noch hoch, in Europa und Ostasien niedrig.",
           "difficulty": 2
-        },
-        {
-          "text": "Welche Aussage zum demographischen Wandel in Deutschland stimmt NICHT?",
-          "options": [
-            "Die Geburtenrate liegt klar über zwei Kindern pro Frau.",
-            "Die Lebenserwartung ist deutlich gestiegen in Deutschland.",
-            "Der Anteil älterer Menschen an der Bevölkerung nimmt zu.",
-            "Ohne Zuwanderung würde die Bevölkerung hier schrumpfen."
-          ],
-          "explanation": "Sie liegt seit Jahrzehnten darunter – zu wenig für eine gleichbleibende Bevölkerung.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c02",
-      "topic": "Ursachen des demographischen Wandels",
-      "variants": [
-        {
-          "text": "Welcher Grund trägt dazu bei, dass in Deutschland vergleichsweise wenige Kinder geboren werden?",
-          "options": [
-            "Beruf und Familie sind schwer zu vereinbaren.",
-            "Junge Menschen heiraten heute viel früher als früher.",
-            "Die hohe Kindersterblichkeit schreckt Familien ab.",
-            "Der Staat zahlt Familien überhaupt keine Hilfen."
-          ],
-          "explanation": "Lange Ausbildung und Karriere lassen Kinder später oder gar nicht kommen.",
-          "difficulty": 1
-        },
-        {
-          "text": "Warum steigt die Lebenserwartung in Deutschland seit Jahrzehnten an?",
-          "options": [
-            "bessere Medizin, Ernährung und Hygiene",
-            "immer mehr junge Zuwanderer kommen an",
-            "die Geburtenrate sinkt, also lebt jeder länger",
-            "man geht früher in Rente und bleibt gesünder"
-          ],
-          "explanation": "Fortschritte in Medizin, Ernährung, Hygiene und bei der Arbeit.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c03",
-      "topic": "Folgen der Alterung für Rente, Pflege und Arbeitsmarkt",
-      "variants": [
-        {
-          "text": "Welche Folge hat die Alterung der Gesellschaft für die Rentenversicherung in Deutschland?",
-          "options": [
-            "Weniger Beitragszahler tragen mehr Rentner.",
-            "Die Renten steigen, weil Ältere mehr einzahlen.",
-            "Die Kassen füllen sich, es gibt weniger Kinder.",
-            "Junge zahlen künftig gar keine Beiträge mehr."
-          ],
-          "explanation": "Die Erwerbstätigen zahlen die Renten – werden sie weniger, gerät das System unter Druck.",
-          "difficulty": 1
-        },
-        {
-          "text": "Ein Pflegeheim findet kaum noch Personal, gleichzeitig steigt die Zahl der pflegebedürftigen Senioren. Womit hängt diese Entwicklung zusammen?",
-          "options": [
-            "mit dem demographischen Wandel",
-            "mit einer Bevölkerungsexplosion",
-            "mit sinkender Lebenserwartung",
-            "mit steigenden Geburtenzahlen"
-          ],
-          "explanation": "Mehr alte Menschen, weniger junge Arbeitskräfte – das trifft die Pflege doppelt.",
-          "difficulty": 2
-        },
-        {
-          "text": "Welche Aussage über die Folgen des demographischen Wandels stimmt NICHT?",
-          "options": [
-            "Der Arbeitsmarkt profitiert: mehr junge Fachkräfte.",
-            "Auf einen Rentner kommen immer weniger Erwerbstätige.",
-            "Der Bedarf an Pflegekräften wird weiter stark steigen.",
-            "In vielen Branchen fehlen schon heute die Fachkräfte."
-          ],
-          "explanation": "Es rücken gerade weniger junge Fachkräfte nach – der Mangel verschärft sich.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c04",
-      "topic": "Pyramidenform des Bevölkerungsaufbaus",
-      "variants": [
-        {
-          "text": "Eine Bevölkerungspyramide hat die Form eines Dreiecks mit breiter Basis. Was sagt das über die Bevölkerung aus?",
-          "options": [
-            "viele Kinder, wenige Alte – sie wächst",
-            "viele Alte, wenige Junge – sie schrumpft",
-            "alle Gruppen gleich stark – sie stagniert",
-            "viele Erwachsene wandern gerade ab"
-          ],
-          "explanation": "Die breite Basis heißt: viele Geburten, die Bevölkerung nimmt zu.",
-          "difficulty": 1
-        },
-        {
-          "text": "Für welches Land ist eine dreieckige Bevölkerungspyramide mit breiter Basis heute typisch?",
-          "options": [
-            "für Niger mit hoher Geburtenrate",
-            "für ein alterndes Land wie Deutschland",
-            "für Japan mit hoher Lebenserwartung",
-            "für Bulgarien mit schrumpfender Zahl"
-          ],
-          "explanation": "Die Dreiecksform findet man vor allem in Afrika südlich der Sahara.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c05",
-      "topic": "Glockenform des Bevölkerungsaufbaus",
-      "variants": [
-        {
-          "text": "Was bedeutet es, wenn eine Bevölkerungspyramide die Form einer Glocke hat?",
-          "options": [
-            "Geburten und Sterbefälle halten sich die Waage.",
-            "Die Bevölkerung wächst sehr schnell durch Geburten.",
-            "Die Bevölkerung schrumpft, die Jungen fehlen fast.",
-            "Das Land nimmt viele Zuwanderer im Rentenalter auf."
-          ],
-          "explanation": "Junge und mittlere Jahrgänge sind ähnlich stark – die Zahl bleibt etwa gleich.",
-          "difficulty": 1
-        },
-        {
-          "text": "Welche Aussage passt zu einem Land mit glockenförmigem Bevölkerungsaufbau?",
-          "options": [
-            "Die Bevölkerungszahl verändert sich kaum.",
-            "Die Basis ist viel breiter als die Spitze.",
-            "Die jungen Jahrgänge sind viel schwächer.",
-            "Die Bevölkerung verdoppelt sich in 25 Jahren."
-          ],
-          "explanation": "Die nachwachsenden Jahrgänge sind etwa so stark wie die Elterngeneration.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c06",
-      "topic": "Urnenform des Bevölkerungsaufbaus",
-      "variants": [
-        {
-          "text": "Der Bevölkerungsaufbau Deutschlands ähnelt einer Urne. Was bedeutet diese Form?",
-          "options": [
-            "schwache junge Jahrgänge – die Zahl schrumpft",
-            "die Bevölkerung wächst durch viele Geburten",
-            "Geburten und Sterbefälle sind genau im Gleichgewicht",
-            "die mittleren Jahrgänge fehlen durch Auswanderung"
-          ],
-          "explanation": "Die Basis ist schmaler als die Mitte: Es rücken weniger Kinder nach.",
-          "difficulty": 1
-        },
-        {
-          "text": "Ein Land zeigt im Bevölkerungsdiagramm eine schmale Basis, stark besetzte mittlere Jahrgänge und viele alte Menschen. Welche Probleme sind dort zu erwarten?",
-          "options": [
-            "Fachkräftemangel, teure Rente und Pflege",
-            "zu wenige Schulplätze für viele Kinder",
-            "Bevölkerungsexplosion, wachsende Städte",
-            "hohe Jugendarbeitslosigkeit im ganzen Land"
-          ],
-          "explanation": "Viele gehen in Rente, wenige rücken nach – Sozialkosten und Personalmangel steigen.",
-          "difficulty": 2
-        },
-        {
-          "text": "Welche Zuordnung von Diagrammform und Bevölkerungsentwicklung ist richtig?",
-          "options": [
-            "Urne – alternde, schrumpfende Bevölkerung",
-            "Urne – schnell wachsende junge Bevölkerung",
-            "Dreieck – alternde, schrumpfende Bevölkerung",
-            "Glocke – sehr stark wachsende Bevölkerung"
-          ],
-          "explanation": "Urne heißt Schrumpfen, Dreieck heißt Wachstum, Glocke heißt Stagnation.",
-          "difficulty": 3
         }
       ]
     },
     {
       "id": "bevoelkerung-c07",
       "topic": "Modell des demographischen Übergangs",
+      "source": {
+        "lesson": "Große Unterschiede",
+        "page": 94
+      },
       "variants": [
         {
           "text": "Was beschreibt das Modell des demographischen Übergangs?",
@@ -244,6 +79,10 @@
     {
       "id": "bevoelkerung-c08",
       "topic": "Länder im demographischen Übergang einordnen",
+      "source": {
+        "lesson": "Große Unterschiede",
+        "page": 94
+      },
       "variants": [
         {
           "text": "Ein Land hat eine hohe Geburtenrate, aber eine bereits stark gesunkene Sterberate. In welcher Situation befindet es sich?",
@@ -270,375 +109,119 @@
       ]
     },
     {
-      "id": "bevoelkerung-c09",
-      "topic": "Bevölkerungsverteilung in Deutschland",
+      "id": "bevoelkerung-c01",
+      "topic": "Demographischer Wandel in Deutschland",
+      "source": {
+        "lesson": "Zu wenige oder zu viele Kinder?",
+        "page": 96
+      },
       "variants": [
         {
-          "text": "Welche Region gehört zu den am dichtesten besiedelten Ballungsräumen Deutschlands?",
+          "text": "Was versteht man unter dem demographischen Wandel in Deutschland?",
           "options": [
-            "das Ruhrgebiet",
-            "die Seenplatte",
-            "der Bayerische Wald",
-            "die Lüneburger Heide"
+            "wenige Geburten, hohe Lebenserwartung – alle altern",
+            "starkes Wachstum, weil viel mehr Kinder geboren werden",
+            "immer mehr Menschen ziehen vom Land in die Großstädte",
+            "mehr Erwerbstätige, weil die Lebenserwartung sinkt"
           ],
-          "explanation": "Im Ruhrgebiet sind die Großstädte fast zusammengewachsen.",
+          "explanation": "Wenige Geburten und steigende Lebenserwartung lassen die Gesellschaft altern.",
           "difficulty": 1
         },
         {
-          "text": "Warum leben in Ballungsräumen wie München oder Rhein-Main besonders viele Menschen?",
+          "text": "In einem Zeitungsartikel steht: \"Frauen bekommen in Deutschland im Schnitt deutlich weniger als zwei Kinder, gleichzeitig werden die Menschen immer älter.\" Welche Entwicklung beschreibt der Artikel?",
           "options": [
-            "viele Arbeitsplätze, gute Verkehrsanbindung",
-            "die Mieten sind dort besonders günstig",
-            "das Klima ist dort deutlich wärmer als sonst",
-            "es gibt dort viel freie Fläche für Neubauten"
+            "den demographischen Wandel",
+            "eine Verjüngung der Gesellschaft",
+            "eine Bevölkerungsexplosion",
+            "eine Auswanderungswelle"
           ],
-          "explanation": "Arbeit, Infrastruktur, Bildung und Freizeit ziehen Menschen an.",
+          "explanation": "Wenige Geburten plus hohe Lebenserwartung – die zwei Kennzeichen des Wandels.",
           "difficulty": 2
         },
         {
-          "text": "Welche Aussage zur Bevölkerungsverteilung in Deutschland trifft zu?",
+          "text": "Welche Aussage zum demographischen Wandel in Deutschland stimmt NICHT?",
           "options": [
-            "Sie ist ungleich: dichte und dünne Räume",
-            "Sie ist fast überall gleichmäßig verteilt",
-            "Der Nordosten ist am dichtesten besiedelt",
-            "In den Alpen leben mehr Menschen als im Ruhrgebiet"
+            "Die Geburtenrate liegt klar über zwei Kindern pro Frau.",
+            "Die Lebenserwartung ist deutlich gestiegen in Deutschland.",
+            "Der Anteil älterer Menschen an der Bevölkerung nimmt zu.",
+            "Ohne Zuwanderung würde die Bevölkerung hier schrumpfen."
           ],
-          "explanation": "Rhein-Ruhr und München stehen Regionen wie dem Bayerischen Wald gegenüber.",
+          "explanation": "Sie liegt seit Jahrzehnten darunter – zu wenig für eine gleichbleibende Bevölkerung.",
           "difficulty": 2
         }
       ]
     },
     {
-      "id": "bevoelkerung-c10",
-      "topic": "Gunst- und Ungunsträume",
+      "id": "bevoelkerung-c02",
+      "topic": "Ursachen des demographischen Wandels",
+      "source": {
+        "lesson": "Zu wenige oder zu viele Kinder?",
+        "page": 96
+      },
       "variants": [
         {
-          "text": "Was ist ein Gunstraum?",
+          "text": "Welcher Grund trägt dazu bei, dass in Deutschland vergleichsweise wenige Kinder geboren werden?",
           "options": [
-            "Gebiet mit gutem Boden, Klima und Wasser",
-            "Gebiet mit besonders niedrigen Steuersätzen",
-            "Naturschutzgebiet, in dem niemand siedeln darf",
-            "extrem trockenes Gebiet mit wenigen Menschen"
+            "Beruf und Familie sind schwer zu vereinbaren.",
+            "Junge Menschen heiraten heute viel früher als früher.",
+            "Die hohe Kindersterblichkeit schreckt Familien ab.",
+            "Der Staat zahlt Familien überhaupt keine Hilfen."
           ],
-          "explanation": "Gute natürliche Bedingungen – deshalb sind Flusstäler oft dicht besiedelt.",
+          "explanation": "Lange Ausbildung und Karriere lassen Kinder später oder gar nicht kommen.",
           "difficulty": 1
         },
         {
-          "text": "Warum ist die Sahara ein Ungunstraum für die Besiedlung?",
+          "text": "Warum steigt die Lebenserwartung in Deutschland seit Jahrzehnten an?",
           "options": [
-            "Trockenheit und Hitze verhindern Landwirtschaft.",
-            "Es ist dort zu kalt für den Anbau von Nahrung.",
-            "Häufige Überschwemmungen bedrohen Siedlungen.",
-            "Das Gebiet ist viel zu dicht mit Wald bewachsen."
+            "bessere Medizin, Ernährung und Hygiene",
+            "immer mehr junge Zuwanderer kommen an",
+            "die Geburtenrate sinkt, also lebt jeder länger",
+            "man geht früher in Rente und bleibt gesünder"
           ],
-          "explanation": "Ohne Wasser und nutzbaren Boden leben dort nur wenige, meist in Oasen.",
+          "explanation": "Fortschritte in Medizin, Ernährung, Hygiene und bei der Arbeit.",
           "difficulty": 2
         }
       ]
     },
     {
-      "id": "bevoelkerung-c11",
-      "topic": "Wachstum der Weltbevölkerung",
+      "id": "bevoelkerung-c03",
+      "topic": "Folgen der Alterung für Rente, Pflege und Arbeitsmarkt",
+      "source": {
+        "lesson": "Zu wenige oder zu viele Kinder?",
+        "page": 96
+      },
       "variants": [
         {
-          "text": "Wie viele Menschen leben derzeit ungefähr auf der Erde?",
+          "text": "Welche Folge hat die Alterung der Gesellschaft für die Rentenversicherung in Deutschland?",
           "options": [
-            "rund acht Milliarden",
-            "rund 800 Millionen",
-            "rund 80 Millionen",
-            "rund 80 Milliarden"
+            "Weniger Beitragszahler tragen mehr Rentner.",
+            "Die Renten steigen, weil Ältere mehr einzahlen.",
+            "Die Kassen füllen sich, es gibt weniger Kinder.",
+            "Junge zahlen künftig gar keine Beiträge mehr."
           ],
-          "explanation": "2022 wurde die Marke von acht Milliarden überschritten.",
+          "explanation": "Die Erwerbstätigen zahlen die Renten – werden sie weniger, gerät das System unter Druck.",
           "difficulty": 1
         },
         {
-          "text": "In welcher Weltregion wächst die Bevölkerung derzeit am schnellsten?",
+          "text": "Ein Pflegeheim findet kaum noch Personal, gleichzeitig steigt die Zahl der pflegebedürftigen Senioren. Womit hängt diese Entwicklung zusammen?",
           "options": [
-            "in Afrika südlich der Sahara",
-            "in Westeuropa",
-            "in Ostasien, vor allem Japan",
-            "in Nordamerika"
+            "mit dem demographischen Wandel",
+            "mit einer Bevölkerungsexplosion",
+            "mit sinkender Lebenserwartung",
+            "mit steigenden Geburtenzahlen"
           ],
-          "explanation": "Dort sind die Geburtenraten noch hoch, in Europa und Ostasien niedrig.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c12",
-      "topic": "Migrationsbegriffe",
-      "variants": [
-        {
-          "text": "Was bedeutet der Begriff \"Emigration\"?",
-          "options": [
-            "die Auswanderung in ein anderes Land",
-            "die Einwanderung in ein fremdes Land",
-            "der Umzug innerhalb des eigenen Landes",
-            "die Rückkehr in das Herkunftsland"
-          ],
-          "explanation": "Emigration heißt Auswanderung, Immigration heißt Einwanderung.",
-          "difficulty": 1
-        },
-        {
-          "text": "Eine Familie zieht von Berlin nach München um. Wie nennt man diese Form der Wanderung?",
-          "options": [
-            "Binnenmigration",
-            "Emigration",
-            "Immigration",
-            "Fluchtmigration"
-          ],
-          "explanation": "Wanderung im eigenen Land – es wird keine Staatsgrenze überschritten.",
-          "difficulty": 1
-        },
-        {
-          "text": "Welche Zuordnung von Begriff und Bedeutung ist richtig?",
-          "options": [
-            "Immigration – Einwanderung in ein Land",
-            "Immigration – Auswanderung aus einem Land",
-            "Emigration – Umzug innerhalb eines Landes",
-            "Binnenmigration – Flucht über die Grenze"
-          ],
-          "explanation": "Immigration rein, Emigration raus, Binnenmigration im Land.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c13",
-      "topic": "Flucht, Asyl und Arbeitsmigration",
-      "variants": [
-        {
-          "text": "Worin unterscheidet sich ein Flüchtling von einem Arbeitsmigranten?",
-          "options": [
-            "Der Flüchtling muss gehen, der Migrant will gehen.",
-            "Der Flüchtling geht freiwillig, der Migrant gezwungen.",
-            "Der Flüchtling bleibt im Land, der Migrant geht fort.",
-            "Es gibt keinen Unterschied, beides ist dasselbe."
-          ],
-          "explanation": "Entscheidend ist die Freiwilligkeit der Entscheidung.",
-          "difficulty": 1
-        },
-        {
-          "text": "Was bedeutet es, in einem Land Asyl zu beantragen?",
-          "options": [
-            "um Schutz vor Verfolgung zu bitten",
-            "eine Arbeitserlaubnis zu beantragen",
-            "die Staatsbürgerschaft anzunehmen",
-            "einen Studienplatz zu beantragen"
-          ],
-          "explanation": "Asyl ist Schutz für Verfolgte – in Deutschland steht es im Grundgesetz.",
-          "difficulty": 1
-        },
-        {
-          "text": "Welche der folgenden Ursachen ist eine typische Fluchtursache?",
-          "options": [
-            "Bürgerkrieg und politische Verfolgung",
-            "der Wunsch nach besserer Bezahlung",
-            "ein Studienplatz an einer Hochschule",
-            "der Umzug zum Ehepartner ins Ausland"
-          ],
-          "explanation": "Flucht heißt: verlassen müssen wegen Krieg, Verfolgung oder Katastrophen.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c14",
-      "topic": "Push-Faktoren",
-      "variants": [
-        {
-          "text": "Was versteht man unter Push-Faktoren?",
-          "options": [
-            "Gründe, die aus der Heimat wegdrängen",
-            "Gründe, die ins Zielland hineinziehen",
-            "Gesetze, die Einwanderung fördern sollen",
-            "Maßnahmen für eine höhere Geburtenrate"
-          ],
-          "explanation": "To push heißt drücken: abstoßende Bedingungen im Herkunftsland.",
-          "difficulty": 1
-        },
-        {
-          "text": "Welcher der folgenden Gründe ist ein Push-Faktor?",
-          "options": [
-            "Dürre zerstört die Ernte in der Heimat.",
-            "Hohe Löhne locken im Zielland.",
-            "Gute Universitäten gibt es im Zielland.",
-            "Sicherheit und Stabilität im Zielland."
-          ],
-          "explanation": "Push wirkt im Herkunftsland – die Dürre drängt zur Abwanderung.",
+          "explanation": "Mehr alte Menschen, weniger junge Arbeitskräfte – das trifft die Pflege doppelt.",
           "difficulty": 2
         },
         {
-          "text": "Welche Aussage zu Push- und Pull-Faktoren stimmt NICHT?",
+          "text": "Welche Aussage über die Folgen des demographischen Wandels stimmt NICHT?",
           "options": [
-            "Push-Faktoren machen das Zielland attraktiv.",
-            "Push wirkt in der Heimat, Pull im Zielland.",
-            "Oft wirken Push und Pull gemeinsam zusammen.",
-            "Krieg in der Heimat ist ein Push-Faktor."
+            "Der Arbeitsmarkt profitiert: mehr junge Fachkräfte.",
+            "Auf einen Rentner kommen immer weniger Erwerbstätige.",
+            "Der Bedarf an Pflegekräften wird weiter stark steigen.",
+            "In vielen Branchen fehlen schon heute die Fachkräfte."
           ],
-          "explanation": "Attraktive Bedingungen im Zielland sind Pull-Faktoren.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c15",
-      "topic": "Pull-Faktoren",
-      "variants": [
-        {
-          "text": "Was sind Pull-Faktoren?",
-          "options": [
-            "anziehende Vorteile im Zielland",
-            "abstoßende Zustände in der Heimat",
-            "Verträge über Anwerbung von Personal",
-            "Hindernisse, die eine Wanderung bremsen"
-          ],
-          "explanation": "To pull heißt ziehen: Arbeit, Sicherheit und Bildung im Zielland.",
-          "difficulty": 1
-        },
-        {
-          "text": "Ein IT-Spezialist aus Indien zieht nach Deutschland, weil er hier ein gutes Gehalt und sichere Lebensverhältnisse erwartet. Welche Faktoren wirken hier vor allem?",
-          "options": [
-            "Pull-Faktoren des Ziellandes",
-            "Push-Faktoren des Ziellandes",
-            "Push-Faktoren, er wird verfolgt",
-            "gar keine, er zieht freiwillig um"
-          ],
-          "explanation": "Gehalt und Sicherheit sind klassische Pull-Faktoren.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c16",
-      "topic": "Folgen der Migration für Herkunftsländer",
-      "variants": [
-        {
-          "text": "Was bedeutet der Begriff \"Brain Drain\"?",
-          "options": [
-            "Abwanderung gut ausgebildeter Fachkräfte",
-            "Zustrom hoch qualifizierter Fachkräfte",
-            "Geldüberweisungen an Familien zu Hause",
-            "Rückgang der Geburtenrate im Industrieland"
-          ],
-          "explanation": "Wörtlich der Abfluss von Gehirnen: Ärzte und Ingenieure gehen weg.",
-          "difficulty": 1
-        },
-        {
-          "text": "Wie können Herkunftsländer trotz der Abwanderung von Menschen von Migration profitieren?",
-          "options": [
-            "Migranten überweisen Geld an ihre Familien.",
-            "Die Löhne steigen sofort auf Zielland-Niveau.",
-            "Das Zielland übernimmt die Staatsschulden.",
-            "Die Abgewanderten zahlen weiter Steuern dort."
-          ],
-          "explanation": "Rücküberweisungen sind für viele Länder eine wichtige Einnahmequelle.",
-          "difficulty": 2
-        },
-        {
-          "text": "Ein kleines Land verliert viele seiner Ärzte und Ingenieure an Industrieländer. Welche Folge hat das für dieses Land?",
-          "options": [
-            "Fachkräfte fehlen, Ausbildungskosten sind verloren.",
-            "Die Versorgung wird besser, es gibt weniger Patienten.",
-            "Ein Brain Gain, weil sofort neue Kräfte nachrücken.",
-            "Die Rücküberweisungen gleichen alles vollständig aus."
-          ],
-          "explanation": "Das Land trug die Ausbildungskosten, den Nutzen haben andere Staaten.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c17",
-      "topic": "Zuwanderung und Fachkräftemangel im Zielland",
-      "variants": [
-        {
-          "text": "Warum ist Deutschland auf die Zuwanderung von Fachkräften angewiesen?",
-          "options": [
-            "Viele gehen in Rente, wenige rücken nach.",
-            "Die Bevölkerung wächst hier viel zu schnell.",
-            "Die Arbeitslosigkeit ist die höchste in Europa.",
-            "Fast alle jungen Deutschen wandern gerade aus."
-          ],
-          "explanation": "Geburtenstarke Jahrgänge gehen, geburtenschwache kommen nach.",
-          "difficulty": 1
-        },
-        {
-          "text": "Welche Chancen bietet Zuwanderung für ein Zielland wie Deutschland?",
-          "options": [
-            "offene Stellen besetzen, Sozialkassen stärken",
-            "die Mieten in den Großstädten sinken sofort",
-            "die Geburtenrate steigt sofort über zwei Kinder",
-            "der Bedarf an Wohnraum sinkt spürbar ab"
-          ],
-          "explanation": "Zuwanderer sind im Schnitt jünger, arbeiten und zahlen Beiträge ein.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c18",
-      "topic": "Integration von Zuwanderern",
-      "variants": [
-        {
-          "text": "Was ist für eine gelingende Integration von Zuwanderern besonders wichtig?",
-          "options": [
-            "die Sprache lernen, Bildung und Arbeit finden",
-            "möglichst unter sich bleiben, wenig Kontakt haben",
-            "die eigene Herkunftskultur vollständig aufgeben",
-            "ausschließlich in eigenen Stadtvierteln wohnen"
-          ],
-          "explanation": "Sprache, Bildung und Arbeit sind die Schlüssel zur Teilhabe.",
-          "difficulty": 1
-        },
-        {
-          "text": "Eine Stadt bietet Sprachkurse an, hilft bei der Anerkennung ausländischer Berufsabschlüsse und vermittelt Praktika. Was möchte sie damit erreichen?",
-          "options": [
-            "Integration in Gesellschaft und Arbeitsmarkt",
-            "eine schnelle Rückkehr in die alte Heimat",
-            "Binnenmigration in andere Bundesländer",
-            "einen stärkeren Brain Drain der Herkunftsländer"
-          ],
-          "explanation": "Sprachkurse, Abschlüsse und Praktika erleichtern den Einstieg in den Alltag.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "bevoelkerung-c19",
-      "topic": "Gastarbeiter-Geschichte Deutschlands",
-      "variants": [
-        {
-          "text": "Warum warb die Bundesrepublik Deutschland ab den 1950er-Jahren sogenannte Gastarbeiter an?",
-          "options": [
-            "Im Wirtschaftswunder fehlten Arbeitskräfte.",
-            "Weil die Bevölkerung damals stark schrumpfte.",
-            "Um die hohe Arbeitslosigkeit zu bekämpfen.",
-            "Weil ein internationales Gesetz es vorschrieb."
-          ],
-          "explanation": "Die Wirtschaft wuchs schneller, als es einheimische Arbeitskräfte gab.",
-          "difficulty": 1
-        },
-        {
-          "text": "Aus welchen Ländern kamen viele Gastarbeiter nach Deutschland?",
-          "options": [
-            "Italien, Spanien, Griechenland, Türkei",
-            "USA, Kanada und Australien",
-            "Schweden, Norwegen und Finnland",
-            "Japan, China und Südkorea"
-          ],
-          "explanation": "Anwerbeabkommen gab es ab 1955 mit Italien, ab 1961 mit der Türkei.",
-          "difficulty": 2
-        },
-        {
-          "text": "Welche Aussage zur Gastarbeiter-Geschichte Deutschlands trifft zu?",
-          "options": [
-            "Viele blieben und holten ihre Familien nach.",
-            "Fast alle kehrten nach wenigen Jahren zurück.",
-            "Die staatliche Anwerbung läuft bis heute weiter.",
-            "Gastarbeiter durften nur in der Landwirtschaft arbeiten."
-          ],
-          "explanation": "Geplant war ein kurzer Aufenthalt; 1973 wurde die Anwerbung gestoppt.",
+          "explanation": "Es rücken gerade weniger junge Fachkräfte nach – der Mangel verschärft sich.",
           "difficulty": 3
         }
       ]
@@ -646,6 +229,10 @@
     {
       "id": "bevoelkerung-c20",
       "topic": "Ein-Kind-Politik in China",
+      "source": {
+        "lesson": "Zu wenige oder zu viele Kinder?",
+        "page": 96
+      },
       "variants": [
         {
           "text": "Was war das Ziel der chinesischen Ein-Kind-Politik?",
@@ -685,6 +272,10 @@
     {
       "id": "bevoelkerung-c21",
       "topic": "Familienpolitik in Frankreich und Deutschland",
+      "source": {
+        "lesson": "Zu wenige oder zu viele Kinder?",
+        "page": 96
+      },
       "variants": [
         {
           "text": "Wie versucht Frankreich, die Geburtenrate hoch zu halten?",
@@ -711,8 +302,183 @@
       ]
     },
     {
+      "id": "bevoelkerung-c04",
+      "topic": "Pyramidenform des Bevölkerungsaufbaus",
+      "source": {
+        "lesson": "Ein Bevölkerungsdiagramm auswerten",
+        "page": 98
+      },
+      "variants": [
+        {
+          "text": "Eine Bevölkerungspyramide hat die Form eines Dreiecks mit breiter Basis. Was sagt das über die Bevölkerung aus?",
+          "options": [
+            "viele Kinder, wenige Alte – sie wächst",
+            "viele Alte, wenige Junge – sie schrumpft",
+            "alle Gruppen gleich stark – sie stagniert",
+            "viele Erwachsene wandern gerade ab"
+          ],
+          "explanation": "Die breite Basis heißt: viele Geburten, die Bevölkerung nimmt zu.",
+          "difficulty": 1
+        },
+        {
+          "text": "Für welches Land ist eine dreieckige Bevölkerungspyramide mit breiter Basis heute typisch?",
+          "options": [
+            "für Niger mit hoher Geburtenrate",
+            "für ein alterndes Land wie Deutschland",
+            "für Japan mit hoher Lebenserwartung",
+            "für Bulgarien mit schrumpfender Zahl"
+          ],
+          "explanation": "Die Dreiecksform findet man vor allem in Afrika südlich der Sahara.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c05",
+      "topic": "Glockenform des Bevölkerungsaufbaus",
+      "source": {
+        "lesson": "Ein Bevölkerungsdiagramm auswerten",
+        "page": 98
+      },
+      "variants": [
+        {
+          "text": "Was bedeutet es, wenn eine Bevölkerungspyramide die Form einer Glocke hat?",
+          "options": [
+            "Geburten und Sterbefälle halten sich die Waage.",
+            "Die Bevölkerung wächst sehr schnell durch Geburten.",
+            "Die Bevölkerung schrumpft, die Jungen fehlen fast.",
+            "Das Land nimmt viele Zuwanderer im Rentenalter auf."
+          ],
+          "explanation": "Junge und mittlere Jahrgänge sind ähnlich stark – die Zahl bleibt etwa gleich.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Aussage passt zu einem Land mit glockenförmigem Bevölkerungsaufbau?",
+          "options": [
+            "Die Bevölkerungszahl verändert sich kaum.",
+            "Die Basis ist viel breiter als die Spitze.",
+            "Die jungen Jahrgänge sind viel schwächer.",
+            "Die Bevölkerung verdoppelt sich in 25 Jahren."
+          ],
+          "explanation": "Die nachwachsenden Jahrgänge sind etwa so stark wie die Elterngeneration.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c06",
+      "topic": "Urnenform des Bevölkerungsaufbaus",
+      "source": {
+        "lesson": "Ein Bevölkerungsdiagramm auswerten",
+        "page": 98
+      },
+      "variants": [
+        {
+          "text": "Der Bevölkerungsaufbau Deutschlands ähnelt einer Urne. Was bedeutet diese Form?",
+          "options": [
+            "schwache junge Jahrgänge – die Zahl schrumpft",
+            "die Bevölkerung wächst durch viele Geburten",
+            "Geburten und Sterbefälle sind genau im Gleichgewicht",
+            "die mittleren Jahrgänge fehlen durch Auswanderung"
+          ],
+          "explanation": "Die Basis ist schmaler als die Mitte: Es rücken weniger Kinder nach.",
+          "difficulty": 1
+        },
+        {
+          "text": "Ein Land zeigt im Bevölkerungsdiagramm eine schmale Basis, stark besetzte mittlere Jahrgänge und viele alte Menschen. Welche Probleme sind dort zu erwarten?",
+          "options": [
+            "Fachkräftemangel, teure Rente und Pflege",
+            "zu wenige Schulplätze für viele Kinder",
+            "Bevölkerungsexplosion, wachsende Städte",
+            "hohe Jugendarbeitslosigkeit im ganzen Land"
+          ],
+          "explanation": "Viele gehen in Rente, wenige rücken nach – Sozialkosten und Personalmangel steigen.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Zuordnung von Diagrammform und Bevölkerungsentwicklung ist richtig?",
+          "options": [
+            "Urne – alternde, schrumpfende Bevölkerung",
+            "Urne – schnell wachsende junge Bevölkerung",
+            "Dreieck – alternde, schrumpfende Bevölkerung",
+            "Glocke – sehr stark wachsende Bevölkerung"
+          ],
+          "explanation": "Urne heißt Schrumpfen, Dreieck heißt Wachstum, Glocke heißt Stagnation.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c23",
+      "topic": "Bevölkerungsentwicklung in Bayern",
+      "source": {
+        "lesson": "Bevölkerungsentwicklung in Bayern",
+        "page": 100
+      },
+      "variants": [
+        {
+          "text": "Wie hat sich Bayerns Bevölkerung in den letzten Jahrzehnten entwickelt?",
+          "options": [
+            "Sie ist gewachsen, vor allem durch Zuzug.",
+            "Sie ist stark geschrumpft, trotz Zuzug.",
+            "Sie blieb über Jahrzehnte exakt gleich.",
+            "Sie wuchs allein durch viele Geburten."
+          ],
+          "explanation": "Ohne Zuwanderung würde auch Bayern schrumpfen — es sterben mehr, als geboren werden.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum wächst Bayern trotz niedriger Geburtenzahl?",
+          "options": [
+            "Es ziehen mehr Menschen zu als weg.",
+            "Die Geburtenrate liegt weit über zwei.",
+            "Die Lebenserwartung sinkt dort rasch.",
+            "Es wandern jährlich sehr viele Leute ab."
+          ],
+          "explanation": "Der Wanderungsgewinn gleicht das Geburtendefizit mehr als aus.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c24",
+      "topic": "Bayern: Wachstum und Abwanderung",
+      "source": {
+        "lesson": "Bevölkerungsentwicklung in Bayern",
+        "page": 100
+      },
+      "variants": [
+        {
+          "text": "Wie ist das Bevölkerungswachstum innerhalb Bayerns verteilt?",
+          "options": [
+            "Der Süden wächst, der Nordosten verliert.",
+            "Der Nordosten wächst, der Süden verliert.",
+            "Alle Regionen wachsen genau gleich stark.",
+            "Nur die ländlichen Räume gewinnen dazu."
+          ],
+          "explanation": "Rund um München und Ingolstadt boomt es, in Oberfranken schrumpfen Landkreise.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Folge hat Abwanderung für ländliche Räume in Bayern?",
+          "options": [
+            "Schulen und Läden schließen, Junge fehlen.",
+            "Die Mieten steigen dort besonders stark an.",
+            "Es entstehen dort besonders viele Neubauten.",
+            "Der Anteil junger Familien nimmt stark zu."
+          ],
+          "explanation": "Wer zum Arbeiten wegzieht, fehlt dem Dorf als Kundschaft, Nachbar und Elternteil.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
       "id": "bevoelkerung-c22",
       "topic": "Landflucht und Urbanisierung in Entwicklungsländern",
+      "source": {
+        "lesson": "Entwicklung und Verteilung der Weltbevölkerung",
+        "page": 102
+      },
       "variants": [
         {
           "text": "Was versteht man unter Landflucht?",
@@ -735,6 +501,488 @@
           ],
           "explanation": "Landflucht und viele Geburten lassen die Städte schneller wachsen als die Infrastruktur.",
           "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c25",
+      "topic": "Verteilung der Weltbevölkerung",
+      "source": {
+        "lesson": "Entwicklung und Verteilung der Weltbevölkerung",
+        "page": 102
+      },
+      "variants": [
+        {
+          "text": "Wie ist die Weltbevölkerung über die Erde verteilt?",
+          "options": [
+            "sehr ungleich, mit großen leeren Räumen",
+            "völlig gleichmäßig über alle Kontinente",
+            "fast ausschließlich in den Gebirgen",
+            "gleichmäßig entlang aller Längengrade"
+          ],
+          "explanation": "Auf wenigen Prozent der Landfläche lebt der Großteil der Menschheit.",
+          "difficulty": 1
+        },
+        {
+          "text": "Wo leben besonders viele Menschen dicht beieinander?",
+          "options": [
+            "in Süd- und Ostasien sowie an Küsten",
+            "in den Wüstengürteln beider Halbkugeln",
+            "in den Polargebieten rund um die Arktis",
+            "in den Hochgebirgen über 3000 Metern"
+          ],
+          "explanation": "Fruchtbare Flussebenen und Küsten sind seit jeher die dichtesten Siedlungsräume.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Räume der Erde sind kaum besiedelt?",
+          "options": [
+            "Wüsten, Hochgebirge und Polargebiete",
+            "Flussniederungen und Küstenebenen",
+            "gemäßigte Zonen mit gutem Boden",
+            "Ballungsräume in Ost- und Südasien"
+          ],
+          "explanation": "Zu trocken, zu kalt, zu hoch — solche Ungunsträume bleiben nahezu menschenleer.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c12",
+      "topic": "Migrationsbegriffe",
+      "source": {
+        "lesson": "Weltweite Wanderung",
+        "page": 104
+      },
+      "variants": [
+        {
+          "text": "Was bedeutet der Begriff \"Emigration\"?",
+          "options": [
+            "die Auswanderung in ein anderes Land",
+            "die Einwanderung in ein fremdes Land",
+            "der Umzug innerhalb des eigenen Landes",
+            "die Rückkehr in das Herkunftsland"
+          ],
+          "explanation": "Emigration heißt Auswanderung, Immigration heißt Einwanderung.",
+          "difficulty": 1
+        },
+        {
+          "text": "Eine Familie zieht von Berlin nach München um. Wie nennt man diese Form der Wanderung?",
+          "options": [
+            "Binnenmigration",
+            "Emigration",
+            "Immigration",
+            "Fluchtmigration"
+          ],
+          "explanation": "Wanderung im eigenen Land – es wird keine Staatsgrenze überschritten.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Zuordnung von Begriff und Bedeutung ist richtig?",
+          "options": [
+            "Immigration – Einwanderung in ein Land",
+            "Immigration – Auswanderung aus einem Land",
+            "Emigration – Umzug innerhalb eines Landes",
+            "Binnenmigration – Flucht über die Grenze"
+          ],
+          "explanation": "Immigration rein, Emigration raus, Binnenmigration im Land.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c13",
+      "topic": "Flucht, Asyl und Arbeitsmigration",
+      "source": {
+        "lesson": "Weltweite Wanderung",
+        "page": 104
+      },
+      "variants": [
+        {
+          "text": "Worin unterscheidet sich ein Flüchtling von einem Arbeitsmigranten?",
+          "options": [
+            "Der Flüchtling muss gehen, der Migrant will gehen.",
+            "Der Flüchtling geht freiwillig, der Migrant gezwungen.",
+            "Der Flüchtling bleibt im Land, der Migrant geht fort.",
+            "Es gibt keinen Unterschied, beides ist dasselbe."
+          ],
+          "explanation": "Entscheidend ist die Freiwilligkeit der Entscheidung.",
+          "difficulty": 1
+        },
+        {
+          "text": "Was bedeutet es, in einem Land Asyl zu beantragen?",
+          "options": [
+            "um Schutz vor Verfolgung zu bitten",
+            "eine Arbeitserlaubnis zu beantragen",
+            "die Staatsbürgerschaft anzunehmen",
+            "einen Studienplatz zu beantragen"
+          ],
+          "explanation": "Asyl ist Schutz für Verfolgte – in Deutschland steht es im Grundgesetz.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche der folgenden Ursachen ist eine typische Fluchtursache?",
+          "options": [
+            "Bürgerkrieg und politische Verfolgung",
+            "der Wunsch nach besserer Bezahlung",
+            "ein Studienplatz an einer Hochschule",
+            "der Umzug zum Ehepartner ins Ausland"
+          ],
+          "explanation": "Flucht heißt: verlassen müssen wegen Krieg, Verfolgung oder Katastrophen.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c14",
+      "topic": "Push-Faktoren",
+      "source": {
+        "lesson": "Ursachen und Auswirkungen der Migration",
+        "page": 106
+      },
+      "variants": [
+        {
+          "text": "Was versteht man unter Push-Faktoren?",
+          "options": [
+            "Gründe, die aus der Heimat wegdrängen",
+            "Gründe, die ins Zielland hineinziehen",
+            "Gesetze, die Einwanderung fördern sollen",
+            "Maßnahmen für eine höhere Geburtenrate"
+          ],
+          "explanation": "To push heißt drücken: abstoßende Bedingungen im Herkunftsland.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welcher der folgenden Gründe ist ein Push-Faktor?",
+          "options": [
+            "Dürre zerstört die Ernte in der Heimat.",
+            "Hohe Löhne locken im Zielland.",
+            "Gute Universitäten gibt es im Zielland.",
+            "Sicherheit und Stabilität im Zielland."
+          ],
+          "explanation": "Push wirkt im Herkunftsland – die Dürre drängt zur Abwanderung.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zu Push- und Pull-Faktoren stimmt NICHT?",
+          "options": [
+            "Push-Faktoren machen das Zielland attraktiv.",
+            "Push wirkt in der Heimat, Pull im Zielland.",
+            "Oft wirken Push und Pull gemeinsam zusammen.",
+            "Krieg in der Heimat ist ein Push-Faktor."
+          ],
+          "explanation": "Attraktive Bedingungen im Zielland sind Pull-Faktoren.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c15",
+      "topic": "Pull-Faktoren",
+      "source": {
+        "lesson": "Ursachen und Auswirkungen der Migration",
+        "page": 106
+      },
+      "variants": [
+        {
+          "text": "Was sind Pull-Faktoren?",
+          "options": [
+            "anziehende Vorteile im Zielland",
+            "abstoßende Zustände in der Heimat",
+            "Verträge über Anwerbung von Personal",
+            "Hindernisse, die eine Wanderung bremsen"
+          ],
+          "explanation": "To pull heißt ziehen: Arbeit, Sicherheit und Bildung im Zielland.",
+          "difficulty": 1
+        },
+        {
+          "text": "Ein IT-Spezialist aus Indien zieht nach Deutschland, weil er hier ein gutes Gehalt und sichere Lebensverhältnisse erwartet. Welche Faktoren wirken hier vor allem?",
+          "options": [
+            "Pull-Faktoren des Ziellandes",
+            "Push-Faktoren des Ziellandes",
+            "Push-Faktoren, er wird verfolgt",
+            "gar keine, er zieht freiwillig um"
+          ],
+          "explanation": "Gehalt und Sicherheit sind klassische Pull-Faktoren.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c16",
+      "topic": "Folgen der Migration für Herkunftsländer",
+      "source": {
+        "lesson": "Ursachen und Auswirkungen der Migration",
+        "page": 106
+      },
+      "variants": [
+        {
+          "text": "Was bedeutet der Begriff \"Brain Drain\"?",
+          "options": [
+            "Abwanderung gut ausgebildeter Fachkräfte",
+            "Zustrom hoch qualifizierter Fachkräfte",
+            "Geldüberweisungen an Familien zu Hause",
+            "Rückgang der Geburtenrate im Industrieland"
+          ],
+          "explanation": "Wörtlich der Abfluss von Gehirnen: Ärzte und Ingenieure gehen weg.",
+          "difficulty": 1
+        },
+        {
+          "text": "Wie können Herkunftsländer trotz der Abwanderung von Menschen von Migration profitieren?",
+          "options": [
+            "Migranten überweisen Geld an ihre Familien.",
+            "Die Löhne steigen sofort auf Zielland-Niveau.",
+            "Das Zielland übernimmt die Staatsschulden.",
+            "Die Abgewanderten zahlen weiter Steuern dort."
+          ],
+          "explanation": "Rücküberweisungen sind für viele Länder eine wichtige Einnahmequelle.",
+          "difficulty": 2
+        },
+        {
+          "text": "Ein kleines Land verliert viele seiner Ärzte und Ingenieure an Industrieländer. Welche Folge hat das für dieses Land?",
+          "options": [
+            "Fachkräfte fehlen, Ausbildungskosten sind verloren.",
+            "Die Versorgung wird besser, es gibt weniger Patienten.",
+            "Ein Brain Gain, weil sofort neue Kräfte nachrücken.",
+            "Die Rücküberweisungen gleichen alles vollständig aus."
+          ],
+          "explanation": "Das Land trug die Ausbildungskosten, den Nutzen haben andere Staaten.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c19",
+      "topic": "Gastarbeiter-Geschichte Deutschlands",
+      "source": {
+        "lesson": "Einwanderungsland Deutschland",
+        "page": 108
+      },
+      "variants": [
+        {
+          "text": "Warum warb die Bundesrepublik Deutschland ab den 1950er-Jahren sogenannte Gastarbeiter an?",
+          "options": [
+            "Im Wirtschaftswunder fehlten Arbeitskräfte.",
+            "Weil die Bevölkerung damals stark schrumpfte.",
+            "Um die hohe Arbeitslosigkeit zu bekämpfen.",
+            "Weil ein internationales Gesetz es vorschrieb."
+          ],
+          "explanation": "Die Wirtschaft wuchs schneller, als es einheimische Arbeitskräfte gab.",
+          "difficulty": 1
+        },
+        {
+          "text": "Aus welchen Ländern kamen viele Gastarbeiter nach Deutschland?",
+          "options": [
+            "Italien, Spanien, Griechenland, Türkei",
+            "USA, Kanada und Australien",
+            "Schweden, Norwegen und Finnland",
+            "Japan, China und Südkorea"
+          ],
+          "explanation": "Anwerbeabkommen gab es ab 1955 mit Italien, ab 1961 mit der Türkei.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Aussage zur Gastarbeiter-Geschichte Deutschlands trifft zu?",
+          "options": [
+            "Viele blieben und holten ihre Familien nach.",
+            "Fast alle kehrten nach wenigen Jahren zurück.",
+            "Die staatliche Anwerbung läuft bis heute weiter.",
+            "Gastarbeiter durften nur in der Landwirtschaft arbeiten."
+          ],
+          "explanation": "Geplant war ein kurzer Aufenthalt; 1973 wurde die Anwerbung gestoppt.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c17",
+      "topic": "Zuwanderung und Fachkräftemangel im Zielland",
+      "source": {
+        "lesson": "Einwanderungsland Deutschland",
+        "page": 108
+      },
+      "variants": [
+        {
+          "text": "Warum ist Deutschland auf die Zuwanderung von Fachkräften angewiesen?",
+          "options": [
+            "Viele gehen in Rente, wenige rücken nach.",
+            "Die Bevölkerung wächst hier viel zu schnell.",
+            "Die Arbeitslosigkeit ist die höchste in Europa.",
+            "Fast alle jungen Deutschen wandern gerade aus."
+          ],
+          "explanation": "Geburtenstarke Jahrgänge gehen, geburtenschwache kommen nach.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Chancen bietet Zuwanderung für ein Zielland wie Deutschland?",
+          "options": [
+            "offene Stellen besetzen, Sozialkassen stärken",
+            "die Mieten in den Großstädten sinken sofort",
+            "die Geburtenrate steigt sofort über zwei Kinder",
+            "der Bedarf an Wohnraum sinkt spürbar ab"
+          ],
+          "explanation": "Zuwanderer sind im Schnitt jünger, arbeiten und zahlen Beiträge ein.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c26",
+      "topic": "Einwanderungsland Deutschland heute",
+      "source": {
+        "lesson": "Einwanderungsland Deutschland",
+        "page": 108
+      },
+      "variants": [
+        {
+          "text": "Was bedeutet „Migrationshintergrund“?",
+          "options": [
+            "Man selbst oder die Eltern sind zugewandert.",
+            "Man besitzt keinen deutschen Pass.",
+            "Man ist selbst im Ausland geboren.",
+            "Man spricht zu Hause kein Deutsch."
+          ],
+          "explanation": "Der Begriff schließt auch Kinder ein, die längst deutsche Staatsbürger sind.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum ist Deutschland auf Zuwanderung angewiesen?",
+          "options": [
+            "Ohne sie schrumpft die Zahl der Arbeitskräfte.",
+            "Weil die Geburtenzahl seit Jahren stark steigt.",
+            "Weil die Bevölkerung ohnehin rasch wächst.",
+            "Weil es zu viele junge Menschen im Land gibt."
+          ],
+          "explanation": "Die geburtenstarken Jahrgänge gehen in Rente — es rücken zu wenige nach.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c27",
+      "topic": "Massenmedien analysieren",
+      "source": {
+        "lesson": "Massenmedien analysieren",
+        "page": 110
+      },
+      "variants": [
+        {
+          "text": "Worauf achtest du beim Analysieren eines Zeitungsartikels?",
+          "options": [
+            "Wer schreibt, wann und mit welcher Absicht?",
+            "Wie viele Bilder der Artikel enthält.",
+            "Wie lang die einzelnen Sätze sind.",
+            "Auf welcher Seite er abgedruckt ist."
+          ],
+          "explanation": "Verfasser, Zeitpunkt und Absicht entscheiden, wie du eine Aussage einordnest.",
+          "difficulty": 2
+        },
+        {
+          "text": "Woran erkennst du, dass ein Bericht einseitig ist?",
+          "options": [
+            "Nur eine Seite kommt ausführlich zu Wort.",
+            "Der Text nennt viele verschiedene Quellen.",
+            "Es werden Zahlen und Statistiken genannt.",
+            "Der Text ist betont sachlich geschrieben."
+          ],
+          "explanation": "Fehlt die Gegenposition, willst du überzeugt und nicht informiert werden.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c18",
+      "topic": "Integration von Zuwanderern",
+      "source": {
+        "lesson": "Integration als Herausforderung",
+        "page": 112
+      },
+      "variants": [
+        {
+          "text": "Was ist für eine gelingende Integration von Zuwanderern besonders wichtig?",
+          "options": [
+            "die Sprache lernen, Bildung und Arbeit finden",
+            "möglichst unter sich bleiben, wenig Kontakt haben",
+            "die eigene Herkunftskultur vollständig aufgeben",
+            "ausschließlich in eigenen Stadtvierteln wohnen"
+          ],
+          "explanation": "Sprache, Bildung und Arbeit sind die Schlüssel zur Teilhabe.",
+          "difficulty": 1
+        },
+        {
+          "text": "Eine Stadt bietet Sprachkurse an, hilft bei der Anerkennung ausländischer Berufsabschlüsse und vermittelt Praktika. Was möchte sie damit erreichen?",
+          "options": [
+            "Integration in Gesellschaft und Arbeitsmarkt",
+            "eine schnelle Rückkehr in die alte Heimat",
+            "Binnenmigration in andere Bundesländer",
+            "einen stärkeren Brain Drain der Herkunftsländer"
+          ],
+          "explanation": "Sprachkurse, Abschlüsse und Praktika erleichtern den Einstieg in den Alltag.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c28",
+      "topic": "Die Tragfähigkeit der Erde",
+      "source": {
+        "lesson": "Die Tragfähigkeit der Erde",
+        "page": 114
+      },
+      "variants": [
+        {
+          "text": "Was meint der Begriff Tragfähigkeit der Erde?",
+          "options": [
+            "wie viele Menschen die Erde ernähren kann",
+            "wie schwer die Erde insgesamt wiegt",
+            "wie viele Länder es auf der Erde gibt",
+            "wie viel Fläche jedes Land besitzt"
+          ],
+          "explanation": "Gemeint ist die Zahl an Menschen, die dauerhaft leben kann, ohne alles zu verbrauchen.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum lässt sich die Tragfähigkeit nicht genau beziffern?",
+          "options": [
+            "Sie hängt vom Lebensstil der Menschen ab.",
+            "Es gibt keinerlei Daten über die Erdfläche.",
+            "Die Erde wächst jedes Jahr ein Stück weiter.",
+            "Sie ist seit Jahrhunderten unverändert."
+          ],
+          "explanation": "Bei sparsamem Konsum reicht die Erde für weit mehr Menschen als bei hohem.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "bevoelkerung-c29",
+      "topic": "Ökologischer Fußabdruck und Erdüberlastungstag",
+      "source": {
+        "lesson": "Die Tragfähigkeit der Erde",
+        "page": 114
+      },
+      "variants": [
+        {
+          "text": "Was misst der ökologische Fußabdruck?",
+          "options": [
+            "die Fläche, die unser Lebensstil braucht",
+            "die Zahl der Schritte pro Tag und Person",
+            "die Größe der bewohnten Wohnfläche",
+            "das Gewicht des jährlichen Hausmülls"
+          ],
+          "explanation": "Er rechnet Essen, Wohnen und Verkehr in benötigte Hektar Erdfläche um.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was sagt der Erdüberlastungstag aus?",
+          "options": [
+            "Ab dann leben wir auf Kosten der Zukunft.",
+            "Ab dann ist die Ernte des Jahres fertig.",
+            "Ab dann ist der Winter offiziell vorbei.",
+            "Ab dann steigt die Weltbevölkerung an."
+          ],
+          "explanation": "An diesem Tag ist aufgebraucht, was die Erde in einem Jahr erneuern kann.",
+          "difficulty": 3
         }
       ]
     }

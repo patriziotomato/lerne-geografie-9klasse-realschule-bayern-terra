@@ -4,6 +4,10 @@
     {
       "id": "staedte-c01",
       "topic": "Merkmale und Aufgaben einer Stadt",
+      "source": {
+        "lesson": "Städtische Siedlungs- und Lebensräume",
+        "page": 72
+      },
       "variants": [
         {
           "text": "Welche Merkmale sind typisch für eine Stadt?",
@@ -41,287 +45,87 @@
       ]
     },
     {
-      "id": "staedte-c02",
-      "topic": "Mittelalterlicher Stadtkern",
+      "id": "bevoelkerung-c09",
+      "topic": "Bevölkerungsverteilung in Deutschland",
+      "source": {
+        "lesson": "Die Bevölkerung eines Landes – ungleich verteilt",
+        "page": 74
+      },
       "variants": [
         {
-          "text": "Woran erkennt man in vielen deutschen Städten noch heute den mittelalterlichen Stadtkern?",
+          "text": "Welche Region gehört zu den am dichtesten besiedelten Ballungsräumen Deutschlands?",
           "options": [
-            "an engen Gassen, Marktplatz und Mauerresten",
-            "an geraden Ausfallstraßen und großen Parkhäusern",
-            "an Hochhäusern aus Glas und Stahl am Bahnhof",
-            "an weitläufigen Siedlungen mit großen Gärten"
+            "das Ruhrgebiet",
+            "die Seenplatte",
+            "der Bayerische Wald",
+            "die Lüneburger Heide"
           ],
-          "explanation": "Enge Gassen, zentraler Marktplatz mit Kirche und Rathaus, Reste der Stadtmauer.",
+          "explanation": "Im Ruhrgebiet sind die Großstädte fast zusammengewachsen.",
           "difficulty": 1
         },
         {
-          "text": "Welche Rolle spielte der Marktplatz in der mittelalterlichen Stadt?",
+          "text": "Warum leben in Ballungsräumen wie München oder Rhein-Main besonders viele Menschen?",
           "options": [
-            "Handelszentrum mit Rathaus und Kirche daran",
-            "reiner Übungsplatz für die städtische Wache",
-            "Platz außerhalb der Mauer für fremde Händler",
-            "reine Grünfläche zur Erholung der Bewohner"
+            "viele Arbeitsplätze, gute Verkehrsanbindung",
+            "die Mieten sind dort besonders günstig",
+            "das Klima ist dort deutlich wärmer als sonst",
+            "es gibt dort viel freie Fläche für Neubauten"
           ],
-          "explanation": "Der Marktplatz war Handels- und Lebensmittelpunkt der Stadt.",
-          "difficulty": 1
+          "explanation": "Arbeit, Infrastruktur, Bildung und Freizeit ziehen Menschen an.",
+          "difficulty": 2
         },
         {
-          "text": "Warum war die mittelalterliche Stadt von einer Mauer umgeben?",
+          "text": "Welche Aussage zur Bevölkerungsverteilung in Deutschland trifft zu?",
           "options": [
-            "Sie schützte vor Angreifern und markierte die Grenze.",
-            "Sie sollte die Stadt vor Flusshochwasser schützen.",
-            "Sie trennte Handwerker- und Kaufmannsviertel.",
-            "Sie hielt den Lärm der Handelswege von der Stadt fern."
+            "Sie ist ungleich: dichte und dünne Räume",
+            "Sie ist fast überall gleichmäßig verteilt",
+            "Der Nordosten ist am dichtesten besiedelt",
+            "In den Alpen leben mehr Menschen als im Ruhrgebiet"
           ],
-          "explanation": "Schutz vor Angriffen – und zugleich die Festlegung, wo die Stadt endet.",
+          "explanation": "Rhein-Ruhr und München stehen Regionen wie dem Bayerischen Wald gegenüber.",
           "difficulty": 2
         }
       ]
     },
     {
-      "id": "staedte-c03",
-      "topic": "Stadt der Industrialisierung",
+      "id": "bevoelkerung-c10",
+      "topic": "Gunst- und Ungunsträume",
+      "source": {
+        "lesson": "Die Bevölkerung eines Landes – ungleich verteilt",
+        "page": 74
+      },
       "variants": [
         {
-          "text": "Wie veränderten sich viele deutsche Städte während der Industrialisierung im 19. Jahrhundert?",
+          "text": "Was ist ein Gunstraum?",
           "options": [
-            "Fabriken entstanden, die Städte wuchsen rasant.",
-            "Die Städte schrumpften, alle kehrten aufs Land zurück.",
-            "Die Stadtmauern wurden gegen Zuwanderer verstärkt.",
-            "Die Innenstädte wurden reine Erholungsgebiete."
+            "Gebiet mit gutem Boden, Klima und Wasser",
+            "Gebiet mit besonders niedrigen Steuersätzen",
+            "Naturschutzgebiet, in dem niemand siedeln darf",
+            "extrem trockenes Gebiet mit wenigen Menschen"
           ],
-          "explanation": "Mit den Fabriken kamen Arbeitskräfte vom Land – die Städte wuchsen rasant.",
+          "explanation": "Gute natürliche Bedingungen – deshalb sind Flusstäler oft dicht besiedelt.",
           "difficulty": 1
         },
         {
-          "text": "Wie wohnten viele Arbeiterfamilien in den schnell wachsenden Industriestädten des 19. Jahrhunderts?",
+          "text": "Warum ist die Sahara ein Ungunstraum für die Besiedlung?",
           "options": [
-            "beengt in Mietskasernen mit dunklen Hinterhöfen",
-            "geräumig in eigenen Stadtvillen mit großem Garten",
-            "modern im Hochhaus mit Aufzug und Heizung",
-            "auf Bauernhöfen im Umland, mit Bahn zur Arbeit"
+            "Trockenheit und Hitze verhindern Landwirtschaft.",
+            "Es ist dort zu kalt für den Anbau von Nahrung.",
+            "Häufige Überschwemmungen bedrohen Siedlungen.",
+            "Das Gebiet ist viel zu dicht mit Wald bewachsen."
           ],
-          "explanation": "Billig gebaute Mietskasernen, viele Menschen auf engem Raum, oft im Hinterhof.",
+          "explanation": "Ohne Wasser und nutzbaren Boden leben dort nur wenige, meist in Oasen.",
           "difficulty": 2
-        },
-        {
-          "text": "Warum entstanden die Arbeiterviertel des 19. Jahrhunderts meist direkt neben den Fabriken?",
-          "options": [
-            "Die Arbeiter mussten zu Fuß zur Fabrik kommen.",
-            "Grundstücke dort waren die teuersten der Stadt.",
-            "Die Verwaltung wies die Wohnungen per Gesetz zu.",
-            "In Fabriknähe war die Luft am allerbesten."
-          ],
-          "explanation": "Ohne Busse und Bahnen musste man in Fußnähe zur Fabrik wohnen.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "staedte-c04",
-      "topic": "Stadtentwicklung nach 1945",
-      "variants": [
-        {
-          "text": "Was prägte die Entwicklung vieler deutscher Städte in den Jahrzehnten nach dem Zweiten Weltkrieg?",
-          "options": [
-            "Wiederaufbau, später Großsiedlungen am Rand",
-            "vollständiger Rückbau aller Straßen für Trams",
-            "neue Stadtmauern rund um die alten Stadtkerne",
-            "Umbau der Innenstädte zu reinen Industriegebieten"
-          ],
-          "explanation": "Erst Wiederaufbau der zerstörten Innenstädte, später Großsiedlungen am Stadtrand.",
-          "difficulty": 2
-        },
-        {
-          "text": "Was ist mit dem Leitbild der „autogerechten Stadt“ der Nachkriegszeit gemeint?",
-          "options": [
-            "Planung vor allem für das Auto: Straßen, Parkplätze",
-            "Komplette Sperrung der Innenstädte für alle Autos",
-            "Zuerst Radwege und Busspuren, Straßen viel später",
-            "Neue Wohngebiete durften nur autofrei entstehen"
-          ],
-          "explanation": "Breite Straßen, große Kreuzungen, viele Parkplätze – geplant für das Auto.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "staedte-c05",
-      "topic": "Die City als Geschäftszentrum",
-      "variants": [
-        {
-          "text": "Was findet man typischerweise in der City, dem Geschäftszentrum einer Großstadt?",
-          "options": [
-            "Kaufhäuser, Banken und Büros, kaum Wohnungen",
-            "vor allem Bauernhöfe und große Lagerhallen",
-            "hauptsächlich Einfamilienhäuser mit Gärten",
-            "überwiegend Fabrikhallen und Logistikzentren"
-          ],
-          "explanation": "Handel, Banken, Büros, Dienstleistungen – Wohnungen gibt es kaum.",
-          "difficulty": 1
-        },
-        {
-          "text": "Warum wohnen im Geschäftszentrum einer Großstadt nur wenige Menschen?",
-          "options": [
-            "Die Bodenpreise sind zu hoch für Wohnungen.",
-            "Die City ist so laut, dass dort niemand wohnen will.",
-            "Wohnungen dürfen dort nur an Firmen gehen.",
-            "Fast alle Gebäude sind zu alt zum Wohnen."
-          ],
-          "explanation": "Nur Geschäfte, Banken und Büros können die Flächen dort bezahlen.",
-          "difficulty": 2
-        },
-        {
-          "text": "Welche Aussage über die City einer Großstadt stimmt NICHT?",
-          "options": [
-            "In der City wohnen viele Familien sehr günstig.",
-            "In der City sind die Bodenpreise am allerhöchsten.",
-            "Abends wirkt die City oft wie ausgestorben.",
-            "In der City sammeln sich Handel und Büros."
-          ],
-          "explanation": "Wegen der hohen Mieten wohnen in der City gerade nur wenige Menschen.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "staedte-c06",
-      "topic": "Funktionale Gliederung der Stadt",
-      "variants": [
-        {
-          "text": "Was bedeutet es, dass eine Stadt „funktional gegliedert“ ist?",
-          "options": [
-            "Stadtteile haben verschiedene Aufgaben.",
-            "Alle Stadtteile sind völlig gleich aufgebaut.",
-            "Die Stadt hat gleich große Quadrat-Bezirke.",
-            "Jeder Stadtteil hat eine eigene Verwaltung."
-          ],
-          "explanation": "Wohnen, Arbeiten, Einkaufen und Erholung verteilen sich auf eigene Bereiche.",
-          "difficulty": 1
-        },
-        {
-          "text": "Warum liegen Gewerbe- und Industriegebiete meist am Stadtrand in der Nähe großer Verkehrsachsen?",
-          "options": [
-            "Flächen sind billiger, Lkw meiden Wohngebiete.",
-            "Dort wohnen die meisten Kunden der Betriebe.",
-            "Am Stadtrand sind die Grundstücke am teuersten.",
-            "Nur dort darf höher als zwei Stockwerke gebaut werden."
-          ],
-          "explanation": "Günstige Flächen und Autobahnanschluss – ohne Belastung der Wohngebiete.",
-          "difficulty": 2
-        },
-        {
-          "text": "Eine Familie sucht am Wochenende Erholung im Grünen, ohne die Stadt zu verlassen. Welcher Bereich der Stadt erfüllt diese Aufgabe?",
-          "options": [
-            "Parks, Stadtwälder und Flussufer",
-            "das Gewerbegebiet am Stadtrand",
-            "die Fußgängerzone im Zentrum",
-            "das Messegelände an der Autobahn"
-          ],
-          "explanation": "Parks, Stadtwälder und Flussufer sind die Naherholungsgebiete der Stadt.",
-          "difficulty": 1
-        }
-      ]
-    },
-    {
-      "id": "staedte-c07",
-      "topic": "Berlin als Hauptstadt",
-      "variants": [
-        {
-          "text": "Welche Einrichtungen hat Berlin, weil es die Hauptstadt Deutschlands ist?",
-          "options": [
-            "Bundestag, Bundesregierung und Botschaften",
-            "Europäisches Parlament und der Gerichtshof",
-            "das Hauptquartier der Vereinten Nationen",
-            "die Sitze aller 16 Landesregierungen"
-          ],
-          "explanation": "Sitz von Bundestag und Bundesregierung – dazu fast alle Botschaften.",
-          "difficulty": 1
-        },
-        {
-          "text": "Wie profitiert Berlin wirtschaftlich von seiner Rolle als Hauptstadt?",
-          "options": [
-            "Regierung, Medien und Besucher schaffen Arbeit.",
-            "Berlin darf als einzige Stadt Exportsteuern erheben.",
-            "Alle Großunternehmen müssen ihren Sitz dort haben.",
-            "Berlin bekommt sämtliche Steuereinnahmen des Bundes."
-          ],
-          "explanation": "Politik, Verbände, Medien und der Besucherstrom schaffen viele Arbeitsplätze.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
-      "id": "staedte-c08",
-      "topic": "Berlin: die geteilte Stadt",
-      "variants": [
-        {
-          "text": "Was geschah im Jahr 1961 in Berlin?",
-          "options": [
-            "Die DDR ließ die Berliner Mauer bauen.",
-            "West-Berlin trat offiziell der DDR bei.",
-            "Berlin ging ganz an die Bundesrepublik.",
-            "Ost und West wurden wieder vereinigt."
-          ],
-          "explanation": "Am 13. August 1961 begann der Mauerbau; er trennte die Stadt bis 1989.",
-          "difficulty": 1
-        },
-        {
-          "text": "Welche Folgen hatte die jahrzehntelange Teilung für die Stadtentwicklung Berlins?",
-          "options": [
-            "zwei eigene Zentren, unterbrochene Verbindungen",
-            "die Stadt wuchs in beiden Hälften völlig gleich",
-            "alle zogen in den Osten, der Westen stand leer",
-            "an der Mauer entstanden die teuersten Viertel"
-          ],
-          "explanation": "Straßen und Bahnlinien wurden gekappt; jede Hälfte baute ein eigenes Zentrum.",
-          "difficulty": 2
-        },
-        {
-          "text": "Warum hat Berlin bis heute zwei große Zentrumsbereiche, etwa um den Kurfürstendamm im Westen und um den Alexanderplatz im Osten?",
-          "options": [
-            "Beide Stadthälften bauten je ein eigenes Zentrum.",
-            "Nach 1990 baute man absichtlich ein zweites Zentrum.",
-            "Ein breiter Fluss trennte immer schon zwei Stadtkerne.",
-            "Zwei Königshäuser gründeten je eine eigene Stadt."
-          ],
-          "explanation": "West-Berlin am Kurfürstendamm, Ost-Berlin am Alexanderplatz – beide blieben.",
-          "difficulty": 3
-        }
-      ]
-    },
-    {
-      "id": "staedte-c09",
-      "topic": "Berlin: Wachstum und Wohnungsmarkt",
-      "variants": [
-        {
-          "text": "Warum sind die Mieten in Berlin seit etwa 2010 stark gestiegen?",
-          "options": [
-            "Viele zogen zu, es wurde zu wenig gebaut.",
-            "Die Einwohnerzahl sank, deshalb stiegen die Mieten.",
-            "Fast alle Wohnungen wichen Regierungsgebäuden.",
-            "Ein Gesetz schreibt zehn Prozent Erhöhung pro Jahr vor."
-          ],
-          "explanation": "Berlin wächst durch Zuzug, der Wohnungsbau hielt jahrelang nicht mit.",
-          "difficulty": 2
-        },
-        {
-          "text": "Welche Folgen hat der angespannte Wohnungsmarkt für viele Berliner Haushalte?",
-          "options": [
-            "Wer wenig verdient, muss an den Stadtrand ziehen.",
-            "Man kann unter vielen leeren Wohnungen frei wählen.",
-            "Die Mieten sinken in der Innenstadt besonders stark.",
-            "Familien ziehen in die teuersten Viertel, dort ist Platz."
-          ],
-          "explanation": "Bei Wohnungsmangel finden gerade einkommensschwache Haushalte kaum etwas.",
-          "difficulty": 3
         }
       ]
     },
     {
       "id": "staedte-c10",
       "topic": "München als Wirtschaftsstandort",
+      "source": {
+        "lesson": "München – die Landeshauptstadt Bayerns",
+        "page": 76
+      },
       "variants": [
         {
           "text": "Welche Wirtschaftszweige machen München zu einem der wichtigsten Wirtschaftsstandorte Deutschlands?",
@@ -361,6 +165,10 @@
     {
       "id": "staedte-c11",
       "topic": "München: Folgen des Zuzugs",
+      "source": {
+        "lesson": "München – die Landeshauptstadt Bayerns",
+        "page": 76
+      },
       "variants": [
         {
           "text": "Welche Folge hat der anhaltende Zuzug nach München?",
@@ -400,6 +208,10 @@
     {
       "id": "staedte-c12",
       "topic": "Suburbanisierung",
+      "source": {
+        "lesson": "München – die Landeshauptstadt Bayerns",
+        "page": 76
+      },
       "variants": [
         {
           "text": "Was versteht man unter Suburbanisierung?",
@@ -437,36 +249,12 @@
       ]
     },
     {
-      "id": "staedte-c13",
-      "topic": "Reurbanisierung",
-      "variants": [
-        {
-          "text": "Was bezeichnet der Begriff Reurbanisierung?",
-          "options": [
-            "Rückkehr in die Kernstadt, sie wächst wieder.",
-            "Erneuerung alter Fabriken im Umland der Stadt.",
-            "Rückbau von Wohnhäusern in der Innenstadt.",
-            "Verlagerung von Büros aus der Stadt ins Ausland."
-          ],
-          "explanation": "Die Kernstadt gewinnt wieder Einwohner, weil Menschen zurückziehen.",
-          "difficulty": 2
-        },
-        {
-          "text": "Warum entscheiden sich heute wieder viele Menschen für das Wohnen in der Innenstadt statt im Umland?",
-          "options": [
-            "kurze Wege zu Arbeit, Einkauf und Freizeit",
-            "die Mieten sind dort niedriger als auf dem Land",
-            "im Umland gibt es keine Schulen mehr",
-            "Grundstücke sind in der City groß und billig"
-          ],
-          "explanation": "Kurze Wege zu Arbeit, Einkauf und Kultur machen die Innenstadt attraktiv.",
-          "difficulty": 2
-        }
-      ]
-    },
-    {
       "id": "staedte-c14",
       "topic": "Gentrifizierung",
+      "source": {
+        "lesson": "München – die Landeshauptstadt Bayerns",
+        "page": 76
+      },
       "variants": [
         {
           "text": "Was versteht man unter Gentrifizierung?",
@@ -504,29 +292,183 @@
       ]
     },
     {
-      "id": "staedte-c15",
-      "topic": "Soziale Segregation",
+      "id": "staedte-c23",
+      "topic": "Île-de-France – das Herz Frankreichs",
+      "source": {
+        "lesson": "Île-de-France – das Herz Frankreichs",
+        "page": 78
+      },
       "variants": [
         {
-          "text": "Was bedeutet soziale Segregation in einer Stadt?",
+          "text": "Was ist die Île-de-France?",
           "options": [
-            "Bevölkerungsgruppen wohnen räumlich getrennt.",
-            "Alle Gruppen verteilen sich völlig gleichmäßig.",
-            "Die Stadt wird in gleich große Wahlbezirke geteilt.",
-            "Jung und Alt nutzen andere Freizeiteinrichtungen."
+            "die Metropolregion rund um Paris",
+            "eine Insel im Mittelmeer bei Nizza",
+            "das Bergland im Süden Frankreichs",
+            "die Küstenregion am Atlantik"
           ],
-          "explanation": "Gruppen leben nach Einkommen oder Herkunft getrennt in eigenen Vierteln.",
+          "explanation": "Trotz des Namens keine Insel, sondern die Region um die Hauptstadt.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum nennt man die Île-de-France das Herz Frankreichs?",
+          "options": [
+            "Hier lebt und arbeitet ein Fünftel des Landes.",
+            "Hier liegen die höchsten Berge des Landes.",
+            "Hier wird der meiste Wein des Landes erzeugt.",
+            "Hier leben die wenigsten Menschen des Landes."
+          ],
+          "explanation": "Auf rund 2 % der Landesfläche wohnen etwa 12 Millionen Menschen.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "staedte-c24",
+      "topic": "Zentralismus in Frankreich",
+      "source": {
+        "lesson": "Île-de-France – das Herz Frankreichs",
+        "page": 78
+      },
+      "variants": [
+        {
+          "text": "Was bedeutet der Zentralismus Frankreichs für Paris?",
+          "options": [
+            "Politik und Wirtschaft laufen dort zusammen.",
+            "Die Macht ist gleichmäßig im Land verteilt.",
+            "Jede einzelne Region entscheidet fast alles.",
+            "Paris hat weniger Einfluss als andere Städte."
+          ],
+          "explanation": "Regierung, Verwaltung und die großen Konzerne sitzen fast alle in Paris.",
           "difficulty": 2
         },
         {
-          "text": "In einer Großstadt konzentrieren sich einkommensschwache Haushalte zunehmend in wenigen Vierteln mit günstigen Mieten. Wie nennt man diese Entwicklung, und warum gilt sie als problematisch?",
+          "text": "Wie zeigt sich der Zentralismus im französischen Verkehrsnetz?",
           "options": [
-            "Segregation – Nachteile verstärken sich gegenseitig.",
-            "Reurbanisierung – die Innenstadt wird dadurch zu voll.",
-            "Suburbanisierung – im Umland entsteht zu viel Verkehr.",
-            "Nachverdichtung – es bleibt zu wenig Platz für Grün."
+            "Autobahn und TGV laufen sternförmig auf Paris zu.",
+            "Alle Strecken verlaufen von Norden nach Süden.",
+            "Das Netz ist über das ganze Land gleich dicht.",
+            "Es gibt fast nur Verbindungen entlang der Küste."
           ],
-          "explanation": "Ballen sich benachteiligte Haushalte, leiden auch Schulen und Zukunftschancen.",
+          "explanation": "Wer von Lyon nach Bordeaux will, fährt oft über Paris — das Netz ist ein Stern.",
+          "difficulty": 3
+        },
+        {
+          "text": "Was sind die „Banlieues“ von Paris?",
+          "options": [
+            "Vorstädte mit oft sozialen Problemen",
+            "die alten Viertel im Stadtzentrum",
+            "Grüngürtel rund um die Innenstadt",
+            "Bürohochhäuser im Westen der Stadt"
+          ],
+          "explanation": "In den Trabantensiedlungen am Rand sind Arbeitslosigkeit und Armut hoch.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "staedte-c25",
+      "topic": "Was ist eine Global City?",
+      "source": {
+        "lesson": "Global City Tokyo",
+        "page": 80
+      },
+      "variants": [
+        {
+          "text": "Was zeichnet eine Global City aus?",
+          "options": [
+            "Von dort wird die Weltwirtschaft gesteuert.",
+            "Sie hat die meisten Einwohner der Welt.",
+            "Sie liegt immer direkt am offenen Meer.",
+            "Sie besitzt die größte Fläche aller Städte."
+          ],
+          "explanation": "Entscheidend ist nicht die Größe, sondern die Macht über weltweite Geldströme.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Städte gelten als klassische Global Cities?",
+          "options": [
+            "London, New York und Tokio",
+            "Rom, Athen und Kairo",
+            "Sydney, Lima und Oslo",
+            "Wien, Prag und Budapest"
+          ],
+          "explanation": "Dort sitzen Börsen, Großbanken und Konzernzentralen mit weltweiter Wirkung.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "staedte-c26",
+      "topic": "Global City Tokyo",
+      "source": {
+        "lesson": "Global City Tokyo",
+        "page": 80
+      },
+      "variants": [
+        {
+          "text": "Was macht Tokio zu einer Global City?",
+          "options": [
+            "Börse, Banken und Konzerne sitzen dort.",
+            "Es hat die größte Fläche aller Städte.",
+            "Es ist die älteste Millionenstadt der Erde.",
+            "Es liegt genau auf dem Nullmeridian."
+          ],
+          "explanation": "Die Börse in Tokio ist eine der größten der Welt — Entscheidungen wirken global.",
+          "difficulty": 1
+        },
+        {
+          "text": "Wie viele Menschen leben in der Metropolregion Tokio?",
+          "options": [
+            "rund 37 Millionen Menschen",
+            "rund 3,7 Millionen Menschen",
+            "rund 370 Millionen Menschen",
+            "rund 7 Millionen Menschen"
+          ],
+          "explanation": "Tokio-Yokohama ist damit die größte Metropolregion der Erde.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "staedte-c27",
+      "topic": "Leben in der Megastadt Tokio",
+      "source": {
+        "lesson": "Global City Tokyo",
+        "page": 80
+      },
+      "variants": [
+        {
+          "text": "Welches Problem bringt die Enge in Tokio mit sich?",
+          "options": [
+            "extrem teure und sehr kleine Wohnungen",
+            "sehr viel Leerstand in den Wohnvierteln",
+            "kaum Nachfrage nach Bus und Bahn",
+            "zu wenige Menschen für die Betriebe"
+          ],
+          "explanation": "Bauland ist knapp — viele wohnen auf wenigen Quadratmetern oder pendeln weit.",
+          "difficulty": 2
+        },
+        {
+          "text": "Wie bewältigt Tokio täglich Millionen von Pendlern?",
+          "options": [
+            "mit einem extrem dichten Bahnnetz",
+            "mit einer eigenen Autobahn je Bezirk",
+            "mit Fähren über die offene See",
+            "mit Seilbahnen zwischen den Häusern"
+          ],
+          "explanation": "Die Bahn transportiert dort mehr Menschen als in jeder anderen Stadt der Welt.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Naturgefahr bedroht Tokio besonders?",
+          "options": [
+            "Erdbeben, weil dort Platten aufeinandertreffen",
+            "Dürre, weil in der Region fast nie Regen fällt",
+            "Lawinen aus den unmittelbar nahen Gebirgen",
+            "Sandstürme aus der benachbarten Wüste"
+          ],
+          "explanation": "Japan liegt auf dem Pazifischen Feuerring — Häuser werden erdbebensicher gebaut.",
           "difficulty": 3
         }
       ]
@@ -534,6 +476,10 @@
     {
       "id": "staedte-c16",
       "topic": "Verstädterung weltweit",
+      "source": {
+        "lesson": "Globale Verstädterung",
+        "page": 82
+      },
       "variants": [
         {
           "text": "Was versteht man unter Verstädterung?",
@@ -562,6 +508,10 @@
     {
       "id": "staedte-c17",
       "topic": "Megastädte",
+      "source": {
+        "lesson": "Globale Verstädterung",
+        "page": 82
+      },
       "variants": [
         {
           "text": "Ab wann spricht man von einer Megastadt?",
@@ -599,8 +549,44 @@
       ]
     },
     {
+      "id": "staedte-c15",
+      "topic": "Soziale Segregation",
+      "source": {
+        "lesson": "Globale Verstädterung",
+        "page": 82
+      },
+      "variants": [
+        {
+          "text": "Was bedeutet soziale Segregation in einer Stadt?",
+          "options": [
+            "Bevölkerungsgruppen wohnen räumlich getrennt.",
+            "Alle Gruppen verteilen sich völlig gleichmäßig.",
+            "Die Stadt wird in gleich große Wahlbezirke geteilt.",
+            "Jung und Alt nutzen andere Freizeiteinrichtungen."
+          ],
+          "explanation": "Gruppen leben nach Einkommen oder Herkunft getrennt in eigenen Vierteln.",
+          "difficulty": 2
+        },
+        {
+          "text": "In einer Großstadt konzentrieren sich einkommensschwache Haushalte zunehmend in wenigen Vierteln mit günstigen Mieten. Wie nennt man diese Entwicklung, und warum gilt sie als problematisch?",
+          "options": [
+            "Segregation – Nachteile verstärken sich gegenseitig.",
+            "Reurbanisierung – die Innenstadt wird dadurch zu voll.",
+            "Suburbanisierung – im Umland entsteht zu viel Verkehr.",
+            "Nachverdichtung – es bleibt zu wenig Platz für Grün."
+          ],
+          "explanation": "Ballen sich benachteiligte Haushalte, leiden auch Schulen und Zukunftschancen.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
       "id": "staedte-c18",
       "topic": "Städtische Wärmeinsel",
+      "source": {
+        "lesson": "Ideen für eine nachhaltige Stadtplanung",
+        "page": 84
+      },
       "variants": [
         {
           "text": "In einer Sommernacht misst man in der Innenstadt 24 °C, im Umland dagegen nur 18 °C. Wie nennt man dieses Phänomen?",
@@ -640,6 +626,10 @@
     {
       "id": "staedte-c19",
       "topic": "Grünflächen und Frischluftschneisen",
+      "source": {
+        "lesson": "Ideen für eine nachhaltige Stadtplanung",
+        "page": 84
+      },
       "variants": [
         {
           "text": "Was ist eine Frischluftschneise?",
@@ -668,6 +658,10 @@
     {
       "id": "staedte-c20",
       "topic": "Verkehrswende in der Stadt",
+      "source": {
+        "lesson": "Ideen für eine nachhaltige Stadtplanung",
+        "page": 84
+      },
       "variants": [
         {
           "text": "Was ist das Ziel der Verkehrswende in Städten?",
@@ -696,6 +690,10 @@
     {
       "id": "staedte-c21",
       "topic": "Nachverdichtung statt Flächenverbrauch",
+      "source": {
+        "lesson": "Ideen für eine nachhaltige Stadtplanung",
+        "page": 84
+      },
       "variants": [
         {
           "text": "Was versteht man unter Nachverdichtung in der Stadtentwicklung?",
@@ -724,6 +722,10 @@
     {
       "id": "staedte-c22",
       "topic": "Smart City",
+      "source": {
+        "lesson": "Ideen für eine nachhaltige Stadtplanung",
+        "page": 84
+      },
       "variants": [
         {
           "text": "Was ist mit dem Begriff Smart City gemeint?",
@@ -746,6 +748,102 @@
           ],
           "explanation": "Vernetzte Sensoren und mitdenkende Ampeln sind typische Smart-City-Anwendungen.",
           "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "staedte-c28",
+      "topic": "Nachhaltige Stadtplanung: Leitbilder",
+      "source": {
+        "lesson": "Ideen für eine nachhaltige Stadtplanung",
+        "page": 84
+      },
+      "variants": [
+        {
+          "text": "Was ist das Leitbild der „Stadt der kurzen Wege“?",
+          "options": [
+            "Wohnen, Arbeit und Einkauf liegen nah beieinander.",
+            "Jeder Stadtteil hat nur eine einzige Funktion.",
+            "Die Wege zum Arbeitsplatz werden länger.",
+            "Wohnhäuser stehen weit außerhalb der Stadt."
+          ],
+          "explanation": "Wer alles im Viertel erreicht, braucht für den Alltag kein Auto mehr.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum ist eine strenge Trennung der Funktionen problematisch?",
+          "options": [
+            "Sie erzwingt viel Verkehr zwischen den Vierteln.",
+            "Sie macht die Innenstädte deutlich lauter.",
+            "Sie lässt zu wenig Grünflächen entstehen.",
+            "Sie verteuert ausschließlich die Mieten."
+          ],
+          "explanation": "Getrennte Wohn- und Arbeitsgebiete erzeugen jeden Morgen dieselben Staus.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "staedte-c29",
+      "topic": "Curitiba: Verkehr als Vorbild",
+      "source": {
+        "lesson": "Curitiba – die grünste Millionenstadt Lateinamerikas",
+        "page": 86
+      },
+      "variants": [
+        {
+          "text": "Wofür ist Curitiba weltweit bekannt geworden?",
+          "options": [
+            "für sein schnelles Bussystem",
+            "für seine riesigen Autobahnen",
+            "für seine U-Bahn unter der Stadt",
+            "für seinen großen Flughafen"
+          ],
+          "explanation": "Das Schnellbussystem gilt weltweit als Vorbild für bezahlbaren Nahverkehr.",
+          "difficulty": 1
+        },
+        {
+          "text": "Was macht Curitibas Bussystem so schnell?",
+          "options": [
+            "eigene Spuren und Vorverkauf an der Haltestelle",
+            "besonders viele Haltestellen je Kilometer",
+            "kostenlose Fahrten für sämtliche Einwohner",
+            "Busse, die mitten zwischen den Autos fahren"
+          ],
+          "explanation": "Die Busse stehen nie im Stau, und die Fahrgäste zahlen schon vor dem Einsteigen.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "staedte-c30",
+      "topic": "Curitiba: grüne Stadt",
+      "source": {
+        "lesson": "Curitiba – die grünste Millionenstadt Lateinamerikas",
+        "page": 86
+      },
+      "variants": [
+        {
+          "text": "Warum gilt Curitiba als besonders grüne Millionenstadt?",
+          "options": [
+            "Sie hat viel Parkfläche je Einwohner.",
+            "Sie liegt vollständig im Regenwald.",
+            "Sie verbietet jeden Autoverkehr ganz.",
+            "Sie besteht fast nur aus Hochhäusern."
+          ],
+          "explanation": "Parks dienen zugleich als Überschwemmungsflächen bei Starkregen.",
+          "difficulty": 2
+        },
+        {
+          "text": "Wie brachte Curitiba die armen Viertel zum Mülltrennen?",
+          "options": [
+            "Müll ließ sich gegen Lebensmittel tauschen.",
+            "Wer nicht trennte, musste Strafe zahlen.",
+            "Die Müllabfuhr fuhr dort einfach nicht hin.",
+            "Der gesamte Müll wurde dort verbrannt."
+          ],
+          "explanation": "In die engen Gassen kam kein Müllwagen — also brachten die Leute ihn selbst.",
+          "difficulty": 3
         }
       ]
     }

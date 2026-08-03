@@ -5,7 +5,20 @@ import { CHAPTERS } from './data/chapters.ts';
  *  index.html, das das Farbschema noch vor dem ersten Paint setzt. Wird er
  *  hier geändert, muss er dort mitgeändert werden. */
 const KEY = 'geoquest.geo9.terra.v1';
-const SCHEMA_VERSION = 5;
+const SCHEMA_VERSION = 6;
+
+/** Kapitel-IDs, wie sie vor der Umstellung auf die Buchstruktur existierten.
+ *  „arbeitstechniken“ ist entfallen (im Buch gibt es kein solches Kapitel),
+ *  „klima“ ist neu dazugekommen. Gebraucht wird die Liste nur noch, um alte
+ *  Profile zu erkennen — siehe migrateChapters(). */
+const LEGACY_CHAPTERS = [
+  'landschaften',
+  'arbeitstechniken',
+  'landwirtschaft',
+  'staedte',
+  'bevoelkerung',
+  'europa',
+];
 
 function defaultState(): AppState {
   return {
@@ -52,11 +65,7 @@ function load(): AppState {
           phone: rawProfile.phone ?? '',
           deadline: rawProfile.deadline ?? null,
           studyTimes: rawProfile.studyTimes ?? [],
-          // Profile von vor der Themenauswahl lernen weiterhin alles.
-          chapters:
-            rawProfile.chapters && rawProfile.chapters.length > 0
-              ? rawProfile.chapters
-              : CHAPTERS.map((c) => c.id),
+          chapters: migrateChapters(rawProfile.chapters),
           // Profile von vor der Zielnoten-Abfrage werden auf der Startseite gefragt.
           targetGrade: validGrade(rawProfile.targetGrade),
           createdAt: rawProfile.createdAt ?? new Date().toISOString(),
@@ -83,6 +92,31 @@ function load(): AppState {
   } catch {
     return defaultState();
   }
+}
+
+/** Kapitelauswahl aus dem Speicher auf die Buchstruktur bringen.
+ *
+ *  Drei Fälle:
+ *  1. Profile von vor der Themenauswahl (leer) lernen weiterhin alles.
+ *  2. Wer vorher „Alle Inhalte“ gewählt hatte, bekommt auch das neue Kapitel
+ *     „Klima und Klimawandel“ — sonst fiele stillschweigend ein ganzes
+ *     Buchkapitel aus dem Lernplan.
+ *  3. Wer bewusst nur einzelne Kapitel gewählt hatte, behält seine Auswahl.
+ *     Über „klima“ konnte er noch gar nicht entscheiden, deshalb wird es
+ *     hier NICHT dazugeschummelt — er findet es im Themenkatalog.
+ *
+ *  Entfallene IDs (`arbeitstechniken`) fliegen in jedem Fall raus. Bleibt
+ *  dabei nichts übrig, wäre der Lernplan leer — dann lieber alles. */
+function migrateChapters(stored: string[] | undefined): string[] {
+  const all = CHAPTERS.map((c) => c.id);
+  if (!Array.isArray(stored) || stored.length === 0) return all;
+
+  const hadEverything = LEGACY_CHAPTERS.every((id) => stored.includes(id));
+  if (hadEverything) return all;
+
+  const known = new Set(all);
+  const kept = stored.filter((id) => known.has(id));
+  return kept.length > 0 ? kept : all;
 }
 
 /** Zielnote aus dem Speicher übernehmen, sofern sie eine echte Schulnote ist.

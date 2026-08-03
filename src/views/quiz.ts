@@ -240,6 +240,13 @@ function answer(root: HTMLElement, btn: HTMLButtonElement): void {
     <div class="feedback ${isCorrect ? 'ok' : 'bad'}">
       <div class="fb-head">${isCorrect ? `Richtig! +${gained} XP ${r.combo >= 3 ? '⚡' : '🎉'}` : 'Leider falsch 😅'}</div>
       <div class="fb-expl">${esc(item.variant.explanation)}</div>
+      ${
+        // Nur bei falscher Antwort: Wer richtig lag, ist nach 1,2 s ohnehin weiter,
+        // und die Fundstelle braucht nur, wer im Buch nachschlagen will.
+        isCorrect
+          ? ''
+          : `<div class="fb-source">📖 Nachlesen: S.&nbsp;${item.concept.source.page} · ${esc(item.concept.source.lesson)}</div>`
+      }
       ${todoCleared ? '<div class="fb-expl">📌 Gelernt! Das Thema ist von deiner Merkliste abgehakt.</div>' : ''}
       <button class="btn primary big" id="next">${last ? 'Runde abschließen 🏁' : 'Weiter 👉'}</button>
       ${isCorrect ? '<div class="fb-autobar"><span></span></div>' : ''}

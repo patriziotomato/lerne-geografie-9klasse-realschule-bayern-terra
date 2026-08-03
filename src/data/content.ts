@@ -1,14 +1,15 @@
 import type { ChapterFile, Concept } from '../types.ts';
 import landschaften from './questions/landschaften.json';
-import arbeitstechniken from './questions/arbeitstechniken.json';
+import klima from './questions/klima.json';
 import landwirtschaft from './questions/landwirtschaft.json';
 import staedte from './questions/staedte.json';
 import bevoelkerung from './questions/bevoelkerung.json';
 import europa from './questions/europa.json';
 
+/** Reihenfolge wie im Buch (Kapitel 1–6). */
 const FILES: ChapterFile[] = [
   landschaften,
-  arbeitstechniken,
+  klima,
   landwirtschaft,
   staedte,
   bevoelkerung,

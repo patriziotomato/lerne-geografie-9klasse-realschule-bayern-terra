@@ -1,0 +1,688 @@
+{
+  "chapterId": "klima",
+  "concepts": [
+    {
+      "id": "klima-c01",
+      "topic": "Wetter, Witterung und Klima",
+      "source": {
+        "lesson": "Wetterlagen in Deutschland und Europa",
+        "page": 32
+      },
+      "variants": [
+        {
+          "text": "Was ist der Unterschied zwischen Wetter und Klima?",
+          "options": [
+            "Wetter ist kurzfristig, Klima langfristig.",
+            "Klima ist kurzfristig, Wetter langfristig.",
+            "Beide meinen denselben Zeitraum von Tagen.",
+            "Wetter gilt weltweit, Klima nur örtlich."
+          ],
+          "explanation": "Wetter ist der Zustand von heute, Klima der Durchschnitt über Jahrzehnte.",
+          "difficulty": 1
+        },
+        {
+          "text": "Über welchen Zeitraum wird das Klima gemittelt?",
+          "options": [
+            "über etwa 30 Jahre",
+            "über etwa 30 Tage",
+            "über etwa 3 Jahre",
+            "über etwa 300 Jahre"
+          ],
+          "explanation": "30 Jahre sind die vereinbarte Normalperiode — kürzer wäre es nur Witterung.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was bezeichnet man als Witterung?",
+          "options": [
+            "den Wetterablauf über Tage bis Wochen",
+            "den Wetterablauf über wenige Stunden",
+            "den Durchschnitt über viele Jahrzehnte",
+            "die Wetterlage an einem einzigen Tag"
+          ],
+          "explanation": "Die Witterung liegt zwischen Wetter und Klima — etwa „ein nasser Juli“.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c02",
+      "topic": "Hoch- und Tiefdruckgebiete",
+      "source": {
+        "lesson": "Wetterlagen in Deutschland und Europa",
+        "page": 32
+      },
+      "variants": [
+        {
+          "text": "Welches Wetter bringt ein Hochdruckgebiet meist?",
+          "options": [
+            "trockenes und sonniges Wetter",
+            "Dauerregen mit starkem Wind",
+            "wechselhaftes Wetter mit Schauern",
+            "Nebel und geschlossene Wolken"
+          ],
+          "explanation": "Im Hoch sinkt Luft ab und erwärmt sich — Wolken lösen sich auf.",
+          "difficulty": 1
+        },
+        {
+          "text": "Wie strömt die Luft in einem Tiefdruckgebiet?",
+          "options": [
+            "von außen ins Zentrum und nach oben",
+            "vom Zentrum nach außen und nach unten",
+            "von oben nach unten und wieder hinauf",
+            "gar nicht, die Luft steht im Zentrum"
+          ],
+          "explanation": "Aufsteigende Luft kühlt ab, Wasserdampf kondensiert — es bilden sich Wolken.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c03",
+      "topic": "Westwindzone",
+      "source": {
+        "lesson": "Wetterlagen in Deutschland und Europa",
+        "page": 32
+      },
+      "variants": [
+        {
+          "text": "Aus welcher Richtung kommt das Wetter in Deutschland meist?",
+          "options": [
+            "aus Westen, vom Atlantik her",
+            "aus Osten, von Russland her",
+            "aus Süden, vom Mittelmeer her",
+            "aus Norden, von der Arktis her"
+          ],
+          "explanation": "Deutschland liegt in der Westwindzone — Tiefs ziehen vom Atlantik heran.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum sind die Winter in Deutschland milder als in Kanada?",
+          "options": [
+            "Westwind und Atlantik bringen milde Luft.",
+            "Deutschland liegt deutlich weiter südlich.",
+            "Die Alpen halten sämtliche Kaltluft ab.",
+            "In Deutschland scheint häufiger die Sonne."
+          ],
+          "explanation": "Das warme Atlantikwasser heizt die Luft vor, der Westwind trägt sie zu uns.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c04",
+      "topic": "Warmfront und Kaltfront",
+      "source": {
+        "lesson": "Wetterlagen in Deutschland und Europa",
+        "page": 32
+      },
+      "variants": [
+        {
+          "text": "Was passiert an einer Kaltfront?",
+          "options": [
+            "Kalte Luft schiebt sich unter warme.",
+            "Warme Luft schiebt sich unter kalte.",
+            "Zwei gleich warme Luftmassen treffen sich.",
+            "Die Luft bleibt geschichtet und ruhig."
+          ],
+          "explanation": "Die warme Luft wird rasch gehoben — kurze, heftige Schauer und Gewitter.",
+          "difficulty": 2
+        },
+        {
+          "text": "Woran erkennst du auf der Wetterkarte eine Warmfront?",
+          "options": [
+            "an einer roten Linie mit Halbkreisen",
+            "an einer blauen Linie mit Dreiecken",
+            "an einer schwarzen gestrichelten Linie",
+            "an einer grünen Linie mit Quadraten"
+          ],
+          "explanation": "Rote Halbkreise stehen für die Warmfront, blaue Dreiecke für die Kaltfront.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c05",
+      "topic": "Hitzewellen und Dürre",
+      "source": {
+        "lesson": "Wetterextreme und Klimawandel",
+        "page": 34
+      },
+      "variants": [
+        {
+          "text": "Was ist eine Folge längerer Hitze- und Trockenperioden?",
+          "options": [
+            "Ernteausfälle und niedrige Flusspegel",
+            "höhere Erträge auf allen Ackerflächen",
+            "ein deutlich steigender Grundwasserstand",
+            "mehr Schnee in den höher gelegenen Lagen"
+          ],
+          "explanation": "Ohne Regen vertrocknen Felder, Flüsse führen Niedrigwasser, Schiffe bleiben liegen.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum sind Hitzewellen in Städten besonders gefährlich?",
+          "options": [
+            "Beton und Asphalt speichern die Wärme.",
+            "In Städten weht immer deutlich mehr Wind.",
+            "Städte liegen meist höher als ihr Umland.",
+            "In Städten regnet es grundsätzlich weniger."
+          ],
+          "explanation": "Versiegelte Flächen heizen sich auf und geben die Wärme nachts wieder ab.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c06",
+      "topic": "Starkregen und Stürme",
+      "source": {
+        "lesson": "Wetterextreme und Klimawandel",
+        "page": 34
+      },
+      "variants": [
+        {
+          "text": "Warum führt Starkregen häufig zu Überschwemmungen?",
+          "options": [
+            "Der Boden nimmt so viel Wasser nicht auf.",
+            "Der Regen fällt fast nur über den Flüssen.",
+            "Das Wasser verdunstet sofort wieder nach oben.",
+            "Die Kanäle leiten das Wasser rasch weiter."
+          ],
+          "explanation": "Fällt zu viel Regen auf einmal, läuft er oberflächlich ab statt zu versickern.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was hat sich bei Starkregen in den letzten Jahrzehnten verändert?",
+          "options": [
+            "Solche Ereignisse werden häufiger.",
+            "Solche Ereignisse werden viel seltener.",
+            "Es hat sich praktisch nichts verändert.",
+            "Sie treten nur noch im Winter auf."
+          ],
+          "explanation": "Wärmere Luft hält mehr Wasserdampf — es fällt mehr Regen auf einmal.",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "klima-c07",
+      "topic": "Einzelereignis oder Klimawandel?",
+      "source": {
+        "lesson": "Wetterextreme und Klimawandel",
+        "page": 34
+      },
+      "variants": [
+        {
+          "text": "Beweist ein einzelner heißer Sommer den Klimawandel?",
+          "options": [
+            "Nein, erst eine lange Messreihe zeigt ihn.",
+            "Ja, ein Rekordsommer genügt als Beweis.",
+            "Nein, das Klima lässt sich gar nicht messen.",
+            "Ja, wenn mehrere Länder betroffen sind."
+          ],
+          "explanation": "Ein Sommer ist Wetter. Erst der Trend über Jahrzehnte zeigt den Klimawandel.",
+          "difficulty": 3
+        },
+        {
+          "text": "Was verändert der Klimawandel an Wetterextremen?",
+          "options": [
+            "Sie werden häufiger und heftiger.",
+            "Sie verschwinden nach und nach ganz.",
+            "Sie bleiben unverändert wie bisher.",
+            "Sie treten nur noch nachts auf."
+          ],
+          "explanation": "Nicht jedes Extrem ist „der Klimawandel“ — aber sie häufen sich messbar.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c08",
+      "topic": "Natürlicher Treibhauseffekt",
+      "source": {
+        "lesson": "„Treibhaus“ Erde",
+        "page": 36
+      },
+      "variants": [
+        {
+          "text": "Was bewirkt der natürliche Treibhauseffekt?",
+          "options": [
+            "Er macht die Erde erst bewohnbar.",
+            "Er kühlt die Erde auf −18 Grad ab.",
+            "Er entstand erst mit der Industrie.",
+            "Er wird von Sauerstoff verursacht."
+          ],
+          "explanation": "Ohne ihn läge die Durchschnittstemperatur bei etwa −18 °C statt +15 °C.",
+          "difficulty": 1
+        },
+        {
+          "text": "Wie wirken Treibhausgase in der Atmosphäre?",
+          "options": [
+            "Sie halten Wärmestrahlung der Erde zurück.",
+            "Sie halten das Sonnenlicht vollständig ab.",
+            "Sie kühlen die Luft in großer Höhe ab.",
+            "Sie lassen die Wärme ungehindert hinaus."
+          ],
+          "explanation": "Sonnenlicht kommt herein, die Wärmestrahlung der Erde kommt schlechter hinaus.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c09",
+      "topic": "Vom Menschen verstärkter Treibhauseffekt",
+      "source": {
+        "lesson": "„Treibhaus“ Erde",
+        "page": 36
+      },
+      "variants": [
+        {
+          "text": "Was bedeutet „anthropogener“ Treibhauseffekt?",
+          "options": [
+            "Er wird vom Menschen zusätzlich verstärkt.",
+            "Er entsteht ganz ohne Zutun des Menschen.",
+            "Er wird ausschließlich von Vulkanen erzeugt.",
+            "Er wirkt nur über den beiden Polargebieten."
+          ],
+          "explanation": "„Anthropogen“ heißt menschengemacht — gemeint ist der zusätzliche Anteil.",
+          "difficulty": 1
+        },
+        {
+          "text": "Welche Tätigkeit setzt am meisten CO₂ frei?",
+          "options": [
+            "das Verbrennen von Kohle, Öl und Gas",
+            "das Anlegen von neuen Mischwäldern",
+            "die Nutzung von Wind- und Sonnenkraft",
+            "das Sammeln und Trennen von Abfällen"
+          ],
+          "explanation": "Fossile Brennstoffe geben Kohlenstoff frei, der Millionen Jahre gebunden war.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c10",
+      "topic": "Treibhausgase und ihre Quellen",
+      "source": {
+        "lesson": "„Treibhaus“ Erde",
+        "page": 36
+      },
+      "variants": [
+        {
+          "text": "Welches Gas trägt am meisten zum Treibhauseffekt bei?",
+          "options": [
+            "Kohlenstoffdioxid",
+            "Sauerstoff",
+            "Stickstoff",
+            "Argon"
+          ],
+          "explanation": "CO₂ ist das wichtigste vom Menschen freigesetzte Treibhausgas.",
+          "difficulty": 2
+        },
+        {
+          "text": "Woher stammt der größte Teil des Methans?",
+          "options": [
+            "aus Viehhaltung, Reisanbau und Deponien",
+            "aus dem Verbrennen von Holz im Kamin",
+            "aus der Stromerzeugung durch Windkraft",
+            "aus dem Ausatmen von Menschen und Tieren"
+          ],
+          "explanation": "Methan wirkt je Molekül weit stärker als CO₂, hält sich aber kürzer in der Luft.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "klima-c11",
+      "topic": "Ursachen des Meeresspiegelanstiegs",
+      "source": {
+        "lesson": "Der Meeresspiegel steigt",
+        "page": 38
+      },
+      "variants": [
+        {
+          "text": "Welche zwei Ursachen lassen den Meeresspiegel steigen?",
+          "options": [
+            "Wärmeausdehnung und schmelzendes Landeis",
+            "Wärmeausdehnung und schmelzendes Meereis",
+            "mehr Niederschlag und stärkere Gezeiten",
+            "mehr Flüsse und ein tieferer Meeresboden"
+          ],
+          "explanation": "Warmes Wasser braucht mehr Platz, dazu kommt Schmelzwasser von Grönland.",
+          "difficulty": 2
+        },
+        {
+          "text": "Warum lässt schmelzendes Meereis den Pegel nicht steigen?",
+          "options": [
+            "Es schwimmt und verdrängt sein Volumen.",
+            "Es schmilzt zu langsam für einen Effekt.",
+            "Es besteht aus Salz- statt aus Süßwasser.",
+            "Es gefriert im Winter jeweils wieder."
+          ],
+          "explanation": "Schwimmendes Eis verdrängt schon jetzt so viel Wasser, wie es später ergibt.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "klima-c12",
+      "topic": "Folgen des Meeresspiegelanstiegs",
+      "source": {
+        "lesson": "Der Meeresspiegel steigt",
+        "page": 38
+      },
+      "variants": [
+        {
+          "text": "Wer ist vom Meeresspiegelanstieg besonders bedroht?",
+          "options": [
+            "flache Inselstaaten und Küstentiefländer",
+            "Länder mit hohen Gebirgen im Landesinneren",
+            "Staaten mit vielen Seen und großen Flüssen",
+            "Regionen mit trockenem Wüstenklima"
+          ],
+          "explanation": "Staaten wie die Malediven oder Bangladesch liegen nur wenige Meter über Null.",
+          "difficulty": 1
+        },
+        {
+          "text": "Was bedeutet der Anstieg für die deutsche Nordseeküste?",
+          "options": [
+            "Deiche müssen erhöht und verstärkt werden.",
+            "Die Häfen müssen ins Landesinnere ziehen.",
+            "Die Nordsee verliert nach und nach Fläche.",
+            "Die Gezeiten verschwinden allmählich ganz."
+          ],
+          "explanation": "Höhere Pegel und stärkere Sturmfluten treffen auf dieselben alten Deiche.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c13",
+      "topic": "Verschiebung der Klimazonen",
+      "source": {
+        "lesson": "Klimawandel – Folgen für die ganze Welt",
+        "page": 40
+      },
+      "variants": [
+        {
+          "text": "Was passiert mit den Klimazonen bei fortschreitender Erwärmung?",
+          "options": [
+            "Sie verschieben sich Richtung Pole.",
+            "Sie verschieben sich Richtung Äquator.",
+            "Sie bleiben genau an ihrem alten Platz.",
+            "Sie verschwinden nach und nach völlig."
+          ],
+          "explanation": "Wärmeliebende Pflanzen und Tiere wandern polwärts und in höhere Lagen.",
+          "difficulty": 2
+        },
+        {
+          "text": "Welche Folge hat die Erwärmung für ohnehin trockene Gebiete?",
+          "options": [
+            "Wüsten breiten sich weiter aus.",
+            "Wüsten werden deutlich kleiner.",
+            "Wüsten wandeln sich zu Regenwald.",
+            "Wüsten bleiben exakt unverändert."
+          ],
+          "explanation": "In der Sahelzone verschärfen Dürren die Desertifikation — Land wird unbrauchbar.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c14",
+      "topic": "Verursacher und Betroffene",
+      "source": {
+        "lesson": "Klimawandel – Folgen für die ganze Welt",
+        "page": 40
+      },
+      "variants": [
+        {
+          "text": "Was ist am Klimawandel besonders ungerecht?",
+          "options": [
+            "Die Hauptverursacher leiden am wenigsten.",
+            "Die Hauptverursacher leiden am stärksten.",
+            "Alle Länder sind exakt gleich stark betroffen.",
+            "Nur reiche Länder spüren die Folgen davon."
+          ],
+          "explanation": "Industrieländer stoßen am meisten aus, ärmere Länder trifft es am härtesten.",
+          "difficulty": 3
+        },
+        {
+          "text": "Warum können ärmere Länder sich schlechter anpassen?",
+          "options": [
+            "Ihnen fehlt Geld für teure Schutzbauten.",
+            "Sie liegen alle in kühleren Breiten der Erde.",
+            "Sie sind vom Klimawandel gar nicht betroffen.",
+            "Sie haben viel zu wenige Menschen im Land."
+          ],
+          "explanation": "Deiche, Bewässerung und Frühwarnsysteme kosten Geld, das dort fehlt.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c15",
+      "topic": "Permafrost und Kipppunkte",
+      "source": {
+        "lesson": "Klimawandel – Folgen für die ganze Welt",
+        "page": 40
+      },
+      "variants": [
+        {
+          "text": "Warum ist auftauender Permafrostboden gefährlich?",
+          "options": [
+            "Er setzt zusätzlich Methan und CO₂ frei.",
+            "Er bindet zusätzlich große Mengen CO₂.",
+            "Er lässt den Meeresspiegel direkt sinken.",
+            "Er kühlt die Atmosphäre wieder deutlich ab."
+          ],
+          "explanation": "Der freigesetzte Kohlenstoff verstärkt die Erwärmung, die ihn auftauen ließ.",
+          "difficulty": 3
+        },
+        {
+          "text": "Was ist ein Kipppunkt im Klimasystem?",
+          "options": [
+            "eine Grenze, ab der Folgen sich selbst verstärken",
+            "eine Grenze, ab der der Klimawandel endet",
+            "ein Zeitpunkt, an dem alle Messungen enden",
+            "ein Ort, an dem zwei Klimazonen sich treffen"
+          ],
+          "explanation": "Ist der Punkt überschritten, läuft die Entwicklung ohne weiteres Zutun weiter.",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "klima-c16",
+      "topic": "Ein Mystery lösen",
+      "source": {
+        "lesson": "Ein Mystery lösen",
+        "page": 42
+      },
+      "variants": [
+        {
+          "text": "Wie gehst du bei einem Mystery vor?",
+          "options": [
+            "Kärtchen ordnen und Zusammenhänge knüpfen",
+            "die Kärtchen der Reihe nach einmal vorlesen",
+            "nur das erste und das letzte Kärtchen nutzen",
+            "die Kärtchen nach ihrer Länge sortieren"
+          ],
+          "explanation": "Aus lauter Einzelinfos baust du eine Ursachenkette zur Leitfrage.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was ist das Ziel eines Mystery im Erdkundeunterricht?",
+          "options": [
+            "eine Leitfrage über Ursachenketten klären",
+            "möglichst viele Fachbegriffe auswendig lernen",
+            "eine Landkarte möglichst genau abzuzeichnen",
+            "die Kärtchen allein und schweigend sortieren"
+          ],
+          "explanation": "Am Ende steht eine begründete Antwort, die weit entfernte Dinge verbindet.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c17",
+      "topic": "Erneuerbare Energien",
+      "source": {
+        "lesson": "Aktiv gegen den Klimawandel",
+        "page": 46
+      },
+      "variants": [
+        {
+          "text": "Welche dieser Energiequellen ist erneuerbar?",
+          "options": [
+            "Windkraft",
+            "Erdgas",
+            "Braunkohle",
+            "Erdöl"
+          ],
+          "explanation": "Wind, Sonne, Wasser und Biomasse erneuern sich, fossile Vorräte nicht.",
+          "difficulty": 1
+        },
+        {
+          "text": "Warum senken erneuerbare Energien den CO₂-Ausstoß?",
+          "options": [
+            "Bei der Stromerzeugung entsteht kein CO₂.",
+            "Sie verbrennen Kohle besonders sauber.",
+            "Sie speichern das CO₂ tief unter der Erde.",
+            "Sie brauchen weniger Strom als Kraftwerke."
+          ],
+          "explanation": "Wind und Sonne liefern Strom ganz ohne Verbrennung — also ohne Abgase.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c18",
+      "topic": "Klimaschutz im Alltag",
+      "source": {
+        "lesson": "Aktiv gegen den Klimawandel",
+        "page": 46
+      },
+      "variants": [
+        {
+          "text": "Womit sparst du im Alltag am meisten CO₂ ein?",
+          "options": [
+            "seltener fliegen und Auto fahren",
+            "Zimmerpflanzen im Haus aufstellen",
+            "Papier statt Plastik verwenden",
+            "das Licht seltener brennen lassen"
+          ],
+          "explanation": "Verkehr, Heizung und Ernährung sind die großen Posten — der Rest ist klein.",
+          "difficulty": 1
+        },
+        {
+          "text": "Wofür ist der CO₂-Fußabdruck ein nützliches Maß?",
+          "options": [
+            "Er macht die eigene Belastung vergleichbar.",
+            "Er misst, wie viel Müll man selbst erzeugt.",
+            "Er zeigt den Wasserverbrauch pro Person an.",
+            "Er gibt die Größe der eigenen Wohnung an."
+          ],
+          "explanation": "Er rechnet Wohnen, Verkehr, Essen und Konsum in eine einzige Zahl um.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c19",
+      "topic": "Pariser Klimaabkommen",
+      "source": {
+        "lesson": "Aktiv gegen den Klimawandel",
+        "page": 46
+      },
+      "variants": [
+        {
+          "text": "Worauf einigte sich die Weltgemeinschaft 2015 in Paris?",
+          "options": [
+            "die Erwärmung möglichst auf 1,5 °C zu begrenzen",
+            "bis 2030 weltweit aus der Kernkraft auszusteigen",
+            "Autos in allen Innenstädten ganz zu verbieten",
+            "die Weltbevölkerung bis 2100 zu halbieren"
+          ],
+          "explanation": "Ziel ist deutlich unter 2 °C Erwärmung, möglichst nicht mehr als 1,5 °C.",
+          "difficulty": 1
+        },
+        {
+          "text": "Was ist ein Schwachpunkt des Pariser Abkommens?",
+          "options": [
+            "Die Ziele sind kaum erzwingbar.",
+            "Es haben nur drei Länder unterschrieben.",
+            "Es gilt ausschließlich für arme Länder.",
+            "Es ist bis heute nie in Kraft getreten."
+          ],
+          "explanation": "Jedes Land setzt sich seine Ziele selbst — Sanktionen gibt es praktisch keine.",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "id": "klima-c20",
+      "topic": "Klimaschutz und Klimaanpassung",
+      "source": {
+        "lesson": "Mit dem Klimawandel umgehen",
+        "page": 48
+      },
+      "variants": [
+        {
+          "text": "Was unterscheidet Klimaschutz von Klimaanpassung?",
+          "options": [
+            "Schutz vermeidet, Anpassung reagiert.",
+            "Anpassung vermeidet, Schutz reagiert.",
+            "Beide meinen genau dasselbe Vorgehen.",
+            "Schutz wirkt sofort, Anpassung erst spät."
+          ],
+          "explanation": "Schutz senkt den Ausstoß, Anpassung macht uns gegen die Folgen widerstandsfähig.",
+          "difficulty": 2
+        },
+        {
+          "text": "Was ist ein Beispiel für Klimaanpassung?",
+          "options": [
+            "höhere Deiche an der Küste bauen",
+            "Kohlekraftwerke früher abschalten",
+            "mehr Windräder an Land aufstellen",
+            "weniger Fleisch pro Woche essen"
+          ],
+          "explanation": "Der Deich stoppt den Klimawandel nicht — er schützt vor seinen Folgen.",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "klima-c21",
+      "topic": "Anpassung in Stadt und Landwirtschaft",
+      "source": {
+        "lesson": "Mit dem Klimawandel umgehen",
+        "page": 48
+      },
+      "variants": [
+        {
+          "text": "Wie passen sich Städte an häufigere Hitze an?",
+          "options": [
+            "mit mehr Bäumen, Grün und Wasser",
+            "mit mehr Asphalt und festen Plätzen",
+            "mit mehr Parkplätzen im Zentrum",
+            "mit höheren Häusern in dunkler Farbe"
+          ],
+          "explanation": "Bäume spenden Schatten, Grün und Wasser kühlen durch Verdunstung.",
+          "difficulty": 2
+        },
+        {
+          "text": "Wie passt sich die Landwirtschaft an mehr Trockenheit an?",
+          "options": [
+            "mit robusten Sorten und sparsamer Bewässerung",
+            "mit noch mehr Mais auf noch größeren Flächen",
+            "mit einer Umstellung auf reine Weidehaltung",
+            "mit dem völligen Verzicht auf Bewässerung"
+          ],
+          "explanation": "Trockenheitsverträgliche Sorten und Tropfbewässerung sparen Wasser.",
+          "difficulty": 2
+        }
+      ]
+    }
+  ]
+}
