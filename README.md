@@ -300,6 +300,43 @@ Kapiteln ihren alten Präfix — `bevoelkerung-c09` liegt deshalb in `staedte.js
 (im Buch steht „Die Bevölkerung eines Landes – ungleich verteilt“ auf S. 74 in
 Kapitel 4). Die ID ist ein Schlüssel, kein Ablageort.
 
+### Was mit bestehenden Installationen passiert
+
+Wird der Inhaltsbestand umgebaut, sitzt auf den Geräten noch der alte
+`localStorage`. Erhalten bleiben:
+
+- **der Leitner-Lernstand jedes Konzepts, das es weiter gibt** — die Box hängt an
+  der ID, nicht an Datei oder Kapitel,
+- **XP, Level, Streak, Bestserie, Historie und Sitzungen** — sie zählen Antworten,
+  keine Inhalte,
+- **Badges und geöffnete Kapitel-Kisten** — einmal verdient, bleibt verdient, auch
+  wenn ein Kapitel danach neue Unterthemen bekommt.
+
+Der Lernstand entfallener Konzepte bleibt liegen und stört nicht: Gelesen wird
+`state.progress` ausschließlich per Lookup über `ALL_CONCEPTS`, unbekannte
+Schlüssel tauchen also in keinem Zähler und keinem Nenner auf. Dasselbe gilt für
+`topics.excluded`, `topics.todo` und `stats.openedChests`. Kommt ein Thema je
+zurück, ist sein Lernstand noch da — deshalb wird bewusst nicht aufgeräumt.
+
+Zwei Dinge werden aktiv migriert (`migrateChapters()` und der `version < 6`-Zweig
+in `src/store.ts`):
+
+- **Kapitelauswahl im Profil.** Entfallene IDs fliegen raus. Wer „Alle Inhalte“
+  gewählt hatte, bekommt neue Kapitel dazu — sonst fiele stillschweigend ein
+  ganzes Buchkapitel aus dem Lernplan. Wer bewusst nur einzelne Kapitel gewählt
+  hatte, behält seine Auswahl unangetastet.
+- **`stats.bestGrade`** wird einmalig auf `null` gesetzt. Es wird nirgends
+  angezeigt und dient nur als Sperre gegen wiederholtes Feiern desselben
+  Notensprungs. Eine Bestnote vom alten Bestand würde sonst jede Feier auf dem
+  Weg zurück verschlucken, obwohl sich fast die Hälfte der Inhalte geändert hat.
+
+Was sich zwangsläufig verschlechtert, ist die **Notenschätzung**: Neue Konzepte
+starten in Box 0. Nach dieser Umstellung fällt ein zuvor komplett gelernter Stand
+von 100 % auf 57 % (81 von 142 Konzepten). Das ist kein verlorener Fortschritt,
+sondern neuer Stoff — die App weist auf der Startseite selbst darauf hin
+(„Noch nie dran: 61 Themen“). Was im Unterricht noch nicht dran war, lässt sich
+im Themenkatalog ausnehmen oder gleich als ganzes Kapitel abwählen.
+
 ## Deployment (GitHub Pages)
 
 Bei jedem Push auf `main` baut GitHub Actions die App und deployt sie auf GitHub

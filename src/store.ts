@@ -58,6 +58,13 @@ function load(): AppState {
     const parsed = JSON.parse(raw) as Partial<AppState>;
     // Sanfte Migration: fehlende Felder mit Defaults auffüllen.
     const def = defaultState();
+    // Mit Schema 6 hat sich der Inhaltsbestand geändert: 49 Konzepte sind
+    // entfallen, 61 sind neu — knapp die Hälfte. Eine Bestnote, die auf dem
+    // alten Bestand erreicht wurde, ist damit nicht mehr vergleichbar und würde
+    // als Sperre jede Feier auf dem Weg zurück verschlucken. Deshalb einmalig
+    // zurücksetzen: Angezeigt wird bestGrade nirgends, es steuert nur den
+    // Notensprung — der Preis ist also nur eine Feier, die schon einmal war.
+    const contentChanged = (parsed.version ?? 0) < 6;
     const rawProfile = parsed.profile as Partial<Profile> | null | undefined;
     const profile: Profile | null = rawProfile
       ? {
@@ -76,12 +83,20 @@ function load(): AppState {
       ...parsed,
       profile,
       version: SCHEMA_VERSION,
-      stats: { ...def.stats, ...(parsed.stats ?? {}) },
+      stats: {
+        ...def.stats,
+        ...(parsed.stats ?? {}),
+        ...(contentChanged ? { bestGrade: null } : {}),
+      },
       settings: {
         ...def.settings,
         ...(parsed.settings ?? {}),
         theme: validTheme(parsed.settings?.theme),
       },
+      // Der Lernstand entfallener Konzepte bleibt absichtlich liegen: Gelesen
+      // wird ausschließlich per Lookup über ALL_CONCEPTS, unbekannte Schlüssel
+      // können also keine Zahl verfälschen — und käme ein Thema je zurück, wäre
+      // sein Lernstand noch da. Dasselbe gilt für topics und stats.openedChests.
       progress: parsed.progress ?? {},
       // Profile von vor dem Themenkatalog haben noch keine Markierungen.
       topics: {
